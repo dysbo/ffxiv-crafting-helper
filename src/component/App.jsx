@@ -1,36 +1,38 @@
-import React, { Component } from 'react';
-import ClassSelector from './ClassSelector'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import * as action from '../store/action'
 
 class App extends Component {
-  state = {
-    selectedClassId: undefined
-  }
+  componentDidMount() {
+    const { getCraftingClasses } = this.props
 
-  handleClassSelectionToggle (selectedClassId) {
-    this.setState({
-      selectedClassId
-    })
+    getCraftingClasses()
   }
 
   render () {
-    const { selectedClassId } = this.state
-
     return (
       <div className="mh2">
         <h1>Stacy's Cool Crafting Planner</h1>
 
         <div>
-          <ClassSelector handleToggle={this.handleClassSelectionToggle.bind(this)} />
+          selector will go here
         </div>
-
-        {!!selectedClassId && (
-          <div>
-            options here?
-          </div>
-        )}
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    craftingClasses: state.craftingClasses
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getCraftingClasses: () => dispatch(action.getCraftingClasses())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

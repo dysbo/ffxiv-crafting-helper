@@ -9,8 +9,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "tachyons": "^4.11.1",
+    "thunk": "0.0.1",
     "xivapi-js": "^0.1.1"
   },
   "scripts": {
