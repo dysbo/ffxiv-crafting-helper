@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as xivApi from '../service/xivApi'
+import SearchResult from './SearchResult'
 
 class App extends Component {
   state = {
@@ -7,7 +8,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const result = await xivApi.queryForCraftingRecipes('CUL', 1, 5)
+    const result = await xivApi.queryForCraftingRecipes('CUL', 1, 20)
     console.log(result)
     this.setState({
       result
@@ -17,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hey here is my JSON result for the POC call: {JSON.stringify(this.state.result)}
+        {this.state.result ? <SearchResult {...this.state.result} /> : 'Loading ...'}
       </div>
     );
   }

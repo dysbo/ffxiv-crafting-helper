@@ -8,7 +8,8 @@ export const queryForCraftingRecipes = async (craftingClassAbbreviation, minLeve
     'ID',
     'Name',
     'Url',
-    'RecipeLevelTable.ClassJobLevel'
+    'RecipeLevelTable.ClassJobLevel',
+    'ClassJob'
   ]
 
   const filters = [
@@ -34,7 +35,7 @@ export const queryForCraftingRecipes = async (craftingClassAbbreviation, minLeve
     sort_order: 'asc'
   }
 
-  const response = await xivApi.data.list('recipe', params)
+  const response = await xivApi.search('', params)
 
   return response
 }
