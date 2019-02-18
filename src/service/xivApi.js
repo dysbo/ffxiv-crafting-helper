@@ -12,12 +12,18 @@ export const getCraftingClasses = async () => {
     'Url',
     'ClassJobCategory.ID'
   ]
+
   const result = await xivApi.data.list('ClassJob', {
     columns: columns.join(',')
   })
-  const filteredResult = filter(result['Results'], res => get(res, 'ClassJobCategory.ID') === 33)
-  result['Results'] = filteredResult
-  console.log(result)
+
+  result['Results'] = orderBy(
+    filter(
+      result['Results'],
+        res => get(res, 'ClassJobCategory.ID') === 33),
+    'Name'
+  )
+
   return result
 }
 

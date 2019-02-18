@@ -15,6 +15,23 @@ const getCraftingClassesFailure = error => ({
   error
 })
 
+const getRecipeListRequest = (classId, minimumLevel, maximumLevel) => ({
+  type: T.RECIPE_REQUEST,
+  classId,
+  minimumLevel,
+  maximumLevel
+})
+
+const getRecipeListSuccess = payload => ({
+  type: T.RECIPE_SUCCESS,
+  payload
+})
+
+const getRecipeListFailure = error => ({
+  type: T.RECIPE_FAILURE,
+  error
+})
+
 export const getCraftingClasses = () => {
   return async dispatch => {
     dispatch(getCraftingClassesRequest())
@@ -23,6 +40,18 @@ export const getCraftingClasses = () => {
       dispatch(getCraftingClassesSuccess(result))
     } catch (err) {
       dispatch(getCraftingClassesFailure(err))
+    }
+  }
+}
+
+export const getRecipeList = (classId, minimumLevel, maximumLevel) => {
+  return async dispatch => {
+    dispatch(getRecipeListRequest(classId, minimumLevel, maximumLevel))
+    try {
+      const result = await xivApi.queryForCraftingRecipes(classId, minimumLevel, maximumLevel)
+      dispatch(getRecipeListSuccess(result))
+    } catch (err) {
+      dispatch(getRecipeListFailure(err))
     }
   }
 }

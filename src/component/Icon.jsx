@@ -9,9 +9,7 @@ const Icon = props => {
   const imageUrl = url.indexOf(baseUrl) > -1 ? url : baseUrl + url
 
   return (
-    <div className="pa1">
-      <img src={imageUrl} alt={name} height={32} width={32} />
-    </div>
+    <img src={imageUrl} alt={name} height={32} width={32} className="pa1" />
   )
 }
 
