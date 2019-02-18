@@ -16,19 +16,19 @@ const getCraftingClassesFailure = error => ({
 })
 
 const getRecipeListRequest = (classId, minimumLevel, maximumLevel) => ({
-  type: T.RECIPE_REQUEST,
+  type: T.RECIPE_LIST_REQUEST,
   classId,
   minimumLevel,
   maximumLevel
 })
 
 const getRecipeListSuccess = payload => ({
-  type: T.RECIPE_SUCCESS,
+  type: T.RECIPE_LIST_SUCCESS,
   payload
 })
 
 const getRecipeListFailure = error => ({
-  type: T.RECIPE_FAILURE,
+  type: T.RECIPE_LIST_FAILURE,
   error
 })
 
@@ -53,5 +53,11 @@ export const getRecipeList = (classId, minimumLevel, maximumLevel) => {
     } catch (err) {
       dispatch(getRecipeListFailure(err))
     }
+  }
+}
+
+export const clearRecipeList = () => {
+  return async dispatch => {
+    dispatch({ type: T.CLEAR_RECIPE_LIST })
   }
 }

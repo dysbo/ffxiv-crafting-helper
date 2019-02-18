@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { Button, InputLabel, MenuItem, Select, TextField } from '@material-ui/core'
-import { filter } from 'lodash'
+import { filter, get } from 'lodash'
 import { connect } from 'react-redux'
 import * as action from '../store/action'
 import Icon from './Icon'
 
+const MINIMUM_LEVEL = 1
+const MAXIMUM_LEVEL = 70
+
 class App extends Component {
   state = {
     selectedClassId: -1,
-    selectedMinimumLevel: 1,
-    selectedMaximumLevel: 70
+    selectedMinimumLevel: MINIMUM_LEVEL,
+    selectedMaximumLevel: MAXIMUM_LEVEL
   }
 
   componentDidMount() {
@@ -19,22 +22,61 @@ class App extends Component {
   }
 
   handleClassSelection = event => {
+    const { clearRecipeList } = this.props
     const selectedClassId = event.target.value
 
     this.setState({
       selectedClassId
-    })
+    }, () => clearRecipeList())
   }
 
   handleMinimumLevelSelection = event => {
+    const { target: { value } } = event
+    const { selectedMaximumLevel } = this.state
+
+    let newMinimumLevel = value
+
+    if (!!value.length) {
+      if (isNaN(value)) {
+        return
+      }
+
+      if (newMinimumLevel < MINIMUM_LEVEL) {
+        newMinimumLevel = MINIMUM_LEVEL
+      }
+
+      if (newMinimumLevel > selectedMaximumLevel) {
+        newMinimumLevel = selectedMaximumLevel
+      }
+    }
+
     this.setState({
-      selectedMinimumLevel: event.target.value
+      selectedMinimumLevel: newMinimumLevel
     })
   }
 
   handleMaximumLevelSelection = event => {
+    const { target: { value } } = event
+    const { selectedMinimumLevel } = this.state
+
+    let newMaximumLevel = value
+
+    if (!!value.length) {
+      if (isNaN(value)) {
+        return
+      }
+
+      if (newMaximumLevel > MAXIMUM_LEVEL) {
+        newMaximumLevel = MAXIMUM_LEVEL
+      }
+
+      if (newMaximumLevel < selectedMinimumLevel) {
+        newMaximumLevel = selectedMinimumLevel
+      }
+    }
+
     this.setState({
-      selectedMaximumLevel: event.target.value
+      selectedMaximumLevel: newMaximumLevel
     })
   }
 
@@ -49,28 +91,6 @@ class App extends Component {
     const { getRecipeList } = this.props
 
     getRecipeList(this.state.selectedClassId, this.state.selectedMinimumLevel, this.state.selectedMaximumLevel)
-  }
-
-  retrieveMinimumLevelOptions = () => {
-    const { selectedMaximumLevel } = this.state
-
-    const options = []
-    for (let i = 1; i <= selectedMaximumLevel; i++) {
-      options.push(i)
-    }
-
-    return options
-  }
-
-  retrieveMaximumLevelOptions = () => {
-    const { selectedMinimumLevel } = this.state
-
-    const options = []
-    for (let i = selectedMinimumLevel; i <= 70; i++) {
-      options.push(i)
-    }
-
-    return options
   }
 
   render () {
@@ -104,37 +124,33 @@ class App extends Component {
             </Select>
           </div>
           <div className="w-third-l w-20-m ph1">
-            <InputLabel>Minimum Level</InputLabel>
-            <Select
+            <InputLabel htmlFor="tbMin">Minimum Level</InputLabel>
+            <TextField
+              id="tbMin"
               fullWidth
-              native
+              min={MINIMUM_LEVEL}
+              max={selectedMaximumLevel}
               onChange={this.handleMinimumLevelSelection}
               value={selectedMinimumLevel}
-            >
-              {this.retrieveMinimumLevelOptions().map(opt => (
-                <option value={opt} key={opt}>{opt}</option>
-              ))}
-            </Select>
+            />
           </div>
           <div className="w-third-l w-20-m ph1">
-            <InputLabel>Maximum Level</InputLabel>
-            <Select
+            <InputLabel htmlFor="tbMax">Maximum Level</InputLabel>
+            <TextField
+              id="tbMax"
               fullWidth
-              native
+              min={selectedMinimumLevel}
+              max={MAXIMUM_LEVEL}
               onChange={this.handleMaximumLevelSelection}
               value={selectedMaximumLevel}
-            >
-              {this.retrieveMaximumLevelOptions().map(opt => (
-                <option value={opt} key={opt}>{opt}</option>
-              ))}
-            </Select>
+            />
           </div>
         </div>
         <div className="flex flex-row">
           <div className="w-100-l w-10-m pv2">
             <Button
               color="primary"
-              disabled={selectedClassId < 0 || !!thinking}
+              disabled={selectedClassId < 0 || !selectedMinimumLevel || !selectedMaximumLevel || !!thinking}
               fullWidth
               onClick={this.handleSearch}
               variant="outlined"
@@ -144,10 +160,31 @@ class App extends Component {
           </div>
         </div>
 
-        {recipeList.length > 0 && (
-          <div>
-            hello
-          </div>
+        {!!get(recipeList, 'length') && (
+          <table>
+            <thead>
+            <tr>
+              <th>Recipe Level</th>
+              <th>Icon</th>
+              <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            {recipeList.map((recipe, key) => (
+              <tr key={key}>
+                <td className="tc">
+                  {get(recipe, 'RecipeLevelTable.ClassJobLevel')}
+                </td>
+                <td className="tc">
+                  <Icon url={get(recipe, 'Icon')} name={get(recipe, 'Name')} />
+                </td>
+                <td className="tl">
+                  {get(recipe, 'Name')}
+                </td>
+              </tr>
+            ))}
+            </tbody>
+          </table>
         )}
       </div>
     )
@@ -163,7 +200,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
   return {
     getCraftingClasses: () => dispatch(action.getCraftingClasses()),
-    getRecipeList: (classId, minLevel, maxLevel) => dispatch(action.getRecipeList(classId, minLevel, maxLevel))
+    getRecipeList: (classId, minLevel, maxLevel) => dispatch(action.getRecipeList(classId, minLevel, maxLevel)),
+    clearRecipeList: () => dispatch(action.clearRecipeList())
   }
 }
 
