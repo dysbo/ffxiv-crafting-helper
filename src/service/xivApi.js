@@ -27,6 +27,22 @@ export const getCraftingClasses = async () => {
   return result
 }
 
+export const getAllGatheringItems = async () => {
+  const columns = [
+    'ID',
+    'Item'
+  ]
+
+  const result = await xivApi.data.list('GatheringItem', {
+    columns: columns.join(','),
+    limit: 3000
+  })
+
+  return filter(
+    get(result, 'Results', []),
+      item => get(item, 'Item', 0) !== 0)
+}
+
 export const queryForCraftingRecipes = async (craftingClassId, minLevel = 1, maxLevel = 70) => {
   const columns = [
     'ID',
@@ -40,10 +56,10 @@ export const queryForCraftingRecipes = async (craftingClassId, minLevel = 1, max
   // add the Ingredient # fields lazily
   for (let i = 0; i < 10; i++) {
     columns.push(`AmountIngredient${i}`)
-    columns.push(`ItemIngredient${i}`)
-    // columns.push(`ItemIngredient${i}.ID`)
-    // columns.push(`ItemIngredient${i}.Name`)
-    // columns.push(`ItemIngredient${i}.Icon`)
+    columns.push(`ItemIngredient${i}.ID`)
+    columns.push(`ItemIngredient${i}.Name`)
+    columns.push(`ItemIngredient${i}.Icon`)
+    columns.push(`ItemIngredient${i}.Url`)
     columns.push(`ItemIngredientRecipe${i}`)
   }
 
@@ -78,7 +94,9 @@ export const queryForCraftingRecipes = async (craftingClassId, minLevel = 1, max
     ['asc', 'asc']
   )
 
-  console.log({ initialResponse, allIds, recipeResponse })
+  const gatheringItems = await getAllGatheringItems()
+
+  console.log({ initialResponse, allIds, recipeResponse, gatheringItems })
 
   return recipeResponse
 }
