@@ -74,10 +74,8 @@ class App extends Component {
   }
 
   render () {
-    const { craftingClasses, recipeList } = this.props
+    const { craftingClasses, recipeList, thinking } = this.props
     const { selectedClassId, selectedMinimumLevel, selectedMaximumLevel } = this.state
-
-    console.log(recipeList)
 
     return (
       <div className="mh2">
@@ -136,14 +134,21 @@ class App extends Component {
           <div className="w-100-l w-10-m pv2">
             <Button
               color="primary"
+              disabled={selectedClassId < 0 || !!thinking}
               fullWidth
               onClick={this.handleSearch}
               variant="outlined"
             >
-              Search
+              {thinking ? 'Thinking ... ' : 'Search'}
             </Button>
           </div>
         </div>
+
+        {recipeList.length > 0 && (
+          <div>
+            hello
+          </div>
+        )}
       </div>
     )
   }
@@ -151,7 +156,8 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   craftingClasses: state.craftingClasses,
-  recipeList: state.recipeList
+  recipeList: state.recipeList,
+  thinking: state.thinking
 })
 
 const mapDispatchToProps = dispatch => {

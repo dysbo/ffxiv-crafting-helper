@@ -3,7 +3,8 @@ import { get } from 'lodash'
 
 const initialState = {
   craftingClasses: [],
-  recipeList: []
+  recipeList: [],
+  thinking: false
 }
 
 export default (state = initialState, action) => {
@@ -11,18 +12,26 @@ export default (state = initialState, action) => {
     case T.CRAFTING_CLASS_SUCCESS:
       return {
         ...state,
-        craftingClasses: get(action, 'payload.Results', [])
+        craftingClasses: get(action, 'payload.Results', []),
+        thinking: false
       }
     case T.CRAFTING_CLASS_FAILURE:
     case T.RECIPE_FAILURE:
       return {
         ...state,
-        error: action.error
+        error: action.error,
+        thinking: false
+      }
+    case T.RECIPE_REQUEST:
+      return {
+        ...state,
+        thinking: true
       }
     case T.RECIPE_SUCCESS:
       return {
         ...state,
-        recipeList: get(action, 'payload.Results', [])
+        recipeList: get(action, 'payload.Results', []),
+        thinking: false
       }
     default:
       return state
