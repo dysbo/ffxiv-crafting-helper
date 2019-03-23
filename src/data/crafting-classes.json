@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Alchemist",
+    "abbreviation": "ALC"
+  },
+  {
+    "name": "Armorer",
+    "abbreviation": "ARM"
+  },
+  {
+    "name": "Blacksmith",
+    "abbreviation": "BSM"
+  },
+  {
+    "name": "Carpenter",
+    "abbreviation": "CRP"
+  },
+  {
+    "name": "Culinarian",
+    "abbreviation": "CUL"
+  },
+  {
+    "name": "Goldsmith",
+    "abbreviation": "GSM"
+  },
+  {
+    "name": "Leatherworker",
+    "abbreviation": "LTW"
+  },
+  {
+    "name": "Weaver",
+    "abbreviation": "WVR"
+  }
+]
