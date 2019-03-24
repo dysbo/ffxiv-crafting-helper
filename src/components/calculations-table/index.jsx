@@ -1,11 +1,13 @@
 import React from 'react'
 import {
   cloneDeep as _cloneDeep,
+  concat as _concat,
   find as _find,
   get as _get,
   map as _map,
   orderBy as _orderBy,
-  toNumber as _toNumber
+  toNumber as _toNumber,
+  uniqBy as _uniqBy
 } from 'lodash'
 import CalculationsTableHead from './head'
 import CalculationsTableBody from './body'
@@ -33,7 +35,7 @@ class CalculationsTable extends React.Component {
     const craftingClasses = localStorage.getItem('craftingClasses')
     if (craftingClasses) {
       this.state = {
-        craftingClasses: JSON.parse(craftingClasses),
+        craftingClasses: _uniqBy(_concat(JSON.parse(craftingClasses), STATE.craftingClasses), 'abbreviation'),
         show: '',
         sort: {
           field: 'name',

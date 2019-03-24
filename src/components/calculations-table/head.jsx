@@ -8,7 +8,7 @@ class CalculationsTableHead extends React.Component {
       <tr>
         <th>
           <button className="link-like" onClick={this.props.handleSortUpdate.bind(this, 'name')}>
-            Crafting Class
+            Crafting/<br />Gathering Class
           </button>
         </th>
         <th style={{ minWidth: '75px' }}>
@@ -19,7 +19,7 @@ class CalculationsTableHead extends React.Component {
         <th>Current Experience</th>
         <th className="d-none d-sm-table-cell">Total Experience</th>
         <th className="d-none d-sm-table-cell">Remaining Experience</th>
-        <th>Experience Per Crafted Item</th>
+        <th>Experience Per Item</th>
         <th>Items to Level Up</th>
         <th className="d-none d-sm-table-cell">Progress</th>
       </tr>

@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <h1>
-          FFXIV Crafting Calculator
+          FFXIV Crafting & Gathering Calculator
         </h1>
         <CalculationsTable />
       </div>

@@ -30,5 +30,17 @@
   {
     "name": "Weaver",
     "abbreviation": "WVR"
+  },
+  {
+    "name": "Botanist",
+    "abbreviation": "BTN"
+  },
+  {
+    "name": "Miner",
+    "abbreviation": "MIN"
+  },
+  {
+    "name": "Fisherman",
+    "abbreviation": "FSH"
   }
 ]
