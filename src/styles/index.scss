@@ -6,11 +6,17 @@
 
 .progress {
   background-color: #555;
+  min-width: 175px;
 }
 
 td {
   vertical-align: middle !important;
-  text-align: right;
+  text-align: center;
+
+  input, select {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 th {
