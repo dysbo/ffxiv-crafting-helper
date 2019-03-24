@@ -12,6 +12,14 @@ class CurrentExperienceCell extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.currentExperience !== prevProps.currentExperience) {
+      this.setState({
+        currentExperience: _toNumber(this.props.currentExperience)
+      })
+    }
+  }
+
   handleCurrentExperienceChange (event) {
     const currentExperience = _get(event, 'target.value', event)
     this.setState({
@@ -25,6 +33,14 @@ class CurrentExperienceCell extends React.Component {
     handleCurrentExperienceChange(currentExperience)
   }
 
+  handleKeyPress (event) {
+    const keyCode = _get(event, 'keyCode')
+
+    if (keyCode === 13) {
+      this.handleCurrentExperienceBlur()
+    }
+  }
+
   render () {
     const { currentExperience } = this.state
     const { totalExperience } = this.props
@@ -36,6 +52,7 @@ class CurrentExperienceCell extends React.Component {
           value={currentExperience}
           onChange={this.handleCurrentExperienceChange.bind(this)}
           onBlur={this.handleCurrentExperienceBlur.bind(this)}
+          onKeyDown={this.handleKeyPress.bind(this)}
           min={0}
           max={Math.max(totalExperience, 1)}
         />

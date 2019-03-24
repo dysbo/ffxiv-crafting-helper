@@ -37,6 +37,7 @@ class CalculationsTable extends React.Component {
 
     craftingClass.currentLevel = _toNumber(level)
     craftingClass.totalExperience = totalExperience
+    craftingClass.currentExperience = 0
     this.setState({
       craftingClasses: craftingClassesClone
     }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
