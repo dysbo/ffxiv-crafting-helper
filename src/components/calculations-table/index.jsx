@@ -97,7 +97,7 @@ class CalculationsTable extends React.Component {
     sort.field = field
     this.setState({
       sort
-    }, () => console.log(this.state.sort))
+    })
   }
 
   render () {
