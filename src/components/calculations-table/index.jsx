@@ -1,5 +1,12 @@
 import React from 'react'
-import { get as _get, map as _map, cloneDeep as _cloneDeep, find as _find, toNumber as _toNumber } from 'lodash'
+import {
+  cloneDeep as _cloneDeep,
+  find as _find,
+  get as _get,
+  map as _map,
+  orderBy as _orderBy,
+  toNumber as _toNumber
+} from 'lodash'
 import CalculationsTableHead from './head'
 import CalculationsTableBody from './body'
 import craftingClasses from '../../data/crafting-classes'
@@ -13,7 +20,11 @@ const STATE = {
     c.totalExperience = 300
     return c
   }),
-  show: ''
+  show: '',
+  sort: {
+    field: 'name',
+    asc: true
+  }
 }
 
 class CalculationsTable extends React.Component {
@@ -23,7 +34,11 @@ class CalculationsTable extends React.Component {
     if (craftingClasses) {
       this.state = {
         craftingClasses: JSON.parse(craftingClasses),
-        show: ''
+        show: '',
+        sort: {
+          field: 'name',
+          asc: true
+        }
       }
     } else {
       this.state = STATE
@@ -72,19 +87,34 @@ class CalculationsTable extends React.Component {
     })
   }
 
+  handleSortUpdate (field) {
+    const sort = _cloneDeep(_get(this.state, 'sort', {}))
+    if (_get(sort, 'field') !== field) {
+      sort.asc = true
+    } else {
+      sort.asc = !sort.asc
+    }
+    sort.field = field
+    this.setState({
+      sort
+    }, () => console.log(this.state.sort))
+  }
+
   render () {
     const { craftingClasses, show } = this.state
+
+    const sortedCraftingClasses = _orderBy(craftingClasses, [this.state.sort.field], [this.state.sort.asc ? 'asc' : 'desc'])
 
     return (
       <React.Fragment>
         <FilterCraftingClasses
           handleFilterUpdate={this.handleFilterUpdate.bind(this)}
-          options={craftingClasses}
+          options={sortedCraftingClasses}
         />
         <table className="table table-hover table-condensed table-responsive">
-          <CalculationsTableHead data={craftingClasses} />
+          <CalculationsTableHead data={sortedCraftingClasses} handleSortUpdate={this.handleSortUpdate.bind(this)} />
           <CalculationsTableBody
-            data={craftingClasses}
+            data={sortedCraftingClasses}
             show={show}
             handleCurrentLevelSelection={this.handleCurrentLevelSelection.bind(this)}
             handleCurrentExperienceChange={this.handleCurrentExperienceChange.bind(this)}

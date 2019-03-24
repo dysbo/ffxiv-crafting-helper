@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { get as _get } from 'lodash'
+import { get as _get, toNumber as _toNumber } from 'lodash'
 
 class ExperiencePerItemCell extends React.Component {
   constructor (props) {
@@ -10,6 +10,14 @@ class ExperiencePerItemCell extends React.Component {
 
     this.state = {
       experiencePerItem
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.experiencePerItem !== prevProps.experiencePerItem) {
+      this.setState({
+        experiencePerItem: _toNumber(this.props.experiencePerItem)
+      })
     }
   }
 
