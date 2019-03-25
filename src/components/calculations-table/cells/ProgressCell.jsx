@@ -2,9 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class ProgressCell extends React.Component {
+  static calculateProgress (currentExperience, totalExperience) {
+    if (currentExperience < 0 || totalExperience < 1) {
+      return 0
+    }
+
+    return Math.floor(currentExperience / totalExperience * 100)
+  }
+
   render () {
     const { currentExperience, totalExperience } = this.props
-    const progress = `${(Math.floor(currentExperience / totalExperience * 100))}%`
+    const progress = `${(ProgressCell.calculateProgress(currentExperience, totalExperience))}%`
 
     return (
       <td className="d-none d-sm-table-cell">
