@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class ProgressCell extends React.Component {
   render () {
     const { currentExperience, totalExperience } = this.props
-    const progress = `${(Math.round(currentExperience / totalExperience * 100))}%`
+    const progress = `${(Math.floor(currentExperience / totalExperience * 100))}%`
 
     return (
       <td className="d-none d-sm-table-cell">
