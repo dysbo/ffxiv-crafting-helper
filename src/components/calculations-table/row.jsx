@@ -5,6 +5,7 @@ import CurrentLevelCell from './cells/CurrentLevelCell'
 import CurrentExperienceCell from './cells/CurrentExperienceCell'
 import ExperiencePerItemCell from './cells/ExperiencePerItemCell'
 import ProgressCell from './cells/ProgressCell'
+import NumericDisplay from './cells/NumericDisplay'
 
 class CalculationsTableRow extends React.Component {
   render () {
@@ -42,17 +43,17 @@ class CalculationsTableRow extends React.Component {
           totalExperience={totalExperience}
         />
         <td className="d-none d-sm-table-cell">
-          {totalExperience}
+          <NumericDisplay value={totalExperience} />
         </td>
         <td className="d-none d-sm-table-cell">
-          {Math.max(totalExperience - currentExperience, 0)}
+          <NumericDisplay value={Math.max(totalExperience - currentExperience, 0)} />
         </td>
         <ExperiencePerItemCell
           experiencePerItem={experiencePerItem}
           handleExperiencePerItemChange={handleExperiencePerItemChange}
         />
         <td>
-          {Math.ceil(remainingExperience / experiencePerItem)}
+          <NumericDisplay value={Math.ceil(remainingExperience / experiencePerItem)} />
         </td>
         <ProgressCell
           currentExperience={currentExperience}
