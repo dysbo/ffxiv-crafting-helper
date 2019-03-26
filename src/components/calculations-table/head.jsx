@@ -21,7 +21,11 @@ class CalculationsTableHead extends React.Component {
         <th className="d-none d-sm-table-cell">Remaining Experience</th>
         <th>Experience Per Item</th>
         <th>Items to Level Up</th>
-        <th className="d-none d-sm-table-cell">Progress</th>
+        <th className="d-none d-sm-table-cell">
+          <button className="link-like" onClick={this.props.handleSortUpdate.bind(this, 'progress')}>
+            Progress
+          </button>
+        </th>
       </tr>
       </thead>
     )
