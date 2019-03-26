@@ -9,6 +9,10 @@ class App extends Component {
           FFXIV Crafting & Gathering Calculator
         </h1>
         <CalculationsTable />
+        <hr />
+        <div className="text-center text-muted text-lowercase">
+          Version {process.env.REACT_APP_VERSION}
+        </div>
       </div>
     )
   }
