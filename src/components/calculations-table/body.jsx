@@ -11,6 +11,7 @@ class CalculationsTableBody extends React.Component {
       handleCurrentLevelSelection,
       handleCurrentExperienceChange,
       handleExperiencePerItemChange,
+      handleProgressChange,
       show
     } = this.props
 
@@ -24,6 +25,7 @@ class CalculationsTableBody extends React.Component {
           handleCurrentLevelSelection={handleCurrentLevelSelection.bind(this, d.abbreviation)}
           handleCurrentExperienceChange={handleCurrentExperienceChange.bind(this, d.abbreviation)}
           handleExperiencePerItemChange={handleExperiencePerItemChange.bind(this, d.abbreviation)}
+          handleProgressChange={handleProgressChange.bind(this, d.abbreviation)}
         />
       ))}
       </tbody>
@@ -41,7 +43,8 @@ CalculationsTableBody.propTypes = {
   })),
   handleCurrentLevelSelection: PropTypes.func.isRequired,
   handleCurrentExperienceChange: PropTypes.func.isRequired,
-  handleExperiencePerItemChange: PropTypes.func.isRequired
+  handleExperiencePerItemChange: PropTypes.func.isRequired,
+  handleProgressChange: PropTypes.func.isRequired
 }
 
 export default CalculationsTableBody

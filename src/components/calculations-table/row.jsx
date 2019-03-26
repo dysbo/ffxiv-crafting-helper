@@ -20,7 +20,8 @@ class CalculationsTableRow extends React.Component {
       },
       handleCurrentLevelSelection,
       handleCurrentExperienceChange,
-      handleExperiencePerItemChange
+      handleExperiencePerItemChange,
+      handleProgressChange
     } = this.props
 
     const remainingExperience = Math.max(totalExperience - currentExperience, 0)
@@ -53,7 +54,11 @@ class CalculationsTableRow extends React.Component {
         <td>
           {Math.ceil(remainingExperience / experiencePerItem)}
         </td>
-        <ProgressCell currentExperience={currentExperience} totalExperience={totalExperience} />
+        <ProgressCell
+          currentExperience={currentExperience}
+          totalExperience={totalExperience}
+          handleProgressChange={handleProgressChange}
+        />
       </tr>
     )
   }
@@ -70,7 +75,8 @@ CalculationsTableRow.propTypes = {
   }).isRequired,
   handleCurrentLevelSelection: PropTypes.func.isRequired,
   handleCurrentExperienceChange: PropTypes.func.isRequired,
-  handleExperiencePerItemChange: PropTypes.func.isRequired
+  handleExperiencePerItemChange: PropTypes.func.isRequired,
+  handleProgressChange: PropTypes.func.isRequired
 }
 
 export default CalculationsTableRow

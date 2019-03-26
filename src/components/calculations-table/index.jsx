@@ -102,6 +102,17 @@ class CalculationsTable extends React.Component {
     })
   }
 
+  handleProgressChange (abbreviation, progress) {
+    const { craftingClasses } = this.state
+    const craftingClassesClone = _cloneDeep(craftingClasses)
+    const craftingClass = _find(craftingClassesClone, c => c.abbreviation === abbreviation)
+
+    craftingClass.progress = progress
+    this.setState({
+      craftingClasses: craftingClassesClone
+    }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
+  }
+
   render () {
     const { craftingClasses, show } = this.state
 
@@ -121,6 +132,7 @@ class CalculationsTable extends React.Component {
             handleCurrentLevelSelection={this.handleCurrentLevelSelection.bind(this)}
             handleCurrentExperienceChange={this.handleCurrentExperienceChange.bind(this)}
             handleExperiencePerItemChange={this.handleExperiencePerItemChange.bind(this)}
+            handleProgressChange={this.handleProgressChange.bind(this)}
           />
         </table>
       </React.Fragment>
