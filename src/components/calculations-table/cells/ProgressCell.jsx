@@ -48,7 +48,7 @@ class ProgressCell extends React.Component {
       <td className="d-none d-sm-table-cell">
         <div className="progress">
           <div className="progress-bar" style={{ width: progress }}>
-            {currentExperience} / {totalExperience} ({progress})
+            {currentExperience.toLocaleString()} / {totalExperience.toLocaleString()} ({progress})
           </div>
         </div>
       </td>
