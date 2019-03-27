@@ -1,13 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { orderBy as _orderBy } from 'lodash'
 
 class FilterCraftingClasses extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      options: _orderBy(props.options, ['name'], ['asc'])
+    }
+  }
+
   render () {
+    const { handleFilterUpdate } = this.props
+    const { options } = this.state
     return (
       <div>
-        <select className="fullWidth" onChange={this.props.handleFilterUpdate}>
+        <select className="fullWidth" onChange={handleFilterUpdate}>
           <option value="">Show All</option>
-          {this.props.options.map((o, key) => (
+          {options.map((o, key) => (
             <option key={key} value={o.abbreviation}>{o.name}</option>
           ))}
         </select>
