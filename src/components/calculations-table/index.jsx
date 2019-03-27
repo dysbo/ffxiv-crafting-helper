@@ -122,7 +122,7 @@ class CalculationsTable extends React.Component {
       <React.Fragment>
         <FilterCraftingClasses
           handleFilterUpdate={this.handleFilterUpdate.bind(this)}
-          options={sortedCraftingClasses}
+          options={_cloneDeep(sortedCraftingClasses)}
         />
         <table className="table table-hover table-condensed table-responsive">
           <CalculationsTableHead
