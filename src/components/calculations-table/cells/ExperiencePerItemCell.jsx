@@ -41,6 +41,7 @@ class ExperiencePerItemCell extends React.Component {
       <td>
         <input
           type="number"
+          step={100}
           value={experiencePerItem}
           onChange={this.handleExperiencePerItemChange.bind(this)}
           onBlur={this.handleExperiencePerItemBlur.bind(this)}
