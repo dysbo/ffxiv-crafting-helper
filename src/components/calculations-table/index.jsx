@@ -114,7 +114,7 @@ class CalculationsTable extends React.Component {
   }
 
   render () {
-    const { craftingClasses, show } = this.state
+    const { craftingClasses, show, sort } = this.state
 
     const sortedCraftingClasses = _orderBy(craftingClasses, [this.state.sort.field], [this.state.sort.asc ? 'asc' : 'desc'])
 
@@ -125,7 +125,11 @@ class CalculationsTable extends React.Component {
           options={sortedCraftingClasses}
         />
         <table className="table table-hover table-condensed table-responsive">
-          <CalculationsTableHead data={sortedCraftingClasses} handleSortUpdate={this.handleSortUpdate.bind(this)} />
+          <CalculationsTableHead
+            data={sortedCraftingClasses}
+            sort={sort}
+            handleSortUpdate={this.handleSortUpdate.bind(this)}
+          />
           <CalculationsTableBody
             data={sortedCraftingClasses}
             show={show}
