@@ -55,7 +55,6 @@ class CurrentExperienceCell extends React.Component {
           onKeyDown={this.handleKeyPress.bind(this)}
           min={0}
           max={Math.max(totalExperience, 1)}
-          step={100}
         />
       </td>
     )

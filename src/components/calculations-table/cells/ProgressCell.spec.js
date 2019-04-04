@@ -4,7 +4,7 @@ import ProgressCell from './ProgressCell'
 
 describe('ProgressCell tests', () => {
   it('renders without crashing', () => {
-    const wrapper = shallow(<ProgressCell currentExperience={50} totalExperience={100} />)
+    const wrapper = shallow(<ProgressCell currentExperience={50} totalExperience={100} handleProgressChange={jest.fn()} />)
     expect(wrapper).toBeDefined()
   })
 
