@@ -1,59 +1,28 @@
 import React from 'react'
 import {
   cloneDeep as _cloneDeep,
-  concat as _concat,
   find as _find,
   get as _get,
-  map as _map,
   orderBy as _orderBy,
-  toNumber as _toNumber,
-  uniqBy as _uniqBy
+  toNumber as _toNumber
 } from 'lodash'
 import CalculationsTableHead from './CalculationsTableHead'
 import CalculationsTableBody from './CalculationsTableBody'
-import craftingClasses from '../../data/crafting-classes'
 import FilterCraftingClasses from './FilterCraftingClasses'
-
-const STATE = {
-  craftingClasses: _map(craftingClasses, c => {
-    c.currentLevel = 1
-    c.currentExperience = 0
-    c.experiencePerItem = 1
-    c.totalExperience = 300
-    return c
-  }),
-  show: '',
-  sort: {
-    field: 'name',
-    asc: true
-  }
-}
+import { retrieveAndUpdateStoredData } from '../../util/localStorageHelper'
 
 class CalculationsTable extends React.Component {
   constructor(props) {
     super(props)
-    const craftingClasses = CalculationsTable.retrieveAndUpdateStoredData()
-    if (craftingClasses) {
-      this.state = {
-        craftingClasses: _uniqBy(_concat(craftingClasses, STATE.craftingClasses), 'abbreviation'),
-        show: '',
-        sort: {
-          field: 'name',
-          asc: true
-        }
+    const craftingClasses = retrieveAndUpdateStoredData()
+    this.state = {
+      craftingClasses,
+      show: '',
+      sort: {
+        field: 'name',
+        asc: true
       }
-    } else {
-      this.state = STATE
     }
-  }
-
-  static retrieveAndUpdateStoredData () {
-    const storedData = localStorage.getItem('craftingClasses')
-    if (!storedData) {
-      return []
-    }
-
-    return JSON.parse(storedData)
   }
 
   handleCurrentLevelSelection (abbreviation, level, totalExperience) {
