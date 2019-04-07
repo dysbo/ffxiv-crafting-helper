@@ -1,19 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Modal } from 'react-bootstrap'
-import { get as _get } from 'lodash'
+import { cloneDeep as _cloneDeep, get as _get } from 'lodash'
 import xivServers from '../../data/xiv-servers'
 import * as xivApi from '../../util/xivApi'
 
 const LABEL_CLASSES = 'font-weight-bold text-right'
 
+const INITIAL_STATE = {
+  server: xivServers[0] || '',
+  pagination: {},
+  results: [],
+  thinking: false,
+  characterId: undefined,
+  characterName: undefined
+}
+
 class CharacterSelectorModal extends React.Component {
-  state = {
-    server: xivServers[0] || '',
-    pagination: {},
-    results: [],
-    thinking: false
-  }
+  state = _cloneDeep(INITIAL_STATE)
 
   handleCharacterInput (event) {
     this.setState({
@@ -28,22 +32,25 @@ class CharacterSelectorModal extends React.Component {
   }
 
   async handleCharacterSearch () {
-    this.setState({
-      thinking: true
-    }, async () => {
-      const { characterName, server } = this.state
-      const data = await xivApi.searchForCharacter(server, characterName)
-      console.log(data)
+    const { characterName, server } = this.state
+    if (!!characterName) {
       this.setState({
-        thinking: false,
-        results: _get(data, 'Results', []),
-        pagination: _get(data, 'Pagination', {})
+        thinking: true
+      }, async () => {
+        const data = await xivApi.searchForCharacter(server, characterName)
+        console.log(data)
+        this.setState({
+          thinking: false,
+          results: _get(data, 'Results', []),
+          pagination: _get(data, 'Pagination', {})
+        })
       })
-    })
+    } else {
+      alert('Cannot search without a character name!')
+    }
   }
 
   handleCharacterSelection (event) {
-    console.log('I selected this', event.target.value)
     this.setState({
       characterId: event.target.value
     })
@@ -57,12 +64,20 @@ class CharacterSelectorModal extends React.Component {
     onHide()
   }
 
+  handleModalClose () {
+    const { onHide } = this.props
+    onHide()
+    this.setState({
+      ...INITIAL_STATE
+    })
+  }
+
   render () {
-    const { onHide, show } = this.props
+    const { show } = this.props
     const { results, thinking } = this.state
 
     return (
-      <Modal show={show} onHide={onHide}>
+      <Modal show={show} onHide={this.handleModalClose.bind(this)}>
         <Modal.Header closeButton>
           <Modal.Title>
             Load My Character Data
@@ -118,9 +133,7 @@ class CharacterSelectorModal extends React.Component {
                   />
                 </td>
                 <td>
-                  <label
-                    htmlFor={`lodestone-${r.ID}`}
-                  >
+                  <label htmlFor={`lodestone-${r.ID}`}>
                     {r.Name}
                   </label>
                 </td>
@@ -146,10 +159,14 @@ class CharacterSelectorModal extends React.Component {
           </table>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={onHide}>
+          <Button variant="secondary" onClick={this.handleModalClose.bind(this)}>
             Close
           </Button>
-          <Button variant="primary" onClick={this.handleSubmit.bind(this)}>
+          <Button
+            disabled={!this.state.characterId}
+            variant="primary"
+            onClick={this.handleSubmit.bind(this)}
+          >
             Select
           </Button>
         </Modal.Footer>
