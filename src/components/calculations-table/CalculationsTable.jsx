@@ -32,10 +32,10 @@ const STATE = {
 class CalculationsTable extends React.Component {
   constructor(props) {
     super(props)
-    const craftingClasses = localStorage.getItem('craftingClasses')
+    const craftingClasses = CalculationsTable.retrieveAndUpdateStoredData()
     if (craftingClasses) {
       this.state = {
-        craftingClasses: _uniqBy(_concat(JSON.parse(craftingClasses), STATE.craftingClasses), 'abbreviation'),
+        craftingClasses: _uniqBy(_concat(craftingClasses, STATE.craftingClasses), 'abbreviation'),
         show: '',
         sort: {
           field: 'name',
@@ -47,6 +47,15 @@ class CalculationsTable extends React.Component {
     }
   }
 
+  static retrieveAndUpdateStoredData () {
+    const storedData = localStorage.getItem('craftingClasses')
+    if (!storedData) {
+      return []
+    }
+
+    return JSON.parse(storedData)
+  }
+
   handleCurrentLevelSelection (abbreviation, level, totalExperience) {
     const { craftingClasses } = this.state
     const craftingClassesClone = _cloneDeep(craftingClasses)
@@ -54,7 +63,6 @@ class CalculationsTable extends React.Component {
 
     craftingClass.currentLevel = _toNumber(level)
     craftingClass.totalExperience = totalExperience
-    craftingClass.currentExperience = 0
     this.setState({
       craftingClasses: craftingClassesClone
     }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
@@ -124,21 +132,23 @@ class CalculationsTable extends React.Component {
           handleFilterUpdate={this.handleFilterUpdate.bind(this)}
           options={_cloneDeep(sortedCraftingClasses)}
         />
-        <table className="table table-hover table-condensed table-responsive">
-          <CalculationsTableHead
-            data={sortedCraftingClasses}
-            sort={sort}
-            handleSortUpdate={this.handleSortUpdate.bind(this)}
-          />
-          <CalculationsTableBody
-            data={sortedCraftingClasses}
-            show={show}
-            handleCurrentLevelSelection={this.handleCurrentLevelSelection.bind(this)}
-            handleCurrentExperienceChange={this.handleCurrentExperienceChange.bind(this)}
-            handleExperiencePerItemChange={this.handleExperiencePerItemChange.bind(this)}
-            handleProgressChange={this.handleProgressChange.bind(this)}
-          />
-        </table>
+        <div className="table-responsive">
+          <table className="table table-hover table-condensed">
+            <CalculationsTableHead
+              data={sortedCraftingClasses}
+              sort={sort}
+              handleSortUpdate={this.handleSortUpdate.bind(this)}
+            />
+            <CalculationsTableBody
+              data={sortedCraftingClasses}
+              show={show}
+              handleCurrentLevelSelection={this.handleCurrentLevelSelection.bind(this)}
+              handleCurrentExperienceChange={this.handleCurrentExperienceChange.bind(this)}
+              handleExperiencePerItemChange={this.handleExperiencePerItemChange.bind(this)}
+              handleProgressChange={this.handleProgressChange.bind(this)}
+            />
+          </table>
+        </div>
       </React.Fragment>
     )
   }

@@ -6,9 +6,19 @@ import expPerLevel from '../../../data/exp-per-level'
 class CurrentLevelCell extends React.Component {
   handleCurrentLevelSelection (event) {
     const currentLevel = _get(event, 'target.value', event)
-    const totalExperience = expPerLevel[currentLevel]
 
-    this.props.handleCurrentLevelSelection(currentLevel, totalExperience)
+    const validatedCurrentLevel =
+      currentLevel < 1 ? 1
+        : currentLevel > 69 ? 69
+        : currentLevel
+
+    const totalExperience = expPerLevel[validatedCurrentLevel]
+
+    this.props.handleCurrentLevelSelection(validatedCurrentLevel, totalExperience)
+  }
+
+  handleFocus (event) {
+    event.target.select()
   }
 
   render () {
@@ -16,11 +26,14 @@ class CurrentLevelCell extends React.Component {
 
     return (
       <td>
-        <select value={currentLevel} onChange={this.handleCurrentLevelSelection.bind(this)}>
-          {Object.keys(expPerLevel).map((level, key) => (
-            <option key={key} value={level}>{level}</option>
-          ))}
-        </select>
+        <input
+          type="number"
+          onChange={this.handleCurrentLevelSelection.bind(this)}
+          min={1}
+          max={69}
+          value={currentLevel}
+          onFocus={this.handleFocus.bind(this)}
+        />
       </td>
     )
   }
