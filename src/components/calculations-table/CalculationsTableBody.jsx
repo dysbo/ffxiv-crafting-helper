@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { map as _map } from 'lodash'
-import CalculationsTableRow from './row'
+import CalculationsTableRow from './CalculationsTableRow'
 
 class CalculationsTableBody extends React.Component {
   render () {
