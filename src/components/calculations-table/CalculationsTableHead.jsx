@@ -15,7 +15,7 @@ class CalculationsTableHead extends React.Component {
           text={<span>Crafting/<br />Gathering Class</span>}
         />
         <SortableHeaderCell
-          style={{ minWidth: '78px' }}
+          className="currentLevel"
           handleSortUpdate={handleSortUpdate}
           sort={sort}
           fieldName="currentLevel"
