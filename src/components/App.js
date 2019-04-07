@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CalculationsTable from './calculations-table'
+import CalculationsTable from './calculations-table/CalculationsTable'
 
 class App extends Component {
   render() {

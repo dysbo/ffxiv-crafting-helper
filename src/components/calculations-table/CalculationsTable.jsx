@@ -9,8 +9,8 @@ import {
   toNumber as _toNumber,
   uniqBy as _uniqBy
 } from 'lodash'
-import CalculationsTableHead from './head'
-import CalculationsTableBody from './body'
+import CalculationsTableHead from './CalculationsTableHead'
+import CalculationsTableBody from './CalculationsTableBody'
 import craftingClasses from '../../data/crafting-classes'
 import FilterCraftingClasses from './FilterCraftingClasses'
 
