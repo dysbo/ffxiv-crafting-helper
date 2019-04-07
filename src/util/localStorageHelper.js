@@ -2,12 +2,21 @@ import CRAFTING_CLASSES from '../data/crafting-classes'
 import { applyChanges, diff } from 'diff-json'
 import { filter as _filter, find as _find, map as _map } from 'lodash'
 
-export function retrieveAndUpdateStoredData () {
+const KEYS = {
+  CHARACTER_DATA: 'character',
+  CRAFTING_CLASS_DATA: 'craftingClasses'
+}
+
+function store(key, data) {
+  localStorage.setItem(key, JSON.stringify(data))
+}
+
+export function retrieveAndUpdateCraftingClassData () {
   // get the default crafting class data
   const defaultCraftingClasses = getDefaultCraftingClasses()
 
   // retrieve the stored data from local storage
-  const storedData = localStorage.getItem('craftingClasses')
+  const storedData = localStorage.getItem(KEYS.CRAFTING_CLASS_DATA)
 
   // if there is no stored data, return the default data
   if (!storedData) {
@@ -43,6 +52,32 @@ export function retrieveAndUpdateStoredData () {
 
   // send back the updated stored data
   return result
+}
+
+export function retrieveAndUpdateCharacterData() {
+  // get the stored character data
+  const storedData = localStorage.getItem(KEYS.CHARACTER_DATA)
+
+  // if there is no character data, return an empty object
+  if (!storedData) {
+    return {}
+  }
+
+  // if there is, update it
+  // TBD
+
+  // return the character data
+  return JSON.parse(storedData)
+}
+
+export function storeCharacterData(characterData) {
+  // localStorage.setItem(KEYS.CHARACTER_DATA, JSON.stringify(characterData))
+  store(KEYS.CHARACTER_DATA, characterData)
+}
+
+export function storeCraftingClassData(craftingClasses) {
+  // localStorage.setItem(KEYS.CRAFTING_CLASS_DATA, JSON.stringify(craftingClasses))
+  store(KEYS.CRAFTING_CLASS_DATA, craftingClasses)
 }
 
 export function getDefaultCraftingClasses () {

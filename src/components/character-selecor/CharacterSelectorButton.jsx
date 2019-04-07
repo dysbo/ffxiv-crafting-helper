@@ -22,9 +22,22 @@ class CharacterSelectorButton extends React.Component {
 
   render () {
     const { showModal } = this.state
-    const { onClear, onSelect } = this.props
+    const { character, onClear, onSelect } = this.props
+    console.log(character)
     return (
       <React.Fragment>
+        {!!character && (
+          <React.Fragment>
+            <span className="margin-right">{character.Name}</span>
+            <img
+              src={character.Avatar}
+              height={48}
+              width={48}
+              alt={character.Name}
+              className="margin-right"
+            />
+          </React.Fragment>
+        )}
         <Button onClick={this.handleShow.bind(this)}>
           Load My Character Data
         </Button>
@@ -41,7 +54,8 @@ class CharacterSelectorButton extends React.Component {
 
 CharacterSelectorButton.propTypes = {
   onSelect: PropTypes.func.isRequired,
-  onClear: PropTypes.func.isRequired
+  onClear: PropTypes.func.isRequired,
+  character: PropTypes.shape()
 }
 
 export default CharacterSelectorButton

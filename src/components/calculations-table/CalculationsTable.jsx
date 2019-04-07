@@ -9,12 +9,12 @@ import {
 import CalculationsTableHead from './CalculationsTableHead'
 import CalculationsTableBody from './CalculationsTableBody'
 import FilterCraftingClasses from './FilterCraftingClasses'
-import { retrieveAndUpdateStoredData } from '../../util/localStorageHelper'
+import { retrieveAndUpdateCraftingClassData, storeCraftingClassData } from '../../util/localStorageHelper'
 
 class CalculationsTable extends React.Component {
   constructor(props) {
     super(props)
-    const craftingClasses = retrieveAndUpdateStoredData()
+    const craftingClasses = retrieveAndUpdateCraftingClassData()
     this.state = {
       craftingClasses,
       show: '',
@@ -34,7 +34,7 @@ class CalculationsTable extends React.Component {
     craftingClass.totalExperience = totalExperience
     this.setState({
       craftingClasses: craftingClassesClone
-    }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
+    }, () => storeCraftingClassData(craftingClassesClone))
   }
 
   handleCurrentExperienceChange (abbreviation, currentExperience) {
@@ -45,7 +45,7 @@ class CalculationsTable extends React.Component {
     craftingClass.currentExperience = _toNumber(currentExperience)
     this.setState({
       craftingClasses: craftingClassesClone
-    }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
+    }, () => storeCraftingClassData(craftingClassesClone))
   }
 
   handleExperiencePerItemChange (abbreviation, experiencePerItem) {
@@ -56,7 +56,7 @@ class CalculationsTable extends React.Component {
     craftingClass.experiencePerItem = _toNumber(experiencePerItem)
     this.setState({
       craftingClasses: craftingClassesClone
-    }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
+    }, () => storeCraftingClassData(craftingClassesClone))
   }
 
   handleFilterUpdate (event) {
@@ -87,7 +87,7 @@ class CalculationsTable extends React.Component {
     craftingClass.progress = progress
     this.setState({
       craftingClasses: craftingClassesClone
-    }, () => localStorage.setItem('craftingClasses', JSON.stringify(craftingClassesClone)))
+    }, () => storeCraftingClassData(craftingClassesClone))
   }
 
   render () {

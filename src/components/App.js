@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
+import { get as _get } from 'lodash'
 import CalculationsTable from './calculations-table/CalculationsTable'
 import CharacterSelectorButton from './character-selecor/CharacterSelectorButton'
 import * as xivApi from '../util/xivApi'
+import * as localStorageHelper from '../util/localStorageHelper'
 
 class App extends Component {
   state = {
-    character: null
+    character: localStorageHelper.retrieveAndUpdateCharacterData()
   }
 
   async handleCharacterSelection (characterId) {
-    console.log('How did I get this??', characterId)
     const characterData = await xivApi.getCharacter(characterId)
-    console.log(characterData)
     this.setState({
       character: characterData
-    })
+    }, localStorageHelper.storeCharacterData.bind(this, characterData))
   }
 
   handleCharacterClear () {
@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   render () {
+    const { character } = this.state
     return (
       <div className="container-fluid">
         <table className="fullWidth">
@@ -38,6 +39,7 @@ class App extends Component {
               <CharacterSelectorButton
                 onSelect={this.handleCharacterSelection.bind(this)}
                 onClear={this.handleCharacterClear.bind(this)}
+                character={_get(character, 'Character')}
               />
             </td>
           </tr>
