@@ -1,13 +1,21 @@
 import CRAFTING_CLASSES from '../data/crafting-classes'
 import { applyChanges, diff } from 'diff-json'
-import { filter as _filter, find as _find, map as _map } from 'lodash'
+import {
+  filter as _filter,
+  find as _find,
+  get as _get,
+  includes as _includes,
+  map as _map,
+  set as _set,
+  values as _values
+} from 'lodash'
 
 const KEYS = {
   CHARACTER_DATA: 'character',
   CRAFTING_CLASS_DATA: 'craftingClasses'
 }
 
-function store(key, data) {
+function store (key, data) {
   localStorage.setItem(key, JSON.stringify(data))
 }
 
@@ -54,7 +62,7 @@ export function retrieveAndUpdateCraftingClassData () {
   return result
 }
 
-export function retrieveAndUpdateCharacterData() {
+export function retrieveAndUpdateCharacterData () {
   // get the stored character data
   const storedData = localStorage.getItem(KEYS.CHARACTER_DATA)
 
@@ -70,17 +78,17 @@ export function retrieveAndUpdateCharacterData() {
   return JSON.parse(storedData)
 }
 
-export function storeCharacterData(characterData) {
+export function storeCharacterData (characterData) {
   // localStorage.setItem(KEYS.CHARACTER_DATA, JSON.stringify(characterData))
   store(KEYS.CHARACTER_DATA, characterData)
 }
 
-export function storeCraftingClassData(craftingClasses) {
+export function storeCraftingClassData (craftingClasses) {
   // localStorage.setItem(KEYS.CRAFTING_CLASS_DATA, JSON.stringify(craftingClasses))
   store(KEYS.CRAFTING_CLASS_DATA, craftingClasses)
 }
 
-export function clearCharacterData() {
+export function clearCharacterData () {
   if (!!localStorage.getItem(KEYS.CHARACTER_DATA)) {
     localStorage.removeItem(KEYS.CHARACTER_DATA)
   }
@@ -91,6 +99,25 @@ export function clearCraftingClassData () {
   //   localStorage.removeItem(KEYS.CRAFTING_CLASS_DATA)
   // }
   console.log(`I'll really do it next time.`)
+}
+
+export function updateCraftingClassDataWithCharacterData () {
+  const classJobCategories = ['Disciple of the Land', 'Disciple of the Hand']
+  const craftingClassData = retrieveAndUpdateCraftingClassData()
+  const characterData = _filter(_values(_get(retrieveAndUpdateCharacterData(), 'Character.ClassJobs')),
+    c => _includes(classJobCategories, _get(c, 'Class.ClassJobCategory.Name')))
+
+  const newCraftingClassData = _map(craftingClassData, c => {
+    const lodestoneClassData = _find(characterData, d => _get(d, 'Class.Abbreviation') === _get(c, 'abbreviation'))
+    console.log(lodestoneClassData)
+    _set(c, 'currentLevel', _get(lodestoneClassData, 'Level', 1))
+    _set(c, 'currentExperience', _get(lodestoneClassData, 'ExpLevel', 0))
+    _set(c, 'totalExperience', _get(lodestoneClassData, 'ExpLevelMax', c.totalExperience))
+    return c
+  })
+
+  console.log('comparing', craftingClassData, characterData)
+  return newCraftingClassData
 }
 
 export function getDefaultCraftingClasses () {

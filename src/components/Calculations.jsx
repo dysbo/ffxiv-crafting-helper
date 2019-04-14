@@ -1,53 +1,124 @@
 import React from 'react'
-import * as localStorageHelper from '../util/localStorageHelper'
-import * as lodestoneHelper from '../util/lodestoneHelper'
-import CalculationsBody from './CalculationsBody'
-import Header from './Header'
+import { cloneDeep as _cloneDeep, concat as _concat, find as _find, get as _get, uniqBy as _uniqBy } from 'lodash'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import * as LocalStorageService from '../service/localStorage'
+import * as XivApi from '../service/xivApi'
+import LodestoneModal from './LodestoneModal'
+import CalculationsTable from './CalculationsTable'
 
 class Calculations extends React.Component {
-  state = {}
+  state = {
+    lodestoneModalIsOpen: false
+  }
 
   componentDidMount () {
-    const character = localStorageHelper.retrieveAndUpdateCharacterData()
-    const craftingClasses = localStorageHelper.retrieveAndUpdateCraftingClassData()
+    const characterData = LocalStorageService.retrieveAndUpdateCharacterData()
+    const classData = LocalStorageService.retrieveAndUpdateCraftingClassData()
+
     this.setState({
-      craftingClasses
-    }, () => {
-      if (!!character) {
-        this.setState({
-          character
-        })
+      characterData,
+      classData
+    })
+  }
+
+  activateLodestoneModal () {
+    this.setState({
+      lodestoneModalIsOpen: true
+    })
+  }
+
+  deactivateLodestoneModal () {
+    this.setState({
+      lodestoneModalIsOpen: false
+    })
+  }
+
+  clearCharacterData () {
+    LocalStorageService.clearCharacterData()
+    this.setState({
+      characterData: undefined
+    })
+  }
+
+  async refreshCharacterData () {
+    const characterId = _get(this.state, 'characterData.Character.ID')
+    const characterData = await XivApi.getCharacter(characterId)
+    this.updateCharacterData(characterData)
+    // this.updateStoredDataWithLodestoneData()
+  }
+
+  updateCharacterData (characterData) {
+    LocalStorageService.storeCharacterData(characterData)
+    this.setState({
+      characterData
+    }, this.updateStoredDataWithLodestoneData.bind(this))
+  }
+
+  updateClassData (classData) {
+    LocalStorageService.storeCraftingClassData(classData)
+    this.setState({
+      classData
+    })
+  }
+
+  updateStoredDataWithLodestoneData () {
+    this.updateClassData(LocalStorageService.updateCraftingClassDataWithCharacterData())
+  }
+
+  updateLocalStorage (abbreviation, newData) {
+    const { classData } = this.state
+    const newClassData = _cloneDeep(classData)
+    const targetData = _find(newClassData, c => c.abbreviation === abbreviation)
+    if (targetData) {
+      const replacementData = {
+        ...targetData,
+        ...newData
       }
-    })
-  }
 
-  handleStoreCharacterData (character) {
-    this.setState({
-      character
-    })
-    localStorageHelper.storeCharacterData(character)
-  }
+      const toUpdate = _uniqBy(_concat(replacementData, newClassData), c => c.abbreviation)
 
-  handleClearCharacterData () {
-    this.setState({
-      character: undefined
-    })
-    localStorageHelper.clearCharacterData()
+      this.updateClassData(toUpdate)
+    }
   }
 
   render () {
-    const { character, craftingClasses } = this.state
+    const { characterData, classData, lodestoneModalIsOpen } = this.state
     return (
       <div>
-        <Header
-          character={character}
-          craftingClasses={craftingClasses}
-          handleClearCharacterData={this.handleClearCharacterData.bind(this)}
-          handleStoreCharacterData={this.handleStoreCharacterData.bind(this)}
-        />
-        <CalculationsBody
-          character={character}
-          craftingClasses={craftingClasses}
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand>
+            FFXIV Crafting & Gathering Helper
+          </Navbar.Brand>
+          <Nav className="mr-auto" />
+          <Nav>
+            {!characterData && (
+              <Nav.Link onClick={this.activateLodestoneModal.bind(this)}>
+                Import Character Data
+              </Nav.Link>
+            )}
+            {!!characterData && (
+              <NavDropdown title={characterData.Character.Name} className="dropleft">
+                <NavDropdown.Item onClick={this.refreshCharacterData.bind(this)}>
+                  Refresh Character Class Data
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={this.activateLodestoneModal.bind(this)}>
+                  Import Different Character Data
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={this.clearCharacterData.bind(this)}>
+                  Clear Character Data
+                </NavDropdown.Item>
+              </NavDropdown>
+            )}
+          </Nav>
+        </Navbar>
+        <Container fluid>
+          <CalculationsTable classData={classData} updateLocalStorage={this.updateLocalStorage.bind(this)} />
+        </Container>
+        <LodestoneModal
+          show={lodestoneModalIsOpen}
+          onHide={this.deactivateLodestoneModal.bind(this)}
+          onSelect={this.updateCharacterData.bind(this)}
         />
       </div>
     )

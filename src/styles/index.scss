@@ -22,3 +22,19 @@ $iconSize: 28px;
   max-height: 300px;
   overflow: auto;
 }
+
+table.calculations {
+  tbody {
+    td {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  
+  thead {
+    th {
+      vertical-align: bottom;
+      text-align: center;
+    }
+  }
+}

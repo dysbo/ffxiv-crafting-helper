@@ -4,9 +4,7 @@ import Calculations from './Calculations'
 class App extends React.Component {
   render () {
     return (
-      <div>
-        <Calculations />
-      </div>
+      <Calculations />
     )
   }
 }
