@@ -2,56 +2,431 @@
   {
     "name": "Alchemist",
     "abbreviation": "ALC",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-alc-alchemist-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Armorer",
     "abbreviation": "ARM",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-arm-armorsmith-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Blacksmith",
     "abbreviation": "BSM",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-bsm-blacksmith-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Carpenter",
     "abbreviation": "CRP",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-crp-carpenter-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Culinarian",
     "abbreviation": "CUL",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-cul-culinarian-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Goldsmith",
     "abbreviation": "GSM",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-gsm-goldsmith-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Leatherworker",
     "abbreviation": "LTW",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-ltw-leatherworker-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Weaver",
     "abbreviation": "WVR",
-    "type": "crafting"
+    "type": "crafting",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ffxiv-wvr-weaver-leveling-guide-ffxivarr",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 35,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 5,
+          "minLevel": 60,
+          "maxLevel": 64
+        },
+        {
+          "page": 6,
+          "minLevel": 65,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Botanist",
     "abbreviation": "BTN",
-    "type": "gathering"
+    "type": "gathering",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ff14-botany-botanist-leveling-guide-a-realm-reborn",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 15
+        },
+        {
+          "page": 2,
+          "minLevel": 16,
+          "maxLevel": 35
+        },
+        {
+          "page": 3,
+          "minLevel": 36,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 6,
+          "minLevel": 60,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Miner",
     "abbreviation": "MIN",
-    "type": "gathering"
+    "type": "gathering",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ff14-mining-miner-leveling-guide-a-realm-reborn",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 15
+        },
+        {
+          "page": 2,
+          "minLevel": 16,
+          "maxLevel": 35
+        },
+        {
+          "page": 3,
+          "minLevel": 36,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 59
+        },
+        {
+          "page": 6,
+          "minLevel": 60,
+          "maxLevel": 69
+        }
+      ]
+    }
   },
   {
     "name": "Fisherman",
     "abbreviation": "FSH",
-    "type": "gathering"
+    "type": "gathering",
+    "levelingGuide": {
+      "url": "https://www.ffxivguild.com/ff14-fishing-fisher-leveling-guide-a-realm-reborn",
+      "pages": [
+        {
+          "page": 1,
+          "minLevel": 1,
+          "maxLevel": 14
+        },
+        {
+          "page": 2,
+          "minLevel": 15,
+          "maxLevel": 34
+        },
+        {
+          "page": 3,
+          "minLevel": 34,
+          "maxLevel": 49
+        },
+        {
+          "page": 4,
+          "minLevel": 50,
+          "maxLevel": 54
+        },
+        {
+          "page": 5,
+          "minLevel": 55,
+          "maxLevel": 59
+        },
+        {
+          "page": 6,
+          "minLevel": 60,
+          "maxLevel": 69
+        }
+      ]
+    }
   }
 ]
