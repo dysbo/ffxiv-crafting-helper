@@ -1,0 +1,19 @@
+{
+  "Achievements": null,
+  "Character": null,
+  "FreeCompany": null,
+  "FreeCompanyMembers": null,
+  "Friends": null,
+  "Info": {
+    "Achievements": null,
+    "Character": {
+      "State": 1,
+      "Updated": 0
+    },
+    "FreeCompany": null,
+    "FreeCompanyMembers": null,
+    "Friends": null,
+    "PvPTeam": null
+  },
+  "PvPTeam": null
+}

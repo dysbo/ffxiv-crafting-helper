@@ -1,46 +1,57 @@
 [
   {
     "name": "Alchemist",
-    "abbreviation": "ALC"
+    "abbreviation": "ALC",
+    "type": "crafting"
   },
   {
     "name": "Armorer",
-    "abbreviation": "ARM"
+    "abbreviation": "ARM",
+    "type": "crafting"
   },
   {
     "name": "Blacksmith",
-    "abbreviation": "BSM"
+    "abbreviation": "BSM",
+    "type": "crafting"
   },
   {
     "name": "Carpenter",
-    "abbreviation": "CRP"
+    "abbreviation": "CRP",
+    "type": "crafting"
   },
   {
     "name": "Culinarian",
-    "abbreviation": "CUL"
+    "abbreviation": "CUL",
+    "type": "crafting"
   },
   {
     "name": "Goldsmith",
-    "abbreviation": "GSM"
+    "abbreviation": "GSM",
+    "type": "crafting"
   },
   {
     "name": "Leatherworker",
-    "abbreviation": "LTW"
+    "abbreviation": "LTW",
+    "type": "crafting"
   },
   {
     "name": "Weaver",
-    "abbreviation": "WVR"
+    "abbreviation": "WVR",
+    "type": "crafting"
   },
   {
     "name": "Botanist",
-    "abbreviation": "BTN"
+    "abbreviation": "BTN",
+    "type": "gathering"
   },
   {
     "name": "Miner",
-    "abbreviation": "MIN"
+    "abbreviation": "MIN",
+    "type": "gathering"
   },
   {
     "name": "Fisherman",
-    "abbreviation": "FSH"
+    "abbreviation": "FSH",
+    "type": "gathering"
   }
 ]
