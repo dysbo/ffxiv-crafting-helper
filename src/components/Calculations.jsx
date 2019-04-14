@@ -1,5 +1,13 @@
 import React from 'react'
-import { cloneDeep as _cloneDeep, concat as _concat, find as _find, get as _get, uniqBy as _uniqBy } from 'lodash'
+import {
+  cloneDeep as _cloneDeep,
+  concat as _concat,
+  find as _find,
+  get as _get,
+  isEqual as _isEqual,
+  orderBy as _orderBy,
+  uniqBy as _uniqBy
+} from 'lodash'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import * as LocalStorageService from '../service/localStorage'
 import * as XivApi from '../service/xivApi'
@@ -8,7 +16,11 @@ import CalculationsTable from './CalculationsTable'
 
 class Calculations extends React.Component {
   state = {
-    lodestoneModalIsOpen: false
+    lodestoneModalIsOpen: false,
+    sortData: {
+      field: 'name',
+      direction: 'asc'
+    }
   }
 
   componentDidMount () {
@@ -81,6 +93,29 @@ class Calculations extends React.Component {
     }
   }
 
+  applySorting (classData) {
+    const { sortData } = this.state
+    return _orderBy(_cloneDeep(classData), sortData.field, sortData.direction)
+  }
+
+  setSorting (field) {
+    const { sortData } = this.state
+    const newSortData = {
+      ...sortData
+    }
+
+    if (_isEqual(JSON.stringify(sortData.field), JSON.stringify(field))) {
+      newSortData.direction = sortData.direction === 'asc' ? 'desc' : 'asc'
+    } else {
+      newSortData.field = field
+      newSortData.direction = 'asc'
+    }
+
+    this.setState({
+      sortData: newSortData
+    })
+  }
+
   render () {
     const { characterData, classData, lodestoneModalIsOpen } = this.state
     const characterIsLoaded = !!characterData && !!characterData.Character
@@ -127,11 +162,15 @@ class Calculations extends React.Component {
         <Container fluid>
           {!characterIsLoaded && !!characterData && (
             <div className="alert alert-info">
-              Your character is being imported for the first time.  Congratulations!<br />
+              Your character is being imported for the first time. Congratulations!<br />
               Please wait a few minutes and try your import again.
             </div>
           )}
-          <CalculationsTable classData={classData} updateLocalStorage={this.updateLocalStorage.bind(this)} />
+          <CalculationsTable
+            classData={this.applySorting(classData)}
+            updateLocalStorage={this.updateLocalStorage.bind(this)}
+            updateSorting={this.setSorting.bind(this)}
+          />
         </Container>
         <LodestoneModal
           show={lodestoneModalIsOpen}
