@@ -112,8 +112,8 @@ class CalculationsRow extends React.Component {
         <td>
           {name}
           &nbsp;
-          <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-            <FontAwesomeIcon icon={faIcon} className="text-primary" />
+          <OverlayTrigger trigger="click" placement="right" overlay={popover} rootClose>
+            <FontAwesomeIcon icon={faIcon} className="text-primary" onBlur={() => console.log('blurreddd')} />
           </OverlayTrigger>
         </td>
         <td>
