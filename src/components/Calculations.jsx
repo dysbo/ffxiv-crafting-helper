@@ -9,7 +9,7 @@ import {
   orderBy as _orderBy,
   uniqBy as _uniqBy
 } from 'lodash'
-import { Button, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import * as LocalStorageService from '../service/localStorage'
 import * as XivApi from '../service/xivApi'
 import LodestoneModal from './LodestoneModal'
