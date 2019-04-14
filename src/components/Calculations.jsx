@@ -9,12 +9,13 @@ import {
   orderBy as _orderBy,
   uniqBy as _uniqBy
 } from 'lodash'
-import { Container } from 'react-bootstrap'
+import { Button, Container } from 'react-bootstrap'
 import * as LocalStorageService from '../service/localStorage'
 import * as XivApi from '../service/xivApi'
 import LodestoneModal from './LodestoneModal'
 import CalculationsTable from './CalculationsTable'
 import NavigationBar from './NavigationBar'
+import ImportAlert from './ImportAlert'
 
 class Calculations extends React.Component {
   state = {
@@ -65,8 +66,8 @@ class Calculations extends React.Component {
     })
   }
 
-  async refreshCharacterData () {
-    const characterId = _get(this.state, 'characterData.Character.ID')
+  async refreshCharacterData (id) {
+    const characterId = _get(this.state, 'characterData.Character.ID', id)
     const characterData = await XivApi.getCharacter(characterId)
     this.updateCharacterData(characterData)
     // this.updateStoredDataWithLodestoneData()
@@ -159,12 +160,11 @@ class Calculations extends React.Component {
           setFilter={this.setFilter.bind(this)}
         />
         <Container fluid>
-          {!characterIsLoaded && !!characterData && (
-            <div className="alert alert-info">
-              Your character is being imported for the first time. Congratulations!<br />
-              Please wait a few minutes and try your import again.
-            </div>
-          )}
+          <ImportAlert
+            characterData={characterData}
+            characterIsLoaded={characterIsLoaded}
+            refreshCharacterData={this.refreshCharacterData.bind(this)}
+          />
           <CalculationsTable
             classData={this.applyFilter(this.applySorting(classData))}
             updateLocalStorage={this.updateLocalStorage.bind(this)}
