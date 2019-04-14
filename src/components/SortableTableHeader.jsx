@@ -6,7 +6,6 @@ import { faSort } from '@fortawesome/free-solid-svg-icons'
 class SortableTableHeader extends React.Component {
   render () {
     const { className, text, sortField, updateSorting } = this.props
-    console.log(className)
     return (
       <th className={className} onClick={updateSorting.bind(this, sortField)}
         style={{ cursor: 'pointer' }}
