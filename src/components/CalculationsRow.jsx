@@ -83,14 +83,14 @@ class CalculationsRow extends React.Component {
     const { currentLevel } = this.state
 
     const matchedPage = _find(levelingGuide.pages, p => {
-      const { maxLevel, minLevel, page } = p
+      const { maxLevel, minLevel } = p
 
       if (currentLevel >= minLevel && currentLevel <= maxLevel) {
         return true
       }
     })
 
-    return `${levelingGuide.url}/${matchedPage.page}/`
+    return !!matchedPage ? `${levelingGuide.url}/${matchedPage.page}/` : levelingGuide.url
   }
 
   render () {
