@@ -2,9 +2,11 @@ import React from 'react'
 import {
   cloneDeep as _cloneDeep,
   concat as _concat,
+  filter as _filter,
   find as _find,
   get as _get,
   isEqual as _isEqual,
+  map as _map,
   orderBy as _orderBy,
   uniqBy as _uniqBy
 } from 'lodash'
@@ -13,6 +15,7 @@ import * as LocalStorageService from '../service/localStorage'
 import * as XivApi from '../service/xivApi'
 import LodestoneModal from './LodestoneModal'
 import CalculationsTable from './CalculationsTable'
+import CRAFTING_CLASSES from '../data/crafting-classes'
 
 class Calculations extends React.Component {
   state = {
@@ -20,6 +23,10 @@ class Calculations extends React.Component {
     sortData: {
       field: 'name',
       direction: 'asc'
+    },
+    filterData: {
+      label: 'All',
+      criteria: undefined
     }
   }
 
@@ -49,6 +56,13 @@ class Calculations extends React.Component {
     LocalStorageService.clearCharacterData()
     this.setState({
       characterData: undefined
+    })
+  }
+
+  clearCraftingClassData () {
+    LocalStorageService.clearCraftingClassData()
+    this.setState({
+      classData: LocalStorageService.retrieveAndUpdateCraftingClassData()
     })
   }
 
@@ -116,8 +130,22 @@ class Calculations extends React.Component {
     })
   }
 
+  applyFilter (classData) {
+    const { filterData } = this.state
+    return _filter(_cloneDeep(classData), filterData.criteria)
+  }
+
+  setFilter (label, criteria) {
+    this.setState({
+      filterData: {
+        label,
+        criteria
+      }
+    })
+  }
+
   render () {
-    const { characterData, classData, lodestoneModalIsOpen } = this.state
+    const { characterData, classData, filterData, lodestoneModalIsOpen } = this.state
     const characterIsLoaded = !!characterData && !!characterData.Character
     return (
       <div>
@@ -125,12 +153,39 @@ class Calculations extends React.Component {
           <Navbar.Brand>
             FFXIV Crafting & Gathering Helper
           </Navbar.Brand>
-          <Nav className="mr-auto" />
+          <Nav className="mr-auto">
+            <NavDropdown title={`Showing ${filterData.label}`}>
+              <NavDropdown.Item onClick={this.setFilter.bind(this, 'All', undefined)}>
+                Show All
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item onClick={this.setFilter.bind(this, 'Crafting Classes', c => c.type === 'crafting')}>
+                Crafting Classes
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={this.setFilter.bind(this, 'Gathering Classes', c => c.type === 'gathering')}>
+                Gathering Classes
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              {_map(_orderBy(CRAFTING_CLASSES, 'name'), (cc, key) => (
+                <NavDropdown.Item
+                  key={key}
+                  onClick={this.setFilter.bind(this, cc.name, c => cc.abbreviation === c.abbreviation)}
+                >
+                  {cc.name}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Nav>
           <Nav>
             {!characterIsLoaded && (
-              <Nav.Link onClick={this.activateLodestoneModal.bind(this)}>
-                Import Character Data
-              </Nav.Link>
+              <React.Fragment>
+                <Nav.Link onClick={this.activateLodestoneModal.bind(this)}>
+                  Import Character Data
+                </Nav.Link>
+                <Nav.Link onClick={this.clearCraftingClassData.bind(this)}>
+                  Clear Crafting Class Data
+                </Nav.Link>
+              </React.Fragment>
             )}
             {characterIsLoaded && (
               <NavDropdown
@@ -155,6 +210,10 @@ class Calculations extends React.Component {
                 <NavDropdown.Item onClick={this.clearCharacterData.bind(this)}>
                   Clear Character Data
                 </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={this.clearCraftingClassData.bind(this)}>
+                  Clear Crafting Class Data
+                </NavDropdown.Item>
               </NavDropdown>
             )}
           </Nav>
@@ -167,7 +226,7 @@ class Calculations extends React.Component {
             </div>
           )}
           <CalculationsTable
-            classData={this.applySorting(classData)}
+            classData={this.applyFilter(this.applySorting(classData))}
             updateLocalStorage={this.updateLocalStorage.bind(this)}
             updateSorting={this.setSorting.bind(this)}
           />
