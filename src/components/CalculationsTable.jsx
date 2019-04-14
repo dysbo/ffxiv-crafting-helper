@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import { map as _map } from 'lodash'
 import { Table } from 'react-bootstrap'
 import CalculationsRow from './CalculationsRow'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSort } from '@fortawesome/free-solid-svg-icons'
+import SortableTableHeader from './SortableTableHeader'
+
+function sortByProgress (c) {
+  return !c.totalExperience ? 0 : c.currentExperience / c.totalExperience
+}
 
 class CalculationsTable extends React.Component {
   render () {
@@ -14,34 +17,14 @@ class CalculationsTable extends React.Component {
         <Table hover striped className="calculations">
           <thead>
           <tr>
-            <th style={{ cursor: 'pointer' }} onClick={updateSorting.bind(this, 'name')}>
-              Class
-              <FontAwesomeIcon
-                className="margin-left"
-                icon={faSort}
-              />
-            </th>
-            <th style={{ cursor: 'pointer' }} onClick={updateSorting.bind(this, 'currentLevel')}>
-              Level
-              <FontAwesomeIcon
-                className="margin-left"
-                icon={faSort}
-              />
-            </th>
+            <SortableTableHeader text="Class" sortField="name" updateSorting={updateSorting} />
+            <SortableTableHeader text="Level" sortField="currentLevel" updateSorting={updateSorting} />
             <th>Current Exp.</th>
             <th>Required Exp.</th>
             <th>Remaining Exp.</th>
             <th>Exp. Per Item</th>
             <th>Remaining Items</th>
-            <th style={{ cursor: 'pointer' }} onClick={updateSorting.bind(this, c => {
-              return !c.totalExperience ? 0 : (c.currentExperience / c.totalExperience) * 100
-            })}>
-              Progress
-              <FontAwesomeIcon
-                className="margin-left"
-                icon={faSort}
-              />
-            </th>
+            <SortableTableHeader text="Progress" sortField={sortByProgress} updateSorting={updateSorting} />
           </tr>
           </thead>
           <tbody>
