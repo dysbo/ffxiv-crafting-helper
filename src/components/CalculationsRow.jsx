@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { find as _find, forEach as _forEach, get as _get, isEqual as _isEqual, set as _set } from 'lodash'
-import { Form, ProgressBar } from 'react-bootstrap'
+import { Button, Form, OverlayTrigger, Popover, ProgressBar} from 'react-bootstrap'
 import EXP_PER_LEVEL from '../data/exp-per-level'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle as faIcon } from '@fortawesome/free-solid-svg-icons'
 
 class CalculationsRow extends React.Component {
   static validateValue (value, min, max) {
@@ -96,12 +98,23 @@ class CalculationsRow extends React.Component {
     const { currentLevel, currentExperience, experiencePerItem, totalExperience } = this.state
     const remainingExperience = totalExperience - currentExperience
     const progressPercentage = totalExperience === 0 ? 0 : Math.floor((currentExperience / totalExperience) * 100)
+
+    const popover = (
+      <Popover id={`links-${name}`}>
+        <a href={this.getLevelingGuidePageUrl()} target="_blank">
+          Leveling Guide
+        </a>
+      </Popover>
+    )
+
     return (
       <tr className="calculations">
         <td>
-          <a href={this.getLevelingGuidePageUrl()} target="_blank">
-            {name}
-          </a>
+          {name}
+          &nbsp;
+          <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+            <FontAwesomeIcon icon={faIcon} className="text-primary" />
+          </OverlayTrigger>
         </td>
         <td>
           <Form.Control
