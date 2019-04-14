@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { forEach as _forEach, get as _get, isEqual as _isEqual, set as _set } from 'lodash'
+import { find as _find, forEach as _forEach, get as _get, isEqual as _isEqual, set as _set } from 'lodash'
 import { Form, ProgressBar } from 'react-bootstrap'
 import EXP_PER_LEVEL from '../data/exp-per-level'
 
@@ -76,6 +76,21 @@ class CalculationsRow extends React.Component {
     updateLocalStorage(data)
   }
 
+  getLevelingGuidePageUrl () {
+    const { levelingGuide } = this.props
+    const { currentLevel } = this.state
+
+    const matchedPage = _find(levelingGuide.pages, p => {
+      const { maxLevel, minLevel, page } = p
+
+      if (currentLevel >= minLevel && currentLevel <= maxLevel) {
+        return true
+      }
+    })
+
+    return `${levelingGuide.url}/${matchedPage.page}/`
+  }
+
   render () {
     const { name } = this.props
     const { currentLevel, currentExperience, experiencePerItem, totalExperience } = this.state
@@ -84,7 +99,9 @@ class CalculationsRow extends React.Component {
     return (
       <tr className="calculations">
         <td>
-          {name}
+          <a href={this.getLevelingGuidePageUrl()} target="_blank">
+            {name}
+          </a>
         </td>
         <td>
           <Form.Control
@@ -146,7 +163,15 @@ CalculationsRow.propTypes = {
   totalExperience: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   abbreviation: PropTypes.string.isRequired,
-  updateLocalStorage: PropTypes.func.isRequired
+  updateLocalStorage: PropTypes.func.isRequired,
+  levelingGuide: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    pages: PropTypes.arrayOf(PropTypes.shape({
+      page: PropTypes.number.isRequired,
+      minLevel: PropTypes.number.isRequired,
+      maxLevel: PropTypes.number.isRequired
+    })).isRequired
+  })
 }
 
 export default CalculationsRow
