@@ -83,6 +83,7 @@ class Calculations extends React.Component {
 
   render () {
     const { characterData, classData, lodestoneModalIsOpen } = this.state
+    const characterIsLoaded = !!characterData && !!characterData.Character
     return (
       <div>
         <Navbar bg="dark" variant="dark">
@@ -91,13 +92,24 @@ class Calculations extends React.Component {
           </Navbar.Brand>
           <Nav className="mr-auto" />
           <Nav>
-            {!characterData && (
+            {!characterIsLoaded && (
               <Nav.Link onClick={this.activateLodestoneModal.bind(this)}>
                 Import Character Data
               </Nav.Link>
             )}
-            {!!characterData && (
-              <NavDropdown title={characterData.Character.Name} className="dropleft">
+            {characterIsLoaded && (
+              <NavDropdown
+                title={(
+                  <span>
+                    {characterData.Character.Name}
+                    <img
+                      src={characterData.Character.Avatar}
+                      alt={characterData.Character.Name}
+                      className="character-icon"
+                    />
+                    </span>)}
+                className="dropleft"
+              >
                 <NavDropdown.Item onClick={this.refreshCharacterData.bind(this)}>
                   Refresh Character Class Data
                 </NavDropdown.Item>
@@ -113,6 +125,12 @@ class Calculations extends React.Component {
           </Nav>
         </Navbar>
         <Container fluid>
+          {!characterIsLoaded && !!characterData && (
+            <div className="alert alert-info">
+              Your character is being imported for the first time.  Congratulations!<br />
+              Please wait a few minutes and try your import again.
+            </div>
+          )}
           <CalculationsTable classData={classData} updateLocalStorage={this.updateLocalStorage.bind(this)} />
         </Container>
         <LodestoneModal

@@ -80,7 +80,7 @@ class CalculationsRow extends React.Component {
     const { name } = this.props
     const { currentLevel, currentExperience, experiencePerItem, totalExperience } = this.state
     const remainingExperience = totalExperience - currentExperience
-    const progressPercentage = Math.floor((currentExperience / totalExperience) * 100)
+    const progressPercentage = totalExperience === 0 ? 0 : Math.floor((currentExperience / totalExperience) * 100)
     return (
       <tr className="calculations">
         <td>

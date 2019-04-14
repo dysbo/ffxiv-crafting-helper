@@ -95,10 +95,9 @@ export function clearCharacterData () {
 }
 
 export function clearCraftingClassData () {
-  // if (!!localStorage.getItem(KEYS.CRAFTING_CLASS_DATA)) {
-  //   localStorage.removeItem(KEYS.CRAFTING_CLASS_DATA)
-  // }
-  console.log(`I'll really do it next time.`)
+  if (!!localStorage.getItem(KEYS.CRAFTING_CLASS_DATA)) {
+    localStorage.removeItem(KEYS.CRAFTING_CLASS_DATA)
+  }
 }
 
 export function updateCraftingClassDataWithCharacterData () {
@@ -107,17 +106,13 @@ export function updateCraftingClassDataWithCharacterData () {
   const characterData = _filter(_values(_get(retrieveAndUpdateCharacterData(), 'Character.ClassJobs')),
     c => _includes(classJobCategories, _get(c, 'Class.ClassJobCategory.Name')))
 
-  const newCraftingClassData = _map(craftingClassData, c => {
+  return _map(craftingClassData, c => {
     const lodestoneClassData = _find(characterData, d => _get(d, 'Class.Abbreviation') === _get(c, 'abbreviation'))
-    console.log(lodestoneClassData)
     _set(c, 'currentLevel', _get(lodestoneClassData, 'Level', 1))
     _set(c, 'currentExperience', _get(lodestoneClassData, 'ExpLevel', 0))
     _set(c, 'totalExperience', _get(lodestoneClassData, 'ExpLevelMax', c.totalExperience))
     return c
   })
-
-  console.log('comparing', craftingClassData, characterData)
-  return newCraftingClassData
 }
 
 export function getDefaultCraftingClasses () {
