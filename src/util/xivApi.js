@@ -5,10 +5,8 @@ import { get as _get } from 'lodash'
 const BASE_URL = 'https://xivapi.com'
 
 export const searchForCharacter = async (server, name) => {
-  console.log('getting', server, name)
   const result = await axios.get(`${BASE_URL}/character/search?name=${name}&server=${server}`)
-  console.log(result)
-  return _get(result, 'data', {})
+  return _get(result, 'data', [])
 }
 
 export const getCharacter = async id => {

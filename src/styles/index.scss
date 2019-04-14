@@ -1,5 +1,7 @@
 @import '~bootstrap-scss';
 
+$iconSize: 28px;
+
 .fullWidth {
   width: 100%;
 }
@@ -9,34 +11,14 @@
   min-width: 175px;
 }
 
-td {
-  vertical-align: middle !important;
-  text-align: center;
-
-  input, select {
-    width: 100%;
-    text-align: center;
-  }
+.character-icon {
+  height: $iconSize;
+  width: $iconSize;
+  border-radius: 25px;
+  border: 1px solid $text-muted;
 }
 
-th {
-  text-align: center;
-  vertical-align: bottom !important;
-}
-
-button.link-like {
-  border: 0;
-  background: inherit;
-  color: inherit;
-  font-weight: inherit;
-  padding: 0;
-  margin: 0;
-}
-
-.currentLevel {
-  min-width: 78px;
-}
-
-.margin-right {
-  margin-right: .5em;
+.results {
+  max-height: 300px;
+  overflow: auto;
 }

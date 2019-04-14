@@ -58,9 +58,9 @@ export function retrieveAndUpdateCharacterData() {
   // get the stored character data
   const storedData = localStorage.getItem(KEYS.CHARACTER_DATA)
 
-  // if there is no character data, return an empty object
+  // if there is no character data, return undefined
   if (!storedData) {
-    return {}
+    return undefined
   }
 
   // if there is, update it
@@ -78,6 +78,19 @@ export function storeCharacterData(characterData) {
 export function storeCraftingClassData(craftingClasses) {
   // localStorage.setItem(KEYS.CRAFTING_CLASS_DATA, JSON.stringify(craftingClasses))
   store(KEYS.CRAFTING_CLASS_DATA, craftingClasses)
+}
+
+export function clearCharacterData() {
+  if (!!localStorage.getItem(KEYS.CHARACTER_DATA)) {
+    localStorage.removeItem(KEYS.CHARACTER_DATA)
+  }
+}
+
+export function clearCraftingClassData () {
+  // if (!!localStorage.getItem(KEYS.CRAFTING_CLASS_DATA)) {
+  //   localStorage.removeItem(KEYS.CRAFTING_CLASS_DATA)
+  // }
+  console.log(`I'll really do it next time.`)
 }
 
 export function getDefaultCraftingClasses () {

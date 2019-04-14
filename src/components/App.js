@@ -4,7 +4,7 @@ import Calculations from './Calculations'
 class App extends React.Component {
   render () {
     return (
-      <div className="container-fluid">
+      <div>
         <Calculations />
       </div>
     )
