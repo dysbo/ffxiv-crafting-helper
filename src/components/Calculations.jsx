@@ -6,16 +6,15 @@ import {
   find as _find,
   get as _get,
   isEqual as _isEqual,
-  map as _map,
   orderBy as _orderBy,
   uniqBy as _uniqBy
 } from 'lodash'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import * as LocalStorageService from '../service/localStorage'
 import * as XivApi from '../service/xivApi'
 import LodestoneModal from './LodestoneModal'
 import CalculationsTable from './CalculationsTable'
-import CRAFTING_CLASSES from '../data/crafting-classes'
+import NavigationBar from './NavigationBar'
 
 class Calculations extends React.Component {
   state = {
@@ -148,76 +147,17 @@ class Calculations extends React.Component {
     const { characterData, classData, filterData, lodestoneModalIsOpen } = this.state
     const characterIsLoaded = !!characterData && !!characterData.Character
     return (
-      <div>
-        <Navbar bg="dark" variant="dark" sticky="top">
-          <Navbar.Brand>
-            FFXIV Crafting & Gathering Helper
-          </Navbar.Brand>
-          <Nav className="mr-auto">
-            <NavDropdown title={`Showing ${filterData.label}`}>
-              <NavDropdown.Item onClick={this.setFilter.bind(this, 'All', undefined)}>
-                Show All
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item onClick={this.setFilter.bind(this, 'Crafting Classes', c => c.type === 'crafting')}>
-                Crafting Classes
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={this.setFilter.bind(this, 'Gathering Classes', c => c.type === 'gathering')}>
-                Gathering Classes
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              {_map(_orderBy(CRAFTING_CLASSES, 'name'), (cc, key) => (
-                <NavDropdown.Item
-                  key={key}
-                  onClick={this.setFilter.bind(this, cc.name, c => cc.abbreviation === c.abbreviation)}
-                >
-                  {cc.name}
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            {!characterIsLoaded && (
-              <React.Fragment>
-                <Nav.Link onClick={this.activateLodestoneModal.bind(this)}>
-                  Import Character Data
-                </Nav.Link>
-                <Nav.Link onClick={this.clearCraftingClassData.bind(this)}>
-                  Clear Crafting Class Data
-                </Nav.Link>
-              </React.Fragment>
-            )}
-            {characterIsLoaded && (
-              <NavDropdown
-                title={(
-                  <span>
-                    {characterData.Character.Name}
-                    <img
-                      src={characterData.Character.Avatar}
-                      alt={characterData.Character.Name}
-                      className="character-icon"
-                    />
-                    </span>)}
-                className="dropleft"
-              >
-                <NavDropdown.Item onClick={this.refreshCharacterData.bind(this)}>
-                  Refresh Character Class Data
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item onClick={this.activateLodestoneModal.bind(this)}>
-                  Import Different Character Data
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={this.clearCharacterData.bind(this)}>
-                  Clear Character Data
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item onClick={this.clearCraftingClassData.bind(this)}>
-                  Clear Crafting Class Data
-                </NavDropdown.Item>
-              </NavDropdown>
-            )}
-          </Nav>
-        </Navbar>
+      <React.Fragment>
+        <NavigationBar
+          activateLodestoneModal={this.activateLodestoneModal.bind(this)}
+          characterData={characterData}
+          characterIsLoaded={characterIsLoaded}
+          clearCharacterData={this.clearCharacterData.bind(this)}
+          clearCraftingClassData={this.clearCraftingClassData.bind(this)}
+          filterData={filterData}
+          refreshCharacterData={this.refreshCharacterData.bind(this)}
+          setFilter={this.setFilter.bind(this)}
+        />
         <Container fluid>
           {!characterIsLoaded && !!characterData && (
             <div className="alert alert-info">
@@ -230,13 +170,17 @@ class Calculations extends React.Component {
             updateLocalStorage={this.updateLocalStorage.bind(this)}
             updateSorting={this.setSorting.bind(this)}
           />
+          <hr />
+          <div className="text-center text-muted">
+            Version {process.env.REACT_APP_VERSION}
+          </div>
         </Container>
         <LodestoneModal
           show={lodestoneModalIsOpen}
           onHide={this.deactivateLodestoneModal.bind(this)}
           onSelect={this.updateCharacterData.bind(this)}
         />
-      </div>
+      </React.Fragment>
     )
   }
 }
