@@ -18,11 +18,11 @@ class CalculationsTable extends React.Component {
           <thead>
           <tr>
             <SortableTableHeader text="Class" sortField="name" updateSorting={updateSorting} />
-            <SortableTableHeader text="Level" sortField="currentLevel" updateSorting={updateSorting} />
-            <th>Current Exp.</th>
+            <SortableTableHeader text="Level" sortField="currentLevel" updateSorting={updateSorting} className="numeric-entry" />
+            <th className="numeric-entry">Current Exp.</th>
             <th>Required Exp.</th>
             <th>Remaining Exp.</th>
-            <th>Exp. Per Item</th>
+            <th className="numeric-entry">Exp. Per Item</th>
             <th>Remaining Items</th>
             <SortableTableHeader text="Progress" sortField={sortByProgress} updateSorting={updateSorting} />
           </tr>

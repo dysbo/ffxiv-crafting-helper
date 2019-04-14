@@ -5,9 +5,10 @@ import { faSort } from '@fortawesome/free-solid-svg-icons'
 
 class SortableTableHeader extends React.Component {
   render () {
-    const { text, sortField, updateSorting } = this.props
+    const { className, text, sortField, updateSorting } = this.props
+    console.log(className)
     return (
-      <th onClick={updateSorting.bind(this, sortField)}
+      <th className={className} onClick={updateSorting.bind(this, sortField)}
         style={{ cursor: 'pointer' }}
       >
         {text}

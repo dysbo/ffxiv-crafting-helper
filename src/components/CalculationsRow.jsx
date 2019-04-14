@@ -110,11 +110,12 @@ class CalculationsRow extends React.Component {
     return (
       <tr className="calculations">
         <td>
-          {name}
-          &nbsp;
-          <OverlayTrigger trigger="click" placement="right" overlay={popover} rootClose>
-            <FontAwesomeIcon icon={faIcon} className="text-primary" onBlur={() => console.log('blurreddd')} />
-          </OverlayTrigger>
+          <div className="flex justify-between items-center">
+            <span>{name}</span>
+            <OverlayTrigger trigger="click" placement="right" overlay={popover} rootClose>
+              <FontAwesomeIcon icon={faIcon} className="text-primary" onBlur={() => console.log('blurreddd')} />
+            </OverlayTrigger>
+          </div>
         </td>
         <td>
           <Form.Control

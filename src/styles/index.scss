@@ -1,4 +1,5 @@
 @import '~bootstrap-scss';
+@import '~tachyons-custom';
 
 $iconSize: 28px;
 
@@ -29,6 +30,10 @@ table.calculations {
     td {
       vertical-align: middle;
       text-align: center;
+
+      input {
+        text-align: center;
+      }
     }
   }
   
@@ -42,4 +47,17 @@ table.calculations {
 
 .margin-left {
   margin-left: .25em;
+}
+
+.numeric-entry {
+  width: 125px;
+}
+
+// noticed problem with Tachyons for the modal sizing...
+.modal-open {
+  --height-1: auto;
+  --height-2: auto;
+  --height-3: auto;
+  --height-4: auto;
+  --height-5: auto;
 }
