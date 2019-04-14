@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/ffxiv-crafting-helper/static/js/runtime~main.7eeda2ce.js"
   },
   {
-    "revision": "de78f734bfa6fd93d7b2",
-    "url": "/ffxiv-crafting-helper/static/js/main.8578f808.chunk.js"
+    "revision": "968fed6ec532317d2218",
+    "url": "/ffxiv-crafting-helper/static/js/main.f629ac54.chunk.js"
   },
   {
     "revision": "ae4367ed86b65a12c5f4",
     "url": "/ffxiv-crafting-helper/static/js/2.f0db3040.chunk.js"
   },
   {
-    "revision": "de78f734bfa6fd93d7b2",
-    "url": "/ffxiv-crafting-helper/static/css/main.5964f868.chunk.css"
+    "revision": "968fed6ec532317d2218",
+    "url": "/ffxiv-crafting-helper/static/css/main.961e13d2.chunk.css"
   },
   {
-    "revision": "e815c1c0a7c8406f9c97369c77007982",
+    "revision": "a41999e79619027d409ccc1bede0943c",
     "url": "/ffxiv-crafting-helper/index.html"
   }
 ];
