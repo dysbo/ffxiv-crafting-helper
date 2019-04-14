@@ -149,7 +149,7 @@ class Calculations extends React.Component {
     const characterIsLoaded = !!characterData && !!characterData.Character
     return (
       <div>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" sticky="top">
           <Navbar.Brand>
             FFXIV Crafting & Gathering Helper
           </Navbar.Brand>
