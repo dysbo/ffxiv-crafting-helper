@@ -10,6 +10,7 @@
     "axios": "^0.18.0",
     "bootstrap-scss": "^4.3.1",
     "classnames": "^2.2.6",
+    "dayjs": "^1.8.12",
     "diff-json": "^1.1.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",

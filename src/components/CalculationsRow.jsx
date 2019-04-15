@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { find as _find, forEach as _forEach, get as _get, isEqual as _isEqual, set as _set } from 'lodash'
-import { Button, Form, OverlayTrigger, Popover, ProgressBar} from 'react-bootstrap'
-import EXP_PER_LEVEL from '../data/exp-per-level'
+import { Form, OverlayTrigger, Popover, ProgressBar} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle as faIcon } from '@fortawesome/free-solid-svg-icons'
+import EXP_PER_LEVEL from '../data/exp-per-level'
 
 class CalculationsRow extends React.Component {
   static validateValue (value, min, max) {
@@ -101,7 +101,7 @@ class CalculationsRow extends React.Component {
 
     const popover = (
       <Popover id={`links-${name}`}>
-        <a href={this.getLevelingGuidePageUrl()} target="_blank">
+        <a href={this.getLevelingGuidePageUrl()} target="_blank" rel="noopener noreferrer">
           Leveling Guide
         </a>
       </Popover>

@@ -1,4 +1,6 @@
 import React from 'react'
+import dayjs from 'dayjs'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import {
   cloneDeep as _cloneDeep,
   concat as _concat,
@@ -16,6 +18,8 @@ import LodestoneModal from './LodestoneModal'
 import CalculationsTable from './CalculationsTable'
 import NavigationBar from './NavigationBar'
 import ImportAlert from './ImportAlert'
+
+dayjs.extend(isSameOrBefore)
 
 class Calculations extends React.Component {
   state = {
@@ -68,9 +72,22 @@ class Calculations extends React.Component {
 
   async refreshCharacterData (id) {
     const characterId = _get(this.state, 'characterData.Character.ID', id)
+    const parseDate = _get(this.state, 'characterData.Character.ParseDate')
+    if (!!parseDate) {
+      const parseDateTime = dayjs(parseDate * 1000)
+      const sixHoursAgo = dayjs().add(-6, 'h')
+      const canRefreshCharacterData = parseDateTime.isBefore(sixHoursAgo)
+
+      if (!canRefreshCharacterData) {
+        alert(`Character data was last obtained ${parseDateTime.format('YYYY-MM-DD HH:mm')}.  ` +
+          'Please wait at least six hours for an update from Lodestone.  Next update will be available ' +
+          `at ${parseDateTime.add(6, 'h').format('YYYY-MM-DD HH:mm')}.`)
+        return
+      }
+    }
     const characterData = await XivApi.getCharacter(characterId)
     this.updateCharacterData(characterData)
-    // this.updateStoredDataWithLodestoneData()
+    this.updateStoredDataWithLodestoneData()
   }
 
   updateCharacterData (characterData) {
