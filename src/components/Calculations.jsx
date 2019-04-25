@@ -79,10 +79,12 @@ class Calculations extends React.Component {
       const canRefreshCharacterData = parseDateTime.isBefore(sixHoursAgo)
 
       if (!canRefreshCharacterData) {
-        alert(`Character data was last obtained ${parseDateTime.format('YYYY-MM-DD HH:mm')}.  ` +
+        const confirmed = window.confirm(`Character data was last obtained ${parseDateTime.format('YYYY-MM-DD HH:mm')}.  ` +
           'Please wait at least six hours for an update from Lodestone.  Next update will be available ' +
-          `at ${parseDateTime.add(6, 'h').format('YYYY-MM-DD HH:mm')}.`)
-        return
+          `at ${parseDateTime.add(6, 'h').format('YYYY-MM-DD HH:mm')}.  If you would ` +
+          `like to overwrite local changes with current Lodestone data, you may do so by clicking 'OK' on this alert.`)
+
+        if (!confirmed) return
       }
     }
     const characterData = await XivApi.getCharacter(characterId)
