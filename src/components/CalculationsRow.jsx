@@ -113,7 +113,7 @@ class CalculationsRow extends React.Component {
           <div className="flex justify-between items-center">
             <span>{name}</span>
             <OverlayTrigger trigger="click" placement="right" overlay={popover} rootClose>
-              <FontAwesomeIcon icon={faIcon} className="text-primary" onBlur={() => console.log('blurreddd')} />
+              <FontAwesomeIcon icon={faIcon} className="text-primary pointer" />
             </OverlayTrigger>
           </div>
         </td>
