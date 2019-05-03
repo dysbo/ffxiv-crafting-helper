@@ -4,7 +4,7 @@ import { find as _find, forEach as _forEach, get as _get, isEqual as _isEqual, s
 import { Form, OverlayTrigger, Popover, ProgressBar} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle as faIcon } from '@fortawesome/free-solid-svg-icons'
-import EXP_PER_LEVEL from '../data/exp-per-level'
+import EXP_PER_LEVEL from '../../data/exp-per-level'
 
 class CalculationsRow extends React.Component {
   static validateValue (value, min, max) {

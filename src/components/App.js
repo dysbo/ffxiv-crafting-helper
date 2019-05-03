@@ -1,10 +1,14 @@
 import React from 'react'
-import Calculations from './Calculations'
+import XivCraftingGatheringHelper from './XivCraftingGatheringHelper'
+import Provider from 'react-redux/es/components/Provider'
+import store from '../store'
 
 class App extends React.Component {
   render () {
     return (
-      <Calculations />
+      <Provider store={store}>
+        <XivCraftingGatheringHelper />
+      </Provider>
     )
   }
 }

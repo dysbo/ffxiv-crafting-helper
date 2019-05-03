@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { cloneDeep as _cloneDeep, get as _get, map as _map } from 'lodash'
 import { Button, Form, Modal, Spinner } from 'react-bootstrap'
-import * as XivApi from '../service/xivApi'
-import XIV_SERVERS from '../data/xiv-servers'
+import * as XivApi from '../../service/xivApi'
+import XIV_SERVERS from '../../data/xiv-servers'
 
 const INITIAL_STATE = {
   characterId: undefined,

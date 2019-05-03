@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { map as _map, orderBy as _orderBy } from 'lodash'
-import CRAFTING_CLASSES from '../data/crafting-classes'
+import CRAFTING_CLASSES from '../../data/crafting-classes'
 
 class NavigationBar extends React.Component {
   render () {

@@ -101,6 +101,7 @@ export function clearCraftingClassData () {
 }
 
 export function updateCraftingClassDataWithCharacterData () {
+  console.log('updating')
   const classJobCategories = ['Disciple of the Land', 'Disciple of the Hand']
   const craftingClassData = retrieveAndUpdateCraftingClassData()
   const characterData = _filter(_values(_get(retrieveAndUpdateCharacterData(), 'Character.ClassJobs')),

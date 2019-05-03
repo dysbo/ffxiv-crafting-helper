@@ -12,8 +12,8 @@ import {
   uniqBy as _uniqBy
 } from 'lodash'
 import { Container } from 'react-bootstrap'
-import * as LocalStorageService from '../service/localStorage'
-import * as XivApi from '../service/xivApi'
+import * as LocalStorageService from '../../service/localStorage'
+import * as XivApi from '../../service/xivApi'
 import LodestoneModal from './LodestoneModal'
 import CalculationsTable from './CalculationsTable'
 import NavigationBar from './NavigationBar'
