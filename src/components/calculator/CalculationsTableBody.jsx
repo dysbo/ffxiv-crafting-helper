@@ -1,25 +1,18 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { calculateProgressPercentage, calculateRemainingExp, calculateRemainingItems } from '../../service/calculations'
 import Form from 'react-bootstrap/es/Form'
 import { OverlayTrigger, Popover, ProgressBar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle as faIcon } from '@fortawesome/free-solid-svg-icons'
-import { find } from 'lodash'
+import { concat, filter, find, orderBy, set, toNumber } from 'lodash'
 import LEVELING_GUIDE_LINKS from '../../data/leveling-guide-links'
+import EXP_PER_LEVEL from '../../data/exp-per-level'
+import { saveLocalClassData } from '../../store/actions'
 
-export default class CalculationsTableBody extends React.Component {
+class CalculationsTableBody extends React.Component {
   getLevelingGuidePageUrl (abbreviation, currentLevel) {
-    // const matchedPage = find(levelingGuide.pages, p => {
-    //   const { maxLevel, minLevel } = p
-    //
-    //   if (currentLevel >= minLevel && currentLevel <= maxLevel) {
-    //     return true
-    //   }
-    // })
-    //
-    // return !!matchedPage ? `${levelingGuide.url}/${matchedPage.page}/` : levelingGuide.url
-
     const classGuideData = find(LEVELING_GUIDE_LINKS, g => g.abbreviation === abbreviation)
     const { levelingGuide } = classGuideData
 
@@ -32,7 +25,37 @@ export default class CalculationsTableBody extends React.Component {
     })
 
     return !!matchedPage ? `${levelingGuide.url}/${matchedPage.page}/` : levelingGuide.url
-    // return levelingGuide.url
+  }
+
+  updateField (abbreviation, event) {
+    const { target: { value, name } } = event
+    const { craftingClasses, saveLocalClassData } = this.props
+
+    const targetCraftingClass = find(craftingClasses, c => c.abbreviation === abbreviation)
+    const otherCraftingClasses = filter(craftingClasses, c => c.abbreviation !== abbreviation)
+    set(targetCraftingClass, name, toNumber(value))
+
+    if (name === 'currentLevel') {
+      set(targetCraftingClass, 'totalExperience', EXP_PER_LEVEL[value])
+    }
+
+    const updatedCraftingClasses = orderBy(concat(otherCraftingClasses, targetCraftingClass), ['type', 'name'])
+
+    saveLocalClassData(updatedCraftingClasses)
+  }
+
+  validateNumericFieldChange (abbreviation, event) {
+    const { target: { value, max, min } } = event
+
+    if (!!min && toNumber(value) < min) {
+      set(event, 'target.value', min)
+    }
+
+    if (!!max && toNumber(value) > max) {
+      set(event, 'target.value', max)
+    }
+
+    this.updateField(abbreviation, event)
   }
 
   render () {
@@ -67,15 +90,35 @@ export default class CalculationsTableBody extends React.Component {
               </div>
             </td>
             <td>
-              <Form.Control type="number" value={c.currentLevel} readOnly />
+              <Form.Control
+                name="currentLevel"
+                type="number"
+                value={c.currentLevel}
+                min="1"
+                max="70"
+                onChange={this.validateNumericFieldChange.bind(this, c.abbreviation)}
+              />
             </td>
             <td>
-              <Form.Control type="number" value={c.currentExperience} readOnly />
+              <Form.Control
+                name="currentExperience"
+                type="number"
+                value={c.currentExperience}
+                min="0"
+                max={c.totalExperience}
+                onChange={this.validateNumericFieldChange.bind(this, c.abbreviation)}
+              />
             </td>
             <td>{c.totalExperience}</td>
             <td>{remainingExperience}</td>
             <td>
-              <Form.Control type="number" value={c.experiencePerItem} readOnly />
+              <Form.Control
+                name="experiencePerItem"
+                type="number"
+                value={c.experiencePerItem}
+                min="1"
+                onChange={this.validateNumericFieldChange.bind(this, c.abbreviation)}
+              />
             </td>
             <td>{remainingItems}</td>
             <td>
@@ -92,6 +135,13 @@ export default class CalculationsTableBody extends React.Component {
   }
 }
 
+const mapStateToProps = () => ({})
+const mapDispatchToProps = dispatch => ({
+  saveLocalClassData: (classData) => dispatch(saveLocalClassData(classData))
+})
+
 CalculationsTableBody.propTypes = {
   craftingClasses: PropTypes.arrayOf(PropTypes.shape()).isRequired
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(CalculationsTableBody)
