@@ -28,6 +28,16 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         error: action.error
       }
+    case T.LOCAL_CHARACTER_DATA_CLEAR:
+      return {
+        ...state,
+        characterData: undefined
+      }
+    case T.LOCAL_CLASS_DATA_CLEAR:
+      return {
+        ...state,
+        classData: LocalStorage.getDefaultCraftingClasses()
+      }
     default:
       return state
   }

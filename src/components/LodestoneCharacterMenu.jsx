@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { get } from 'lodash'
 import { NavDropdown } from 'react-bootstrap'
+import { clearLocalCharacterData, clearLocalClassData, getLodestoneCharacterData } from '../store/actions'
 import LodestoneCharacterModal from './LodestoneCharacterModal'
-import { getLodestoneCharacterData } from '../store/actions'
-import connect from 'react-redux/es/connect/connect'
 
 const getDropdownTitle = characterData => {
   if (get(characterData, 'Character.Avatar')) {
@@ -32,7 +32,15 @@ class LodestoneCharacterMenu extends React.Component {
   }
 
   render () {
-    const { characterData, getLodestoneCharacterData, lodestoneResults, searchLodestoneCharacterData } = this.props
+    const {
+      characterData,
+      clearLocalCharacterData,
+      clearLocalClassData,
+      getLodestoneCharacterData,
+      lodestoneResults,
+      searchLodestoneCharacterData
+    } = this.props
+
     const importText = `Import ${!characterData ? '' : 'Different'} Character Data`.replace('  ', ' ')
 
     return (
@@ -53,11 +61,11 @@ class LodestoneCharacterMenu extends React.Component {
             {importText}
           </NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item>
+          <NavDropdown.Item onClick={clearLocalClassData}>
             Clear Crafting Class Data
           </NavDropdown.Item>
           {!!characterData && (
-            <NavDropdown.Item>
+            <NavDropdown.Item onClick={clearLocalCharacterData}>
               Clear Character Data
             </NavDropdown.Item>
           )}
@@ -81,7 +89,9 @@ LodestoneCharacterMenu.propTypes = {
 const mapStateToProps = () => ({})
 
 const mapDispatchToProps = dispatch => ({
-  getLodestoneCharacterData: characterId => dispatch(getLodestoneCharacterData(characterId))
+  getLodestoneCharacterData: characterId => dispatch(getLodestoneCharacterData(characterId)),
+  clearLocalCharacterData: () => dispatch(clearLocalCharacterData()),
+  clearLocalClassData: () => dispatch(clearLocalClassData())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LodestoneCharacterMenu)

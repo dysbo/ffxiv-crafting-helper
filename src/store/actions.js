@@ -12,6 +12,10 @@ const localClassDataStore = localData => ({
   localData
 })
 
+const localClassDataClear = () => ({
+  type: T.LOCAL_CLASS_DATA_CLEAR
+})
+
 const localCharacterDataRetrieve = localData => ({
   type: T.LOCAL_CHARACTER_DATA_RETRIEVAL,
   localData
@@ -20,6 +24,10 @@ const localCharacterDataRetrieve = localData => ({
 const localCharacterDataStore = localData => ({
   type: T.LOCAL_CHARACTER_DATA_STORE,
   localData
+})
+
+const localCharacterDataClear = () => ({
+  type: T.LOCAL_CHARACTER_DATA_CLEAR
 })
 
 const lodestoneCharacterDataRequest = characterId => ({
@@ -51,6 +59,13 @@ export const saveLocalClassData = classData => {
   }
 }
 
+export const clearLocalClassData = () => {
+  return dispatch => {
+    LocalStorage.clearCraftingClassData()
+    dispatch(localClassDataClear())
+  }
+}
+
 export const saveLocalCharacterData = characterData => {
   return dispatch => {
     LocalStorage.storeCharacterData(characterData)
@@ -62,6 +77,13 @@ export const getLocalCharacterData = () => {
   return dispatch => {
     const localData = LocalStorage.retrieveAndUpdateCharacterData()
     dispatch(localCharacterDataRetrieve(localData))
+  }
+}
+
+export const clearLocalCharacterData = () => {
+  return dispatch => {
+    LocalStorage.clearCharacterData()
+    dispatch(localCharacterDataClear())
   }
 }
 

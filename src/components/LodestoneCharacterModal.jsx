@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button, Form, Modal } from 'react-bootstrap'
+import { Button, Form, Spinner, Modal } from 'react-bootstrap'
 import { get, map as _map } from 'lodash'
 import XIV_SERVERS from '../data/xiv-servers'
 import * as XivApi from '../service/xivApi'
@@ -88,8 +88,10 @@ class LodestoneCharacterModal extends React.Component {
             </Button>
             <hr />
             {!!loading && (
-              <div>
-                Loading ...
+              <div className="fullWidth text-center">
+                <Spinner animation="grow" variant="danger" />
+                <Spinner animation="grow" variant="warning" />
+                <Spinner animation="grow" variant="success" />
               </div>
             )}
             {!loading && !results.length && (
