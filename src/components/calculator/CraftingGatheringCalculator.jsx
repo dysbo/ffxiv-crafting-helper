@@ -61,7 +61,7 @@ export default class CraftingGatheringCalculator extends React.Component {
         </div>
         <div className="table-responsive">
           <Table className="calculations" striped hover>
-            <CalculationsTableHeader applySortFunc={this.applySort} />
+            <CalculationsTableHeader applySortFunc={this.applySort.bind(this)} />
             <CalculationsTableBody craftingClasses={sortedAndFilteredCraftingClassData} />
           </Table>
         </div>

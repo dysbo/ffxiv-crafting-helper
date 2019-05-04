@@ -12,14 +12,6 @@ $iconSize: 28px;
   min-width: 175px;
 }
 
-.character-icon {
-  height: $iconSize;
-  width: $iconSize;
-  border-radius: 25px;
-  border: 1px solid $text-muted;
-  margin-left: 0.5em;
-}
-
 .results {
   max-height: 300px;
   overflow: auto;

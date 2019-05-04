@@ -54,6 +54,12 @@ export function retrieveAndUpdateCraftingClassData () {
       applyChanges(storedCraftingClass, classDiffs)
     }
 
+    // get any leveling guide data and remove it from stored data
+    const levelingGuideDiffs = _filter(diff(storedCraftingClass, defaultCraftingClass), d => d.key === 'levelingGuide')
+    if (levelingGuideDiffs.length > 0) {
+      applyChanges(storedCraftingClass, levelingGuideDiffs)
+    }
+
     // add this record to the result to return
     result.push(storedCraftingClass)
   })
