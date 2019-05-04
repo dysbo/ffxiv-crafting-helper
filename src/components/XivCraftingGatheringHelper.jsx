@@ -8,6 +8,12 @@ import Navigation from './navigation/Navigation'
 import CraftingGatheringCalculator from './calculator/CraftingGatheringCalculator'
 import RecipeHelper from './recipes/RecipeHelper'
 
+const externalLink = (url, text) => (
+  <a href={url} target="_blank" rel="noopener noreferrer">
+    {text}
+  </a>
+)
+
 class XivCraftingGatheringHelper extends React.Component {
   componentDidMount () {
     this.props.getLocalClassData()
@@ -36,10 +42,13 @@ class XivCraftingGatheringHelper extends React.Component {
             <Route exact path="/" render={Calculator} />
             <Route path="/calculations" render={Calculator} />
             {process.env.NODE_ENV === 'development' && (
-              <Route path="/recipes/:craftingClass" component={RecipeHelper} />
+              <Route path="/recipes" component={RecipeHelper} />
             )}
           </Switch>
           <div className="tc text-muted">
+            Created by {externalLink('https://na.finalfantasyxiv.com/lodestone/character/22858010/',
+            'Xythyt')} with the help of {externalLink('https://www.xivapi.com', 'XIVAPI')}.
+            <br />
             Version {process.env.REACT_APP_VERSION}
           </div>
         </Container>
@@ -48,10 +57,13 @@ class XivCraftingGatheringHelper extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  craftingClassData: get(state, 'classData'),
-  characterData: get(state, 'characterData')
-})
+const mapStateToProps = state => {
+            console.log(state)
+  return ({
+    craftingClassData: get(state, 'local.classData'),
+    characterData: get(state, 'local.characterData')
+  })
+}
 
 const mapDispatchToProps = dispatch => ({
   getLocalCharacterData: () => dispatch(actions.getLocalCharacterData()),
