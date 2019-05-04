@@ -40,7 +40,9 @@ class XivCraftingGatheringHelper extends React.Component {
           <Switch>
             <Route exact path="/" render={Calculator} />
             <Route path="/calculations" render={Calculator} />
-            <Route path="/recipes/:craftingClass" render={DummyComponent} />
+            {process.env.NODE_ENV === 'development' && (
+              <Route path="/recipes/:craftingClass" render={DummyComponent} />
+            )}
           </Switch>
         </Container>
       </Router>

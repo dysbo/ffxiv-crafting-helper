@@ -20,11 +20,13 @@ export default class Navigation extends React.Component {
               Calculations
             </Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/recipes/all">
-            <Nav.Link>
-              Recipes
-            </Nav.Link>
-          </LinkContainer>
+          {process.env.NODE_ENV === 'development' && (
+            <LinkContainer to="/recipes/all">
+              <Nav.Link>
+                Recipes
+              </Nav.Link>
+            </LinkContainer>
+          )}
         </Nav>
         <Nav>
           <LodestoneCharacterMenu

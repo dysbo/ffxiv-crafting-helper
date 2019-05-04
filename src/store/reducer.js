@@ -8,15 +8,27 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case T.LOCAL_CLASS_DATA_STORE:
     case T.LOCAL_CLASS_DATA_RETRIEVAL:
       return {
         ...state,
         classData: get(action, 'localData')
       }
+    case T.LOCAL_CHARACTER_DATA_CLEAR:
+      return {
+        ...state,
+        characterData: undefined
+      }
+    case T.LOCAL_CHARACTER_DATA_STORE:
     case T.LOCAL_CHARACTER_DATA_RETRIEVAL:
       return {
         ...state,
         characterData: get(action, 'localData')
+      }
+    case T.LOCAL_CLASS_DATA_CLEAR:
+      return {
+        ...state,
+        classData: LocalStorage.getDefaultCraftingClasses()
       }
     case T.LODESTONE_CHARACTER_DATA_SUCCESS:
       return {
@@ -27,16 +39,6 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         error: action.error
-      }
-    case T.LOCAL_CHARACTER_DATA_CLEAR:
-      return {
-        ...state,
-        characterData: undefined
-      }
-    case T.LOCAL_CLASS_DATA_CLEAR:
-      return {
-        ...state,
-        classData: LocalStorage.getDefaultCraftingClasses()
       }
     default:
       return state

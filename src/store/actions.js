@@ -94,6 +94,8 @@ export const getLodestoneCharacterData = characterId => {
       const payload = await XivApi.getCharacter(characterId)
       dispatch(apiRequestSuccess(T.LODESTONE_CHARACTER_DATA_SUCCESS, payload))
       dispatch(saveLocalCharacterData(payload))
+      dispatch(saveLocalClassData(LocalStorage.updateCraftingClassDataWithCharacterData()))
+      dispatch(getLocalClassData())
     } catch (err) {
       dispatch(apiRequestFailure(T.API_REQUEST_FAILURE, err))
     }
