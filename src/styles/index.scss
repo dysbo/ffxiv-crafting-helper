@@ -61,3 +61,26 @@ table.calculations {
   --height-4: auto;
   --height-5: auto;
 }
+
+.lodestoneResults {
+  max-height: 300px;
+  overflow: auto;
+
+  > div {
+    padding: 0.25em;
+  }
+
+  label {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.avatar {
+  height: $iconSize;
+  width: $iconSize;
+  border-radius: 5em;
+  border: 1px solid #777;
+  margin: 0;
+  padding: 0;
+}

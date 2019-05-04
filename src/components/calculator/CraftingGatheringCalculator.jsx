@@ -5,8 +5,7 @@ export default class CraftingGatheringCalculator extends React.Component {
   render () {
     return (
       <div>
-        HeLLo!<br />
-        {JSON.stringify(this.props)}
+        Under Construction
       </div>
     )
   }

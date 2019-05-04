@@ -1,13 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { get, isEqual } from 'lodash'
-import { Modal, NavDropdown } from 'react-bootstrap'
+import { get } from 'lodash'
+import { NavDropdown } from 'react-bootstrap'
+import LodestoneCharacterModal from './LodestoneCharacterModal'
+import { getLodestoneCharacterData } from '../store/actions'
+import connect from 'react-redux/es/connect/connect'
 
 const getDropdownTitle = characterData => {
-  if (get(characterData, 'Avatar')) {
+  if (get(characterData, 'Character.Avatar')) {
+    const { Character: { Avatar, Name } } = characterData
     return (
-      <span>
-        TBD
+      <span className="items-center">
+        {Name}
+        <span className="ml2"><img src={Avatar} alt={Name} className="avatar" /></span>
       </span>
     )
   }
@@ -15,54 +20,55 @@ const getDropdownTitle = characterData => {
   return 'Options'
 }
 
-const getDropdownOptions = characterData => {
-  if (isEqual(characterData, {})) {
-    return (
-      <React.Fragment>
-        <NavDropdown.Item>
-          Option
-        </NavDropdown.Item>
-      </React.Fragment>
-    )
-  }
-
-  return (
-    <React.Fragment>
-      <NavDropdown.Item>
-        Import Character Data
-      </NavDropdown.Item>
-      <NavDropdown.Divider />
-      <NavDropdown.Item>
-        Clear Crafting Class Data
-      </NavDropdown.Item>
-    </React.Fragment>
-  )
-}
-
-export default class LodestoneCharacterMenu extends React.Component {
+class LodestoneCharacterMenu extends React.Component {
   state = {
     showModal: false
   }
 
+  handleModalToggle (showModal) {
+    this.setState({
+      showModal: showModal
+    })
+  }
+
   render () {
-    const { characterData } = this.props
+    const { characterData, getLodestoneCharacterData, lodestoneResults, searchLodestoneCharacterData } = this.props
+    const importText = `Import ${!characterData ? '' : 'Different'} Character Data`.replace('  ', ' ')
+
     return (
       <React.Fragment>
         <NavDropdown
           alignRight
           title={getDropdownTitle(characterData)}
         >
-          {getDropdownOptions(characterData)}
+          {!!characterData && (
+            <React.Fragment>
+              <NavDropdown.Item onClick={getLodestoneCharacterData.bind(this, characterData.characterId)}>
+                Refresh Character Data
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+            </React.Fragment>
+          )}
+          <NavDropdown.Item onClick={this.handleModalToggle.bind(this, true)}>
+            {importText}
+          </NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item>
+            Clear Crafting Class Data
+          </NavDropdown.Item>
+          {!!characterData && (
+            <NavDropdown.Item>
+              Clear Character Data
+            </NavDropdown.Item>
+          )}
         </NavDropdown>
-        <Modal show={this.state.showModal} onHide={() => {}}>
-          <Modal.Dialog>
-            <Modal.Header>
-              <Modal.Title>
-                LoDeStOnE
-              </Modal.Title>
-            </Modal.Header>
-          </Modal.Dialog>
-        </Modal>
+        <LodestoneCharacterModal
+          lodestoneResults={lodestoneResults}
+          onHide={this.handleModalToggle.bind(this, false)}
+          searchLodestoneCharacterData={searchLodestoneCharacterData}
+          show={this.state.showModal}
+          getLodestoneCharacterData={getLodestoneCharacterData}
+        />
       </React.Fragment>
     )
   }
@@ -71,3 +77,11 @@ export default class LodestoneCharacterMenu extends React.Component {
 LodestoneCharacterMenu.propTypes = {
   characterData: PropTypes.shape()
 }
+
+const mapStateToProps = () => ({})
+
+const mapDispatchToProps = dispatch => ({
+  getLodestoneCharacterData: characterId => dispatch(getLodestoneCharacterData(characterId))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LodestoneCharacterMenu)

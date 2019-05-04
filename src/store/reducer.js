@@ -18,6 +18,16 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         characterData: get(action, 'localData')
       }
+    case T.LODESTONE_CHARACTER_DATA_SUCCESS:
+      return {
+        ...state,
+        characterData: get(action, 'payload')
+      }
+    case T.API_REQUEST_FAILURE:
+      return {
+        ...state,
+        error: action.error
+      }
     default:
       return state
   }

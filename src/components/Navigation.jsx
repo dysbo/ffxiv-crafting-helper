@@ -6,7 +6,7 @@ import LodestoneCharacterMenu from './LodestoneCharacterMenu'
 
 export default class Navigation extends React.Component {
   render () {
-    const { characterData, craftingClassData } = this.props
+    const { characterData } = this.props
     return (
       <Navbar bg="dark" variant="dark">
         <LinkContainer to="/">

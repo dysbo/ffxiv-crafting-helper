@@ -32,7 +32,10 @@ class XivCraftingGatheringHelper extends React.Component {
 
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <Navigation characterData={characterData} craftingClassData={craftingClassData} />
+        <Navigation
+          characterData={characterData}
+          craftingClassData={craftingClassData}
+        />
         <Container fluid>
           <Switch>
             <Route exact path="/" render={Calculator} />
