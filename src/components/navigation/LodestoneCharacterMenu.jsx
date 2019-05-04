@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { get } from 'lodash'
 import { NavDropdown } from 'react-bootstrap'
-import { clearLocalCharacterData, clearLocalClassData, getLodestoneCharacterData } from '../store/actions'
+import { clearLocalCharacterData, clearLocalClassData, getLodestoneCharacterData } from '../../store/actions'
 import LodestoneCharacterModal from './LodestoneCharacterModal'
 
 const getDropdownTitle = characterData => {

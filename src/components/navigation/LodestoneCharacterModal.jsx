@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Form, Spinner, Modal } from 'react-bootstrap'
 import { get, map as _map } from 'lodash'
-import XIV_SERVERS from '../data/xiv-servers'
-import * as XivApi from '../service/xivApi'
+import XIV_SERVERS from '../../data/xiv-servers'
+import * as XivApi from '../../service/xivApi'
 
 class LodestoneCharacterModal extends React.Component {
   state = {}

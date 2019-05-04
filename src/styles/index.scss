@@ -31,6 +31,14 @@ table.calculations {
       vertical-align: middle;
       text-align: center;
 
+      &:nth-child(2) {
+        max-width: 100px;
+      }
+
+      &:nth-child(3), &:nth-child(6) {
+        max-width: 120px;
+      }
+
       input {
         text-align: center;
       }

@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { get } from 'lodash'
 import * as actions from '../store/actions'
-import Navigation from './Navigation'
+import Navigation from './navigation/Navigation'
 import CraftingGatheringCalculator from './calculator/CraftingGatheringCalculator'
+import RecipeHelper from './recipes/RecipeHelper'
 
 class XivCraftingGatheringHelper extends React.Component {
   componentDidMount () {
@@ -15,12 +16,6 @@ class XivCraftingGatheringHelper extends React.Component {
 
   render () {
     const { characterData, craftingClassData } = this.props
-    const DummyComponent = props => (
-      <div>
-        hi here are my props<br />
-        {JSON.stringify(props)}
-      </div>
-    )
 
     const Calculator = props => (
       <CraftingGatheringCalculator
@@ -41,9 +36,12 @@ class XivCraftingGatheringHelper extends React.Component {
             <Route exact path="/" render={Calculator} />
             <Route path="/calculations" render={Calculator} />
             {process.env.NODE_ENV === 'development' && (
-              <Route path="/recipes/:craftingClass" render={DummyComponent} />
+              <Route path="/recipes/:craftingClass" component={RecipeHelper} />
             )}
           </Switch>
+          <div className="tc text-muted">
+            Version {process.env.REACT_APP_VERSION}
+          </div>
         </Container>
       </Router>
     )
