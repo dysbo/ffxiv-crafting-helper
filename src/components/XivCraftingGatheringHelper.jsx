@@ -58,7 +58,6 @@ class XivCraftingGatheringHelper extends React.Component {
 }
 
 const mapStateToProps = state => {
-            console.log(state)
   return ({
     craftingClassData: get(state, 'local.classData'),
     characterData: get(state, 'local.characterData')

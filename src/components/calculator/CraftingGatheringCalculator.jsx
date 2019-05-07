@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
-import { filter, isEqual, orderBy } from 'lodash'
+import { concat, filter, find, isEqual, orderBy, set, toNumber } from 'lodash'
 import FilterDropdown from './FilterDropdown'
 import CalculationsTableHeader from './CalculationsTableHeader'
 import CalculationsTableBody from './CalculationsTableBody'
+import EXP_PER_LEVEL from '../../data/exp-per-level'
+import { saveLocalClassData } from '../../store/actions'
 
-export default class CraftingGatheringCalculator extends React.Component {
+class CraftingGatheringCalculator extends React.Component {
   state = {
     sort: {
       func: 'name',
@@ -48,6 +51,23 @@ export default class CraftingGatheringCalculator extends React.Component {
     return filter(craftingClassData, func)
   }
 
+  updateField (abbreviation, event) {
+    const { target: { value, name } } = event
+    const { craftingClassData, saveLocalClassData } = this.props
+
+    const targetCraftingClass = find(craftingClassData, c => c.abbreviation === abbreviation)
+    const otherCraftingClasses = filter(craftingClassData, c => c.abbreviation !== abbreviation)
+    set(targetCraftingClass, name, toNumber(value))
+
+    if (name === 'currentLevel') {
+      set(targetCraftingClass, 'totalExperience', EXP_PER_LEVEL[value])
+    }
+
+    const updatedCraftingClasses = orderBy(concat(otherCraftingClasses, targetCraftingClass), ['type', 'name'])
+
+    saveLocalClassData(updatedCraftingClasses)
+  }
+
   render () {
     const { craftingClassData } = this.props
     const sortedAndFilteredCraftingClassData = this.getSortedCraftingClassData(
@@ -62,7 +82,10 @@ export default class CraftingGatheringCalculator extends React.Component {
         <div className="table-responsive">
           <Table className="calculations" striped hover>
             <CalculationsTableHeader applySortFunc={this.applySort.bind(this)} />
-            <CalculationsTableBody craftingClasses={sortedAndFilteredCraftingClassData} />
+            <CalculationsTableBody
+              craftingClasses={sortedAndFilteredCraftingClassData}
+              updateField={this.updateField.bind(this)}
+            />
           </Table>
         </div>
       </div>
@@ -74,3 +97,10 @@ CraftingGatheringCalculator.propTypes = {
   craftingClassData: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   characterData: PropTypes.shape()
 }
+
+const mapStateToProps = () => ({})
+const mapDispatchToProps = dispatch => ({
+  saveLocalClassData: (classData) => dispatch(saveLocalClassData(classData))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CraftingGatheringCalculator)
