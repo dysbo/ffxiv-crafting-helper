@@ -17,19 +17,11 @@ $iconSize: 28px;
   overflow: auto;
 }
 
-table.calculations {
+table.calculations, table.recipes {
   tbody {
     td {
       vertical-align: middle;
       text-align: center;
-
-      &:nth-child(2) {
-        max-width: 100px;
-      }
-
-      &:nth-child(3), &:nth-child(6) {
-        max-width: 120px;
-      }
 
       input {
         text-align: center;
@@ -41,6 +33,20 @@ table.calculations {
     th {
       vertical-align: bottom;
       text-align: center;
+    }
+  }
+}
+
+table.calculations {
+  tbody {
+    td {
+      &:nth-child(2) {
+        max-width: 100px;
+      }
+
+      &:nth-child(3), &:nth-child(6) {
+        max-width: 120px;
+      }
     }
   }
 }
@@ -83,4 +89,16 @@ table.calculations {
   border: 1px solid #777;
   margin: 0;
   padding: 0;
+}
+
+.myList {
+  border: 1px solid #000;
+  width: 300px;
+  height: 150px;
+  overflow: auto;
+  top: 3.5em !important;
+  background: #fff;
+  padding: 0.5em;
+  font-size: 0.85em;
+  border-radius: 1em;
 }

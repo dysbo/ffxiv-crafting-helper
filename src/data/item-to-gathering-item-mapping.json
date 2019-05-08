@@ -1,0 +1,3526 @@
+[
+  {
+    "GatheringItemID": 1,
+    "ItemID": 2
+  },
+  {
+    "GatheringItemID": 2,
+    "ItemID": 3
+  },
+  {
+    "GatheringItemID": 3,
+    "ItemID": 4
+  },
+  {
+    "GatheringItemID": 4,
+    "ItemID": 5
+  },
+  {
+    "GatheringItemID": 5,
+    "ItemID": 6
+  },
+  {
+    "GatheringItemID": 6,
+    "ItemID": 7
+  },
+  {
+    "GatheringItemID": 7,
+    "ItemID": 8
+  },
+  {
+    "GatheringItemID": 8,
+    "ItemID": 9
+  },
+  {
+    "GatheringItemID": 9,
+    "ItemID": 10
+  },
+  {
+    "GatheringItemID": 10,
+    "ItemID": 11
+  },
+  {
+    "GatheringItemID": 11,
+    "ItemID": 12
+  },
+  {
+    "GatheringItemID": 12,
+    "ItemID": 13
+  },
+  {
+    "GatheringItemID": 13,
+    "ItemID": 14
+  },
+  {
+    "GatheringItemID": 14,
+    "ItemID": 15
+  },
+  {
+    "GatheringItemID": 15,
+    "ItemID": 16
+  },
+  {
+    "GatheringItemID": 16,
+    "ItemID": 17
+  },
+  {
+    "GatheringItemID": 17,
+    "ItemID": 18
+  },
+  {
+    "GatheringItemID": 18,
+    "ItemID": 19
+  },
+  {
+    "GatheringItemID": 19,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 20,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 21,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 22,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 23,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 24,
+    "ItemID": 5599
+  },
+  {
+    "GatheringItemID": 25,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 26,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 27,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 28,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 29,
+    "ItemID": 5814
+  },
+  {
+    "GatheringItemID": 30,
+    "ItemID": 5815
+  },
+  {
+    "GatheringItemID": 31,
+    "ItemID": 5816
+  },
+  {
+    "GatheringItemID": 32,
+    "ItemID": 5817
+  },
+  {
+    "GatheringItemID": 33,
+    "ItemID": 5818
+  },
+  {
+    "GatheringItemID": 34,
+    "ItemID": 5819
+  },
+  {
+    "GatheringItemID": 35,
+    "ItemID": 5820
+  },
+  {
+    "GatheringItemID": 36,
+    "ItemID": 5139
+  },
+  {
+    "GatheringItemID": 37,
+    "ItemID": 5138
+  },
+  {
+    "GatheringItemID": 38,
+    "ItemID": 5524
+  },
+  {
+    "GatheringItemID": 39,
+    "ItemID": 5143
+  },
+  {
+    "GatheringItemID": 40,
+    "ItemID": 5439
+  },
+  {
+    "GatheringItemID": 41,
+    "ItemID": 5134
+  },
+  {
+    "GatheringItemID": 42,
+    "ItemID": 5118
+  },
+  {
+    "GatheringItemID": 43,
+    "ItemID": 5135
+  },
+  {
+    "GatheringItemID": 44,
+    "ItemID": 5128
+  },
+  {
+    "GatheringItemID": 45,
+    "ItemID": 5168
+  },
+  {
+    "GatheringItemID": 46,
+    "ItemID": 5141
+  },
+  {
+    "GatheringItemID": 47,
+    "ItemID": 5144
+  },
+  {
+    "GatheringItemID": 48,
+    "ItemID": 5131
+  },
+  {
+    "GatheringItemID": 49,
+    "ItemID": 5491
+  },
+  {
+    "GatheringItemID": 50,
+    "ItemID": 5145
+  },
+  {
+    "GatheringItemID": 51,
+    "ItemID": 5129
+  },
+  {
+    "GatheringItemID": 52,
+    "ItemID": 5142
+  },
+  {
+    "GatheringItemID": 53,
+    "ItemID": 5263
+  },
+  {
+    "GatheringItemID": 54,
+    "ItemID": 5525
+  },
+  {
+    "GatheringItemID": 55,
+    "ItemID": 5132
+  },
+  {
+    "GatheringItemID": 56,
+    "ItemID": 5137
+  },
+  {
+    "GatheringItemID": 57,
+    "ItemID": 5136
+  },
+  {
+    "GatheringItemID": 58,
+    "ItemID": 5130
+  },
+  {
+    "GatheringItemID": 59,
+    "ItemID": 6199
+  },
+  {
+    "GatheringItemID": 60,
+    "ItemID": 5121
+  },
+  {
+    "GatheringItemID": 61,
+    "ItemID": 5133
+  },
+  {
+    "GatheringItemID": 62,
+    "ItemID": 5140
+  },
+  {
+    "GatheringItemID": 63,
+    "ItemID": 5110
+  },
+  {
+    "GatheringItemID": 64,
+    "ItemID": 5458
+  },
+  {
+    "GatheringItemID": 65,
+    "ItemID": 5116
+  },
+  {
+    "GatheringItemID": 66,
+    "ItemID": 5113
+  },
+  {
+    "GatheringItemID": 67,
+    "ItemID": 5433
+  },
+  {
+    "GatheringItemID": 68,
+    "ItemID": 5124
+  },
+  {
+    "GatheringItemID": 69,
+    "ItemID": 5432
+  },
+  {
+    "GatheringItemID": 70,
+    "ItemID": 5465
+  },
+  {
+    "GatheringItemID": 71,
+    "ItemID": 5107
+  },
+  {
+    "GatheringItemID": 72,
+    "ItemID": 5115
+  },
+  {
+    "GatheringItemID": 73,
+    "ItemID": 5488
+  },
+  {
+    "GatheringItemID": 74,
+    "ItemID": 5111
+  },
+  {
+    "GatheringItemID": 75,
+    "ItemID": 5106
+  },
+  {
+    "GatheringItemID": 76,
+    "ItemID": 5125
+  },
+  {
+    "GatheringItemID": 77,
+    "ItemID": 5114
+  },
+  {
+    "GatheringItemID": 78,
+    "ItemID": 5272
+  },
+  {
+    "GatheringItemID": 79,
+    "ItemID": 5273
+  },
+  {
+    "GatheringItemID": 80,
+    "ItemID": 5270
+  },
+  {
+    "GatheringItemID": 81,
+    "ItemID": 5526
+  },
+  {
+    "GatheringItemID": 82,
+    "ItemID": 5269
+  },
+  {
+    "GatheringItemID": 83,
+    "ItemID": 5231
+  },
+  {
+    "GatheringItemID": 84,
+    "ItemID": 5528
+  },
+  {
+    "GatheringItemID": 85,
+    "ItemID": 6152
+  },
+  {
+    "GatheringItemID": 86,
+    "ItemID": 5152
+  },
+  {
+    "GatheringItemID": 87,
+    "ItemID": 5518
+  },
+  {
+    "GatheringItemID": 88,
+    "ItemID": 5523
+  },
+  {
+    "GatheringItemID": 89,
+    "ItemID": 5228
+  },
+  {
+    "GatheringItemID": 90,
+    "ItemID": 5157
+  },
+  {
+    "GatheringItemID": 91,
+    "ItemID": 5158
+  },
+  {
+    "GatheringItemID": 92,
+    "ItemID": 5519
+  },
+  {
+    "GatheringItemID": 93,
+    "ItemID": 5229
+  },
+  {
+    "GatheringItemID": 94,
+    "ItemID": 5155
+  },
+  {
+    "GatheringItemID": 95,
+    "ItemID": 5268
+  },
+  {
+    "GatheringItemID": 96,
+    "ItemID": 5153
+  },
+  {
+    "GatheringItemID": 97,
+    "ItemID": 5154
+  },
+  {
+    "GatheringItemID": 98,
+    "ItemID": 5156
+  },
+  {
+    "GatheringItemID": 99,
+    "ItemID": 5527
+  },
+  {
+    "GatheringItemID": 100,
+    "ItemID": 5271
+  },
+  {
+    "GatheringItemID": 101,
+    "ItemID": 4842
+  },
+  {
+    "GatheringItemID": 102,
+    "ItemID": 4807
+  },
+  {
+    "GatheringItemID": 103,
+    "ItemID": 5402
+  },
+  {
+    "GatheringItemID": 104,
+    "ItemID": 5383
+  },
+  {
+    "GatheringItemID": 105,
+    "ItemID": 5050
+  },
+  {
+    "GatheringItemID": 106,
+    "ItemID": 4813
+  },
+  {
+    "GatheringItemID": 107,
+    "ItemID": 5547
+  },
+  {
+    "GatheringItemID": 108,
+    "ItemID": 4806
+  },
+  {
+    "GatheringItemID": 109,
+    "ItemID": 5388
+  },
+  {
+    "GatheringItemID": 110,
+    "ItemID": 5385
+  },
+  {
+    "GatheringItemID": 111,
+    "ItemID": 5409
+  },
+  {
+    "GatheringItemID": 112,
+    "ItemID": 5390
+  },
+  {
+    "GatheringItemID": 113,
+    "ItemID": 4803
+  },
+  {
+    "GatheringItemID": 114,
+    "ItemID": 5352
+  },
+  {
+    "GatheringItemID": 115,
+    "ItemID": 4831
+  },
+  {
+    "GatheringItemID": 116,
+    "ItemID": 5351
+  },
+  {
+    "GatheringItemID": 117,
+    "ItemID": 4811
+  },
+  {
+    "GatheringItemID": 118,
+    "ItemID": 4828
+  },
+  {
+    "GatheringItemID": 119,
+    "ItemID": 6146
+  },
+  {
+    "GatheringItemID": 120,
+    "ItemID": 5395
+  },
+  {
+    "GatheringItemID": 121,
+    "ItemID": 5562
+  },
+  {
+    "GatheringItemID": 122,
+    "ItemID": 4805
+  },
+  {
+    "GatheringItemID": 123,
+    "ItemID": 5359
+  },
+  {
+    "GatheringItemID": 124,
+    "ItemID": 5534
+  },
+  {
+    "GatheringItemID": 125,
+    "ItemID": 4844
+  },
+  {
+    "GatheringItemID": 126,
+    "ItemID": 4786
+  },
+  {
+    "GatheringItemID": 127,
+    "ItemID": 5535
+  },
+  {
+    "GatheringItemID": 128,
+    "ItemID": 4810
+  },
+  {
+    "GatheringItemID": 129,
+    "ItemID": 5537
+  },
+  {
+    "GatheringItemID": 130,
+    "ItemID": 5391
+  },
+  {
+    "GatheringItemID": 131,
+    "ItemID": 5536
+  },
+  {
+    "GatheringItemID": 132,
+    "ItemID": 5396
+  },
+  {
+    "GatheringItemID": 133,
+    "ItemID": 5380
+  },
+  {
+    "GatheringItemID": 134,
+    "ItemID": 5498
+  },
+  {
+    "GatheringItemID": 135,
+    "ItemID": 5405
+  },
+  {
+    "GatheringItemID": 136,
+    "ItemID": 5386
+  },
+  {
+    "GatheringItemID": 137,
+    "ItemID": 5509
+  },
+  {
+    "GatheringItemID": 138,
+    "ItemID": 4809
+  },
+  {
+    "GatheringItemID": 139,
+    "ItemID": 5414
+  },
+  {
+    "GatheringItemID": 140,
+    "ItemID": 5393
+  },
+  {
+    "GatheringItemID": 141,
+    "ItemID": 5516
+  },
+  {
+    "GatheringItemID": 142,
+    "ItemID": 4793
+  },
+  {
+    "GatheringItemID": 143,
+    "ItemID": 4835
+  },
+  {
+    "GatheringItemID": 144,
+    "ItemID": 4790
+  },
+  {
+    "GatheringItemID": 145,
+    "ItemID": 4788
+  },
+  {
+    "GatheringItemID": 146,
+    "ItemID": 4779
+  },
+  {
+    "GatheringItemID": 147,
+    "ItemID": 4804
+  },
+  {
+    "GatheringItemID": 148,
+    "ItemID": 5540
+  },
+  {
+    "GatheringItemID": 149,
+    "ItemID": 4829
+  },
+  {
+    "GatheringItemID": 150,
+    "ItemID": 5542
+  },
+  {
+    "GatheringItemID": 151,
+    "ItemID": 4834
+  },
+  {
+    "GatheringItemID": 152,
+    "ItemID": 4796
+  },
+  {
+    "GatheringItemID": 153,
+    "ItemID": 5560
+  },
+  {
+    "GatheringItemID": 154,
+    "ItemID": 4778
+  },
+  {
+    "GatheringItemID": 155,
+    "ItemID": 4845
+  },
+  {
+    "GatheringItemID": 156,
+    "ItemID": 4846
+  },
+  {
+    "GatheringItemID": 157,
+    "ItemID": 4822
+  },
+  {
+    "GatheringItemID": 158,
+    "ItemID": 4795
+  },
+  {
+    "GatheringItemID": 159,
+    "ItemID": 5538
+  },
+  {
+    "GatheringItemID": 160,
+    "ItemID": 4792
+  },
+  {
+    "GatheringItemID": 161,
+    "ItemID": 4819
+  },
+  {
+    "GatheringItemID": 162,
+    "ItemID": 4783
+  },
+  {
+    "GatheringItemID": 163,
+    "ItemID": 5054
+  },
+  {
+    "GatheringItemID": 164,
+    "ItemID": 4841
+  },
+  {
+    "GatheringItemID": 165,
+    "ItemID": 5051
+  },
+  {
+    "GatheringItemID": 166,
+    "ItemID": 4843
+  },
+  {
+    "GatheringItemID": 167,
+    "ItemID": 4838
+  },
+  {
+    "GatheringItemID": 168,
+    "ItemID": 5545
+  },
+  {
+    "GatheringItemID": 169,
+    "ItemID": 5546
+  },
+  {
+    "GatheringItemID": 170,
+    "ItemID": 6145
+  },
+  {
+    "GatheringItemID": 171,
+    "ItemID": 4781
+  },
+  {
+    "GatheringItemID": 172,
+    "ItemID": 4836
+  },
+  {
+    "GatheringItemID": 173,
+    "ItemID": 4816
+  },
+  {
+    "GatheringItemID": 174,
+    "ItemID": 6148
+  },
+  {
+    "GatheringItemID": 175,
+    "ItemID": 4784
+  },
+  {
+    "GatheringItemID": 176,
+    "ItemID": 4818
+  },
+  {
+    "GatheringItemID": 177,
+    "ItemID": 6147
+  },
+  {
+    "GatheringItemID": 178,
+    "ItemID": 4785
+  },
+  {
+    "GatheringItemID": 179,
+    "ItemID": 4812
+  },
+  {
+    "GatheringItemID": 180,
+    "ItemID": 5360
+  },
+  {
+    "GatheringItemID": 181,
+    "ItemID": 5564
+  },
+  {
+    "GatheringItemID": 182,
+    "ItemID": 4800
+  },
+  {
+    "GatheringItemID": 183,
+    "ItemID": 4830
+  },
+  {
+    "GatheringItemID": 184,
+    "ItemID": 4814
+  },
+  {
+    "GatheringItemID": 185,
+    "ItemID": 5541
+  },
+  {
+    "GatheringItemID": 186,
+    "ItemID": 4797
+  },
+  {
+    "GatheringItemID": 187,
+    "ItemID": 4787
+  },
+  {
+    "GatheringItemID": 188,
+    "ItemID": 5563
+  },
+  {
+    "GatheringItemID": 189,
+    "ItemID": 4798
+  },
+  {
+    "GatheringItemID": 190,
+    "ItemID": 4832
+  },
+  {
+    "GatheringItemID": 191,
+    "ItemID": 4840
+  },
+  {
+    "GatheringItemID": 192,
+    "ItemID": 5543
+  },
+  {
+    "GatheringItemID": 193,
+    "ItemID": 4789
+  },
+  {
+    "GatheringItemID": 194,
+    "ItemID": 4837
+  },
+  {
+    "GatheringItemID": 195,
+    "ItemID": 6209
+  },
+  {
+    "GatheringItemID": 196,
+    "ItemID": 4821
+  },
+  {
+    "GatheringItemID": 197,
+    "ItemID": 5559
+  },
+  {
+    "GatheringItemID": 198,
+    "ItemID": 5341
+  },
+  {
+    "GatheringItemID": 199,
+    "ItemID": 5055
+  },
+  {
+    "GatheringItemID": 200,
+    "ItemID": 4823
+  },
+  {
+    "GatheringItemID": 201,
+    "ItemID": 4782
+  },
+  {
+    "GatheringItemID": 202,
+    "ItemID": 5539
+  },
+  {
+    "GatheringItemID": 203,
+    "ItemID": 4791
+  },
+  {
+    "GatheringItemID": 204,
+    "ItemID": 4780
+  },
+  {
+    "GatheringItemID": 205,
+    "ItemID": 4820
+  },
+  {
+    "GatheringItemID": 206,
+    "ItemID": 4808
+  },
+  {
+    "GatheringItemID": 207,
+    "ItemID": 4839
+  },
+  {
+    "GatheringItemID": 208,
+    "ItemID": 4815
+  },
+  {
+    "GatheringItemID": 209,
+    "ItemID": 4777
+  },
+  {
+    "GatheringItemID": 210,
+    "ItemID": 5346
+  },
+  {
+    "GatheringItemID": 211,
+    "ItemID": 4824
+  },
+  {
+    "GatheringItemID": 212,
+    "ItemID": 5350
+  },
+  {
+    "GatheringItemID": 213,
+    "ItemID": 5343
+  },
+  {
+    "GatheringItemID": 214,
+    "ItemID": 5342
+  },
+  {
+    "GatheringItemID": 215,
+    "ItemID": 7010
+  },
+  {
+    "GatheringItemID": 216,
+    "ItemID": 5267
+  },
+  {
+    "GatheringItemID": 217,
+    "ItemID": 5513
+  },
+  {
+    "GatheringItemID": 218,
+    "ItemID": 5230
+  },
+  {
+    "GatheringItemID": 219,
+    "ItemID": 7008
+  },
+  {
+    "GatheringItemID": 220,
+    "ItemID": 5514
+  },
+  {
+    "GatheringItemID": 221,
+    "ItemID": 7011
+  },
+  {
+    "GatheringItemID": 222,
+    "ItemID": 7012
+  },
+  {
+    "GatheringItemID": 223,
+    "ItemID": 7029
+  },
+  {
+    "GatheringItemID": 224,
+    "ItemID": 7030
+  },
+  {
+    "GatheringItemID": 225,
+    "ItemID": 7031
+  },
+  {
+    "GatheringItemID": 226,
+    "ItemID": 7715
+  },
+  {
+    "GatheringItemID": 227,
+    "ItemID": 7716
+  },
+  {
+    "GatheringItemID": 228,
+    "ItemID": 7717
+  },
+  {
+    "GatheringItemID": 229,
+    "ItemID": 7718
+  },
+  {
+    "GatheringItemID": 230,
+    "ItemID": 7719
+  },
+  {
+    "GatheringItemID": 231,
+    "ItemID": 7720
+  },
+  {
+    "GatheringItemID": 232,
+    "ItemID": 7721
+  },
+  {
+    "GatheringItemID": 233,
+    "ItemID": 7722
+  },
+  {
+    "GatheringItemID": 234,
+    "ItemID": 7723
+  },
+  {
+    "GatheringItemID": 235,
+    "ItemID": 7724
+  },
+  {
+    "GatheringItemID": 236,
+    "ItemID": 7725
+  },
+  {
+    "GatheringItemID": 237,
+    "ItemID": 7726
+  },
+  {
+    "GatheringItemID": 238,
+    "ItemID": 7727
+  },
+  {
+    "GatheringItemID": 239,
+    "ItemID": 7728
+  },
+  {
+    "GatheringItemID": 240,
+    "ItemID": 7729
+  },
+  {
+    "GatheringItemID": 241,
+    "ItemID": 7730
+  },
+  {
+    "GatheringItemID": 242,
+    "ItemID": 7731
+  },
+  {
+    "GatheringItemID": 243,
+    "ItemID": 7732
+  },
+  {
+    "GatheringItemID": 244,
+    "ItemID": 7733
+  },
+  {
+    "GatheringItemID": 245,
+    "ItemID": 7734
+  },
+  {
+    "GatheringItemID": 246,
+    "ItemID": 7735
+  },
+  {
+    "GatheringItemID": 247,
+    "ItemID": 7736
+  },
+  {
+    "GatheringItemID": 248,
+    "ItemID": 7737
+  },
+  {
+    "GatheringItemID": 249,
+    "ItemID": 7738
+  },
+  {
+    "GatheringItemID": 250,
+    "ItemID": 7739
+  },
+  {
+    "GatheringItemID": 251,
+    "ItemID": 7740
+  },
+  {
+    "GatheringItemID": 252,
+    "ItemID": 7741
+  },
+  {
+    "GatheringItemID": 253,
+    "ItemID": 7742
+  },
+  {
+    "GatheringItemID": 254,
+    "ItemID": 7743
+  },
+  {
+    "GatheringItemID": 255,
+    "ItemID": 7744
+  },
+  {
+    "GatheringItemID": 256,
+    "ItemID": 7758
+  },
+  {
+    "GatheringItemID": 257,
+    "ItemID": 7759
+  },
+  {
+    "GatheringItemID": 258,
+    "ItemID": 7760
+  },
+  {
+    "GatheringItemID": 259,
+    "ItemID": 7761
+  },
+  {
+    "GatheringItemID": 260,
+    "ItemID": 7762
+  },
+  {
+    "GatheringItemID": 261,
+    "ItemID": 7763
+  },
+  {
+    "GatheringItemID": 262,
+    "ItemID": 7764
+  },
+  {
+    "GatheringItemID": 263,
+    "ItemID": 7765
+  },
+  {
+    "GatheringItemID": 264,
+    "ItemID": 7766
+  },
+  {
+    "GatheringItemID": 265,
+    "ItemID": 7610
+  },
+  {
+    "GatheringItemID": 266,
+    "ItemID": 7588
+  },
+  {
+    "GatheringItemID": 267,
+    "ItemID": 7589
+  },
+  {
+    "GatheringItemID": 268,
+    "ItemID": 5146
+  },
+  {
+    "GatheringItemID": 269,
+    "ItemID": 7611
+  },
+  {
+    "GatheringItemID": 270,
+    "ItemID": 7590
+  },
+  {
+    "GatheringItemID": 271,
+    "ItemID": 7591
+  },
+  {
+    "GatheringItemID": 272,
+    "ItemID": 7592
+  },
+  {
+    "GatheringItemID": 273,
+    "ItemID": 7593
+  },
+  {
+    "GatheringItemID": 274,
+    "ItemID": 7594
+  },
+  {
+    "GatheringItemID": 275,
+    "ItemID": 7595
+  },
+  {
+    "GatheringItemID": 276,
+    "ItemID": 8030
+  },
+  {
+    "GatheringItemID": 277,
+    "ItemID": 5147
+  },
+  {
+    "GatheringItemID": 278,
+    "ItemID": 5148
+  },
+  {
+    "GatheringItemID": 279,
+    "ItemID": 5149
+  },
+  {
+    "GatheringItemID": 280,
+    "ItemID": 5150
+  },
+  {
+    "GatheringItemID": 281,
+    "ItemID": 5151
+  },
+  {
+    "GatheringItemID": 282,
+    "ItemID": 8031
+  },
+  {
+    "GatheringItemID": 283,
+    "ItemID": 5365
+  },
+  {
+    "GatheringItemID": 284,
+    "ItemID": 8024
+  },
+  {
+    "GatheringItemID": 285,
+    "ItemID": 5120
+  },
+  {
+    "GatheringItemID": 286,
+    "ItemID": 5394
+  },
+  {
+    "GatheringItemID": 287,
+    "ItemID": 9519
+  },
+  {
+    "GatheringItemID": 288,
+    "ItemID": 9518
+  },
+  {
+    "GatheringItemID": 289,
+    "ItemID": 10092
+  },
+  {
+    "GatheringItemID": 290,
+    "ItemID": 10093
+  },
+  {
+    "GatheringItemID": 291,
+    "ItemID": 10096
+  },
+  {
+    "GatheringItemID": 292,
+    "ItemID": 10099
+  },
+  {
+    "GatheringItemID": 293,
+    "ItemID": 10094
+  },
+  {
+    "GatheringItemID": 294,
+    "ItemID": 10095
+  },
+  {
+    "GatheringItemID": 295,
+    "ItemID": 10097
+  },
+  {
+    "GatheringItemID": 296,
+    "ItemID": 10098
+  },
+  {
+    "GatheringItemID": 297,
+    "ItemID": 5521
+  },
+  {
+    "GatheringItemID": 298,
+    "ItemID": 5126
+  },
+  {
+    "GatheringItemID": 299,
+    "ItemID": 12531
+  },
+  {
+    "GatheringItemID": 300,
+    "ItemID": 12551
+  },
+  {
+    "GatheringItemID": 301,
+    "ItemID": 12534
+  },
+  {
+    "GatheringItemID": 302,
+    "ItemID": 12552
+  },
+  {
+    "GatheringItemID": 303,
+    "ItemID": 12553
+  },
+  {
+    "GatheringItemID": 304,
+    "ItemID": 12631
+  },
+  {
+    "GatheringItemID": 305,
+    "ItemID": 12555
+  },
+  {
+    "GatheringItemID": 306,
+    "ItemID": 12554
+  },
+  {
+    "GatheringItemID": 307,
+    "ItemID": 12537
+  },
+  {
+    "GatheringItemID": 308,
+    "ItemID": 12556
+  },
+  {
+    "GatheringItemID": 309,
+    "ItemID": 12532
+  },
+  {
+    "GatheringItemID": 310,
+    "ItemID": 12632
+  },
+  {
+    "GatheringItemID": 311,
+    "ItemID": 12557
+  },
+  {
+    "GatheringItemID": 312,
+    "ItemID": 12558
+  },
+  {
+    "GatheringItemID": 313,
+    "ItemID": 12535
+  },
+  {
+    "GatheringItemID": 314,
+    "ItemID": 12539
+  },
+  {
+    "GatheringItemID": 315,
+    "ItemID": 12533
+  },
+  {
+    "GatheringItemID": 316,
+    "ItemID": 12559
+  },
+  {
+    "GatheringItemID": 317,
+    "ItemID": 12560
+  },
+  {
+    "GatheringItemID": 318,
+    "ItemID": 12538
+  },
+  {
+    "GatheringItemID": 319,
+    "ItemID": 5127
+  },
+  {
+    "GatheringItemID": 320,
+    "ItemID": 5108
+  },
+  {
+    "GatheringItemID": 321,
+    "ItemID": 5109
+  },
+  {
+    "GatheringItemID": 322,
+    "ItemID": 5162
+  },
+  {
+    "GatheringItemID": 323,
+    "ItemID": 12941
+  },
+  {
+    "GatheringItemID": 324,
+    "ItemID": 5112
+  },
+  {
+    "GatheringItemID": 325,
+    "ItemID": 5161
+  },
+  {
+    "GatheringItemID": 326,
+    "ItemID": 12901
+  },
+  {
+    "GatheringItemID": 327,
+    "ItemID": 5214
+  },
+  {
+    "GatheringItemID": 328,
+    "ItemID": 5218
+  },
+  {
+    "GatheringItemID": 329,
+    "ItemID": 5117
+  },
+  {
+    "GatheringItemID": 330,
+    "ItemID": 5159
+  },
+  {
+    "GatheringItemID": 331,
+    "ItemID": 12942
+  },
+  {
+    "GatheringItemID": 332,
+    "ItemID": 12966
+  },
+  {
+    "GatheringItemID": 333,
+    "ItemID": 12967
+  },
+  {
+    "GatheringItemID": 334,
+    "ItemID": 12536
+  },
+  {
+    "GatheringItemID": 335,
+    "ItemID": 12540
+  },
+  {
+    "GatheringItemID": 336,
+    "ItemID": 12945
+  },
+  {
+    "GatheringItemID": 337,
+    "ItemID": 5226
+  },
+  {
+    "GatheringItemID": 338,
+    "ItemID": 5163
+  },
+  {
+    "GatheringItemID": 339,
+    "ItemID": 5160
+  },
+  {
+    "GatheringItemID": 340,
+    "ItemID": 5220
+  },
+  {
+    "GatheringItemID": 341,
+    "ItemID": 5224
+  },
+  {
+    "GatheringItemID": 342,
+    "ItemID": 5403
+  },
+  {
+    "GatheringItemID": 343,
+    "ItemID": 5384
+  },
+  {
+    "GatheringItemID": 344,
+    "ItemID": 12597
+  },
+  {
+    "GatheringItemID": 345,
+    "ItemID": 12880
+  },
+  {
+    "GatheringItemID": 346,
+    "ItemID": 12883
+  },
+  {
+    "GatheringItemID": 347,
+    "ItemID": 12878
+  },
+  {
+    "GatheringItemID": 348,
+    "ItemID": 12598
+  },
+  {
+    "GatheringItemID": 349,
+    "ItemID": 12578
+  },
+  {
+    "GatheringItemID": 350,
+    "ItemID": 12585
+  },
+  {
+    "GatheringItemID": 351,
+    "ItemID": 12893
+  },
+  {
+    "GatheringItemID": 352,
+    "ItemID": 12879
+  },
+  {
+    "GatheringItemID": 353,
+    "ItemID": 12885
+  },
+  {
+    "GatheringItemID": 354,
+    "ItemID": 12638
+  },
+  {
+    "GatheringItemID": 355,
+    "ItemID": 12887
+  },
+  {
+    "GatheringItemID": 356,
+    "ItemID": 12639
+  },
+  {
+    "GatheringItemID": 357,
+    "ItemID": 12579
+  },
+  {
+    "GatheringItemID": 358,
+    "ItemID": 12586
+  },
+  {
+    "GatheringItemID": 359,
+    "ItemID": 12642
+  },
+  {
+    "GatheringItemID": 360,
+    "ItemID": 12643
+  },
+  {
+    "GatheringItemID": 361,
+    "ItemID": 12640
+  },
+  {
+    "GatheringItemID": 362,
+    "ItemID": 12891
+  },
+  {
+    "GatheringItemID": 363,
+    "ItemID": 12641
+  },
+  {
+    "GatheringItemID": 364,
+    "ItemID": 12900
+  },
+  {
+    "GatheringItemID": 365,
+    "ItemID": 12896
+  },
+  {
+    "GatheringItemID": 366,
+    "ItemID": 12899
+  },
+  {
+    "GatheringItemID": 367,
+    "ItemID": 12877
+  },
+  {
+    "GatheringItemID": 368,
+    "ItemID": 12882
+  },
+  {
+    "GatheringItemID": 369,
+    "ItemID": 12943
+  },
+  {
+    "GatheringItemID": 370,
+    "ItemID": 12884
+  },
+  {
+    "GatheringItemID": 371,
+    "ItemID": 12889
+  },
+  {
+    "GatheringItemID": 372,
+    "ItemID": 12968
+  },
+  {
+    "GatheringItemID": 373,
+    "ItemID": 12971
+  },
+  {
+    "GatheringItemID": 374,
+    "ItemID": 12944
+  },
+  {
+    "GatheringItemID": 375,
+    "ItemID": 12897
+  },
+  {
+    "GatheringItemID": 376,
+    "ItemID": 12898
+  },
+  {
+    "GatheringItemID": 377,
+    "ItemID": 12969
+  },
+  {
+    "GatheringItemID": 378,
+    "ItemID": 12972
+  },
+  {
+    "GatheringItemID": 379,
+    "ItemID": 12634
+  },
+  {
+    "GatheringItemID": 380,
+    "ItemID": 12587
+  },
+  {
+    "GatheringItemID": 381,
+    "ItemID": 12902
+  },
+  {
+    "GatheringItemID": 382,
+    "ItemID": 4833
+  },
+  {
+    "GatheringItemID": 383,
+    "ItemID": 12903
+  },
+  {
+    "GatheringItemID": 384,
+    "ItemID": 12904
+  },
+  {
+    "GatheringItemID": 385,
+    "ItemID": 12970
+  },
+  {
+    "GatheringItemID": 386,
+    "ItemID": 12973
+  },
+  {
+    "GatheringItemID": 387,
+    "ItemID": 10335
+  },
+  {
+    "GatheringItemID": 388,
+    "ItemID": 13759
+  },
+  {
+    "GatheringItemID": 389,
+    "ItemID": 13760
+  },
+  {
+    "GatheringItemID": 390,
+    "ItemID": 13761
+  },
+  {
+    "GatheringItemID": 391,
+    "ItemID": 13762
+  },
+  {
+    "GatheringItemID": 392,
+    "ItemID": 13763
+  },
+  {
+    "GatheringItemID": 393,
+    "ItemID": 13764
+  },
+  {
+    "GatheringItemID": 394,
+    "ItemID": 13765
+  },
+  {
+    "GatheringItemID": 395,
+    "ItemID": 13767
+  },
+  {
+    "GatheringItemID": 396,
+    "ItemID": 13768
+  },
+  {
+    "GatheringItemID": 397,
+    "ItemID": 14154
+  },
+  {
+    "GatheringItemID": 398,
+    "ItemID": 14956
+  },
+  {
+    "GatheringItemID": 399,
+    "ItemID": 14159
+  },
+  {
+    "GatheringItemID": 400,
+    "ItemID": 14160
+  },
+  {
+    "GatheringItemID": 401,
+    "ItemID": 14957
+  },
+  {
+    "GatheringItemID": 402,
+    "ItemID": 14148
+  },
+  {
+    "GatheringItemID": 403,
+    "ItemID": 14955
+  },
+  {
+    "GatheringItemID": 404,
+    "ItemID": 14151
+  },
+  {
+    "GatheringItemID": 405,
+    "ItemID": 14190
+  },
+  {
+    "GatheringItemID": 406,
+    "ItemID": 15646
+  },
+  {
+    "GatheringItemID": 407,
+    "ItemID": 15647
+  },
+  {
+    "GatheringItemID": 408,
+    "ItemID": 15948
+  },
+  {
+    "GatheringItemID": 409,
+    "ItemID": 15949
+  },
+  {
+    "GatheringItemID": 410,
+    "ItemID": 15865
+  },
+  {
+    "GatheringItemID": 411,
+    "ItemID": 15866
+  },
+  {
+    "GatheringItemID": 412,
+    "ItemID": 15867
+  },
+  {
+    "GatheringItemID": 413,
+    "ItemID": 15868
+  },
+  {
+    "GatheringItemID": 414,
+    "ItemID": 15869
+  },
+  {
+    "GatheringItemID": 415,
+    "ItemID": 15870
+  },
+  {
+    "GatheringItemID": 416,
+    "ItemID": 5392
+  },
+  {
+    "GatheringItemID": 417,
+    "ItemID": 16721
+  },
+  {
+    "GatheringItemID": 418,
+    "ItemID": 16722
+  },
+  {
+    "GatheringItemID": 419,
+    "ItemID": 16723
+  },
+  {
+    "GatheringItemID": 420,
+    "ItemID": 16724
+  },
+  {
+    "GatheringItemID": 421,
+    "ItemID": 16725
+  },
+  {
+    "GatheringItemID": 422,
+    "ItemID": 16726
+  },
+  {
+    "GatheringItemID": 423,
+    "ItemID": 17557
+  },
+  {
+    "GatheringItemID": 424,
+    "ItemID": 17558
+  },
+  {
+    "GatheringItemID": 425,
+    "ItemID": 17559
+  },
+  {
+    "GatheringItemID": 426,
+    "ItemID": 17560
+  },
+  {
+    "GatheringItemID": 427,
+    "ItemID": 17561
+  },
+  {
+    "GatheringItemID": 428,
+    "ItemID": 19910
+  },
+  {
+    "GatheringItemID": 429,
+    "ItemID": 19968
+  },
+  {
+    "GatheringItemID": 430,
+    "ItemID": 19871
+  },
+  {
+    "GatheringItemID": 431,
+    "ItemID": 19969
+  },
+  {
+    "GatheringItemID": 432,
+    "ItemID": 19951
+  },
+  {
+    "GatheringItemID": 433,
+    "ItemID": 19872
+  },
+  {
+    "GatheringItemID": 434,
+    "ItemID": 19970
+  },
+  {
+    "GatheringItemID": 435,
+    "ItemID": 19953
+  },
+  {
+    "GatheringItemID": 436,
+    "ItemID": 19971
+  },
+  {
+    "GatheringItemID": 437,
+    "ItemID": 20009
+  },
+  {
+    "GatheringItemID": 438,
+    "ItemID": 19954
+  },
+  {
+    "GatheringItemID": 439,
+    "ItemID": 19972
+  },
+  {
+    "GatheringItemID": 440,
+    "ItemID": 19957
+  },
+  {
+    "GatheringItemID": 441,
+    "ItemID": 19973
+  },
+  {
+    "GatheringItemID": 442,
+    "ItemID": 19958
+  },
+  {
+    "GatheringItemID": 443,
+    "ItemID": 19959
+  },
+  {
+    "GatheringItemID": 444,
+    "ItemID": 20011
+  },
+  {
+    "GatheringItemID": 445,
+    "ItemID": 5232
+  },
+  {
+    "GatheringItemID": 446,
+    "ItemID": 19950
+  },
+  {
+    "GatheringItemID": 447,
+    "ItemID": 20007
+  },
+  {
+    "GatheringItemID": 448,
+    "ItemID": 20006
+  },
+  {
+    "GatheringItemID": 449,
+    "ItemID": 19952
+  },
+  {
+    "GatheringItemID": 450,
+    "ItemID": 20010
+  },
+  {
+    "GatheringItemID": 451,
+    "ItemID": 19955
+  },
+  {
+    "GatheringItemID": 452,
+    "ItemID": 19956
+  },
+  {
+    "GatheringItemID": 453,
+    "ItemID": 19907
+  },
+  {
+    "GatheringItemID": 454,
+    "ItemID": 19936
+  },
+  {
+    "GatheringItemID": 455,
+    "ItemID": 19851
+  },
+  {
+    "GatheringItemID": 456,
+    "ItemID": 19930
+  },
+  {
+    "GatheringItemID": 457,
+    "ItemID": 19931
+  },
+  {
+    "GatheringItemID": 458,
+    "ItemID": 19908
+  },
+  {
+    "GatheringItemID": 459,
+    "ItemID": 5389
+  },
+  {
+    "GatheringItemID": 460,
+    "ItemID": 19860
+  },
+  {
+    "GatheringItemID": 461,
+    "ItemID": 19863
+  },
+  {
+    "GatheringItemID": 462,
+    "ItemID": 19870
+  },
+  {
+    "GatheringItemID": 463,
+    "ItemID": 19869
+  },
+  {
+    "GatheringItemID": 464,
+    "ItemID": 19932
+  },
+  {
+    "GatheringItemID": 465,
+    "ItemID": 19933
+  },
+  {
+    "GatheringItemID": 466,
+    "ItemID": 19852
+  },
+  {
+    "GatheringItemID": 467,
+    "ItemID": 19934
+  },
+  {
+    "GatheringItemID": 468,
+    "ItemID": 19937
+  },
+  {
+    "GatheringItemID": 469,
+    "ItemID": 19868
+  },
+  {
+    "GatheringItemID": 470,
+    "ItemID": 19976
+  },
+  {
+    "GatheringItemID": 471,
+    "ItemID": 19850
+  },
+  {
+    "GatheringItemID": 472,
+    "ItemID": 19861
+  },
+  {
+    "GatheringItemID": 473,
+    "ItemID": 19881
+  },
+  {
+    "GatheringItemID": 474,
+    "ItemID": 19917
+  },
+  {
+    "GatheringItemID": 475,
+    "ItemID": 19979
+  },
+  {
+    "GatheringItemID": 476,
+    "ItemID": 19856
+  },
+  {
+    "GatheringItemID": 477,
+    "ItemID": 19859
+  },
+  {
+    "GatheringItemID": 478,
+    "ItemID": 19862
+  },
+  {
+    "GatheringItemID": 479,
+    "ItemID": 19879
+  },
+  {
+    "GatheringItemID": 480,
+    "ItemID": 19853
+  },
+  {
+    "GatheringItemID": 481,
+    "ItemID": 19864
+  },
+  {
+    "GatheringItemID": 482,
+    "ItemID": 19982
+  },
+  {
+    "GatheringItemID": 483,
+    "ItemID": 19855
+  },
+  {
+    "GatheringItemID": 484,
+    "ItemID": 19858
+  },
+  {
+    "GatheringItemID": 485,
+    "ItemID": 19865
+  },
+  {
+    "GatheringItemID": 486,
+    "ItemID": 19866
+  },
+  {
+    "GatheringItemID": 487,
+    "ItemID": 19867
+  },
+  {
+    "GatheringItemID": 488,
+    "ItemID": 19916
+  },
+  {
+    "GatheringItemID": 489,
+    "ItemID": 20012
+  },
+  {
+    "GatheringItemID": 490,
+    "ItemID": 19880
+  },
+  {
+    "GatheringItemID": 491,
+    "ItemID": 19857
+  },
+  {
+    "GatheringItemID": 492,
+    "ItemID": 19911
+  },
+  {
+    "GatheringItemID": 493,
+    "ItemID": 19912
+  },
+  {
+    "GatheringItemID": 494,
+    "ItemID": 19913
+  },
+  {
+    "GatheringItemID": 495,
+    "ItemID": 19914
+  },
+  {
+    "GatheringItemID": 496,
+    "ItemID": 19915
+  },
+  {
+    "GatheringItemID": 497,
+    "ItemID": 19854
+  },
+  {
+    "GatheringItemID": 498,
+    "ItemID": 19989
+  },
+  {
+    "GatheringItemID": 499,
+    "ItemID": 19918
+  },
+  {
+    "GatheringItemID": 500,
+    "ItemID": 19991
+  },
+  {
+    "GatheringItemID": 501,
+    "ItemID": 20780
+  },
+  {
+    "GatheringItemID": 502,
+    "ItemID": 20781
+  },
+  {
+    "GatheringItemID": 503,
+    "ItemID": 20782
+  },
+  {
+    "GatheringItemID": 504,
+    "ItemID": 20783
+  },
+  {
+    "GatheringItemID": 505,
+    "ItemID": 20784
+  },
+  {
+    "GatheringItemID": 506,
+    "ItemID": 21085
+  },
+  {
+    "GatheringItemID": 507,
+    "ItemID": 21086
+  },
+  {
+    "GatheringItemID": 508,
+    "ItemID": 22417
+  },
+  {
+    "GatheringItemID": 509,
+    "ItemID": 22418
+  },
+  {
+    "GatheringItemID": 510,
+    "ItemID": 22419
+  },
+  {
+    "GatheringItemID": 511,
+    "ItemID": 22420
+  },
+  {
+    "GatheringItemID": 512,
+    "ItemID": 23179
+  },
+  {
+    "GatheringItemID": 513,
+    "ItemID": 23180
+  },
+  {
+    "GatheringItemID": 514,
+    "ItemID": 23220
+  },
+  {
+    "GatheringItemID": 515,
+    "ItemID": 23221
+  },
+  {
+    "GatheringItemID": 516,
+    "ItemID": 23148
+  },
+  {
+    "GatheringItemID": 517,
+    "ItemID": 23149
+  },
+  {
+    "GatheringItemID": 518,
+    "ItemID": 23150
+  },
+  {
+    "GatheringItemID": 519,
+    "ItemID": 23151
+  },
+  {
+    "GatheringItemID": 520,
+    "ItemID": 23152
+  },
+  {
+    "GatheringItemID": 521,
+    "ItemID": 24255
+  },
+  {
+    "GatheringItemID": 522,
+    "ItemID": 24240
+  },
+  {
+    "GatheringItemID": 523,
+    "ItemID": 24241
+  },
+  {
+    "GatheringItemID": 524,
+    "ItemID": 24242
+  },
+  {
+    "GatheringItemID": 525,
+    "ItemID": 24243
+  },
+  {
+    "GatheringItemID": 526,
+    "ItemID": 24567
+  },
+  {
+    "GatheringItemID": 527,
+    "ItemID": 24568
+  },
+  {
+    "GatheringItemID": 528,
+    "ItemID": 24569
+  },
+  {
+    "GatheringItemID": 529,
+    "ItemID": 24570
+  },
+  {
+    "GatheringItemID": 530,
+    "ItemID": 24571
+  },
+  {
+    "GatheringItemID": 531,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 532,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 533,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 534,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 535,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 536,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 537,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 538,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 539,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 540,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 541,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 542,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 543,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 544,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 545,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 546,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 547,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 548,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 549,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 550,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10000,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10001,
+    "ItemID": 2000267
+  },
+  {
+    "GatheringItemID": 10002,
+    "ItemID": 2000265
+  },
+  {
+    "GatheringItemID": 10003,
+    "ItemID": 2000270
+  },
+  {
+    "GatheringItemID": 10004,
+    "ItemID": 2000268
+  },
+  {
+    "GatheringItemID": 10005,
+    "ItemID": 2000271
+  },
+  {
+    "GatheringItemID": 10006,
+    "ItemID": 2000273
+  },
+  {
+    "GatheringItemID": 10007,
+    "ItemID": 2000277
+  },
+  {
+    "GatheringItemID": 10008,
+    "ItemID": 2000275
+  },
+  {
+    "GatheringItemID": 10009,
+    "ItemID": 2000280
+  },
+  {
+    "GatheringItemID": 10010,
+    "ItemID": 2000278
+  },
+  {
+    "GatheringItemID": 10011,
+    "ItemID": 2000281
+  },
+  {
+    "GatheringItemID": 10012,
+    "ItemID": 2000283
+  },
+  {
+    "GatheringItemID": 10013,
+    "ItemID": 2000287
+  },
+  {
+    "GatheringItemID": 10014,
+    "ItemID": 2000285
+  },
+  {
+    "GatheringItemID": 10015,
+    "ItemID": 2000288
+  },
+  {
+    "GatheringItemID": 10016,
+    "ItemID": 2000268
+  },
+  {
+    "GatheringItemID": 10017,
+    "ItemID": 2000289
+  },
+  {
+    "GatheringItemID": 10018,
+    "ItemID": 2000293
+  },
+  {
+    "GatheringItemID": 10019,
+    "ItemID": 2000291
+  },
+  {
+    "GatheringItemID": 10020,
+    "ItemID": 2000295
+  },
+  {
+    "GatheringItemID": 10021,
+    "ItemID": 2000294
+  },
+  {
+    "GatheringItemID": 10022,
+    "ItemID": 2000296
+  },
+  {
+    "GatheringItemID": 10023,
+    "ItemID": 2000298
+  },
+  {
+    "GatheringItemID": 10024,
+    "ItemID": 2000308
+  },
+  {
+    "GatheringItemID": 10025,
+    "ItemID": 2000303
+  },
+  {
+    "GatheringItemID": 10026,
+    "ItemID": 2000302
+  },
+  {
+    "GatheringItemID": 10027,
+    "ItemID": 2000300
+  },
+  {
+    "GatheringItemID": 10028,
+    "ItemID": 2000306
+  },
+  {
+    "GatheringItemID": 10029,
+    "ItemID": 2000304
+  },
+  {
+    "GatheringItemID": 10030,
+    "ItemID": 2000307
+  },
+  {
+    "GatheringItemID": 10031,
+    "ItemID": 2000309
+  },
+  {
+    "GatheringItemID": 10032,
+    "ItemID": 2000271
+  },
+  {
+    "GatheringItemID": 10033,
+    "ItemID": 2000316
+  },
+  {
+    "GatheringItemID": 10034,
+    "ItemID": 2000311
+  },
+  {
+    "GatheringItemID": 10035,
+    "ItemID": 2000295
+  },
+  {
+    "GatheringItemID": 10036,
+    "ItemID": 2000294
+  },
+  {
+    "GatheringItemID": 10037,
+    "ItemID": 2000313
+  },
+  {
+    "GatheringItemID": 10038,
+    "ItemID": 2000315
+  },
+  {
+    "GatheringItemID": 10039,
+    "ItemID": 2000317
+  },
+  {
+    "GatheringItemID": 10040,
+    "ItemID": 2000464
+  },
+  {
+    "GatheringItemID": 10041,
+    "ItemID": 2000465
+  },
+  {
+    "GatheringItemID": 10042,
+    "ItemID": 2000466
+  },
+  {
+    "GatheringItemID": 10043,
+    "ItemID": 2000467
+  },
+  {
+    "GatheringItemID": 10044,
+    "ItemID": 2000468
+  },
+  {
+    "GatheringItemID": 10045,
+    "ItemID": 2000911
+  },
+  {
+    "GatheringItemID": 10046,
+    "ItemID": 2000912
+  },
+  {
+    "GatheringItemID": 10047,
+    "ItemID": 2000913
+  },
+  {
+    "GatheringItemID": 10048,
+    "ItemID": 2000914
+  },
+  {
+    "GatheringItemID": 10049,
+    "ItemID": 2000915
+  },
+  {
+    "GatheringItemID": 10050,
+    "ItemID": 2000916
+  },
+  {
+    "GatheringItemID": 10051,
+    "ItemID": 2000917
+  },
+  {
+    "GatheringItemID": 10052,
+    "ItemID": 2000918
+  },
+  {
+    "GatheringItemID": 10053,
+    "ItemID": 2000919
+  },
+  {
+    "GatheringItemID": 10054,
+    "ItemID": 2000920
+  },
+  {
+    "GatheringItemID": 10055,
+    "ItemID": 2000921
+  },
+  {
+    "GatheringItemID": 10056,
+    "ItemID": 2000922
+  },
+  {
+    "GatheringItemID": 10057,
+    "ItemID": 2000923
+  },
+  {
+    "GatheringItemID": 10058,
+    "ItemID": 2000924
+  },
+  {
+    "GatheringItemID": 10059,
+    "ItemID": 2000925
+  },
+  {
+    "GatheringItemID": 10060,
+    "ItemID": 2000926
+  },
+  {
+    "GatheringItemID": 10061,
+    "ItemID": 2000927
+  },
+  {
+    "GatheringItemID": 10062,
+    "ItemID": 2000928
+  },
+  {
+    "GatheringItemID": 10063,
+    "ItemID": 2000469
+  },
+  {
+    "GatheringItemID": 10064,
+    "ItemID": 2000470
+  },
+  {
+    "GatheringItemID": 10065,
+    "ItemID": 2000471
+  },
+  {
+    "GatheringItemID": 10066,
+    "ItemID": 2000472
+  },
+  {
+    "GatheringItemID": 10067,
+    "ItemID": 2000473
+  },
+  {
+    "GatheringItemID": 10068,
+    "ItemID": 2000474
+  },
+  {
+    "GatheringItemID": 10069,
+    "ItemID": 2000475
+  },
+  {
+    "GatheringItemID": 10070,
+    "ItemID": 2000476
+  },
+  {
+    "GatheringItemID": 10071,
+    "ItemID": 2000477
+  },
+  {
+    "GatheringItemID": 10072,
+    "ItemID": 2000478
+  },
+  {
+    "GatheringItemID": 10073,
+    "ItemID": 2000479
+  },
+  {
+    "GatheringItemID": 10074,
+    "ItemID": 2000480
+  },
+  {
+    "GatheringItemID": 10075,
+    "ItemID": 2000481
+  },
+  {
+    "GatheringItemID": 10076,
+    "ItemID": 2000482
+  },
+  {
+    "GatheringItemID": 10077,
+    "ItemID": 2000483
+  },
+  {
+    "GatheringItemID": 10078,
+    "ItemID": 2000484
+  },
+  {
+    "GatheringItemID": 10079,
+    "ItemID": 2000485
+  },
+  {
+    "GatheringItemID": 10080,
+    "ItemID": 2000486
+  },
+  {
+    "GatheringItemID": 10081,
+    "ItemID": 2000487
+  },
+  {
+    "GatheringItemID": 10082,
+    "ItemID": 2000488
+  },
+  {
+    "GatheringItemID": 10083,
+    "ItemID": 2000489
+  },
+  {
+    "GatheringItemID": 10084,
+    "ItemID": 2000490
+  },
+  {
+    "GatheringItemID": 10085,
+    "ItemID": 2000491
+  },
+  {
+    "GatheringItemID": 10086,
+    "ItemID": 2000492
+  },
+  {
+    "GatheringItemID": 10087,
+    "ItemID": 2000493
+  },
+  {
+    "GatheringItemID": 10088,
+    "ItemID": 2000494
+  },
+  {
+    "GatheringItemID": 10089,
+    "ItemID": 2000495
+  },
+  {
+    "GatheringItemID": 10090,
+    "ItemID": 2000496
+  },
+  {
+    "GatheringItemID": 10091,
+    "ItemID": 2000497
+  },
+  {
+    "GatheringItemID": 10092,
+    "ItemID": 2000498
+  },
+  {
+    "GatheringItemID": 10093,
+    "ItemID": 2000499
+  },
+  {
+    "GatheringItemID": 10094,
+    "ItemID": 2000500
+  },
+  {
+    "GatheringItemID": 10095,
+    "ItemID": 2000501
+  },
+  {
+    "GatheringItemID": 10096,
+    "ItemID": 2000502
+  },
+  {
+    "GatheringItemID": 10097,
+    "ItemID": 2000503
+  },
+  {
+    "GatheringItemID": 10098,
+    "ItemID": 2000504
+  },
+  {
+    "GatheringItemID": 10099,
+    "ItemID": 2000505
+  },
+  {
+    "GatheringItemID": 10100,
+    "ItemID": 2000506
+  },
+  {
+    "GatheringItemID": 10101,
+    "ItemID": 2000507
+  },
+  {
+    "GatheringItemID": 10102,
+    "ItemID": 2000508
+  },
+  {
+    "GatheringItemID": 10103,
+    "ItemID": 2000893
+  },
+  {
+    "GatheringItemID": 10104,
+    "ItemID": 2000894
+  },
+  {
+    "GatheringItemID": 10105,
+    "ItemID": 2000895
+  },
+  {
+    "GatheringItemID": 10106,
+    "ItemID": 2000896
+  },
+  {
+    "GatheringItemID": 10107,
+    "ItemID": 2000897
+  },
+  {
+    "GatheringItemID": 10108,
+    "ItemID": 2000898
+  },
+  {
+    "GatheringItemID": 10109,
+    "ItemID": 2000899
+  },
+  {
+    "GatheringItemID": 10110,
+    "ItemID": 2000900
+  },
+  {
+    "GatheringItemID": 10111,
+    "ItemID": 2000901
+  },
+  {
+    "GatheringItemID": 10112,
+    "ItemID": 2000902
+  },
+  {
+    "GatheringItemID": 10113,
+    "ItemID": 2000903
+  },
+  {
+    "GatheringItemID": 10114,
+    "ItemID": 2000904
+  },
+  {
+    "GatheringItemID": 10115,
+    "ItemID": 2000905
+  },
+  {
+    "GatheringItemID": 10116,
+    "ItemID": 2000906
+  },
+  {
+    "GatheringItemID": 10117,
+    "ItemID": 2000907
+  },
+  {
+    "GatheringItemID": 10118,
+    "ItemID": 2000908
+  },
+  {
+    "GatheringItemID": 10119,
+    "ItemID": 2000909
+  },
+  {
+    "GatheringItemID": 10120,
+    "ItemID": 2000910
+  },
+  {
+    "GatheringItemID": 10121,
+    "ItemID": 6688
+  },
+  {
+    "GatheringItemID": 10122,
+    "ItemID": 6689
+  },
+  {
+    "GatheringItemID": 10123,
+    "ItemID": 6690
+  },
+  {
+    "GatheringItemID": 10124,
+    "ItemID": 6691
+  },
+  {
+    "GatheringItemID": 10125,
+    "ItemID": 6692
+  },
+  {
+    "GatheringItemID": 10126,
+    "ItemID": 2001391
+  },
+  {
+    "GatheringItemID": 10127,
+    "ItemID": 2001392
+  },
+  {
+    "GatheringItemID": 10128,
+    "ItemID": 2001415
+  },
+  {
+    "GatheringItemID": 10129,
+    "ItemID": 2001416
+  },
+  {
+    "GatheringItemID": 10130,
+    "ItemID": 2001426
+  },
+  {
+    "GatheringItemID": 10131,
+    "ItemID": 2001427
+  },
+  {
+    "GatheringItemID": 10132,
+    "ItemID": 2001388
+  },
+  {
+    "GatheringItemID": 10133,
+    "ItemID": 2001389
+  },
+  {
+    "GatheringItemID": 10134,
+    "ItemID": 2001412
+  },
+  {
+    "GatheringItemID": 10135,
+    "ItemID": 2001413
+  },
+  {
+    "GatheringItemID": 10136,
+    "ItemID": 2001424
+  },
+  {
+    "GatheringItemID": 10137,
+    "ItemID": 2001425
+  },
+  {
+    "GatheringItemID": 10138,
+    "ItemID": 12241
+  },
+  {
+    "GatheringItemID": 10139,
+    "ItemID": 12242
+  },
+  {
+    "GatheringItemID": 10140,
+    "ItemID": 12243
+  },
+  {
+    "GatheringItemID": 10141,
+    "ItemID": 2001846
+  },
+  {
+    "GatheringItemID": 10142,
+    "ItemID": 2001845
+  },
+  {
+    "GatheringItemID": 10143,
+    "ItemID": 2001847
+  },
+  {
+    "GatheringItemID": 10144,
+    "ItemID": 2001849
+  },
+  {
+    "GatheringItemID": 10145,
+    "ItemID": 2001848
+  },
+  {
+    "GatheringItemID": 10146,
+    "ItemID": 2001851
+  },
+  {
+    "GatheringItemID": 10147,
+    "ItemID": 2001850
+  },
+  {
+    "GatheringItemID": 10148,
+    "ItemID": 2001852
+  },
+  {
+    "GatheringItemID": 10149,
+    "ItemID": 2001853
+  },
+  {
+    "GatheringItemID": 10150,
+    "ItemID": 2001855
+  },
+  {
+    "GatheringItemID": 10151,
+    "ItemID": 2001854
+  },
+  {
+    "GatheringItemID": 10152,
+    "ItemID": 2001856
+  },
+  {
+    "GatheringItemID": 10153,
+    "ItemID": 2001858
+  },
+  {
+    "GatheringItemID": 10154,
+    "ItemID": 2001857
+  },
+  {
+    "GatheringItemID": 10155,
+    "ItemID": 2001859
+  },
+  {
+    "GatheringItemID": 10156,
+    "ItemID": 2001860
+  },
+  {
+    "GatheringItemID": 10157,
+    "ItemID": 2001862
+  },
+  {
+    "GatheringItemID": 10158,
+    "ItemID": 2001861
+  },
+  {
+    "GatheringItemID": 10159,
+    "ItemID": 2001864
+  },
+  {
+    "GatheringItemID": 10160,
+    "ItemID": 2001863
+  },
+  {
+    "GatheringItemID": 10161,
+    "ItemID": 2001865
+  },
+  {
+    "GatheringItemID": 10162,
+    "ItemID": 2001867
+  },
+  {
+    "GatheringItemID": 10163,
+    "ItemID": 2001866
+  },
+  {
+    "GatheringItemID": 10164,
+    "ItemID": 2001823
+  },
+  {
+    "GatheringItemID": 10165,
+    "ItemID": 2001822
+  },
+  {
+    "GatheringItemID": 10166,
+    "ItemID": 2001824
+  },
+  {
+    "GatheringItemID": 10167,
+    "ItemID": 2001826
+  },
+  {
+    "GatheringItemID": 10168,
+    "ItemID": 2001825
+  },
+  {
+    "GatheringItemID": 10169,
+    "ItemID": 2001828
+  },
+  {
+    "GatheringItemID": 10170,
+    "ItemID": 2001827
+  },
+  {
+    "GatheringItemID": 10171,
+    "ItemID": 2001829
+  },
+  {
+    "GatheringItemID": 10172,
+    "ItemID": 2001830
+  },
+  {
+    "GatheringItemID": 10173,
+    "ItemID": 2001832
+  },
+  {
+    "GatheringItemID": 10174,
+    "ItemID": 2001831
+  },
+  {
+    "GatheringItemID": 10175,
+    "ItemID": 2001833
+  },
+  {
+    "GatheringItemID": 10176,
+    "ItemID": 2001835
+  },
+  {
+    "GatheringItemID": 10177,
+    "ItemID": 2001834
+  },
+  {
+    "GatheringItemID": 10178,
+    "ItemID": 2001836
+  },
+  {
+    "GatheringItemID": 10179,
+    "ItemID": 2001837
+  },
+  {
+    "GatheringItemID": 10180,
+    "ItemID": 2001839
+  },
+  {
+    "GatheringItemID": 10181,
+    "ItemID": 2001838
+  },
+  {
+    "GatheringItemID": 10182,
+    "ItemID": 2001841
+  },
+  {
+    "GatheringItemID": 10183,
+    "ItemID": 2001840
+  },
+  {
+    "GatheringItemID": 10184,
+    "ItemID": 2001842
+  },
+  {
+    "GatheringItemID": 10185,
+    "ItemID": 2001844
+  },
+  {
+    "GatheringItemID": 10186,
+    "ItemID": 2001843
+  },
+  {
+    "GatheringItemID": 10187,
+    "ItemID": 12949
+  },
+  {
+    "GatheringItemID": 10188,
+    "ItemID": 12946
+  },
+  {
+    "GatheringItemID": 10189,
+    "ItemID": 12948
+  },
+  {
+    "GatheringItemID": 10190,
+    "ItemID": 12947
+  },
+  {
+    "GatheringItemID": 10191,
+    "ItemID": 12950
+  },
+  {
+    "GatheringItemID": 10192,
+    "ItemID": 12954
+  },
+  {
+    "GatheringItemID": 10193,
+    "ItemID": 12951
+  },
+  {
+    "GatheringItemID": 10194,
+    "ItemID": 12953
+  },
+  {
+    "GatheringItemID": 10195,
+    "ItemID": 12952
+  },
+  {
+    "GatheringItemID": 10196,
+    "ItemID": 12955
+  },
+  {
+    "GatheringItemID": 10197,
+    "ItemID": 12959
+  },
+  {
+    "GatheringItemID": 10198,
+    "ItemID": 12956
+  },
+  {
+    "GatheringItemID": 10199,
+    "ItemID": 12958
+  },
+  {
+    "GatheringItemID": 10200,
+    "ItemID": 12957
+  },
+  {
+    "GatheringItemID": 10201,
+    "ItemID": 12960
+  },
+  {
+    "GatheringItemID": 10202,
+    "ItemID": 12964
+  },
+  {
+    "GatheringItemID": 10203,
+    "ItemID": 12961
+  },
+  {
+    "GatheringItemID": 10204,
+    "ItemID": 12963
+  },
+  {
+    "GatheringItemID": 10205,
+    "ItemID": 12962
+  },
+  {
+    "GatheringItemID": 10206,
+    "ItemID": 12965
+  },
+  {
+    "GatheringItemID": 10207,
+    "ItemID": 13750
+  },
+  {
+    "GatheringItemID": 10208,
+    "ItemID": 13752
+  },
+  {
+    "GatheringItemID": 10209,
+    "ItemID": 13753
+  },
+  {
+    "GatheringItemID": 10210,
+    "ItemID": 13631
+  },
+  {
+    "GatheringItemID": 10211,
+    "ItemID": 17570
+  },
+  {
+    "GatheringItemID": 10212,
+    "ItemID": 17571
+  },
+  {
+    "GatheringItemID": 10213,
+    "ItemID": 17689
+  },
+  {
+    "GatheringItemID": 10214,
+    "ItemID": 2002120
+  },
+  {
+    "GatheringItemID": 10215,
+    "ItemID": 2002121
+  },
+  {
+    "GatheringItemID": 10216,
+    "ItemID": 2002122
+  },
+  {
+    "GatheringItemID": 10217,
+    "ItemID": 2002123
+  },
+  {
+    "GatheringItemID": 10218,
+    "ItemID": 2002124
+  },
+  {
+    "GatheringItemID": 10219,
+    "ItemID": 2002125
+  },
+  {
+    "GatheringItemID": 10220,
+    "ItemID": 2002126
+  },
+  {
+    "GatheringItemID": 10221,
+    "ItemID": 2002127
+  },
+  {
+    "GatheringItemID": 10222,
+    "ItemID": 2002128
+  },
+  {
+    "GatheringItemID": 10223,
+    "ItemID": 2002129
+  },
+  {
+    "GatheringItemID": 10224,
+    "ItemID": 2002130
+  },
+  {
+    "GatheringItemID": 10225,
+    "ItemID": 2002131
+  },
+  {
+    "GatheringItemID": 10226,
+    "ItemID": 2002132
+  },
+  {
+    "GatheringItemID": 10227,
+    "ItemID": 2002133
+  },
+  {
+    "GatheringItemID": 10228,
+    "ItemID": 2002134
+  },
+  {
+    "GatheringItemID": 10229,
+    "ItemID": 2002135
+  },
+  {
+    "GatheringItemID": 10230,
+    "ItemID": 2002136
+  },
+  {
+    "GatheringItemID": 10231,
+    "ItemID": 2002137
+  },
+  {
+    "GatheringItemID": 10232,
+    "ItemID": 2002138
+  },
+  {
+    "GatheringItemID": 10233,
+    "ItemID": 2002139
+  },
+  {
+    "GatheringItemID": 10234,
+    "ItemID": 2002140
+  },
+  {
+    "GatheringItemID": 10235,
+    "ItemID": 2002141
+  },
+  {
+    "GatheringItemID": 10236,
+    "ItemID": 2002142
+  },
+  {
+    "GatheringItemID": 10237,
+    "ItemID": 2002143
+  },
+  {
+    "GatheringItemID": 10238,
+    "ItemID": 2002144
+  },
+  {
+    "GatheringItemID": 10239,
+    "ItemID": 2002145
+  },
+  {
+    "GatheringItemID": 10240,
+    "ItemID": 2002146
+  },
+  {
+    "GatheringItemID": 10241,
+    "ItemID": 2002147
+  },
+  {
+    "GatheringItemID": 10242,
+    "ItemID": 2002148
+  },
+  {
+    "GatheringItemID": 10243,
+    "ItemID": 2002149
+  },
+  {
+    "GatheringItemID": 10244,
+    "ItemID": 2002150
+  },
+  {
+    "GatheringItemID": 10245,
+    "ItemID": 2002151
+  },
+  {
+    "GatheringItemID": 10246,
+    "ItemID": 2002152
+  },
+  {
+    "GatheringItemID": 10247,
+    "ItemID": 2002153
+  },
+  {
+    "GatheringItemID": 10248,
+    "ItemID": 2002154
+  },
+  {
+    "GatheringItemID": 10249,
+    "ItemID": 2002155
+  },
+  {
+    "GatheringItemID": 10250,
+    "ItemID": 2002156
+  },
+  {
+    "GatheringItemID": 10251,
+    "ItemID": 2002157
+  },
+  {
+    "GatheringItemID": 10252,
+    "ItemID": 2002158
+  },
+  {
+    "GatheringItemID": 10253,
+    "ItemID": 2002159
+  },
+  {
+    "GatheringItemID": 10254,
+    "ItemID": 2002160
+  },
+  {
+    "GatheringItemID": 10255,
+    "ItemID": 2002161
+  },
+  {
+    "GatheringItemID": 10256,
+    "ItemID": 2002162
+  },
+  {
+    "GatheringItemID": 10257,
+    "ItemID": 2002163
+  },
+  {
+    "GatheringItemID": 10258,
+    "ItemID": 2002164
+  },
+  {
+    "GatheringItemID": 10259,
+    "ItemID": 2002165
+  },
+  {
+    "GatheringItemID": 10260,
+    "ItemID": 17835
+  },
+  {
+    "GatheringItemID": 10261,
+    "ItemID": 17836
+  },
+  {
+    "GatheringItemID": 10262,
+    "ItemID": 17941
+  },
+  {
+    "GatheringItemID": 10263,
+    "ItemID": 17942
+  },
+  {
+    "GatheringItemID": 10264,
+    "ItemID": 17943
+  },
+  {
+    "GatheringItemID": 10265,
+    "ItemID": 17944
+  },
+  {
+    "GatheringItemID": 10266,
+    "ItemID": 17945
+  },
+  {
+    "GatheringItemID": 10267,
+    "ItemID": 17946
+  },
+  {
+    "GatheringItemID": 10268,
+    "ItemID": 17947
+  },
+  {
+    "GatheringItemID": 10269,
+    "ItemID": 17948
+  },
+  {
+    "GatheringItemID": 10270,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10271,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10272,
+    "ItemID": 22616
+  },
+  {
+    "GatheringItemID": 10273,
+    "ItemID": 22617
+  },
+  {
+    "GatheringItemID": 10274,
+    "ItemID": 22618
+  },
+  {
+    "GatheringItemID": 10275,
+    "ItemID": 22619
+  },
+  {
+    "GatheringItemID": 10276,
+    "ItemID": 22620
+  },
+  {
+    "GatheringItemID": 10277,
+    "ItemID": 22621
+  },
+  {
+    "GatheringItemID": 10278,
+    "ItemID": 22622
+  },
+  {
+    "GatheringItemID": 10279,
+    "ItemID": 22623
+  },
+  {
+    "GatheringItemID": 10280,
+    "ItemID": 22624
+  },
+  {
+    "GatheringItemID": 10281,
+    "ItemID": 22625
+  },
+  {
+    "GatheringItemID": 10282,
+    "ItemID": 22626
+  },
+  {
+    "GatheringItemID": 10283,
+    "ItemID": 22627
+  },
+  {
+    "GatheringItemID": 10284,
+    "ItemID": 22628
+  },
+  {
+    "GatheringItemID": 10285,
+    "ItemID": 22629
+  },
+  {
+    "GatheringItemID": 10286,
+    "ItemID": 22630
+  },
+  {
+    "GatheringItemID": 10287,
+    "ItemID": 22631
+  },
+  {
+    "GatheringItemID": 10288,
+    "ItemID": 22632
+  },
+  {
+    "GatheringItemID": 10289,
+    "ItemID": 22633
+  },
+  {
+    "GatheringItemID": 10290,
+    "ItemID": 22634
+  },
+  {
+    "GatheringItemID": 10291,
+    "ItemID": 22635
+  },
+  {
+    "GatheringItemID": 10292,
+    "ItemID": 22636
+  },
+  {
+    "GatheringItemID": 10293,
+    "ItemID": 22637
+  },
+  {
+    "GatheringItemID": 10294,
+    "ItemID": 22638
+  },
+  {
+    "GatheringItemID": 10295,
+    "ItemID": 22639
+  },
+  {
+    "GatheringItemID": 10296,
+    "ItemID": 22640
+  },
+  {
+    "GatheringItemID": 10297,
+    "ItemID": 22641
+  },
+  {
+    "GatheringItemID": 10298,
+    "ItemID": 22642
+  },
+  {
+    "GatheringItemID": 10299,
+    "ItemID": 22643
+  },
+  {
+    "GatheringItemID": 10300,
+    "ItemID": 22644
+  },
+  {
+    "GatheringItemID": 10301,
+    "ItemID": 22645
+  },
+  {
+    "GatheringItemID": 10302,
+    "ItemID": 22646
+  },
+  {
+    "GatheringItemID": 10303,
+    "ItemID": 22647
+  },
+  {
+    "GatheringItemID": 10304,
+    "ItemID": 22648
+  },
+  {
+    "GatheringItemID": 10305,
+    "ItemID": 22649
+  },
+  {
+    "GatheringItemID": 10306,
+    "ItemID": 22650
+  },
+  {
+    "GatheringItemID": 10307,
+    "ItemID": 22651
+  },
+  {
+    "GatheringItemID": 10308,
+    "ItemID": 22652
+  },
+  {
+    "GatheringItemID": 10309,
+    "ItemID": 22653
+  },
+  {
+    "GatheringItemID": 10310,
+    "ItemID": 22654
+  },
+  {
+    "GatheringItemID": 10311,
+    "ItemID": 22655
+  },
+  {
+    "GatheringItemID": 10312,
+    "ItemID": 22656
+  },
+  {
+    "GatheringItemID": 10313,
+    "ItemID": 22657
+  },
+  {
+    "GatheringItemID": 10314,
+    "ItemID": 22658
+  },
+  {
+    "GatheringItemID": 10315,
+    "ItemID": 22659
+  },
+  {
+    "GatheringItemID": 10316,
+    "ItemID": 22660
+  },
+  {
+    "GatheringItemID": 10317,
+    "ItemID": 22661
+  },
+  {
+    "GatheringItemID": 10318,
+    "ItemID": 22662
+  },
+  {
+    "GatheringItemID": 10319,
+    "ItemID": 22663
+  },
+  {
+    "GatheringItemID": 10320,
+    "ItemID": 22664
+  },
+  {
+    "GatheringItemID": 10321,
+    "ItemID": 22665
+  },
+  {
+    "GatheringItemID": 10322,
+    "ItemID": 22666
+  },
+  {
+    "GatheringItemID": 10323,
+    "ItemID": 22667
+  },
+  {
+    "GatheringItemID": 10324,
+    "ItemID": 23169
+  },
+  {
+    "GatheringItemID": 10325,
+    "ItemID": 23170
+  },
+  {
+    "GatheringItemID": 10326,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10327,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10328,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10329,
+    "ItemID": 0
+  },
+  {
+    "GatheringItemID": 10330,
+    "ItemID": 0
+  }
+]

@@ -16,7 +16,7 @@ export const getCharacter = async id => {
   return _get(result, 'data', {})
 }
 
-const search = async (indexes, filters, sortField, columns) => {
+const search = async (indexes, filters, sortField, columns, searchString) => {
   if (_isArray(indexes)) {
     indexes = indexes.join(',')
   }
@@ -28,7 +28,8 @@ const search = async (indexes, filters, sortField, columns) => {
   const params = {
     indexes,
     filters,
-    columns
+    columns,
+    string: searchString
   }
 
   if (!!sortField) {
@@ -59,6 +60,34 @@ export const getRecipesForLevelRange = async (abbreviation, minLevel, maxLevel) 
     sortField,
     columns.join(',')
   )
+}
+
+export const recipeSearch = async (abbreviation, searchString, page = 1) => {
+  const indexes = 'Recipe'
+  const sort_field = 'RecipeLevelTable.ClassJobLevel'
+  // const sort_field = 'ItemResult.Name_en'
+  const columns = [
+    'ID',
+    'ClassJob.Abbreviation_en',
+    'ClassJob.Icon',
+    'ClassJob.NameEnglish',
+    'RecipeLevelTable.ClassJobLevel',
+    'Name',
+    'Icon'
+  ]
+
+  const result = await axios.get(`${BASE_URL}/search`, {
+    params: {
+      indexes,
+      string: searchString,
+      columns: columns.join(','),
+      // 'sort_field': 'RecipeLevelTable.ClassJobLevel'
+      sort_field,
+      page,
+      limit: 20
+    }
+  })
+  return _get(result, 'data', {})
 }
 
 export const getIconUrl = iconRelativePath => `${BASE_URL}${iconRelativePath}`

@@ -8,7 +8,7 @@ export default class Navigation extends React.Component {
   render () {
     const { characterData } = this.props
     return (
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" sticky="top">
         <LinkContainer to="/">
           <NavbarBrand>
             FFXIV Crafting & Gathering Helper

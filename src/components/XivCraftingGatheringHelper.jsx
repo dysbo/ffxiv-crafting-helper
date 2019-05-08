@@ -45,6 +45,7 @@ class XivCraftingGatheringHelper extends React.Component {
               <Route path="/recipes" component={RecipeHelper} />
             )}
           </Switch>
+          <hr />
           <div className="tc text-muted">
             Created by {externalLink('https://na.finalfantasyxiv.com/lodestone/character/22858010/',
             'Xythyt')} with the help of {externalLink('https://www.xivapi.com', 'XIVAPI')}.
