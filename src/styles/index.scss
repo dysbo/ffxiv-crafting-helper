@@ -19,6 +19,12 @@ $iconSize: 28px;
 
 table.calculations, table.recipes {
   tbody {
+    tr {
+      &.focused {
+        background: #def;
+      }
+    }
+
     td {
       vertical-align: middle;
       text-align: center;

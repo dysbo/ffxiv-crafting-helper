@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { calculateProgressPercentage, calculateRemainingExp, calculateRemainingItems } from '../../service/calculations'
 import Form from 'react-bootstrap/es/Form'
 import { OverlayTrigger, Popover, ProgressBar } from 'react-bootstrap'
@@ -9,6 +10,10 @@ import { find, set, toNumber } from 'lodash'
 import LEVELING_GUIDE_LINKS from '../../data/leveling-guide-links'
 
 class CalculationsTableBody extends React.Component {
+  state = {
+    focusedRow: undefined
+  }
+
   getLevelingGuidePageUrl (abbreviation, currentLevel) {
     const classGuideData = find(LEVELING_GUIDE_LINKS, g => g.abbreviation === abbreviation)
     const { levelingGuide } = classGuideData
@@ -39,11 +44,17 @@ class CalculationsTableBody extends React.Component {
     updateField(abbreviation, event)
   }
 
+  handleRowFocus (abbreviation, focused) {
+    this.setState({
+      focusedRow: focused ? abbreviation : undefined
+    })
+  }
+
   render () {
     const { craftingClasses } = this.props
     return (
       <tbody>
-      {craftingClasses.map((c, key) => {
+      {craftingClasses.map(c => {
         const remainingExperience = calculateRemainingExp(c.currentExperience, c.totalExperience)
         const remainingItems = calculateRemainingItems(remainingExperience, c.experiencePerItem)
         const progressPercentage = calculateProgressPercentage(c.currentExperience, c.totalExperience)
@@ -61,7 +72,12 @@ class CalculationsTableBody extends React.Component {
         )
 
         return (
-          <tr key={key}>
+          <tr
+            key={`calculationTableRow${c.abbreviation}`}
+            onFocus={this.handleRowFocus.bind(this, c.abbreviation, true)}
+            onBlur={this.handleRowFocus.bind(this, c.abbreviation, false)}
+            className={cx(this.state.focusedRow === c.abbreviation ? 'focused' : undefined)}
+          >
             <td>
               <div className="flex justify-between items-center">
                 {c.name}
