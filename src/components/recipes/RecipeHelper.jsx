@@ -4,13 +4,15 @@ import { cloneDeep, find, get, reject } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusCircle, faPlusCircle, faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import * as XivApi from '../../service/xivApi'
+import CRAFTING_CLASSES from '../../data/crafting-classes'
 
 export default class RecipeHelper extends React.Component {
   state = {
     recipeSearchString: 'healing',
     recipeSearchIsInvalid: false,
     searching: false,
-    myList: []
+    myList: [],
+    lastSearch: undefined
   }
 
   handleFieldUpdate (event) {
@@ -33,7 +35,8 @@ export default class RecipeHelper extends React.Component {
     console.log(results)
     this.setState({
       searching: false,
-      recipeList: results
+      recipeList: results,
+      lastSearch: recipeSearchString
     })
   }
 
@@ -80,6 +83,8 @@ export default class RecipeHelper extends React.Component {
     const { myList, recipeList, recipeSearchIsInvalid, recipeSearchString, searching } = this.state
     const results = get(recipeList, 'Results')
 
+    console.log(CRAFTING_CLASSES)
+
     const popover = ({ ref, style }) => {
       return (
         <div
@@ -106,6 +111,7 @@ export default class RecipeHelper extends React.Component {
         </div>
       )
     }
+
     return (
       <div className="recipe-list pt3">
         <div className="search">
@@ -209,44 +215,3 @@ export default class RecipeHelper extends React.Component {
     )
   }
 }
-
-/*
-*
-                <Table hover striped bordered>
-                  <thead>
-                  <tr>
-                    <th colSpan={4}>
-                      <div className="flex items-center justify-between">
-                        <span>My List ({myList.length})</span>
-                        <Button variant="danger" onClick={() => this.setState({ myList: [] })}>Clear</Button>
-                      </div>
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>Crafting Class</th>
-                    <th>Recipe Name</th>
-                    <th>Required Level</th>
-                    <th>Remove?</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  {!myList.length && (
-                    <tr>
-                      <td colSpan={4}>
-                        No Items Added to List
-                      </td>
-                    </tr>
-                  )}
-                  {!!myList.length && myList.map((item, key) => (
-                    <tr key={key}>
-                      <td>{get(item, 'ClassJob.Abbreviation_en')}</td>
-                      <td>{get(item, 'Name')}</td>
-                      <td>{get(item, 'RecipeLevelTable.ClassJobLevel')}</td>
-                      <td>
-                        <Button variant="danger" onClick={this.toggleListItem.bind(this, item)}>Remove</Button>
-                      </td>
-                    </tr>
-                  ))}
-                  </tbody>
-                </Table>
-* */

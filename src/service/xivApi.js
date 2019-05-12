@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { get as _get, isArray as _isArray, set as _set } from 'lodash'
+import { forEach, map, get, isArray, set } from 'lodash'
 // import UNLOADED_CHARACTER from '../data/mock/unloadedCharacter'
 
 // const PRIVATE_KEY = '257f7d4532a74f15a429b5262d51d0f3938964ea78124b1ca8da9459accc15b7'
@@ -7,21 +7,21 @@ const BASE_URL = 'https://xivapi.com'
 
 export const searchForCharacter = async (server, name, page = 1) => {
   const result = await axios.get(`${BASE_URL}/character/search?name=${name}&server=${server}&page=${page}`)
-  return _get(result, 'data', [])
+  return get(result, 'data', [])
 }
 
 export const getCharacter = async id => {
   const result = await axios.get(`${BASE_URL}/character/${id}?extended=1`)
-  _set(result, 'data.characterId', id)
-  return _get(result, 'data', {})
+  set(result, 'data.characterId', id)
+  return get(result, 'data', {})
 }
 
 const search = async (indexes, filters, sortField, columns, searchString) => {
-  if (_isArray(indexes)) {
+  if (isArray(indexes)) {
     indexes = indexes.join(',')
   }
 
-  if (_isArray(filters)) {
+  if (isArray(filters)) {
     filters = filters.join(',')
   }
 
@@ -40,7 +40,7 @@ const search = async (indexes, filters, sortField, columns, searchString) => {
   const result = await axios.get(`${BASE_URL}/search`, {
     params
   })
-  return _get(result, 'data', {})
+  return get(result, 'data', {})
 }
 
 export const getRecipesForLevelRange = async (abbreviation, minLevel, maxLevel) => {
@@ -63,9 +63,8 @@ export const getRecipesForLevelRange = async (abbreviation, minLevel, maxLevel) 
 }
 
 export const recipeSearch = async (abbreviation, searchString, page = 1) => {
-  const indexes = 'Recipe'
-  const sort_field = 'RecipeLevelTable.ClassJobLevel'
-  // const sort_field = 'ItemResult.Name_en'
+  const indexes = 'recipe'
+  const size = 50
   const columns = [
     'ID',
     'ClassJob.Abbreviation_en',
@@ -76,18 +75,58 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
     'Icon'
   ]
 
-  const result = await axios.get(`${BASE_URL}/search`, {
-    params: {
-      indexes,
-      string: searchString,
-      columns: columns.join(','),
-      // 'sort_field': 'RecipeLevelTable.ClassJobLevel'
-      sort_field,
-      page,
-      limit: 20
-    }
-  })
-  return _get(result, 'data', {})
+  const paramsToSend = {
+    indexes,
+    body: {
+      query: {
+        bool: {
+          must: [
+            {
+              wildcard: {
+                'NameCombined_en': `*${searchString}*`
+              }
+            }
+          ]
+        }
+      },
+      size,
+      from: size * (page - 1),
+      sort: [
+        {
+          'RecipeLevelTable.ClassJobLevel': 'asc'
+        }
+      ]
+    },
+    columns,
+    limit: size
+  }
+
+  if (!!abbreviation) {
+    const minimum_should_match = 1
+    // const should = []
+        // {
+        //   match: {
+        //     'ClassJob.Abbreviation_en': 'WVR'
+        //   }
+        // },
+
+    abbreviation = isArray(abbreviation) ? abbreviation : [abbreviation]
+    const should = map(abbreviation, a => ({
+      match: {
+        'ClassJob.Abbreviation_en': a
+      }
+    }))
+
+    paramsToSend.body.query.bool.should = should
+    paramsToSend.body.query.bool.minimum_should_match = minimum_should_match
+  }
+
+  console.log(paramsToSend)
+
+  const result = await axios.post(`${BASE_URL}/search`,
+    paramsToSend
+  )
+  return get(result, 'data', {})
 }
 
 export const getIconUrl = iconRelativePath => `${BASE_URL}${iconRelativePath}`
