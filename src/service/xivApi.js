@@ -64,7 +64,7 @@ export const getRecipesForLevelRange = async (abbreviation, minLevel, maxLevel) 
 
 export const recipeSearch = async (abbreviation, searchString, page = 1) => {
   const indexes = 'recipe'
-  const size = 50
+  const size = 10
   const columns = [
     'ID',
     'ClassJob.Abbreviation_en',
@@ -98,7 +98,8 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
       ]
     },
     columns,
-    limit: size
+    limit: size,
+    page
   }
 
   if (!!abbreviation) {

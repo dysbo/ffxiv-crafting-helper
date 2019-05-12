@@ -2,56 +2,67 @@
   {
     "name": "Alchemist",
     "abbreviation": "ALC",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/alchemist.png"
   },
   {
     "name": "Armorer",
     "abbreviation": "ARM",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/armorer.png"
   },
   {
     "name": "Blacksmith",
     "abbreviation": "BSM",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/blacksmith.png"
   },
   {
     "name": "Carpenter",
     "abbreviation": "CRP",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/carpenter.png"
   },
   {
     "name": "Culinarian",
     "abbreviation": "CUL",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/culinarian.png"
   },
   {
     "name": "Goldsmith",
     "abbreviation": "GSM",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/goldsmith.png"
   },
   {
     "name": "Leatherworker",
     "abbreviation": "LTW",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/leatherworker.png"
   },
   {
     "name": "Weaver",
     "abbreviation": "WVR",
-    "type": "crafting"
+    "type": "crafting",
+    "icon": "/cj/1/weaver.png"
   },
   {
     "name": "Botanist",
     "abbreviation": "BTN",
-    "type": "gathering"
+    "type": "gathering",
+    "icon": "/cj/1/botanist.png"
   },
   {
     "name": "Miner",
     "abbreviation": "MIN",
-    "type": "gathering"
+    "type": "gathering",
+    "icon": "/cj/1/miner.png"
   },
   {
     "name": "Fisherman",
     "abbreviation": "FSH",
-    "type": "gathering"
+    "type": "gathering",
+    "icon": "/cj/1/fisher.png"
   }
 ]
