@@ -167,10 +167,8 @@ const getAndSortRecipeResults = async (
       }
 
       if (!gatheringItemId && !ingredientRecipe && !!itemId) {
-        console.log('this item is not gatherable and is not a recpie', itemId)
         const existingIngredientOther = find(ingredientsOther, ip => get(ip, 'itemId') === itemId)
         if (!!existingIngredientOther) {
-          console.log('I found an existing \'other\' ingredient', existingIngredientOther)
           const existingAmount = get(existingIngredientOther, 'amount')
           set(existingIngredientOther, 'amount', existingAmount + (amount * quantity))
         } else {
