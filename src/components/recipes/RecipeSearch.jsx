@@ -11,6 +11,7 @@ export default class RecipeSearch extends React.Component {
       handlePageChange,
       handleReset,
       handleSubmit,
+      handleTabChange,
       handleToggleListItem,
       myList,
       recipeSearchIsInvalid,
@@ -35,6 +36,7 @@ export default class RecipeSearch extends React.Component {
         <hr />
         <RecipeSearchResult
           handlePageChange={handlePageChange}
+          handleTabChange={handleTabChange}
           handleToggleListItem={handleToggleListItem}
           myList={myList}
           pagination={pagination}
@@ -51,6 +53,7 @@ RecipeSearch.propTypes = {
   handlePageChange: PropTypes.func.isRequired,
   handleReset: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,
   myList: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   recipeSearchIsInvalid: PropTypes.bool.isRequired,

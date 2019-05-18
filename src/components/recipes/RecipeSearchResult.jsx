@@ -8,7 +8,15 @@ import { getIconUrl } from '../../service/xivApi'
 
 export default class RecipeSearchResult extends React.Component {
   render () {
-    const { handlePageChange, handleToggleListItem, myList, pagination, ready, recipeList } = this.props
+    const {
+      handlePageChange,
+      handleTabChange,
+      handleToggleListItem,
+      myList,
+      pagination,
+      ready,
+      recipeList
+    } = this.props
 
     if (!ready) {
       return (
@@ -67,28 +75,31 @@ export default class RecipeSearchResult extends React.Component {
           )
         })}
         </tbody>
-        {(!!pagePrev || !!pageNext) && (
-          <tfoot>
-          <tr>
-            <td colSpan={5}>
-              <div className="w-50 dib tl">
-                {!!pagePrev && (
-                  <Button value={pagePrev} onClick={handlePageChange}>
-                    Previous
-                  </Button>
-                )}
-              </div>
-              <div className="w-50 dib tr">
-                {!!pageNext && (
-                  <Button value={pageNext} onClick={handlePageChange}>
-                    Next
-                  </Button>
-                )}
-              </div>
-            </td>
-          </tr>
-          </tfoot>
-        )}
+        <tfoot>
+        <tr>
+          <td colSpan={5}>
+            <div className="w-third dib tl">
+              {!!pagePrev && (
+                <Button value={pagePrev} onClick={handlePageChange}>
+                  Previous
+                </Button>
+              )}
+            </div>
+            <div className="w-third dib tc">
+              <Button onClick={handleTabChange.bind(this, 'recipe-list')}>
+                Go to Recipe List
+              </Button>
+            </div>
+            <div className="w-third dib tr">
+              {!!pageNext && (
+                <Button value={pageNext} onClick={handlePageChange}>
+                  Next
+                </Button>
+              )}
+            </div>
+          </td>
+        </tr>
+        </tfoot>
       </Table>
     )
   }
@@ -96,6 +107,7 @@ export default class RecipeSearchResult extends React.Component {
 
 RecipeSearchResult.propTypes = {
   handlePageChange: PropTypes.func.isRequired,
+  handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,
   myList: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   pagination: PropTypes.shape().isRequired,

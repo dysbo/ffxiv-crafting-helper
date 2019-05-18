@@ -9,7 +9,7 @@ import ShoppingList from './ShoppingList'
 
 export default class RecipeHelper extends React.Component {
   state = {
-    recipeSearchString: 'trout',
+    recipeSearchString: '',
     recipeSearchIsInvalid: false,
     searching: false,
     myList: [],
@@ -80,6 +80,12 @@ export default class RecipeHelper extends React.Component {
     this.handleSearch(event)
   }
 
+  handleTabChange (key) {
+    this.setState({
+      key
+    })
+  }
+
   toggleListItem (item) {
     item = omit(item, 'quantity')
     const { myList } = this.state
@@ -125,6 +131,7 @@ export default class RecipeHelper extends React.Component {
                 handlePageChange={this.handlePageChange.bind(this)}
                 handleReset={this.handleClear.bind(this)}
                 handleSubmit={this.handleSearch.bind(this)}
+                handleTabChange={this.handleTabChange.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
                 myList={myList}
                 recipeSearchResults={recipeList}
@@ -146,7 +153,9 @@ export default class RecipeHelper extends React.Component {
           </Tab>
           <Tab eventKey="shopping-list" title={`My Shopping List`}>
             <div className="recipe-tab">
-              <ShoppingList shoppingList={shoppingListResults} />
+              <ShoppingList
+                shoppingList={shoppingListResults}
+              />
             </div>
           </Tab>
         </Tabs>
