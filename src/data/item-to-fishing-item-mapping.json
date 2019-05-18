@@ -1,0 +1,5378 @@
+[
+  {
+    "ID": 1,
+    "Item": {
+      "ID": 4776,
+      "Name_en": "Malm Kelp"
+    }
+  },
+  {
+    "ID": 2,
+    "Item": {
+      "ID": 4925,
+      "Name_en": "Crayfish"
+    }
+  },
+  {
+    "ID": 3,
+    "Item": {
+      "ID": 4926,
+      "Name_en": "Chub"
+    }
+  },
+  {
+    "ID": 4,
+    "Item": {
+      "ID": 4869,
+      "Name_en": "Merlthor Goby"
+    }
+  },
+  {
+    "ID": 5,
+    "Item": {
+      "ID": 4870,
+      "Name_en": "Lominsan Anchovy"
+    }
+  },
+  {
+    "ID": 6,
+    "Item": {
+      "ID": 4927,
+      "Name_en": "Striped Goby"
+    }
+  },
+  {
+    "ID": 7,
+    "Item": {
+      "ID": 4928,
+      "Name_en": "Dwarf Catfish"
+    }
+  },
+  {
+    "ID": 8,
+    "Item": {
+      "ID": 4871,
+      "Name_en": "Finger Shrimp"
+    }
+  },
+  {
+    "ID": 9,
+    "Item": {
+      "ID": 4929,
+      "Name_en": "Bone Crayfish"
+    }
+  },
+  {
+    "ID": 10,
+    "Item": {
+      "ID": 5460,
+      "Name_en": "White Coral"
+    }
+  },
+  {
+    "ID": 11,
+    "Item": {
+      "ID": 4930,
+      "Name_en": "Princess Trout"
+    }
+  },
+  {
+    "ID": 12,
+    "Item": {
+      "ID": 4872,
+      "Name_en": "Ocean Cloud"
+    }
+  },
+  {
+    "ID": 13,
+    "Item": {
+      "ID": 4931,
+      "Name_en": "Dusk Goby"
+    }
+  },
+  {
+    "ID": 14,
+    "Item": {
+      "ID": 4873,
+      "Name_en": "Sea Cucumber"
+    }
+  },
+  {
+    "ID": 15,
+    "Item": {
+      "ID": 4874,
+      "Name_en": "Harbor Herring"
+    }
+  },
+  {
+    "ID": 16,
+    "Item": {
+      "ID": 4932,
+      "Name_en": "Pipira"
+    }
+  },
+  {
+    "ID": 17,
+    "Item": {
+      "ID": 4933,
+      "Name_en": "Crimson Crayfish"
+    }
+  },
+  {
+    "ID": 18,
+    "Item": {
+      "ID": 4875,
+      "Name_en": "Vongola Clam"
+    }
+  },
+  {
+    "ID": 19,
+    "Item": {
+      "ID": 4934,
+      "Name_en": "Gudgeon"
+    }
+  },
+  {
+    "ID": 20,
+    "Item": {
+      "ID": 4876,
+      "Name_en": "Coral Butterfly"
+    }
+  },
+  {
+    "ID": 21,
+    "Item": {
+      "ID": 4935,
+      "Name_en": "Brass Loach"
+    }
+  },
+  {
+    "ID": 22,
+    "Item": {
+      "ID": 4877,
+      "Name_en": "Moraby Flounder"
+    }
+  },
+  {
+    "ID": 23,
+    "Item": {
+      "ID": 4936,
+      "Name_en": "Maiden Carp"
+    }
+  },
+  {
+    "ID": 24,
+    "Item": {
+      "ID": 4937,
+      "Name_en": "Abalathian Smelt"
+    }
+  },
+  {
+    "ID": 25,
+    "Item": {
+      "ID": 4938,
+      "Name_en": "Blindfish"
+    }
+  },
+  {
+    "ID": 26,
+    "Item": {
+      "ID": 4878,
+      "Name_en": "Pebble Crab"
+    }
+  },
+  {
+    "ID": 27,
+    "Item": {
+      "ID": 4939,
+      "Name_en": "Mudskipper"
+    }
+  },
+  {
+    "ID": 28,
+    "Item": {
+      "ID": 4940,
+      "Name_en": "Rainbow Trout"
+    }
+  },
+  {
+    "ID": 29,
+    "Item": {
+      "ID": 4941,
+      "Name_en": "River Crab"
+    }
+  },
+  {
+    "ID": 30,
+    "Item": {
+      "ID": 4879,
+      "Name_en": "Tiger Cod"
+    }
+  },
+  {
+    "ID": 31,
+    "Item": {
+      "ID": 4942,
+      "Name_en": "Ala Mhigan Fighting Fish"
+    }
+  },
+  {
+    "ID": 32,
+    "Item": {
+      "ID": 4880,
+      "Name_en": "Helmet Crab"
+    }
+  },
+  {
+    "ID": 33,
+    "Item": {
+      "ID": 4943,
+      "Name_en": "Faerie Bass"
+    }
+  },
+  {
+    "ID": 34,
+    "Item": {
+      "ID": 4944,
+      "Name_en": "Acorn Snail"
+    }
+  },
+  {
+    "ID": 35,
+    "Item": {
+      "ID": 4881,
+      "Name_en": "Rothlyt Oyster"
+    }
+  },
+  {
+    "ID": 36,
+    "Item": {
+      "ID": 4945,
+      "Name_en": "Dark Sleeper"
+    }
+  },
+  {
+    "ID": 37,
+    "Item": {
+      "ID": 4946,
+      "Name_en": "La Noscean Perch"
+    }
+  },
+  {
+    "ID": 38,
+    "Item": {
+      "ID": 4882,
+      "Name_en": "Navigator's Dagger"
+    }
+  },
+  {
+    "ID": 39,
+    "Item": {
+      "ID": 4947,
+      "Name_en": "Moat Carp"
+    }
+  },
+  {
+    "ID": 40,
+    "Item": {
+      "ID": 4883,
+      "Name_en": "Angelfish"
+    }
+  },
+  {
+    "ID": 41,
+    "Item": {
+      "ID": 4948,
+      "Name_en": "Copperfish"
+    }
+  },
+  {
+    "ID": 42,
+    "Item": {
+      "ID": 4949,
+      "Name_en": "Bluebell Salmon"
+    }
+  },
+  {
+    "ID": 43,
+    "Item": {
+      "ID": 4884,
+      "Name_en": "Razor Clam"
+    }
+  },
+  {
+    "ID": 44,
+    "Item": {
+      "ID": 4950,
+      "Name_en": "Mudcrab"
+    }
+  },
+  {
+    "ID": 45,
+    "Item": {
+      "ID": 4885,
+      "Name_en": "Blue Octopus"
+    }
+  },
+  {
+    "ID": 46,
+    "Item": {
+      "ID": 4951,
+      "Name_en": "Tri-colored Carp"
+    }
+  },
+  {
+    "ID": 47,
+    "Item": {
+      "ID": 4952,
+      "Name_en": "Eunuch Crayfish"
+    }
+  },
+  {
+    "ID": 48,
+    "Item": {
+      "ID": 4953,
+      "Name_en": "Jade Eel"
+    }
+  },
+  {
+    "ID": 49,
+    "Item": {
+      "ID": 4886,
+      "Name_en": "Blowfish"
+    }
+  },
+  {
+    "ID": 50,
+    "Item": {
+      "ID": 4954,
+      "Name_en": "Pond Mussel"
+    }
+  },
+  {
+    "ID": 51,
+    "Item": {
+      "ID": 4955,
+      "Name_en": "Warmwater Trout"
+    }
+  },
+  {
+    "ID": 52,
+    "Item": {
+      "ID": 4956,
+      "Name_en": "Glass Perch"
+    }
+  },
+  {
+    "ID": 53,
+    "Item": {
+      "ID": 4957,
+      "Name_en": "Four-eyed Fish"
+    }
+  },
+  {
+    "ID": 54,
+    "Item": {
+      "ID": 4887,
+      "Name_en": "Saber Sardine"
+    }
+  },
+  {
+    "ID": 55,
+    "Item": {
+      "ID": 4958,
+      "Name_en": "Black Eel"
+    }
+  },
+  {
+    "ID": 56,
+    "Item": {
+      "ID": 4959,
+      "Name_en": "Dark Bass"
+    }
+  },
+  {
+    "ID": 57,
+    "Item": {
+      "ID": 5461,
+      "Name_en": "Blue Coral"
+    }
+  },
+  {
+    "ID": 58,
+    "Item": {
+      "ID": 4888,
+      "Name_en": "Ogre Barracuda"
+    }
+  },
+  {
+    "ID": 59,
+    "Item": {
+      "ID": 4960,
+      "Name_en": "Aegis Shrimp"
+    }
+  },
+  {
+    "ID": 60,
+    "Item": {
+      "ID": 4961,
+      "Name_en": "Five-ilm Pleco"
+    }
+  },
+  {
+    "ID": 61,
+    "Item": {
+      "ID": 4889,
+      "Name_en": "Monkfish"
+    }
+  },
+  {
+    "ID": 62,
+    "Item": {
+      "ID": 4890,
+      "Name_en": "Sea Bo"
+    }
+  },
+  {
+    "ID": 63,
+    "Item": {
+      "ID": 4962,
+      "Name_en": "Climbing Perch"
+    }
+  },
+  {
+    "ID": 64,
+    "Item": {
+      "ID": 4963,
+      "Name_en": "Shadow Catfish"
+    }
+  },
+  {
+    "ID": 65,
+    "Item": {
+      "ID": 4891,
+      "Name_en": "Bianaq Bream"
+    }
+  },
+  {
+    "ID": 66,
+    "Item": {
+      "ID": 4964,
+      "Name_en": "Black Ghost"
+    }
+  },
+  {
+    "ID": 67,
+    "Item": {
+      "ID": 4892,
+      "Name_en": "Black Sole"
+    }
+  },
+  {
+    "ID": 68,
+    "Item": {
+      "ID": 4965,
+      "Name_en": "Lamprey"
+    }
+  },
+  {
+    "ID": 69,
+    "Item": {
+      "ID": 4966,
+      "Name_en": "Plaguefish"
+    }
+  },
+  {
+    "ID": 70,
+    "Item": {
+      "ID": 4893,
+      "Name_en": "Hammerhead Shark"
+    }
+  },
+  {
+    "ID": 71,
+    "Item": {
+      "ID": 4967,
+      "Name_en": "Yugr'am Salmon"
+    }
+  },
+  {
+    "ID": 72,
+    "Item": {
+      "ID": 4894,
+      "Name_en": "Sea Pickle"
+    }
+  },
+  {
+    "ID": 73,
+    "Item": {
+      "ID": 4968,
+      "Name_en": "Spotted Pleco"
+    }
+  },
+  {
+    "ID": 74,
+    "Item": {
+      "ID": 5544,
+      "Name_en": "Lamp Marimo"
+    }
+  },
+  {
+    "ID": 75,
+    "Item": {
+      "ID": 4895,
+      "Name_en": "Indigo Herring"
+    }
+  },
+  {
+    "ID": 76,
+    "Item": {
+      "ID": 4969,
+      "Name_en": "Ropefish"
+    }
+  },
+  {
+    "ID": 77,
+    "Item": {
+      "ID": 4896,
+      "Name_en": "Ash Tuna"
+    }
+  },
+  {
+    "ID": 78,
+    "Item": {
+      "ID": 4970,
+      "Name_en": "Grip Killifish"
+    }
+  },
+  {
+    "ID": 79,
+    "Item": {
+      "ID": 4971,
+      "Name_en": "Bone Cleaner"
+    }
+  },
+  {
+    "ID": 80,
+    "Item": {
+      "ID": 4972,
+      "Name_en": "Root Skipper"
+    }
+  },
+  {
+    "ID": 81,
+    "Item": {
+      "ID": 4897,
+      "Name_en": "Leafy Seadragon"
+    }
+  },
+  {
+    "ID": 82,
+    "Item": {
+      "ID": 4973,
+      "Name_en": "Bonytongue"
+    }
+  },
+  {
+    "ID": 83,
+    "Item": {
+      "ID": 4898,
+      "Name_en": "Fullmoon Sardine"
+    }
+  },
+  {
+    "ID": 84,
+    "Item": {
+      "ID": 4974,
+      "Name_en": "Mitten Crab"
+    }
+  },
+  {
+    "ID": 85,
+    "Item": {
+      "ID": 4899,
+      "Name_en": "Haraldr Haddock"
+    }
+  },
+  {
+    "ID": 86,
+    "Item": {
+      "ID": 4975,
+      "Name_en": "Monke Onke"
+    }
+  },
+  {
+    "ID": 87,
+    "Item": {
+      "ID": 4976,
+      "Name_en": "Seema"
+    }
+  },
+  {
+    "ID": 88,
+    "Item": {
+      "ID": 4900,
+      "Name_en": "Whitelip Oyster"
+    }
+  },
+  {
+    "ID": 89,
+    "Item": {
+      "ID": 4977,
+      "Name_en": "Sandfish"
+    }
+  },
+  {
+    "ID": 90,
+    "Item": {
+      "ID": 4978,
+      "Name_en": "Silverfish"
+    }
+  },
+  {
+    "ID": 91,
+    "Item": {
+      "ID": 4979,
+      "Name_en": "Clown Loach"
+    }
+  },
+  {
+    "ID": 92,
+    "Item": {
+      "ID": 5032,
+      "Name_en": "Sand Bream"
+    }
+  },
+  {
+    "ID": 93,
+    "Item": {
+      "ID": 4901,
+      "Name_en": "Lavender Remora"
+    }
+  },
+  {
+    "ID": 94,
+    "Item": {
+      "ID": 4980,
+      "Name_en": "Armored Pleco"
+    }
+  },
+  {
+    "ID": 95,
+    "Item": {
+      "ID": 4981,
+      "Name_en": "Giant Bass"
+    }
+  },
+  {
+    "ID": 96,
+    "Item": {
+      "ID": 5033,
+      "Name_en": "Desert Catfish"
+    }
+  },
+  {
+    "ID": 97,
+    "Item": {
+      "ID": 4902,
+      "Name_en": "Balloonfish"
+    }
+  },
+  {
+    "ID": 98,
+    "Item": {
+      "ID": 4982,
+      "Name_en": "Velodyna Carp"
+    }
+  },
+  {
+    "ID": 99,
+    "Item": {
+      "ID": 4983,
+      "Name_en": "Spotted Puffer"
+    }
+  },
+  {
+    "ID": 100,
+    "Item": {
+      "ID": 5034,
+      "Name_en": "Dustfish"
+    }
+  },
+  {
+    "ID": 101,
+    "Item": {
+      "ID": 4984,
+      "Name_en": "Golden Loach"
+    }
+  },
+  {
+    "ID": 102,
+    "Item": {
+      "ID": 5035,
+      "Name_en": "Storm Rider"
+    }
+  },
+  {
+    "ID": 103,
+    "Item": {
+      "ID": 4985,
+      "Name_en": "Trader Eel"
+    }
+  },
+  {
+    "ID": 104,
+    "Item": {
+      "ID": 4986,
+      "Name_en": "Crimson Trout"
+    }
+  },
+  {
+    "ID": 105,
+    "Item": {
+      "ID": 4987,
+      "Name_en": "Discus"
+    }
+  },
+  {
+    "ID": 106,
+    "Item": {
+      "ID": 5036,
+      "Name_en": "Antlion Slug"
+    }
+  },
+  {
+    "ID": 107,
+    "Item": {
+      "ID": 5462,
+      "Name_en": "Red Coral"
+    }
+  },
+  {
+    "ID": 108,
+    "Item": {
+      "ID": 4988,
+      "Name_en": "Bronze Lake Trout"
+    }
+  },
+  {
+    "ID": 109,
+    "Item": {
+      "ID": 4989,
+      "Name_en": "Ignus Snail"
+    }
+  },
+  {
+    "ID": 110,
+    "Item": {
+      "ID": 5037,
+      "Name_en": "Dune Manta"
+    }
+  },
+  {
+    "ID": 111,
+    "Item": {
+      "ID": 4903,
+      "Name_en": "Silver Shark"
+    }
+  },
+  {
+    "ID": 112,
+    "Item": {
+      "ID": 4990,
+      "Name_en": "Loyal Pleco"
+    }
+  },
+  {
+    "ID": 113,
+    "Item": {
+      "ID": 4991,
+      "Name_en": "Thunderbolt Sculpin"
+    }
+  },
+  {
+    "ID": 114,
+    "Item": {
+      "ID": 4992,
+      "Name_en": "Fall Jumper"
+    }
+  },
+  {
+    "ID": 115,
+    "Item": {
+      "ID": 4993,
+      "Name_en": "Knifefish"
+    }
+  },
+  {
+    "ID": 116,
+    "Item": {
+      "ID": 4904,
+      "Name_en": "Wahoo"
+    }
+  },
+  {
+    "ID": 117,
+    "Item": {
+      "ID": 4905,
+      "Name_en": "Raincaller"
+    }
+  },
+  {
+    "ID": 118,
+    "Item": {
+      "ID": 4994,
+      "Name_en": "Oakroot"
+    }
+  },
+  {
+    "ID": 119,
+    "Item": {
+      "ID": 4995,
+      "Name_en": "Common Sculpin"
+    }
+  },
+  {
+    "ID": 120,
+    "Item": {
+      "ID": 5466,
+      "Name_en": "Blacklip Oyster"
+    }
+  },
+  {
+    "ID": 121,
+    "Item": {
+      "ID": 4996,
+      "Name_en": "Southern Pike"
+    }
+  },
+  {
+    "ID": 122,
+    "Item": {
+      "ID": 4997,
+      "Name_en": "Northern Pike"
+    }
+  },
+  {
+    "ID": 123,
+    "Item": {
+      "ID": 4998,
+      "Name_en": "Kobold Puffer"
+    }
+  },
+  {
+    "ID": 124,
+    "Item": {
+      "ID": 4906,
+      "Name_en": "Nautilus"
+    }
+  },
+  {
+    "ID": 125,
+    "Item": {
+      "ID": 4999,
+      "Name_en": "Archerfish"
+    }
+  },
+  {
+    "ID": 126,
+    "Item": {
+      "ID": 5038,
+      "Name_en": "Cloud Jellyfish"
+    }
+  },
+  {
+    "ID": 127,
+    "Item": {
+      "ID": 5000,
+      "Name_en": "Goblin Perch"
+    }
+  },
+  {
+    "ID": 128,
+    "Item": {
+      "ID": 5001,
+      "Name_en": "Agelyss Carp"
+    }
+  },
+  {
+    "ID": 129,
+    "Item": {
+      "ID": 4907,
+      "Name_en": "Pike Eel"
+    }
+  },
+  {
+    "ID": 130,
+    "Item": {
+      "ID": 5002,
+      "Name_en": "Assassin Betta"
+    }
+  },
+  {
+    "ID": 131,
+    "Item": {
+      "ID": 5003,
+      "Name_en": "Sludgeskipper"
+    }
+  },
+  {
+    "ID": 132,
+    "Item": {
+      "ID": 5039,
+      "Name_en": "Skyfish"
+    }
+  },
+  {
+    "ID": 133,
+    "Item": {
+      "ID": 4908,
+      "Name_en": "Mummer Wrasse"
+    }
+  },
+  {
+    "ID": 134,
+    "Item": {
+      "ID": 5040,
+      "Name_en": "Cloud Cutter"
+    }
+  },
+  {
+    "ID": 135,
+    "Item": {
+      "ID": 5004,
+      "Name_en": "Boltfish"
+    }
+  },
+  {
+    "ID": 136,
+    "Item": {
+      "ID": 5005,
+      "Name_en": "Garpike"
+    }
+  },
+  {
+    "ID": 137,
+    "Item": {
+      "ID": 5041,
+      "Name_en": "Blind Manta"
+    }
+  },
+  {
+    "ID": 138,
+    "Item": {
+      "ID": 4909,
+      "Name_en": "Plaice"
+    }
+  },
+  {
+    "ID": 139,
+    "Item": {
+      "ID": 5006,
+      "Name_en": "Ilsabardian Bass"
+    }
+  },
+  {
+    "ID": 140,
+    "Item": {
+      "ID": 5007,
+      "Name_en": "Paglth'an Discus"
+    }
+  },
+  {
+    "ID": 141,
+    "Item": {
+      "ID": 5008,
+      "Name_en": "Boxing Pleco"
+    }
+  },
+  {
+    "ID": 142,
+    "Item": {
+      "ID": 5042,
+      "Name_en": "Rift Sailor"
+    }
+  },
+  {
+    "ID": 143,
+    "Item": {
+      "ID": 4910,
+      "Name_en": "Sea Devil"
+    }
+  },
+  {
+    "ID": 144,
+    "Item": {
+      "ID": 5009,
+      "Name_en": "Kissing Trout"
+    }
+  },
+  {
+    "ID": 145,
+    "Item": {
+      "ID": 5010,
+      "Name_en": "Angry Pike"
+    }
+  },
+  {
+    "ID": 146,
+    "Item": {
+      "ID": 5011,
+      "Name_en": "Goldfish"
+    }
+  },
+  {
+    "ID": 147,
+    "Item": {
+      "ID": 5043,
+      "Name_en": "Sagolii Monkfish"
+    }
+  },
+  {
+    "ID": 148,
+    "Item": {
+      "ID": 5044,
+      "Name_en": "Saucerfish"
+    }
+  },
+  {
+    "ID": 149,
+    "Item": {
+      "ID": 4911,
+      "Name_en": "Rock Lobster"
+    }
+  },
+  {
+    "ID": 150,
+    "Item": {
+      "ID": 5012,
+      "Name_en": "Vampire Lampern"
+    }
+  },
+  {
+    "ID": 151,
+    "Item": {
+      "ID": 5013,
+      "Name_en": "Wandering Sculpin"
+    }
+  },
+  {
+    "ID": 152,
+    "Item": {
+      "ID": 4912,
+      "Name_en": "Goosefish"
+    }
+  },
+  {
+    "ID": 153,
+    "Item": {
+      "ID": 5014,
+      "Name_en": "Cave Cherax"
+    }
+  },
+  {
+    "ID": 154,
+    "Item": {
+      "ID": 5015,
+      "Name_en": "Coeurlfish"
+    }
+  },
+  {
+    "ID": 155,
+    "Item": {
+      "ID": 4913,
+      "Name_en": "Little Thalaos"
+    }
+  },
+  {
+    "ID": 156,
+    "Item": {
+      "ID": 4914,
+      "Name_en": "Shall Shell"
+    }
+  },
+  {
+    "ID": 157,
+    "Item": {
+      "ID": 5016,
+      "Name_en": "Giant Donko"
+    }
+  },
+  {
+    "ID": 158,
+    "Item": {
+      "ID": 5017,
+      "Name_en": "Sundisc"
+    }
+  },
+  {
+    "ID": 159,
+    "Item": {
+      "ID": 4915,
+      "Name_en": "Mahi-Mahi"
+    }
+  },
+  {
+    "ID": 160,
+    "Item": {
+      "ID": 4916,
+      "Name_en": "Halibut"
+    }
+  },
+  {
+    "ID": 161,
+    "Item": {
+      "ID": 5018,
+      "Name_en": "Alligator Garfish"
+    }
+  },
+  {
+    "ID": 162,
+    "Item": {
+      "ID": 5019,
+      "Name_en": "Wootz Knifefish"
+    }
+  },
+  {
+    "ID": 163,
+    "Item": {
+      "ID": 5020,
+      "Name_en": "Giant Catfish"
+    }
+  },
+  {
+    "ID": 164,
+    "Item": {
+      "ID": 5045,
+      "Name_en": "Caravan Eel"
+    }
+  },
+  {
+    "ID": 165,
+    "Item": {
+      "ID": 4917,
+      "Name_en": "Mazlaya Marlin"
+    }
+  },
+  {
+    "ID": 166,
+    "Item": {
+      "ID": 4918,
+      "Name_en": "Coelacanth"
+    }
+  },
+  {
+    "ID": 167,
+    "Item": {
+      "ID": 5021,
+      "Name_en": "Cadaver Carp"
+    }
+  },
+  {
+    "ID": 168,
+    "Item": {
+      "ID": 5046,
+      "Name_en": "Rhamphorhynchus"
+    }
+  },
+  {
+    "ID": 169,
+    "Item": {
+      "ID": 4919,
+      "Name_en": "Giant Squid"
+    }
+  },
+  {
+    "ID": 170,
+    "Item": {
+      "ID": 4920,
+      "Name_en": "Gigant Octopus"
+    }
+  },
+  {
+    "ID": 171,
+    "Item": {
+      "ID": 4921,
+      "Name_en": "Sunfish"
+    }
+  },
+  {
+    "ID": 172,
+    "Item": {
+      "ID": 4922,
+      "Name_en": "Dinichthys"
+    }
+  },
+  {
+    "ID": 173,
+    "Item": {
+      "ID": 5022,
+      "Name_en": "Mushroom Crab"
+    }
+  },
+  {
+    "ID": 174,
+    "Item": {
+      "ID": 5023,
+      "Name_en": "Judgment Staff"
+    }
+  },
+  {
+    "ID": 175,
+    "Item": {
+      "ID": 5024,
+      "Name_en": "Poxpike"
+    }
+  },
+  {
+    "ID": 176,
+    "Item": {
+      "ID": 5025,
+      "Name_en": "Emperor Fish"
+    }
+  },
+  {
+    "ID": 177,
+    "Item": {
+      "ID": 5026,
+      "Name_en": "Bowfin"
+    }
+  },
+  {
+    "ID": 178,
+    "Item": {
+      "ID": 5027,
+      "Name_en": "Heliobatis"
+    }
+  },
+  {
+    "ID": 179,
+    "Item": {
+      "ID": 4923,
+      "Name_en": "Megalodon"
+    }
+  },
+  {
+    "ID": 180,
+    "Item": {
+      "ID": 4924,
+      "Name_en": "Titanic Sawfish"
+    }
+  },
+  {
+    "ID": 181,
+    "Item": {
+      "ID": 5028,
+      "Name_en": "Takitaro"
+    }
+  },
+  {
+    "ID": 182,
+    "Item": {
+      "ID": 5029,
+      "Name_en": "Pirarucu"
+    }
+  },
+  {
+    "ID": 183,
+    "Item": {
+      "ID": 5030,
+      "Name_en": "Morinabaligi"
+    }
+  },
+  {
+    "ID": 184,
+    "Item": {
+      "ID": 5031,
+      "Name_en": "Jungle Catfish"
+    }
+  },
+  {
+    "ID": 185,
+    "Item": {
+      "ID": 6185,
+      "Name_en": "Tiny Tortoise"
+    }
+  },
+  {
+    "ID": 186,
+    "Item": {
+      "ID": 6191,
+      "Name_en": "Gigantpole"
+    }
+  },
+  {
+    "ID": 187,
+    "Item": {
+      "ID": 7678,
+      "Name_en": "Zalera"
+    }
+  },
+  {
+    "ID": 188,
+    "Item": {
+      "ID": 7679,
+      "Name_en": "Beguiler Chub"
+    }
+  },
+  {
+    "ID": 189,
+    "Item": {
+      "ID": 7680,
+      "Name_en": "Oschon's Print"
+    }
+  },
+  {
+    "ID": 190,
+    "Item": {
+      "ID": 7681,
+      "Name_en": "Caterwauler"
+    }
+  },
+  {
+    "ID": 191,
+    "Item": {
+      "ID": 7682,
+      "Name_en": "Crystal Perch"
+    }
+  },
+  {
+    "ID": 192,
+    "Item": {
+      "ID": 7683,
+      "Name_en": "Moldva"
+    }
+  },
+  {
+    "ID": 193,
+    "Item": {
+      "ID": 7684,
+      "Name_en": "Junkmonger"
+    }
+  },
+  {
+    "ID": 194,
+    "Item": {
+      "ID": 7685,
+      "Name_en": "Goldenfin"
+    }
+  },
+  {
+    "ID": 195,
+    "Item": {
+      "ID": 7686,
+      "Name_en": "Gigantshark"
+    }
+  },
+  {
+    "ID": 196,
+    "Item": {
+      "ID": 7687,
+      "Name_en": "Armorer"
+    }
+  },
+  {
+    "ID": 197,
+    "Item": {
+      "ID": 7688,
+      "Name_en": "Great Gudgeon"
+    }
+  },
+  {
+    "ID": 198,
+    "Item": {
+      "ID": 7689,
+      "Name_en": "Dark Knight"
+    }
+  },
+  {
+    "ID": 199,
+    "Item": {
+      "ID": 7690,
+      "Name_en": "Silver Sovereign"
+    }
+  },
+  {
+    "ID": 200,
+    "Item": {
+      "ID": 7691,
+      "Name_en": "Sabertooth Cod"
+    }
+  },
+  {
+    "ID": 201,
+    "Item": {
+      "ID": 7692,
+      "Name_en": "Dream Goby"
+    }
+  },
+  {
+    "ID": 202,
+    "Item": {
+      "ID": 7693,
+      "Name_en": "Navigator's Brand"
+    }
+  },
+  {
+    "ID": 203,
+    "Item": {
+      "ID": 7694,
+      "Name_en": "Dark Ambusher"
+    }
+  },
+  {
+    "ID": 204,
+    "Item": {
+      "ID": 7695,
+      "Name_en": "Judgeray"
+    }
+  },
+  {
+    "ID": 205,
+    "Item": {
+      "ID": 7696,
+      "Name_en": "Bloody Brewer"
+    }
+  },
+  {
+    "ID": 206,
+    "Item": {
+      "ID": 7697,
+      "Name_en": "Faerie Queen"
+    }
+  },
+  {
+    "ID": 207,
+    "Item": {
+      "ID": 7698,
+      "Name_en": "Slime King"
+    }
+  },
+  {
+    "ID": 208,
+    "Item": {
+      "ID": 7699,
+      "Name_en": "Blue Widow"
+    }
+  },
+  {
+    "ID": 209,
+    "Item": {
+      "ID": 7700,
+      "Name_en": "Ghost Carp"
+    }
+  },
+  {
+    "ID": 210,
+    "Item": {
+      "ID": 7701,
+      "Name_en": "Carp Diem"
+    }
+  },
+  {
+    "ID": 211,
+    "Item": {
+      "ID": 7702,
+      "Name_en": "Mud Pilgrim"
+    }
+  },
+  {
+    "ID": 212,
+    "Item": {
+      "ID": 7703,
+      "Name_en": "Old Softie"
+    }
+  },
+  {
+    "ID": 213,
+    "Item": {
+      "ID": 7704,
+      "Name_en": "Marrow Sucker"
+    }
+  },
+  {
+    "ID": 214,
+    "Item": {
+      "ID": 7705,
+      "Name_en": "Chirurgeon"
+    }
+  },
+  {
+    "ID": 215,
+    "Item": {
+      "ID": 7706,
+      "Name_en": "Mud Golem"
+    }
+  },
+  {
+    "ID": 216,
+    "Item": {
+      "ID": 7707,
+      "Name_en": "Octomammoth"
+    }
+  },
+  {
+    "ID": 217,
+    "Item": {
+      "ID": 7708,
+      "Name_en": "Matron Carp"
+    }
+  },
+  {
+    "ID": 218,
+    "Item": {
+      "ID": 7709,
+      "Name_en": "High Perch"
+    }
+  },
+  {
+    "ID": 219,
+    "Item": {
+      "ID": 7710,
+      "Name_en": "Syldra"
+    }
+  },
+  {
+    "ID": 220,
+    "Item": {
+      "ID": 7711,
+      "Name_en": "Rivet Oyster"
+    }
+  },
+  {
+    "ID": 221,
+    "Item": {
+      "ID": 7712,
+      "Name_en": "Jacques the Snipper"
+    }
+  },
+  {
+    "ID": 222,
+    "Item": {
+      "ID": 7713,
+      "Name_en": "Stormdancer"
+    }
+  },
+  {
+    "ID": 223,
+    "Item": {
+      "ID": 7714,
+      "Name_en": "Glimmerscale"
+    }
+  },
+  {
+    "ID": 224,
+    "Item": {
+      "ID": 7902,
+      "Name_en": "Cupfish"
+    }
+  },
+  {
+    "ID": 225,
+    "Item": {
+      "ID": 7903,
+      "Name_en": "Meteor Survivor"
+    }
+  },
+  {
+    "ID": 226,
+    "Item": {
+      "ID": 7904,
+      "Name_en": "Joan of Trout"
+    }
+  },
+  {
+    "ID": 227,
+    "Item": {
+      "ID": 7905,
+      "Name_en": "Toramafish"
+    }
+  },
+  {
+    "ID": 228,
+    "Item": {
+      "ID": 7906,
+      "Name_en": "Fingers"
+    }
+  },
+  {
+    "ID": 229,
+    "Item": {
+      "ID": 7907,
+      "Name_en": "The Assassin"
+    }
+  },
+  {
+    "ID": 230,
+    "Item": {
+      "ID": 7908,
+      "Name_en": "Vip Viper"
+    }
+  },
+  {
+    "ID": 231,
+    "Item": {
+      "ID": 7909,
+      "Name_en": "The Greatest Bream in the World"
+    }
+  },
+  {
+    "ID": 232,
+    "Item": {
+      "ID": 7910,
+      "Name_en": "Dirty Herry"
+    }
+  },
+  {
+    "ID": 233,
+    "Item": {
+      "ID": 7911,
+      "Name_en": "Old Hollow Eyes"
+    }
+  },
+  {
+    "ID": 234,
+    "Item": {
+      "ID": 7912,
+      "Name_en": "Sylphsbane"
+    }
+  },
+  {
+    "ID": 235,
+    "Item": {
+      "ID": 7913,
+      "Name_en": "Floating Boulder"
+    }
+  },
+  {
+    "ID": 236,
+    "Item": {
+      "ID": 7914,
+      "Name_en": "The Grinner"
+    }
+  },
+  {
+    "ID": 237,
+    "Item": {
+      "ID": 7915,
+      "Name_en": "Shark Tuna"
+    }
+  },
+  {
+    "ID": 238,
+    "Item": {
+      "ID": 7916,
+      "Name_en": "Worm of Nym"
+    }
+  },
+  {
+    "ID": 239,
+    "Item": {
+      "ID": 7917,
+      "Name_en": "Twitchbeard"
+    }
+  },
+  {
+    "ID": 240,
+    "Item": {
+      "ID": 7918,
+      "Name_en": "The Warden's Wand"
+    }
+  },
+  {
+    "ID": 241,
+    "Item": {
+      "ID": 7919,
+      "Name_en": "Spearnose"
+    }
+  },
+  {
+    "ID": 242,
+    "Item": {
+      "ID": 7920,
+      "Name_en": "Levinlight"
+    }
+  },
+  {
+    "ID": 243,
+    "Item": {
+      "ID": 7921,
+      "Name_en": "The Sinker"
+    }
+  },
+  {
+    "ID": 244,
+    "Item": {
+      "ID": 7922,
+      "Name_en": "The Gobfather"
+    }
+  },
+  {
+    "ID": 245,
+    "Item": {
+      "ID": 7923,
+      "Name_en": "Sweetnewt"
+    }
+  },
+  {
+    "ID": 246,
+    "Item": {
+      "ID": 7924,
+      "Name_en": "Bombardfish"
+    }
+  },
+  {
+    "ID": 247,
+    "Item": {
+      "ID": 7925,
+      "Name_en": "The Salter"
+    }
+  },
+  {
+    "ID": 248,
+    "Item": {
+      "ID": 7926,
+      "Name_en": "The Lone Ripper"
+    }
+  },
+  {
+    "ID": 249,
+    "Item": {
+      "ID": 7927,
+      "Name_en": "King of the Spring"
+    }
+  },
+  {
+    "ID": 250,
+    "Item": {
+      "ID": 7928,
+      "Name_en": "Discobolus"
+    }
+  },
+  {
+    "ID": 251,
+    "Item": {
+      "ID": 7929,
+      "Name_en": "Iron Noose"
+    }
+  },
+  {
+    "ID": 252,
+    "Item": {
+      "ID": 7930,
+      "Name_en": "Olgoi-Khorkhoi"
+    }
+  },
+  {
+    "ID": 253,
+    "Item": {
+      "ID": 7931,
+      "Name_en": "Magic Carpet"
+    }
+  },
+  {
+    "ID": 254,
+    "Item": {
+      "ID": 7932,
+      "Name_en": "Daniffen's Mark"
+    }
+  },
+  {
+    "ID": 255,
+    "Item": {
+      "ID": 7933,
+      "Name_en": "Charon's Lantern"
+    }
+  },
+  {
+    "ID": 256,
+    "Item": {
+      "ID": 7934,
+      "Name_en": "The Green Jester"
+    }
+  },
+  {
+    "ID": 257,
+    "Item": {
+      "ID": 7935,
+      "Name_en": "Bloodbath"
+    }
+  },
+  {
+    "ID": 258,
+    "Item": {
+      "ID": 7936,
+      "Name_en": "Son of Levin"
+    }
+  },
+  {
+    "ID": 259,
+    "Item": {
+      "ID": 7937,
+      "Name_en": "Thundergut"
+    }
+  },
+  {
+    "ID": 260,
+    "Item": {
+      "ID": 7938,
+      "Name_en": "The Drowned Sniper"
+    }
+  },
+  {
+    "ID": 261,
+    "Item": {
+      "ID": 7939,
+      "Name_en": "The Terpsichorean"
+    }
+  },
+  {
+    "ID": 262,
+    "Item": {
+      "ID": 7940,
+      "Name_en": "Mirrorscale"
+    }
+  },
+  {
+    "ID": 263,
+    "Item": {
+      "ID": 7941,
+      "Name_en": "Helmsman's Hand"
+    }
+  },
+  {
+    "ID": 264,
+    "Item": {
+      "ID": 7942,
+      "Name_en": "The Thousand-year Itch"
+    }
+  },
+  {
+    "ID": 265,
+    "Item": {
+      "ID": 7943,
+      "Name_en": "Hannibal"
+    }
+  },
+  {
+    "ID": 266,
+    "Item": {
+      "ID": 7944,
+      "Name_en": "Dawn Maiden"
+    }
+  },
+  {
+    "ID": 267,
+    "Item": {
+      "ID": 7945,
+      "Name_en": "Starbright"
+    }
+  },
+  {
+    "ID": 268,
+    "Item": {
+      "ID": 7946,
+      "Name_en": "The Matriarch"
+    }
+  },
+  {
+    "ID": 269,
+    "Item": {
+      "ID": 7947,
+      "Name_en": "Shadowstreak"
+    }
+  },
+  {
+    "ID": 270,
+    "Item": {
+      "ID": 7948,
+      "Name_en": "The Captain's Chalice"
+    }
+  },
+  {
+    "ID": 271,
+    "Item": {
+      "ID": 7949,
+      "Name_en": "Anomalocaris"
+    }
+  },
+  {
+    "ID": 272,
+    "Item": {
+      "ID": 7950,
+      "Name_en": "Frilled Shark"
+    }
+  },
+  {
+    "ID": 273,
+    "Item": {
+      "ID": 7951,
+      "Name_en": "Aetherlouse"
+    }
+  },
+  {
+    "ID": 274,
+    "Item": {
+      "ID": 8752,
+      "Name_en": "Imperial Goldfish"
+    }
+  },
+  {
+    "ID": 275,
+    "Item": {
+      "ID": 8753,
+      "Name_en": "The Old Man in the Sea"
+    }
+  },
+  {
+    "ID": 276,
+    "Item": {
+      "ID": 8754,
+      "Name_en": "Nepto Dragon"
+    }
+  },
+  {
+    "ID": 277,
+    "Item": {
+      "ID": 8755,
+      "Name_en": "Coelacanthus"
+    }
+  },
+  {
+    "ID": 278,
+    "Item": {
+      "ID": 8756,
+      "Name_en": "Endoceras"
+    }
+  },
+  {
+    "ID": 279,
+    "Item": {
+      "ID": 8757,
+      "Name_en": "Seahag"
+    }
+  },
+  {
+    "ID": 280,
+    "Item": {
+      "ID": 8758,
+      "Name_en": "Ignus Horn"
+    }
+  },
+  {
+    "ID": 281,
+    "Item": {
+      "ID": 8759,
+      "Name_en": "Void Bass"
+    }
+  },
+  {
+    "ID": 282,
+    "Item": {
+      "ID": 8760,
+      "Name_en": "Cornelia"
+    }
+  },
+  {
+    "ID": 283,
+    "Item": {
+      "ID": 8761,
+      "Name_en": "Ninja Betta"
+    }
+  },
+  {
+    "ID": 284,
+    "Item": {
+      "ID": 8762,
+      "Name_en": "Canavan"
+    }
+  },
+  {
+    "ID": 285,
+    "Item": {
+      "ID": 8763,
+      "Name_en": "Kuno the Killer"
+    }
+  },
+  {
+    "ID": 286,
+    "Item": {
+      "ID": 8764,
+      "Name_en": "Pirate's Bane"
+    }
+  },
+  {
+    "ID": 287,
+    "Item": {
+      "ID": 8765,
+      "Name_en": "Ndendecki"
+    }
+  },
+  {
+    "ID": 288,
+    "Item": {
+      "ID": 8766,
+      "Name_en": "Bat-o'-Nine-Tails"
+    }
+  },
+  {
+    "ID": 289,
+    "Item": {
+      "ID": 8767,
+      "Name_en": "Wootz Knifefish Zenith"
+    }
+  },
+  {
+    "ID": 290,
+    "Item": {
+      "ID": 8768,
+      "Name_en": "Helicoprion"
+    }
+  },
+  {
+    "ID": 291,
+    "Item": {
+      "ID": 8769,
+      "Name_en": "Darkstar"
+    }
+  },
+  {
+    "ID": 292,
+    "Item": {
+      "ID": 8770,
+      "Name_en": "Blue Corpse"
+    }
+  },
+  {
+    "ID": 293,
+    "Item": {
+      "ID": 8771,
+      "Name_en": "Mahar"
+    }
+  },
+  {
+    "ID": 294,
+    "Item": {
+      "ID": 8772,
+      "Name_en": "Shonisaurus"
+    }
+  },
+  {
+    "ID": 295,
+    "Item": {
+      "ID": 8773,
+      "Name_en": "Magicked Mushroom"
+    }
+  },
+  {
+    "ID": 296,
+    "Item": {
+      "ID": 8774,
+      "Name_en": "Giant Takitaro"
+    }
+  },
+  {
+    "ID": 297,
+    "Item": {
+      "ID": 8775,
+      "Name_en": "Namitaro"
+    }
+  },
+  {
+    "ID": 298,
+    "Item": {
+      "ID": 8776,
+      "Name_en": "Blood Red Bonytongue"
+    }
+  },
+  {
+    "ID": 299,
+    "Item": {
+      "ID": 10123,
+      "Name_en": "Gigant Clam"
+    }
+  },
+  {
+    "ID": 300,
+    "Item": {
+      "ID": 12713,
+      "Name_en": "Icepick"
+    }
+  },
+  {
+    "ID": 301,
+    "Item": {
+      "ID": 12714,
+      "Name_en": "Cloud Coral"
+    }
+  },
+  {
+    "ID": 302,
+    "Item": {
+      "ID": 12715,
+      "Name_en": "Ice Faerie"
+    }
+  },
+  {
+    "ID": 303,
+    "Item": {
+      "ID": 12716,
+      "Name_en": "Skyworm"
+    }
+  },
+  {
+    "ID": 304,
+    "Item": {
+      "ID": 12718,
+      "Name_en": "Coerthan Crab"
+    }
+  },
+  {
+    "ID": 305,
+    "Item": {
+      "ID": 12719,
+      "Name_en": "Fanged Clam"
+    }
+  },
+  {
+    "ID": 306,
+    "Item": {
+      "ID": 12720,
+      "Name_en": "Lake Urchin"
+    }
+  },
+  {
+    "ID": 307,
+    "Item": {
+      "ID": 12721,
+      "Name_en": "Whilom Catfish"
+    }
+  },
+  {
+    "ID": 308,
+    "Item": {
+      "ID": 12722,
+      "Name_en": "Blueclaw Shrimp"
+    }
+  },
+  {
+    "ID": 309,
+    "Item": {
+      "ID": 12723,
+      "Name_en": "Starflower"
+    }
+  },
+  {
+    "ID": 310,
+    "Item": {
+      "ID": 12724,
+      "Name_en": "Glacier Core"
+    }
+  },
+  {
+    "ID": 311,
+    "Item": {
+      "ID": 12725,
+      "Name_en": "Ogre Horn Snail"
+    }
+  },
+  {
+    "ID": 312,
+    "Item": {
+      "ID": 12726,
+      "Name_en": "Sorcerer Fish"
+    }
+  },
+  {
+    "ID": 313,
+    "Item": {
+      "ID": 12727,
+      "Name_en": "Hotrod"
+    }
+  },
+  {
+    "ID": 314,
+    "Item": {
+      "ID": 12728,
+      "Name_en": "Maiboi"
+    }
+  },
+  {
+    "ID": 315,
+    "Item": {
+      "ID": 12729,
+      "Name_en": "Three-lip Carp"
+    }
+  },
+  {
+    "ID": 316,
+    "Item": {
+      "ID": 12730,
+      "Name_en": "Bullfrog"
+    }
+  },
+  {
+    "ID": 317,
+    "Item": {
+      "ID": 12731,
+      "Name_en": "Cloudfish"
+    }
+  },
+  {
+    "ID": 318,
+    "Item": {
+      "ID": 12732,
+      "Name_en": "Mahu Wai"
+    }
+  },
+  {
+    "ID": 319,
+    "Item": {
+      "ID": 12733,
+      "Name_en": "Rock Mussel"
+    }
+  },
+  {
+    "ID": 320,
+    "Item": {
+      "ID": 12734,
+      "Name_en": "Buoyant Oviform"
+    }
+  },
+  {
+    "ID": 321,
+    "Item": {
+      "ID": 12735,
+      "Name_en": "Whiteloom"
+    }
+  },
+  {
+    "ID": 322,
+    "Item": {
+      "ID": 12736,
+      "Name_en": "Blue Cloud Coral"
+    }
+  },
+  {
+    "ID": 323,
+    "Item": {
+      "ID": 12737,
+      "Name_en": "Seema Patrician"
+    }
+  },
+  {
+    "ID": 324,
+    "Item": {
+      "ID": 12738,
+      "Name_en": "Ammonite"
+    }
+  },
+  {
+    "ID": 325,
+    "Item": {
+      "ID": 12739,
+      "Name_en": "Bubble Eye"
+    }
+  },
+  {
+    "ID": 326,
+    "Item": {
+      "ID": 12740,
+      "Name_en": "Grass Carp"
+    }
+  },
+  {
+    "ID": 327,
+    "Item": {
+      "ID": 12741,
+      "Name_en": "Pipira Pira"
+    }
+  },
+  {
+    "ID": 328,
+    "Item": {
+      "ID": 12742,
+      "Name_en": "Dravanian Squeaker"
+    }
+  },
+  {
+    "ID": 329,
+    "Item": {
+      "ID": 12743,
+      "Name_en": "Kissing Fish"
+    }
+  },
+  {
+    "ID": 330,
+    "Item": {
+      "ID": 12744,
+      "Name_en": "Mitre Slug"
+    }
+  },
+  {
+    "ID": 331,
+    "Item": {
+      "ID": 12745,
+      "Name_en": "Lava Crab"
+    }
+  },
+  {
+    "ID": 332,
+    "Item": {
+      "ID": 12746,
+      "Name_en": "Storm Core"
+    }
+  },
+  {
+    "ID": 333,
+    "Item": {
+      "ID": 12747,
+      "Name_en": "Scholar Sculpin"
+    }
+  },
+  {
+    "ID": 334,
+    "Item": {
+      "ID": 12748,
+      "Name_en": "Gigant Grouper"
+    }
+  },
+  {
+    "ID": 335,
+    "Item": {
+      "ID": 12749,
+      "Name_en": "Vanuhead"
+    }
+  },
+  {
+    "ID": 336,
+    "Item": {
+      "ID": 12750,
+      "Name_en": "Marble Oscar"
+    }
+  },
+  {
+    "ID": 337,
+    "Item": {
+      "ID": 12751,
+      "Name_en": "Lungfish"
+    }
+  },
+  {
+    "ID": 338,
+    "Item": {
+      "ID": 12752,
+      "Name_en": "Tigerfish"
+    }
+  },
+  {
+    "ID": 339,
+    "Item": {
+      "ID": 12753,
+      "Name_en": "Sky Faerie"
+    }
+  },
+  {
+    "ID": 340,
+    "Item": {
+      "ID": 12754,
+      "Name_en": "Granite Crab"
+    }
+  },
+  {
+    "ID": 341,
+    "Item": {
+      "ID": 12755,
+      "Name_en": "Aithon's Colt"
+    }
+  },
+  {
+    "ID": 342,
+    "Item": {
+      "ID": 12756,
+      "Name_en": "Shipworm"
+    }
+  },
+  {
+    "ID": 343,
+    "Item": {
+      "ID": 12757,
+      "Name_en": "Hedgemole Cricket"
+    }
+  },
+  {
+    "ID": 344,
+    "Item": {
+      "ID": 12758,
+      "Name_en": "Mogpom"
+    }
+  },
+  {
+    "ID": 345,
+    "Item": {
+      "ID": 12759,
+      "Name_en": "Magma Tree"
+    }
+  },
+  {
+    "ID": 346,
+    "Item": {
+      "ID": 12760,
+      "Name_en": "Cloud Rider"
+    }
+  },
+  {
+    "ID": 347,
+    "Item": {
+      "ID": 12761,
+      "Name_en": "Dravanian Bass"
+    }
+  },
+  {
+    "ID": 348,
+    "Item": {
+      "ID": 12762,
+      "Name_en": "Coerthan Puffer"
+    }
+  },
+  {
+    "ID": 349,
+    "Item": {
+      "ID": 12763,
+      "Name_en": "Snowcaller"
+    }
+  },
+  {
+    "ID": 350,
+    "Item": {
+      "ID": 12764,
+      "Name_en": "Dragonhead"
+    }
+  },
+  {
+    "ID": 351,
+    "Item": {
+      "ID": 12765,
+      "Name_en": "Mercy Staff"
+    }
+  },
+  {
+    "ID": 352,
+    "Item": {
+      "ID": 12766,
+      "Name_en": "Rime Eater"
+    }
+  },
+  {
+    "ID": 353,
+    "Item": {
+      "ID": 12767,
+      "Name_en": "Warmwater Bichir"
+    }
+  },
+  {
+    "ID": 354,
+    "Item": {
+      "ID": 12768,
+      "Name_en": "Noontide Oscar"
+    }
+  },
+  {
+    "ID": 355,
+    "Item": {
+      "ID": 12769,
+      "Name_en": "Shadowhisker"
+    }
+  },
+  {
+    "ID": 356,
+    "Item": {
+      "ID": 12770,
+      "Name_en": "Gobbie Mask"
+    }
+  },
+  {
+    "ID": 357,
+    "Item": {
+      "ID": 12771,
+      "Name_en": "Blue Medusa"
+    }
+  },
+  {
+    "ID": 358,
+    "Item": {
+      "ID": 12772,
+      "Name_en": "Cindersmith"
+    }
+  },
+  {
+    "ID": 359,
+    "Item": {
+      "ID": 12773,
+      "Name_en": "Bullwhip"
+    }
+  },
+  {
+    "ID": 360,
+    "Item": {
+      "ID": 12774,
+      "Name_en": "Tiny Axolotl"
+    }
+  },
+  {
+    "ID": 361,
+    "Item": {
+      "ID": 12775,
+      "Name_en": "High Allagan Helmet"
+    }
+  },
+  {
+    "ID": 362,
+    "Item": {
+      "ID": 12776,
+      "Name_en": "Platinum Fish"
+    }
+  },
+  {
+    "ID": 363,
+    "Item": {
+      "ID": 12777,
+      "Name_en": "Aether Eye"
+    }
+  },
+  {
+    "ID": 364,
+    "Item": {
+      "ID": 12778,
+      "Name_en": "Azysfish"
+    }
+  },
+  {
+    "ID": 365,
+    "Item": {
+      "ID": 12779,
+      "Name_en": "Crystalfin"
+    }
+  },
+  {
+    "ID": 366,
+    "Item": {
+      "ID": 12780,
+      "Name_en": "Sweetfish"
+    }
+  },
+  {
+    "ID": 367,
+    "Item": {
+      "ID": 12781,
+      "Name_en": "Orn Butterfly"
+    }
+  },
+  {
+    "ID": 368,
+    "Item": {
+      "ID": 12782,
+      "Name_en": "Hundred Fin"
+    }
+  },
+  {
+    "ID": 369,
+    "Item": {
+      "ID": 12783,
+      "Name_en": "Autumn Leaf"
+    }
+  },
+  {
+    "ID": 370,
+    "Item": {
+      "ID": 12784,
+      "Name_en": "Manasail"
+    }
+  },
+  {
+    "ID": 371,
+    "Item": {
+      "ID": 12785,
+      "Name_en": "Sky Sweeper"
+    }
+  },
+  {
+    "ID": 372,
+    "Item": {
+      "ID": 12786,
+      "Name_en": "Magma Louse"
+    }
+  },
+  {
+    "ID": 373,
+    "Item": {
+      "ID": 12787,
+      "Name_en": "Cometoise"
+    }
+  },
+  {
+    "ID": 374,
+    "Item": {
+      "ID": 12788,
+      "Name_en": "Aetherochemical Compound #123"
+    }
+  },
+  {
+    "ID": 375,
+    "Item": {
+      "ID": 12789,
+      "Name_en": "Brown Bolo"
+    }
+  },
+  {
+    "ID": 376,
+    "Item": {
+      "ID": 12790,
+      "Name_en": "Philosopher's Stone"
+    }
+  },
+  {
+    "ID": 377,
+    "Item": {
+      "ID": 12791,
+      "Name_en": "Fountfish"
+    }
+  },
+  {
+    "ID": 378,
+    "Item": {
+      "ID": 12792,
+      "Name_en": "Weston Bowfin"
+    }
+  },
+  {
+    "ID": 379,
+    "Item": {
+      "ID": 12793,
+      "Name_en": "Letter Puffer"
+    }
+  },
+  {
+    "ID": 380,
+    "Item": {
+      "ID": 12794,
+      "Name_en": "Star Faerie"
+    }
+  },
+  {
+    "ID": 381,
+    "Item": {
+      "ID": 12795,
+      "Name_en": "Gloaming Coral"
+    }
+  },
+  {
+    "ID": 382,
+    "Item": {
+      "ID": 12796,
+      "Name_en": "Albino Octopus"
+    }
+  },
+  {
+    "ID": 383,
+    "Item": {
+      "ID": 12797,
+      "Name_en": "Dragon's Soul"
+    }
+  },
+  {
+    "ID": 384,
+    "Item": {
+      "ID": 12798,
+      "Name_en": "Tornado Shark"
+    }
+  },
+  {
+    "ID": 385,
+    "Item": {
+      "ID": 12799,
+      "Name_en": "Warballoon"
+    }
+  },
+  {
+    "ID": 386,
+    "Item": {
+      "ID": 12800,
+      "Name_en": "Fossiltongue"
+    }
+  },
+  {
+    "ID": 387,
+    "Item": {
+      "ID": 12801,
+      "Name_en": "Proto-hropken"
+    }
+  },
+  {
+    "ID": 388,
+    "Item": {
+      "ID": 12802,
+      "Name_en": "Caiman"
+    }
+  },
+  {
+    "ID": 389,
+    "Item": {
+      "ID": 12803,
+      "Name_en": "Euphotic Pirarucu"
+    }
+  },
+  {
+    "ID": 390,
+    "Item": {
+      "ID": 12804,
+      "Name_en": "Illuminati Perch"
+    }
+  },
+  {
+    "ID": 391,
+    "Item": {
+      "ID": 12805,
+      "Name_en": "Rudderfish"
+    }
+  },
+  {
+    "ID": 392,
+    "Item": {
+      "ID": 12806,
+      "Name_en": "Bomb Puffer"
+    }
+  },
+  {
+    "ID": 393,
+    "Item": {
+      "ID": 12807,
+      "Name_en": "Mucous Minnow"
+    }
+  },
+  {
+    "ID": 394,
+    "Item": {
+      "ID": 12808,
+      "Name_en": "Unidentified Flying Biomass"
+    }
+  },
+  {
+    "ID": 395,
+    "Item": {
+      "ID": 12809,
+      "Name_en": "Hospitalier Fish"
+    }
+  },
+  {
+    "ID": 396,
+    "Item": {
+      "ID": 12810,
+      "Name_en": "Scorpionfly"
+    }
+  },
+  {
+    "ID": 397,
+    "Item": {
+      "ID": 12811,
+      "Name_en": "Rockclimber"
+    }
+  },
+  {
+    "ID": 398,
+    "Item": {
+      "ID": 12812,
+      "Name_en": "Blood Skipper"
+    }
+  },
+  {
+    "ID": 399,
+    "Item": {
+      "ID": 12813,
+      "Name_en": "Cobrafish"
+    }
+  },
+  {
+    "ID": 400,
+    "Item": {
+      "ID": 12814,
+      "Name_en": "Moogle Spirit"
+    }
+  },
+  {
+    "ID": 401,
+    "Item": {
+      "ID": 12815,
+      "Name_en": "Oil Eel"
+    }
+  },
+  {
+    "ID": 402,
+    "Item": {
+      "ID": 12816,
+      "Name_en": "Jeweled Jellyfish"
+    }
+  },
+  {
+    "ID": 403,
+    "Item": {
+      "ID": 12817,
+      "Name_en": "Battle Galley"
+    }
+  },
+  {
+    "ID": 404,
+    "Item": {
+      "ID": 12818,
+      "Name_en": "Yalm Lobster"
+    }
+  },
+  {
+    "ID": 405,
+    "Item": {
+      "ID": 12819,
+      "Name_en": "Hinterlands Perch"
+    }
+  },
+  {
+    "ID": 406,
+    "Item": {
+      "ID": 12820,
+      "Name_en": "Oven Catfish"
+    }
+  },
+  {
+    "ID": 407,
+    "Item": {
+      "ID": 12821,
+      "Name_en": "Pteranodon"
+    }
+  },
+  {
+    "ID": 408,
+    "Item": {
+      "ID": 12822,
+      "Name_en": "Winged Gurnard"
+    }
+  },
+  {
+    "ID": 409,
+    "Item": {
+      "ID": 12823,
+      "Name_en": "Spring Urchin"
+    }
+  },
+  {
+    "ID": 410,
+    "Item": {
+      "ID": 12824,
+      "Name_en": "Cherry Trout"
+    }
+  },
+  {
+    "ID": 411,
+    "Item": {
+      "ID": 12825,
+      "Name_en": "Stupendemys"
+    }
+  },
+  {
+    "ID": 412,
+    "Item": {
+      "ID": 12826,
+      "Name_en": "Black Magefish"
+    }
+  },
+  {
+    "ID": 413,
+    "Item": {
+      "ID": 12827,
+      "Name_en": "Barreleye"
+    }
+  },
+  {
+    "ID": 414,
+    "Item": {
+      "ID": 12828,
+      "Name_en": "Thunderbolt Eel"
+    }
+  },
+  {
+    "ID": 415,
+    "Item": {
+      "ID": 12829,
+      "Name_en": "Catkiller"
+    }
+  },
+  {
+    "ID": 416,
+    "Item": {
+      "ID": 12830,
+      "Name_en": "Loosetongue"
+    }
+  },
+  {
+    "ID": 417,
+    "Item": {
+      "ID": 12831,
+      "Name_en": "Thaliak Caiman"
+    }
+  },
+  {
+    "ID": 418,
+    "Item": {
+      "ID": 12832,
+      "Name_en": "Lavalord"
+    }
+  },
+  {
+    "ID": 419,
+    "Item": {
+      "ID": 12833,
+      "Name_en": "Tupuxuara"
+    }
+  },
+  {
+    "ID": 420,
+    "Item": {
+      "ID": 12834,
+      "Name_en": "Vampiric Tapestry"
+    }
+  },
+  {
+    "ID": 421,
+    "Item": {
+      "ID": 12835,
+      "Name_en": "Storm Chaser"
+    }
+  },
+  {
+    "ID": 422,
+    "Item": {
+      "ID": 12836,
+      "Name_en": "Berserker Betta"
+    }
+  },
+  {
+    "ID": 423,
+    "Item": {
+      "ID": 12837,
+      "Name_en": "Capelin"
+    }
+  },
+  {
+    "ID": 424,
+    "Item": {
+      "ID": 13727,
+      "Name_en": "Functional Proto-hropken"
+    }
+  },
+  {
+    "ID": 425,
+    "Item": {
+      "ID": 13728,
+      "Name_en": "Coerthan Clione"
+    }
+  },
+  {
+    "ID": 426,
+    "Item": {
+      "ID": 13729,
+      "Name_en": "Dravanian Smelt"
+    }
+  },
+  {
+    "ID": 427,
+    "Item": {
+      "ID": 13730,
+      "Name_en": "Heavens Coral"
+    }
+  },
+  {
+    "ID": 428,
+    "Item": {
+      "ID": 13731,
+      "Name_en": "Sunsail"
+    }
+  },
+  {
+    "ID": 429,
+    "Item": {
+      "ID": 13732,
+      "Name_en": "Goblin Bass"
+    }
+  },
+  {
+    "ID": 430,
+    "Item": {
+      "ID": 14215,
+      "Name_en": "Lava Snail"
+    }
+  },
+  {
+    "ID": 431,
+    "Item": {
+      "ID": 14211,
+      "Name_en": "Amber Salamander"
+    }
+  },
+  {
+    "ID": 432,
+    "Item": {
+      "ID": 14212,
+      "Name_en": "Gnomefish"
+    }
+  },
+  {
+    "ID": 433,
+    "Item": {
+      "ID": 14213,
+      "Name_en": "Fleece Stingray"
+    }
+  },
+  {
+    "ID": 434,
+    "Item": {
+      "ID": 14214,
+      "Name_en": "Nyctosaur"
+    }
+  },
+  {
+    "ID": 435,
+    "Item": {
+      "ID": 14216,
+      "Name_en": "Priestfish"
+    }
+  },
+  {
+    "ID": 436,
+    "Item": {
+      "ID": 14217,
+      "Name_en": "Coerthan Oyster"
+    }
+  },
+  {
+    "ID": 437,
+    "Item": {
+      "ID": 14218,
+      "Name_en": "Oliphant's Trunk"
+    }
+  },
+  {
+    "ID": 438,
+    "Item": {
+      "ID": 14219,
+      "Name_en": "Mountain Kraken"
+    }
+  },
+  {
+    "ID": 439,
+    "Item": {
+      "ID": 14220,
+      "Name_en": "Armored Catfish"
+    }
+  },
+  {
+    "ID": 440,
+    "Item": {
+      "ID": 15439,
+      "Name_en": "Magic Bucket"
+    }
+  },
+  {
+    "ID": 441,
+    "Item": {
+      "ID": 15626,
+      "Name_en": "Fat Purse"
+    }
+  },
+  {
+    "ID": 442,
+    "Item": {
+      "ID": 15627,
+      "Name_en": "The Impaler"
+    }
+  },
+  {
+    "ID": 443,
+    "Item": {
+      "ID": 15628,
+      "Name_en": "La Reale"
+    }
+  },
+  {
+    "ID": 444,
+    "Item": {
+      "ID": 15629,
+      "Name_en": "Scaleripper"
+    }
+  },
+  {
+    "ID": 445,
+    "Item": {
+      "ID": 15630,
+      "Name_en": "The Dreamweaver"
+    }
+  },
+  {
+    "ID": 446,
+    "Item": {
+      "ID": 15631,
+      "Name_en": "Meteortoise"
+    }
+  },
+  {
+    "ID": 447,
+    "Item": {
+      "ID": 15632,
+      "Name_en": "The Ewer King"
+    }
+  },
+  {
+    "ID": 448,
+    "Item": {
+      "ID": 15633,
+      "Name_en": "Vidofnir"
+    }
+  },
+  {
+    "ID": 449,
+    "Item": {
+      "ID": 15634,
+      "Name_en": "The Soul of the Martyr"
+    }
+  },
+  {
+    "ID": 450,
+    "Item": {
+      "ID": 15635,
+      "Name_en": "Inkfish"
+    }
+  },
+  {
+    "ID": 451,
+    "Item": {
+      "ID": 15636,
+      "Name_en": "The Second One"
+    }
+  },
+  {
+    "ID": 452,
+    "Item": {
+      "ID": 15637,
+      "Name_en": "Augmented High Allagan Helmet"
+    }
+  },
+  {
+    "ID": 453,
+    "Item": {
+      "ID": 15638,
+      "Name_en": "Aphotic Pirarucu"
+    }
+  },
+  {
+    "ID": 454,
+    "Item": {
+      "ID": 16745,
+      "Name_en": "Hailfinder"
+    }
+  },
+  {
+    "ID": 455,
+    "Item": {
+      "ID": 16746,
+      "Name_en": "Flarefish"
+    }
+  },
+  {
+    "ID": 456,
+    "Item": {
+      "ID": 16747,
+      "Name_en": "Twin-tongued Carp"
+    }
+  },
+  {
+    "ID": 457,
+    "Item": {
+      "ID": 16748,
+      "Name_en": "Madam Butterfly"
+    }
+  },
+  {
+    "ID": 458,
+    "Item": {
+      "ID": 16749,
+      "Name_en": "Moggle Mogpom"
+    }
+  },
+  {
+    "ID": 459,
+    "Item": {
+      "ID": 16750,
+      "Name_en": "Cirrostratus"
+    }
+  },
+  {
+    "ID": 460,
+    "Item": {
+      "ID": 16751,
+      "Name_en": "Hraesvelgr's Tear"
+    }
+  },
+  {
+    "ID": 461,
+    "Item": {
+      "ID": 16752,
+      "Name_en": "Aetherochemical Compound #666"
+    }
+  },
+  {
+    "ID": 462,
+    "Item": {
+      "ID": 16753,
+      "Name_en": "Hundred-eyed Axolotl"
+    }
+  },
+  {
+    "ID": 463,
+    "Item": {
+      "ID": 16754,
+      "Name_en": "Bobgoblin Bass"
+    }
+  },
+  {
+    "ID": 464,
+    "Item": {
+      "ID": 16756,
+      "Name_en": "Merciless"
+    }
+  },
+  {
+    "ID": 465,
+    "Item": {
+      "ID": 16742,
+      "Name_en": "Dimorphodon"
+    }
+  },
+  {
+    "ID": 466,
+    "Item": {
+      "ID": 16743,
+      "Name_en": "Basking Shark"
+    }
+  },
+  {
+    "ID": 467,
+    "Item": {
+      "ID": 16744,
+      "Name_en": "Allagan Bladeshark"
+    }
+  },
+  {
+    "ID": 468,
+    "Item": {
+      "ID": 17577,
+      "Name_en": "Bishopfish"
+    }
+  },
+  {
+    "ID": 469,
+    "Item": {
+      "ID": 17578,
+      "Name_en": "Captain Nemo"
+    }
+  },
+  {
+    "ID": 470,
+    "Item": {
+      "ID": 17579,
+      "Name_en": "Paikiller"
+    }
+  },
+  {
+    "ID": 471,
+    "Item": {
+      "ID": 17580,
+      "Name_en": "Ceti"
+    }
+  },
+  {
+    "ID": 472,
+    "Item": {
+      "ID": 17581,
+      "Name_en": "Crystal Pigeon"
+    }
+  },
+  {
+    "ID": 473,
+    "Item": {
+      "ID": 17582,
+      "Name_en": "Thunderscale"
+    }
+  },
+  {
+    "ID": 474,
+    "Item": {
+      "ID": 17583,
+      "Name_en": "Riddle"
+    }
+  },
+  {
+    "ID": 475,
+    "Item": {
+      "ID": 17584,
+      "Name_en": "The Lord of Lords"
+    }
+  },
+  {
+    "ID": 476,
+    "Item": {
+      "ID": 17585,
+      "Name_en": "The Speaker"
+    }
+  },
+  {
+    "ID": 477,
+    "Item": {
+      "ID": 17586,
+      "Name_en": "Thousand Fin"
+    }
+  },
+  {
+    "ID": 478,
+    "Item": {
+      "ID": 17587,
+      "Name_en": "Bloodchaser"
+    }
+  },
+  {
+    "ID": 479,
+    "Item": {
+      "ID": 17588,
+      "Name_en": "Problematicus"
+    }
+  },
+  {
+    "ID": 480,
+    "Item": {
+      "ID": 17589,
+      "Name_en": "Opabinia"
+    }
+  },
+  {
+    "ID": 481,
+    "Item": {
+      "ID": 17590,
+      "Name_en": "Armor Fish"
+    }
+  },
+  {
+    "ID": 482,
+    "Item": {
+      "ID": 17591,
+      "Name_en": "Sea Butterfly"
+    }
+  },
+  {
+    "ID": 483,
+    "Item": {
+      "ID": 17592,
+      "Name_en": "Charibenet"
+    }
+  },
+  {
+    "ID": 484,
+    "Item": {
+      "ID": 17593,
+      "Name_en": "Raimdellopterus"
+    }
+  },
+  {
+    "ID": 485,
+    "Item": {
+      "ID": 17562,
+      "Name_en": "Thavnairian Leaf"
+    }
+  },
+  {
+    "ID": 486,
+    "Item": {
+      "ID": 17563,
+      "Name_en": "Ghost Faerie"
+    }
+  },
+  {
+    "ID": 487,
+    "Item": {
+      "ID": 17564,
+      "Name_en": "Red Sky Coral"
+    }
+  },
+  {
+    "ID": 488,
+    "Item": {
+      "ID": 17565,
+      "Name_en": "Lovers' Clam"
+    }
+  },
+  {
+    "ID": 489,
+    "Item": {
+      "ID": 17566,
+      "Name_en": "River Shrimp"
+    }
+  },
+  {
+    "ID": 490,
+    "Item": {
+      "ID": 20026,
+      "Name_en": "Comet Minnow"
+    }
+  },
+  {
+    "ID": 491,
+    "Item": {
+      "ID": 20029,
+      "Name_en": "Golden Cichlid"
+    }
+  },
+  {
+    "ID": 492,
+    "Item": {
+      "ID": 20042,
+      "Name_en": "Abalathian Bitterling"
+    }
+  },
+  {
+    "ID": 493,
+    "Item": {
+      "ID": 20045,
+      "Name_en": "Idle Goby"
+    }
+  },
+  {
+    "ID": 494,
+    "Item": {
+      "ID": 20049,
+      "Name_en": "Steelhead Trout"
+    }
+  },
+  {
+    "ID": 495,
+    "Item": {
+      "ID": 20055,
+      "Name_en": "Broken Crab"
+    }
+  },
+  {
+    "ID": 496,
+    "Item": {
+      "ID": 20058,
+      "Name_en": "Miounnefish"
+    }
+  },
+  {
+    "ID": 497,
+    "Item": {
+      "ID": 20062,
+      "Name_en": "Temple Carp"
+    }
+  },
+  {
+    "ID": 498,
+    "Item": {
+      "ID": 20064,
+      "Name_en": "Balloon Frog"
+    }
+  },
+  {
+    "ID": 499,
+    "Item": {
+      "ID": 20065,
+      "Name_en": "Lantern Marimo"
+    }
+  },
+  {
+    "ID": 500,
+    "Item": {
+      "ID": 20070,
+      "Name_en": "Rapids Jumper"
+    }
+  },
+  {
+    "ID": 501,
+    "Item": {
+      "ID": 20072,
+      "Name_en": "Adamantite Bichir"
+    }
+  },
+  {
+    "ID": 502,
+    "Item": {
+      "ID": 20082,
+      "Name_en": "Bone Melter"
+    }
+  },
+  {
+    "ID": 503,
+    "Item": {
+      "ID": 20083,
+      "Name_en": "Fallen Leaf"
+    }
+  },
+  {
+    "ID": 504,
+    "Item": {
+      "ID": 20087,
+      "Name_en": "Velodyna Grass Carp"
+    }
+  },
+  {
+    "ID": 505,
+    "Item": {
+      "ID": 20090,
+      "Name_en": "Highland Perch"
+    }
+  },
+  {
+    "ID": 506,
+    "Item": {
+      "ID": 20033,
+      "Name_en": "Greenstream Loach"
+    }
+  },
+  {
+    "ID": 507,
+    "Item": {
+      "ID": 20047,
+      "Name_en": "Mirage Chub"
+    }
+  },
+  {
+    "ID": 508,
+    "Item": {
+      "ID": 20136,
+      "Name_en": "Padjali Loach"
+    }
+  },
+  {
+    "ID": 509,
+    "Item": {
+      "ID": 20056,
+      "Name_en": "Gyr Abanian Trout"
+    }
+  },
+  {
+    "ID": 510,
+    "Item": {
+      "ID": 20057,
+      "Name_en": "Bloodsipper"
+    }
+  },
+  {
+    "ID": 511,
+    "Item": {
+      "ID": 20059,
+      "Name_en": "Monk Betta"
+    }
+  },
+  {
+    "ID": 512,
+    "Item": {
+      "ID": 20063,
+      "Name_en": "Gilfish"
+    }
+  },
+  {
+    "ID": 513,
+    "Item": {
+      "ID": 20084,
+      "Name_en": "Falling Star"
+    }
+  },
+  {
+    "ID": 514,
+    "Item": {
+      "ID": 20085,
+      "Name_en": "Capsized Squeaker"
+    }
+  },
+  {
+    "ID": 515,
+    "Item": {
+      "ID": 20086,
+      "Name_en": "Nirvana Crab"
+    }
+  },
+  {
+    "ID": 516,
+    "Item": {
+      "ID": 20091,
+      "Name_en": "Gravel Gudgeon"
+    }
+  },
+  {
+    "ID": 517,
+    "Item": {
+      "ID": 20092,
+      "Name_en": "Grinning Anchovy"
+    }
+  },
+  {
+    "ID": 518,
+    "Item": {
+      "ID": 20093,
+      "Name_en": "Glass Herring"
+    }
+  },
+  {
+    "ID": 519,
+    "Item": {
+      "ID": 20094,
+      "Name_en": "Hellyfish"
+    }
+  },
+  {
+    "ID": 520,
+    "Item": {
+      "ID": 20095,
+      "Name_en": "Ruby Coral"
+    }
+  },
+  {
+    "ID": 521,
+    "Item": {
+      "ID": 20096,
+      "Name_en": "Sapphire Coral"
+    }
+  },
+  {
+    "ID": 522,
+    "Item": {
+      "ID": 20097,
+      "Name_en": "Bone Coral"
+    }
+  },
+  {
+    "ID": 523,
+    "Item": {
+      "ID": 20112,
+      "Name_en": "Ruby Shrimp"
+    }
+  },
+  {
+    "ID": 524,
+    "Item": {
+      "ID": 20037,
+      "Name_en": "Coeurl Snake Eel"
+    }
+  },
+  {
+    "ID": 525,
+    "Item": {
+      "ID": 20050,
+      "Name_en": "Heather Charr"
+    }
+  },
+  {
+    "ID": 526,
+    "Item": {
+      "ID": 20060,
+      "Name_en": "Electric Catfish"
+    }
+  },
+  {
+    "ID": 527,
+    "Item": {
+      "ID": 20066,
+      "Name_en": "Death Loach"
+    }
+  },
+  {
+    "ID": 528,
+    "Item": {
+      "ID": 20067,
+      "Name_en": "Grymm Crab"
+    }
+  },
+  {
+    "ID": 529,
+    "Item": {
+      "ID": 20069,
+      "Name_en": "Invisible Crayfish"
+    }
+  },
+  {
+    "ID": 530,
+    "Item": {
+      "ID": 20071,
+      "Name_en": "Abalathian Salamander"
+    }
+  },
+  {
+    "ID": 531,
+    "Item": {
+      "ID": 20081,
+      "Name_en": "Cave Killifish"
+    }
+  },
+  {
+    "ID": 532,
+    "Item": {
+      "ID": 20089,
+      "Name_en": "Rhalgr's Bolt"
+    }
+  },
+  {
+    "ID": 533,
+    "Item": {
+      "ID": 20098,
+      "Name_en": "Butterfly Fish"
+    }
+  },
+  {
+    "ID": 534,
+    "Item": {
+      "ID": 20099,
+      "Name_en": "Dafu"
+    }
+  },
+  {
+    "ID": 535,
+    "Item": {
+      "ID": 20101,
+      "Name_en": "Leaf Tatsunoko"
+    }
+  },
+  {
+    "ID": 536,
+    "Item": {
+      "ID": 20102,
+      "Name_en": "Glass Flounder"
+    }
+  },
+  {
+    "ID": 537,
+    "Item": {
+      "ID": 20106,
+      "Name_en": "Gliding Fish"
+    }
+  },
+  {
+    "ID": 538,
+    "Item": {
+      "ID": 20107,
+      "Name_en": "Globefish"
+    }
+  },
+  {
+    "ID": 539,
+    "Item": {
+      "ID": 20108,
+      "Name_en": "Fan Clam"
+    }
+  },
+  {
+    "ID": 540,
+    "Item": {
+      "ID": 20113,
+      "Name_en": "Striped Fugu"
+    }
+  },
+  {
+    "ID": 541,
+    "Item": {
+      "ID": 20032,
+      "Name_en": "Ruby Meagre"
+    }
+  },
+  {
+    "ID": 542,
+    "Item": {
+      "ID": 20046,
+      "Name_en": "River Barramundi"
+    }
+  },
+  {
+    "ID": 543,
+    "Item": {
+      "ID": 20137,
+      "Name_en": "Nogoi"
+    }
+  },
+  {
+    "ID": 544,
+    "Item": {
+      "ID": 20061,
+      "Name_en": "Pagan Pirarucu"
+    }
+  },
+  {
+    "ID": 545,
+    "Item": {
+      "ID": 20068,
+      "Name_en": "Enid Shrimp"
+    }
+  },
+  {
+    "ID": 546,
+    "Item": {
+      "ID": 20088,
+      "Name_en": "Black Velodyna Carp"
+    }
+  },
+  {
+    "ID": 547,
+    "Item": {
+      "ID": 20118,
+      "Name_en": "Yanxian Koi"
+    }
+  },
+  {
+    "ID": 548,
+    "Item": {
+      "ID": 20120,
+      "Name_en": "Longhair Catfish"
+    }
+  },
+  {
+    "ID": 549,
+    "Item": {
+      "ID": 20123,
+      "Name_en": "Doman Trout"
+    }
+  },
+  {
+    "ID": 550,
+    "Item": {
+      "ID": 20020,
+      "Name_en": "Yanxian Barramundi"
+    }
+  },
+  {
+    "ID": 551,
+    "Item": {
+      "ID": 20023,
+      "Name_en": "Tail Mountains Minnow"
+    }
+  },
+  {
+    "ID": 552,
+    "Item": {
+      "ID": 20036,
+      "Name_en": "Killifish"
+    }
+  },
+  {
+    "ID": 553,
+    "Item": {
+      "ID": 20111,
+      "Name_en": "Doman Crayfish"
+    }
+  },
+  {
+    "ID": 554,
+    "Item": {
+      "ID": 20126,
+      "Name_en": "Othardian Trout"
+    }
+  },
+  {
+    "ID": 555,
+    "Item": {
+      "ID": 20127,
+      "Name_en": "Zagas Khaal"
+    }
+  },
+  {
+    "ID": 556,
+    "Item": {
+      "ID": 20128,
+      "Name_en": "Steppe Skipper"
+    }
+  },
+  {
+    "ID": 557,
+    "Item": {
+      "ID": 20130,
+      "Name_en": "Sun Bass"
+    }
+  },
+  {
+    "ID": 558,
+    "Item": {
+      "ID": 20132,
+      "Name_en": "Dawn Crayfish"
+    }
+  },
+  {
+    "ID": 559,
+    "Item": {
+      "ID": 20138,
+      "Name_en": "Curtain Pleco"
+    }
+  },
+  {
+    "ID": 560,
+    "Item": {
+      "ID": 20031,
+      "Name_en": "Yat Goby"
+    }
+  },
+  {
+    "ID": 561,
+    "Item": {
+      "ID": 20080,
+      "Name_en": "Nhaama's Boon"
+    }
+  },
+  {
+    "ID": 562,
+    "Item": {
+      "ID": 20124,
+      "Name_en": "Doman Eel"
+    }
+  },
+  {
+    "ID": 563,
+    "Item": {
+      "ID": 20125,
+      "Name_en": "Brassfish"
+    }
+  },
+  {
+    "ID": 564,
+    "Item": {
+      "ID": 20129,
+      "Name_en": "Dry Steppe Skipper"
+    }
+  },
+  {
+    "ID": 565,
+    "Item": {
+      "ID": 20131,
+      "Name_en": "Skytear"
+    }
+  },
+  {
+    "ID": 566,
+    "Item": {
+      "ID": 20133,
+      "Name_en": "Dusk Crayfish"
+    }
+  },
+  {
+    "ID": 567,
+    "Item": {
+      "ID": 20134,
+      "Name_en": "Bowfish"
+    }
+  },
+  {
+    "ID": 568,
+    "Item": {
+      "ID": 20135,
+      "Name_en": "Jade Sculpin"
+    }
+  },
+  {
+    "ID": 569,
+    "Item": {
+      "ID": 20140,
+      "Name_en": "Hardscale"
+    }
+  },
+  {
+    "ID": 570,
+    "Item": {
+      "ID": 20027,
+      "Name_en": "Doman Grass Carp"
+    }
+  },
+  {
+    "ID": 571,
+    "Item": {
+      "ID": 20028,
+      "Name_en": "Samurai Fish"
+    }
+  },
+  {
+    "ID": 572,
+    "Item": {
+      "ID": 20044,
+      "Name_en": "Tao Bitterling"
+    }
+  },
+  {
+    "ID": 573,
+    "Item": {
+      "ID": 20115,
+      "Name_en": "Blank Oscar"
+    }
+  },
+  {
+    "ID": 574,
+    "Item": {
+      "ID": 20116,
+      "Name_en": "Dragonfish"
+    }
+  },
+  {
+    "ID": 575,
+    "Item": {
+      "ID": 20117,
+      "Name_en": "Lordly Salmon"
+    }
+  },
+  {
+    "ID": 576,
+    "Item": {
+      "ID": 20052,
+      "Name_en": "Yellow Prismfish"
+    }
+  },
+  {
+    "ID": 577,
+    "Item": {
+      "ID": 20053,
+      "Name_en": "Blue Prismfish"
+    }
+  },
+  {
+    "ID": 578,
+    "Item": {
+      "ID": 20076,
+      "Name_en": "Bull's Bite"
+    }
+  },
+  {
+    "ID": 579,
+    "Item": {
+      "ID": 20077,
+      "Name_en": "Peeping Pisces"
+    }
+  },
+  {
+    "ID": 580,
+    "Item": {
+      "ID": 20079,
+      "Name_en": "Gigant Bass"
+    }
+  },
+  {
+    "ID": 581,
+    "Item": {
+      "ID": 20104,
+      "Name_en": "Daio Squid"
+    }
+  },
+  {
+    "ID": 582,
+    "Item": {
+      "ID": 20105,
+      "Name_en": "Koromo Octopus"
+    }
+  },
+  {
+    "ID": 583,
+    "Item": {
+      "ID": 20110,
+      "Name_en": "Glass Tuna"
+    }
+  },
+  {
+    "ID": 584,
+    "Item": {
+      "ID": 20114,
+      "Name_en": "Raitonfish"
+    }
+  },
+  {
+    "ID": 585,
+    "Item": {
+      "ID": 20141,
+      "Name_en": "Eastern Pike"
+    }
+  },
+  {
+    "ID": 586,
+    "Item": {
+      "ID": 20025,
+      "Name_en": "Rock Saltfish"
+    }
+  },
+  {
+    "ID": 587,
+    "Item": {
+      "ID": 20034,
+      "Name_en": "Tawny Wench Shark"
+    }
+  },
+  {
+    "ID": 588,
+    "Item": {
+      "ID": 20038,
+      "Name_en": "Zekki Grouper"
+    }
+  },
+  {
+    "ID": 589,
+    "Item": {
+      "ID": 20039,
+      "Name_en": "Saltshield Snapper"
+    }
+  },
+  {
+    "ID": 590,
+    "Item": {
+      "ID": 20073,
+      "Name_en": "Meditator"
+    }
+  },
+  {
+    "ID": 591,
+    "Item": {
+      "ID": 20075,
+      "Name_en": "Stonytongue"
+    }
+  },
+  {
+    "ID": 592,
+    "Item": {
+      "ID": 20078,
+      "Name_en": "Scimitarfish"
+    }
+  },
+  {
+    "ID": 593,
+    "Item": {
+      "ID": 20109,
+      "Name_en": "Blockhead"
+    }
+  },
+  {
+    "ID": 594,
+    "Item": {
+      "ID": 20119,
+      "Name_en": "Kotsu Zetsu"
+    }
+  },
+  {
+    "ID": 595,
+    "Item": {
+      "ID": 20122,
+      "Name_en": "Pandamoth"
+    }
+  },
+  {
+    "ID": 596,
+    "Item": {
+      "ID": 20018,
+      "Name_en": "Liopleurodon"
+    }
+  },
+  {
+    "ID": 597,
+    "Item": {
+      "ID": 20019,
+      "Name_en": "Ala Mhigan Ribbon"
+    }
+  },
+  {
+    "ID": 598,
+    "Item": {
+      "ID": 20021,
+      "Name_en": "Seraphim"
+    }
+  },
+  {
+    "ID": 599,
+    "Item": {
+      "ID": 20022,
+      "Name_en": "Blackfin Snake Eel"
+    }
+  },
+  {
+    "ID": 600,
+    "Item": {
+      "ID": 20024,
+      "Name_en": "Sweatfish"
+    }
+  },
+  {
+    "ID": 601,
+    "Item": {
+      "ID": 20030,
+      "Name_en": "Hak Bitterling"
+    }
+  },
+  {
+    "ID": 602,
+    "Item": {
+      "ID": 20035,
+      "Name_en": "Whitehorse"
+    }
+  },
+  {
+    "ID": 603,
+    "Item": {
+      "ID": 20040,
+      "Name_en": "Sculptor"
+    }
+  },
+  {
+    "ID": 604,
+    "Item": {
+      "ID": 20041,
+      "Name_en": "Pearl-eye"
+    }
+  },
+  {
+    "ID": 605,
+    "Item": {
+      "ID": 20043,
+      "Name_en": "Steelshark"
+    }
+  },
+  {
+    "ID": 606,
+    "Item": {
+      "ID": 20048,
+      "Name_en": "Harutsuge"
+    }
+  },
+  {
+    "ID": 607,
+    "Item": {
+      "ID": 20051,
+      "Name_en": "Silken Koi"
+    }
+  },
+  {
+    "ID": 608,
+    "Item": {
+      "ID": 20054,
+      "Name_en": "Hanatatsu"
+    }
+  },
+  {
+    "ID": 609,
+    "Item": {
+      "ID": 20074,
+      "Name_en": "Deemster"
+    }
+  },
+  {
+    "ID": 610,
+    "Item": {
+      "ID": 20100,
+      "Name_en": "Swordfish"
+    }
+  },
+  {
+    "ID": 611,
+    "Item": {
+      "ID": 20121,
+      "Name_en": "Plum Gazer"
+    }
+  },
+  {
+    "ID": 612,
+    "Item": {
+      "ID": 20103,
+      "Name_en": "Zekki Gator"
+    }
+  },
+  {
+    "ID": 613,
+    "Item": {
+      "ID": 20142,
+      "Name_en": "Wraithfish"
+    }
+  },
+  {
+    "ID": 614,
+    "Item": {
+      "ID": 20524,
+      "Name_en": "Castaway Chocobo Chick"
+    }
+  },
+  {
+    "ID": 615,
+    "Item": {
+      "ID": 20143,
+      "Name_en": "Little Perykos"
+    }
+  },
+  {
+    "ID": 616,
+    "Item": {
+      "ID": 20785,
+      "Name_en": "Gyr Abanian Chub"
+    }
+  },
+  {
+    "ID": 617,
+    "Item": {
+      "ID": 20786,
+      "Name_en": "Coral Horse"
+    }
+  },
+  {
+    "ID": 618,
+    "Item": {
+      "ID": 20787,
+      "Name_en": "Maiden's Heart"
+    }
+  },
+  {
+    "ID": 619,
+    "Item": {
+      "ID": 20788,
+      "Name_en": "Velodyna Salmon"
+    }
+  },
+  {
+    "ID": 620,
+    "Item": {
+      "ID": 20789,
+      "Name_en": "Purple Buckler"
+    }
+  },
+  {
+    "ID": 621,
+    "Item": {
+      "ID": 21174,
+      "Name_en": "Cardinalfish"
+    }
+  },
+  {
+    "ID": 622,
+    "Item": {
+      "ID": 21175,
+      "Name_en": "Rockfish"
+    }
+  },
+  {
+    "ID": 623,
+    "Item": {
+      "ID": 21176,
+      "Name_en": "Ukiki"
+    }
+  },
+  {
+    "ID": 624,
+    "Item": {
+      "ID": 21177,
+      "Name_en": "Violet Prismfish"
+    }
+  },
+  {
+    "ID": 625,
+    "Item": {
+      "ID": 21178,
+      "Name_en": "Guppy"
+    }
+  },
+  {
+    "ID": 626,
+    "Item": {
+      "ID": 22392,
+      "Name_en": "Redtail"
+    }
+  },
+  {
+    "ID": 627,
+    "Item": {
+      "ID": 22389,
+      "Name_en": "Mirage Mahi"
+    }
+  },
+  {
+    "ID": 628,
+    "Item": {
+      "ID": 22391,
+      "Name_en": "Alligator Snapping Turtle"
+    }
+  },
+  {
+    "ID": 629,
+    "Item": {
+      "ID": 22394,
+      "Name_en": "Saltmill"
+    }
+  },
+  {
+    "ID": 630,
+    "Item": {
+      "ID": 22396,
+      "Name_en": "Ribbon Eel"
+    }
+  },
+  {
+    "ID": 631,
+    "Item": {
+      "ID": 22395,
+      "Name_en": "Bonsai Fish"
+    }
+  },
+  {
+    "ID": 632,
+    "Item": {
+      "ID": 22390,
+      "Name_en": "Triplespine"
+    }
+  },
+  {
+    "ID": 633,
+    "Item": {
+      "ID": 22393,
+      "Name_en": "Usuginu Octopus"
+    }
+  },
+  {
+    "ID": 634,
+    "Item": {
+      "ID": 22397,
+      "Name_en": "Red Prismfish"
+    }
+  },
+  {
+    "ID": 635,
+    "Item": {
+      "ID": 22398,
+      "Name_en": "Elder Gourami"
+    }
+  },
+  {
+    "ID": 636,
+    "Item": {
+      "ID": 23054,
+      "Name_en": "Shrieker"
+    }
+  },
+  {
+    "ID": 637,
+    "Item": {
+      "ID": 23055,
+      "Name_en": "White Goldfish"
+    }
+  },
+  {
+    "ID": 638,
+    "Item": {
+      "ID": 23056,
+      "Name_en": "Firelight Goldfish"
+    }
+  },
+  {
+    "ID": 639,
+    "Item": {
+      "ID": 23057,
+      "Name_en": "Hookstealer"
+    }
+  },
+  {
+    "ID": 640,
+    "Item": {
+      "ID": 23058,
+      "Name_en": "Sapphire Fan"
+    }
+  },
+  {
+    "ID": 641,
+    "Item": {
+      "ID": 23059,
+      "Name_en": "The Archbishop"
+    }
+  },
+  {
+    "ID": 642,
+    "Item": {
+      "ID": 23060,
+      "Name_en": "Bondsplitter"
+    }
+  },
+  {
+    "ID": 643,
+    "Item": {
+      "ID": 23061,
+      "Name_en": "The Undecided"
+    }
+  },
+  {
+    "ID": 644,
+    "Item": {
+      "ID": 23062,
+      "Name_en": "Diamond-eye"
+    }
+  },
+  {
+    "ID": 645,
+    "Item": {
+      "ID": 23063,
+      "Name_en": "Rising Dragon"
+    }
+  },
+  {
+    "ID": 646,
+    "Item": {
+      "ID": 23064,
+      "Name_en": "The Gambler"
+    }
+  },
+  {
+    "ID": 647,
+    "Item": {
+      "ID": 23065,
+      "Name_en": "The Winter Queen"
+    }
+  },
+  {
+    "ID": 648,
+    "Item": {
+      "ID": 23066,
+      "Name_en": "Rakshasa"
+    }
+  },
+  {
+    "ID": 649,
+    "Item": {
+      "ID": 23067,
+      "Name_en": "Bokuden"
+    }
+  },
+  {
+    "ID": 650,
+    "Item": {
+      "ID": 23068,
+      "Name_en": "Hagoromo Koi"
+    }
+  },
+  {
+    "ID": 651,
+    "Item": {
+      "ID": 23069,
+      "Name_en": "The Word of God"
+    }
+  },
+  {
+    "ID": 652,
+    "Item": {
+      "ID": 23070,
+      "Name_en": "Yat Khan"
+    }
+  },
+  {
+    "ID": 653,
+    "Item": {
+      "ID": 23071,
+      "Name_en": "Curefish"
+    }
+  },
+  {
+    "ID": 654,
+    "Item": {
+      "ID": 23072,
+      "Name_en": "Lake Sphairai"
+    }
+  },
+  {
+    "ID": 655,
+    "Item": {
+      "ID": 23073,
+      "Name_en": "Warmscale Pleco"
+    }
+  },
+  {
+    "ID": 656,
+    "Item": {
+      "ID": 23074,
+      "Name_en": "Shirogane Clam"
+    }
+  },
+  {
+    "ID": 657,
+    "Item": {
+      "ID": 23075,
+      "Name_en": "Illuminati Mask"
+    }
+  },
+  {
+    "ID": 658,
+    "Item": {
+      "ID": 24203,
+      "Name_en": "Indigo Prismfish"
+    }
+  },
+  {
+    "ID": 659,
+    "Item": {
+      "ID": 24204,
+      "Name_en": "Green Prismfish"
+    }
+  },
+  {
+    "ID": 660,
+    "Item": {
+      "ID": 24205,
+      "Name_en": "Watcher Catfish"
+    }
+  },
+  {
+    "ID": 661,
+    "Item": {
+      "ID": 24206,
+      "Name_en": "Bloodtail Zombie"
+    }
+  },
+  {
+    "ID": 662,
+    "Item": {
+      "ID": 24207,
+      "Name_en": "Hardhead Trout"
+    }
+  },
+  {
+    "ID": 663,
+    "Item": {
+      "ID": 24208,
+      "Name_en": "Downstream Loach"
+    }
+  },
+  {
+    "ID": 664,
+    "Item": {
+      "ID": 24209,
+      "Name_en": "Corpse Chub"
+    }
+  },
+  {
+    "ID": 665,
+    "Item": {
+      "ID": 24210,
+      "Name_en": "The Last Tear"
+    }
+  },
+  {
+    "ID": 666,
+    "Item": {
+      "ID": 24211,
+      "Name_en": "Hemon"
+    }
+  },
+  {
+    "ID": 667,
+    "Item": {
+      "ID": 24212,
+      "Name_en": "Moksha"
+    }
+  },
+  {
+    "ID": 668,
+    "Item": {
+      "ID": 24213,
+      "Name_en": "Princess Killifish"
+    }
+  },
+  {
+    "ID": 669,
+    "Item": {
+      "ID": 24214,
+      "Name_en": "Ku'er"
+    }
+  },
+  {
+    "ID": 670,
+    "Item": {
+      "ID": 24215,
+      "Name_en": "Argonautica"
+    }
+  },
+  {
+    "ID": 671,
+    "Item": {
+      "ID": 24216,
+      "Name_en": "Hagoromo Bijin"
+    }
+  },
+  {
+    "ID": 672,
+    "Item": {
+      "ID": 24217,
+      "Name_en": "Duskfish"
+    }
+  },
+  {
+    "ID": 673,
+    "Item": {
+      "ID": 24218,
+      "Name_en": "Blade Skipper"
+    }
+  },
+  {
+    "ID": 674,
+    "Item": {
+      "ID": 24881,
+      "Name_en": "Lily of the Veil"
+    }
+  },
+  {
+    "ID": 675,
+    "Item": {
+      "ID": 24882,
+      "Name_en": "The Vegetarian"
+    }
+  },
+  {
+    "ID": 676,
+    "Item": {
+      "ID": 24883,
+      "Name_en": "Seven Stars"
+    }
+  },
+  {
+    "ID": 677,
+    "Item": {
+      "ID": 24884,
+      "Name_en": "Pinhead"
+    }
+  },
+  {
+    "ID": 678,
+    "Item": {
+      "ID": 24885,
+      "Name_en": "Pomegranate Trout"
+    }
+  },
+  {
+    "ID": 679,
+    "Item": {
+      "ID": 24886,
+      "Name_en": "Glarramundi"
+    }
+  },
+  {
+    "ID": 680,
+    "Item": {
+      "ID": 24887,
+      "Name_en": "Hermit's End"
+    }
+  },
+  {
+    "ID": 681,
+    "Item": {
+      "ID": 24888,
+      "Name_en": "Suiten Ippeki"
+    }
+  },
+  {
+    "ID": 682,
+    "Item": {
+      "ID": 24889,
+      "Name_en": "Axelrod"
+    }
+  },
+  {
+    "ID": 683,
+    "Item": {
+      "ID": 24890,
+      "Name_en": "The Unraveled Bow"
+    }
+  },
+  {
+    "ID": 684,
+    "Item": {
+      "ID": 24891,
+      "Name_en": "Nhaama's Treasure"
+    }
+  },
+  {
+    "ID": 685,
+    "Item": {
+      "ID": 24892,
+      "Name_en": "Garden Skipper"
+    }
+  },
+  {
+    "ID": 686,
+    "Item": {
+      "ID": 24893,
+      "Name_en": "Banderole"
+    }
+  },
+  {
+    "ID": 687,
+    "Item": {
+      "ID": 24557,
+      "Name_en": "Northern Oyster"
+    }
+  },
+  {
+    "ID": 688,
+    "Item": {
+      "ID": 24558,
+      "Name_en": "Ruby Laver"
+    }
+  },
+  {
+    "ID": 689,
+    "Item": {
+      "ID": 24559,
+      "Name_en": "Chakrafish"
+    }
+  },
+  {
+    "ID": 690,
+    "Item": {
+      "ID": 24560,
+      "Name_en": "Wicked Wartfish"
+    }
+  },
+  {
+    "ID": 691,
+    "Item": {
+      "ID": 24561,
+      "Name_en": "Othardian Salmon"
+    }
+  },
+  {
+    "ID": 692,
+    "Item": {
+      "ID": 24994,
+      "Name_en": "Warden of the Seven Hues"
+    }
+  },
+  {
+    "ID": 693,
+    "Item": {
+      "ID": 24990,
+      "Name_en": "Xenacanthus"
+    }
+  },
+  {
+    "ID": 694,
+    "Item": {
+      "ID": 24991,
+      "Name_en": "Drepanaspis"
+    }
+  },
+  {
+    "ID": 695,
+    "Item": {
+      "ID": 24992,
+      "Name_en": "Stethacanthus"
+    }
+  },
+  {
+    "ID": 696,
+    "Item": {
+      "ID": 24993,
+      "Name_en": "The Ruby Dragon"
+    }
+  },
+  {
+    "ID": 697,
+    "Item": {
+      "ID": 24995,
+      "Name_en": "The Unconditional"
+    }
+  },
+  {
+    "ID": 698,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 699,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 700,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 701,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 702,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 703,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 704,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 705,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 706,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 707,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 708,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 709,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 710,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 711,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 712,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 713,
+    "Item": {
+      "ID": 6688,
+      "Name_en": "Timeworn Leather Map"
+    }
+  },
+  {
+    "ID": 714,
+    "Item": {
+      "ID": 6689,
+      "Name_en": "Timeworn Goatskin Map"
+    }
+  },
+  {
+    "ID": 715,
+    "Item": {
+      "ID": 6690,
+      "Name_en": "Timeworn Toadskin Map"
+    }
+  },
+  {
+    "ID": 716,
+    "Item": {
+      "ID": 6691,
+      "Name_en": "Timeworn Boarskin Map"
+    }
+  },
+  {
+    "ID": 717,
+    "Item": {
+      "ID": 6692,
+      "Name_en": "Timeworn Peisteskin Map"
+    }
+  },
+  {
+    "ID": 718,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 719,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 720,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 721,
+    "Item": {
+      "ID": 12241,
+      "Name_en": "Timeworn Archaeoskin Map"
+    }
+  },
+  {
+    "ID": 722,
+    "Item": {
+      "ID": 12242,
+      "Name_en": "Timeworn Wyvernskin Map"
+    }
+  },
+  {
+    "ID": 723,
+    "Item": {
+      "ID": 12243,
+      "Name_en": "Timeworn Dragonskin Map"
+    }
+  },
+  {
+    "ID": 724,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 725,
+    "Item": {
+      "ID": 13733,
+      "Name_en": "Pterodactyl"
+    }
+  },
+  {
+    "ID": 726,
+    "Item": {
+      "ID": 13734,
+      "Name_en": "Eurhinosaur"
+    }
+  },
+  {
+    "ID": 727,
+    "Item": {
+      "ID": 13631,
+      "Name_en": "Steel Sky Pirate Spoil"
+    }
+  },
+  {
+    "ID": 728,
+    "Item": {
+      "ID": 13736,
+      "Name_en": "Gem Marimo"
+    }
+  },
+  {
+    "ID": 729,
+    "Item": {
+      "ID": 13737,
+      "Name_en": "Crown Trout"
+    }
+  },
+  {
+    "ID": 730,
+    "Item": {
+      "ID": 13738,
+      "Name_en": "Retribution Staff"
+    }
+  },
+  {
+    "ID": 731,
+    "Item": {
+      "ID": 13739,
+      "Name_en": "Thief Betta"
+    }
+  },
+  {
+    "ID": 732,
+    "Item": {
+      "ID": 13740,
+      "Name_en": "Goldsmith Crab"
+    }
+  },
+  {
+    "ID": 733,
+    "Item": {
+      "ID": 17594,
+      "Name_en": "Peteinosaur"
+    }
+  },
+  {
+    "ID": 734,
+    "Item": {
+      "ID": 17949,
+      "Name_en": "Deep Velodyna Carp"
+    }
+  },
+  {
+    "ID": 735,
+    "Item": {
+      "ID": 17950,
+      "Name_en": "Harutsuge Sprag"
+    }
+  },
+  {
+    "ID": 736,
+    "Item": {
+      "ID": 17952,
+      "Name_en": "Giant Plesiosaur"
+    }
+  },
+  {
+    "ID": 737,
+    "Item": {
+      "ID": 17835,
+      "Name_en": "Timeworn Gaganaskin Map"
+    }
+  },
+  {
+    "ID": 738,
+    "Item": {
+      "ID": 17836,
+      "Name_en": "Timeworn Gazelleskin Map"
+    }
+  },
+  {
+    "ID": 739,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 740,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 741,
+    "Item": {
+      "ID": null,
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 742,
+    "Item": {
+      "ID": 22668,
+      "Name_en": "Sunshell"
+    }
+  },
+  {
+    "ID": 743,
+    "Item": {
+      "ID": 22669,
+      "Name_en": "Steppe Barramundi"
+    }
+  },
+  {
+    "ID": 744,
+    "Item": {
+      "ID": 22670,
+      "Name_en": "Water Fan"
+    }
+  },
+  {
+    "ID": 745,
+    "Item": {
+      "ID": 22671,
+      "Name_en": "Arrowhead Snail"
+    }
+  },
+  {
+    "ID": 746,
+    "Item": {
+      "ID": 22672,
+      "Name_en": "Invisible Catfish"
+    }
+  },
+  {
+    "ID": 747,
+    "Item": {
+      "ID": 22673,
+      "Name_en": "Khaal Crab"
+    }
+  },
+  {
+    "ID": 748,
+    "Item": {
+      "ID": 22674,
+      "Name_en": "Fish Offering"
+    }
+  },
+  {
+    "ID": 749,
+    "Item": {
+      "ID": 22675,
+      "Name_en": "Fatty Eel"
+    }
+  },
+  {
+    "ID": 750,
+    "Item": {
+      "ID": 22676,
+      "Name_en": "Crimson Copperfish"
+    }
+  },
+  {
+    "ID": 751,
+    "Item": {
+      "ID": 22677,
+      "Name_en": "Zagas A'khaal"
+    }
+  },
+  {
+    "ID": 752,
+    "Item": {
+      "ID": 22678,
+      "Name_en": "Gigas Catfish"
+    }
+  },
+  {
+    "ID": 753,
+    "Item": {
+      "ID": 22679,
+      "Name_en": "Rainbow Killifish"
+    }
+  },
+  {
+    "ID": 754,
+    "Item": {
+      "ID": 22680,
+      "Name_en": "Steppe Sweetfish"
+    }
+  },
+  {
+    "ID": 755,
+    "Item": {
+      "ID": 22681,
+      "Name_en": "Greasy Strangler"
+    }
+  },
+  {
+    "ID": 756,
+    "Item": {
+      "ID": 22682,
+      "Name_en": "Grass Shrimp"
+    }
+  },
+  {
+    "ID": 757,
+    "Item": {
+      "ID": 22683,
+      "Name_en": "Flagon Clam"
+    }
+  },
+  {
+    "ID": 758,
+    "Item": {
+      "ID": 22684,
+      "Name_en": "Moon Oyster"
+    }
+  },
+  {
+    "ID": 759,
+    "Item": {
+      "ID": 22685,
+      "Name_en": "Leatherscale"
+    }
+  },
+  {
+    "ID": 760,
+    "Item": {
+      "ID": 22686,
+      "Name_en": "Dusk Scallop"
+    }
+  },
+  {
+    "ID": 761,
+    "Item": {
+      "ID": 22687,
+      "Name_en": "Spikefish"
+    }
+  },
+  {
+    "ID": 762,
+    "Item": {
+      "ID": 22688,
+      "Name_en": "Nhaama's Claw"
+    }
+  },
+  {
+    "ID": 763,
+    "Item": {
+      "ID": 22689,
+      "Name_en": "Spearhead Snail"
+    }
+  },
+  {
+    "ID": 764,
+    "Item": {
+      "ID": 22690,
+      "Name_en": "Granite Hardscale"
+    }
+  },
+  {
+    "ID": 765,
+    "Item": {
+      "ID": 22691,
+      "Name_en": "Plump Trout"
+    }
+  },
+  {
+    "ID": 766,
+    "Item": {
+      "ID": 22692,
+      "Name_en": "Appleseed"
+    }
+  },
+  {
+    "ID": 767,
+    "Item": {
+      "ID": 22693,
+      "Name_en": "Crawling Cog"
+    }
+  },
+  {
+    "ID": 768,
+    "Item": {
+      "ID": 23171,
+      "Name_en": "Fishy Fish"
+    }
+  }
+]

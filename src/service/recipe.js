@@ -2,6 +2,7 @@ import { concat, filter, find, forEach, get, includes, map, set, toLower, uniqBy
 import ITEM_TO_GATHERING_ITEM_MAPPING from '../data/item-to-gathering-item-mapping'
 import GATHERING_ITEM_POINTS from '../data/gathering-item-points'
 import AETHERYTE from '../data/aetheryte'
+import FISHING_SPOTS from '../data/fishing-spots'
 import * as XivApiService from './xivApi'
 
 /**
@@ -63,42 +64,74 @@ export const getIngredientListForRecipes = async recipeList => {
   addGatheringItemData(ingredientsGatherable)
 
   // sort the results
-  const results = {
+  return {
     ingredientsCrafted: orderBy(uniqBy(ingredientsCrafted, ic => get(ic, 'ID')), 'Name'),
     ingredientsGatherable: orderBy(ingredientsGatherable, 'name'),
     ingredientsPurchased: orderBy(ingredientsPurchased, 'name'),
     ingredientsOther: orderBy(ingredientsOther, 'name')
   }
-
-  return results
 }
 
 const addGatheringItemData = ingredientsGatherable => {
   forEach(ingredientsGatherable, item => {
     const gatheringItemId = get(item, 'gatheringItemId')
 
-    const filteredGatheringPoints = filter(
-      GATHERING_ITEM_POINTS, point => get(point, 'ID', '').startsWith(`${gatheringItemId}.`)
-    )
+    if (!!gatheringItemId) {
+      const filteredGatheringPoints = filter(
+        GATHERING_ITEM_POINTS, point => get(point, 'ID', '').startsWith(`${gatheringItemId}.`)
+      )
 
-    const namePath = 'GatheringPoint.PlaceName.Name_en'
-    const areaPath = 'GatheringPoint.TerritoryType.PlaceName.Name_en'
-    const regionPath = 'GatheringPoint.TerritoryType.PlaceNameRegion.Name_en'
-    const levelPath = 'GatheringPoint.GatheringPointBase.GatheringLevel'
-    const typePath = 'GatheringPoint.GatheringPointBase.GatheringType.Name_en'
-    const aetherytePath = 'GatheringPoint.TerritoryType.AetheryteTargetID'
+      const namePath = 'GatheringPoint.PlaceName.Name_en'
+      const areaPath = 'GatheringPoint.TerritoryType.PlaceName.Name_en'
+      const regionPath = 'GatheringPoint.TerritoryType.PlaceNameRegion.Name_en'
+      const levelPath = 'GatheringPoint.GatheringPointBase.GatheringLevel'
+      const typePath = 'GatheringPoint.GatheringPointBase.GatheringType.Name_en'
+      const aetherytePath = 'GatheringPoint.TerritoryType.AetheryteTargetID'
 
-    const pointData = map(filteredGatheringPoints, point => getPointData(
-      point,
-      namePath,
-      areaPath,
-      regionPath,
-      levelPath,
-      typePath,
-      aetherytePath
-    ))
+      const pointData = map(filteredGatheringPoints, point => getPointData(
+        point,
+        namePath,
+        areaPath,
+        regionPath,
+        levelPath,
+        typePath,
+        aetherytePath
+      ))
 
-    set(item, 'pointData', orderBy(pointData, ['region', 'area', 'name']))
+      set(item, 'pointData', orderBy(pointData, ['region', 'area', 'name']))
+    } else {
+      const itemId = get(item, 'itemId')
+      const filteredFishingSpots = filter(FISHING_SPOTS, spot => {
+        for (let i = 0; i < 10; i++) {
+          const path = `Item${i}TargetID`
+          const fishId = get(spot, path)
+          if (fishId === itemId) return true
+        }
+      })
+
+      const namePath = 'PlaceName.Name_en'
+      const areaPath = 'TerritoryType.PlaceName.Name_en'
+      const regionPath = 'TerritoryType.PlaceNameRegion.Name_en'
+      const levelPath = 'GatheringLevel'
+      const aetherytePath = 'TerritoryType.AetheryteTargetID'
+
+      const pointData = map(filteredFishingSpots, point => {
+        const pd = getPointData(
+          point,
+          namePath,
+          areaPath,
+          regionPath,
+          levelPath,
+          '',
+          aetherytePath
+        )
+        set(pd, 'type', 'Fishing')
+        set(pd, 'gatheringClass', 'Fisherman')
+        return pd
+      })
+
+      set(item, 'pointData', orderBy(pointData, ['region', 'area', 'name']))
+    }
   })
 }
 
@@ -127,6 +160,22 @@ const getPointData = (data, namePath, areaPath, regionPath, levelPath, typePath,
   }
 }
 
+const hasFishingSpotMatch = itemId => {
+  let matched = false
+  forEach(FISHING_SPOTS, spot => {
+    for (let i = 0; i < 10; i++) {
+      const path = `Item${i}TargetID`
+      const fishingId = get(spot, path)
+      if (itemId === fishingId) {
+        matched = true
+        return
+      }
+    }
+  })
+
+  return matched
+}
+
 const getAndSortRecipeResults = async (
   recipeList,
   ingredientsGatherable,
@@ -149,8 +198,9 @@ const getAndSortRecipeResults = async (
       const gatheringItemId = get(gatheringMapNode, 'GatheringItemID')
       const ingredientRecipe = get(rr, `ItemIngredientRecipe${i}[0]`)
       const quantity = get(rr, 'quantity')
+      const fishingSpotMatch = hasFishingSpotMatch(itemId)
 
-      if (!!gatheringItemId) {
+      if (!!gatheringItemId || !!fishingSpotMatch) {
         const existingIngredientGatherable = find(ingredientsGatherable, ig => get(ig, 'itemId') === itemId)
         if (!!existingIngredientGatherable) {
           const existingAmount = get(existingIngredientGatherable, 'amount')
@@ -166,7 +216,7 @@ const getAndSortRecipeResults = async (
         ingredientsCrafted.push(ingredientRecipe)
       }
 
-      if (!gatheringItemId && !ingredientRecipe && !!itemId) {
+      if (!gatheringItemId && !ingredientRecipe && !fishingSpotMatch && !!itemId) {
         const existingIngredientOther = find(ingredientsOther, ip => get(ip, 'itemId') === itemId)
         if (!!existingIngredientOther) {
           const existingAmount = get(existingIngredientOther, 'amount')
