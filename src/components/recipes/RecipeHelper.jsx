@@ -4,10 +4,12 @@ import { cloneDeep, find, get, omit, reject, indexOf, toNumber } from 'lodash'
 import { recipeSearch } from '../../service/xivApi'
 import RecipeSearch from './RecipeSearch'
 import MyList from './MyList'
+import * as RecipeService from '../../service/recipe'
+import ShoppingList from './ShoppingList'
 
 export default class RecipeHelper extends React.Component {
   state = {
-    recipeSearchString: 'healing',
+    recipeSearchString: '',
     recipeSearchIsInvalid: false,
     searching: false,
     myList: [],
@@ -96,19 +98,19 @@ export default class RecipeHelper extends React.Component {
     })
   }
 
-  handleGenerateShoppingList () {
+  async handleGenerateShoppingList () {
     const { myList } = this.state
-    const recipeIds = myList.map(i => i.ID)
 
-    console.log(recipeIds)
+    const shoppingListResults = await RecipeService.getIngredientListForRecipes(myList)
 
     this.setState({
-      key: 'shopping-list'
+      key: 'shopping-list',
+      shoppingListResults
     })
   }
 
   render () {
-    const { myList, recipeList, recipeSearchIsInvalid, recipeSearchString, searching } = this.state
+    const { myList, recipeList, recipeSearchIsInvalid, recipeSearchString, searching, shoppingListResults } = this.state
 
     return (
       <div className="recipe-list pt3">
@@ -144,7 +146,7 @@ export default class RecipeHelper extends React.Component {
           </Tab>
           <Tab eventKey="shopping-list" title={`My Shopping List`}>
             <div className="recipe-tab">
-              uh oh, no content
+              <ShoppingList shoppingList={shoppingListResults} />
             </div>
           </Tab>
         </Tabs>

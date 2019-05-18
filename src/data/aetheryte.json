@@ -1,0 +1,812 @@
+[
+  {
+    "ID": 1,
+    "PlaceName": {
+      "Name_en": ""
+    }
+  },
+  {
+    "ID": 2,
+    "PlaceName": {
+      "Name_en": "New Gridania"
+    }
+  },
+  {
+    "ID": 3,
+    "PlaceName": {
+      "Name_en": "Bentbranch Meadows"
+    }
+  },
+  {
+    "ID": 4,
+    "PlaceName": {
+      "Name_en": "The Hawthorne Hut"
+    }
+  },
+  {
+    "ID": 5,
+    "PlaceName": {
+      "Name_en": "Quarrymill"
+    }
+  },
+  {
+    "ID": 6,
+    "PlaceName": {
+      "Name_en": "Camp Tranquil"
+    }
+  },
+  {
+    "ID": 7,
+    "PlaceName": {
+      "Name_en": "Fallgourd Float"
+    }
+  },
+  {
+    "ID": 8,
+    "PlaceName": {
+      "Name_en": "Limsa Lominsa Lower Decks"
+    }
+  },
+  {
+    "ID": 9,
+    "PlaceName": {
+      "Name_en": "Ul'dah - Steps of Nald"
+    }
+  },
+  {
+    "ID": 10,
+    "PlaceName": {
+      "Name_en": "Moraby Drydocks"
+    }
+  },
+  {
+    "ID": 11,
+    "PlaceName": {
+      "Name_en": "Costa del Sol"
+    }
+  },
+  {
+    "ID": 12,
+    "PlaceName": {
+      "Name_en": "Wineport"
+    }
+  },
+  {
+    "ID": 13,
+    "PlaceName": {
+      "Name_en": "Swiftperch"
+    }
+  },
+  {
+    "ID": 14,
+    "PlaceName": {
+      "Name_en": "Aleport"
+    }
+  },
+  {
+    "ID": 15,
+    "PlaceName": {
+      "Name_en": "Camp Bronze Lake"
+    }
+  },
+  {
+    "ID": 16,
+    "PlaceName": {
+      "Name_en": "Camp Overlook"
+    }
+  },
+  {
+    "ID": 17,
+    "PlaceName": {
+      "Name_en": "Horizon"
+    }
+  },
+  {
+    "ID": 18,
+    "PlaceName": {
+      "Name_en": "Camp Drybone"
+    }
+  },
+  {
+    "ID": 19,
+    "PlaceName": {
+      "Name_en": "Little Ala Mhigo"
+    }
+  },
+  {
+    "ID": 20,
+    "PlaceName": {
+      "Name_en": "Forgotten Springs"
+    }
+  },
+  {
+    "ID": 21,
+    "PlaceName": {
+      "Name_en": "Camp Bluefog"
+    }
+  },
+  {
+    "ID": 22,
+    "PlaceName": {
+      "Name_en": "Ceruleum Processing Plant"
+    }
+  },
+  {
+    "ID": 23,
+    "PlaceName": {
+      "Name_en": "Camp Dragonhead"
+    }
+  },
+  {
+    "ID": 24,
+    "PlaceName": {
+      "Name_en": "Revenant's Toll"
+    }
+  },
+  {
+    "ID": 25,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 26,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 27,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 28,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 29,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 30,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 31,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 32,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 33,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 34,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 35,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 36,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 37,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 38,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 39,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 40,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 41,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 42,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 43,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 44,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 45,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 46,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 47,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 48,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 49,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 50,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 51,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 52,
+    "PlaceName": {
+      "Name_en": "Summerford Farms"
+    }
+  },
+  {
+    "ID": 53,
+    "PlaceName": {
+      "Name_en": "Black Brush Station"
+    }
+  },
+  {
+    "ID": 54,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 55,
+    "PlaceName": {
+      "Name_en": "Wolves' Den Pier"
+    }
+  },
+  {
+    "ID": 56,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Free Company)"
+    }
+  },
+  {
+    "ID": 57,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Free Company)"
+    }
+  },
+  {
+    "ID": 58,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Free Company)"
+    }
+  },
+  {
+    "ID": 59,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Private)"
+    }
+  },
+  {
+    "ID": 60,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Private)"
+    }
+  },
+  {
+    "ID": 61,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Private)"
+    }
+  },
+  {
+    "ID": 62,
+    "PlaceName": {
+      "Name_en": "The Gold Saucer"
+    }
+  },
+  {
+    "ID": 63,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 64,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 65,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 66,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 67,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 68,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 69,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 70,
+    "PlaceName": {
+      "Name_en": "Foundation"
+    }
+  },
+  {
+    "ID": 71,
+    "PlaceName": {
+      "Name_en": "Falcon's Nest"
+    }
+  },
+  {
+    "ID": 72,
+    "PlaceName": {
+      "Name_en": "Camp Cloudtop"
+    }
+  },
+  {
+    "ID": 73,
+    "PlaceName": {
+      "Name_en": "Ok' Zundu"
+    }
+  },
+  {
+    "ID": 74,
+    "PlaceName": {
+      "Name_en": "Helix"
+    }
+  },
+  {
+    "ID": 75,
+    "PlaceName": {
+      "Name_en": "Idyllshire"
+    }
+  },
+  {
+    "ID": 76,
+    "PlaceName": {
+      "Name_en": "Tailfeather"
+    }
+  },
+  {
+    "ID": 77,
+    "PlaceName": {
+      "Name_en": "Anyx Trine"
+    }
+  },
+  {
+    "ID": 78,
+    "PlaceName": {
+      "Name_en": "Moghome"
+    }
+  },
+  {
+    "ID": 79,
+    "PlaceName": {
+      "Name_en": "Zenith"
+    }
+  },
+  {
+    "ID": 80,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 81,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 82,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 83,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 84,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 85,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 86,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 87,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 88,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 89,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 90,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 91,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 92,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 93,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 94,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 95,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 96,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Free Company)"
+    }
+  },
+  {
+    "ID": 97,
+    "PlaceName": {
+      "Name_en": "Estate Hall (Private)"
+    }
+  },
+  {
+    "ID": 98,
+    "PlaceName": {
+      "Name_en": "Castrum Oriens"
+    }
+  },
+  {
+    "ID": 99,
+    "PlaceName": {
+      "Name_en": "The Peering Stones"
+    }
+  },
+  {
+    "ID": 100,
+    "PlaceName": {
+      "Name_en": "Ala Gannha"
+    }
+  },
+  {
+    "ID": 101,
+    "PlaceName": {
+      "Name_en": "Ala Ghiri"
+    }
+  },
+  {
+    "ID": 102,
+    "PlaceName": {
+      "Name_en": "Porta Praetoria"
+    }
+  },
+  {
+    "ID": 103,
+    "PlaceName": {
+      "Name_en": "The Ala Mhigan Quarter"
+    }
+  },
+  {
+    "ID": 104,
+    "PlaceName": {
+      "Name_en": "Rhalgr's Reach"
+    }
+  },
+  {
+    "ID": 105,
+    "PlaceName": {
+      "Name_en": "Tamamizu"
+    }
+  },
+  {
+    "ID": 106,
+    "PlaceName": {
+      "Name_en": "Onokoro"
+    }
+  },
+  {
+    "ID": 107,
+    "PlaceName": {
+      "Name_en": "Namai"
+    }
+  },
+  {
+    "ID": 108,
+    "PlaceName": {
+      "Name_en": "The House of the Fierce"
+    }
+  },
+  {
+    "ID": 109,
+    "PlaceName": {
+      "Name_en": "Reunion"
+    }
+  },
+  {
+    "ID": 110,
+    "PlaceName": {
+      "Name_en": "The Dawn Throne"
+    }
+  },
+  {
+    "ID": 111,
+    "PlaceName": {
+      "Name_en": "Kugane"
+    }
+  },
+  {
+    "ID": 112,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 113,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 114,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 115,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 116,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 117,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 118,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 119,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 120,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 121,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 122,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 123,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 124,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 125,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 126,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 127,
+    "PlaceName": {
+      "Name_en": "The Doman Enclave"
+    }
+  },
+  {
+    "ID": 128,
+    "PlaceName": {
+      "Name_en": "Dhoro Iloh"
+    }
+  },
+  {
+    "ID": 129,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 130,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 131,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 132,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 133,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 134,
+    "PlaceName": {
+      "Name_en": null
+    }
+  },
+  {
+    "ID": 135,
+    "PlaceName": {
+      "Name_en": null
+    }
+  }
+]

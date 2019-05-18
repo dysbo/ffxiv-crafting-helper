@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { forEach, map, get, isArray, set } from 'lodash'
+import { map, get, isArray, set, toLower } from 'lodash'
 // import UNLOADED_CHARACTER from '../data/mock/unloadedCharacter'
 
 // const PRIVATE_KEY = '257f7d4532a74f15a429b5262d51d0f3938964ea78124b1ca8da9459accc15b7'
@@ -43,25 +43,6 @@ const search = async (indexes, filters, sortField, columns, searchString) => {
   return get(result, 'data', {})
 }
 
-export const getRecipesForLevelRange = async (abbreviation, minLevel, maxLevel) => {
-  const index = 'Recipe'
-  const sortField = 'RecipeLevelTable.ClassJobLevel'
-  const columns = ['ID', 'ClassJob.Abbreviation_en', 'RecipeLevelTable.ClassJobLevel', 'Name', 'Icon']
-  const filters = [
-    `ClassJob.Abbreviation_en=${abbreviation}`,
-    `RecipeLevelTable.ClassJobLevel>=${minLevel}`,
-    `RecipeLevelTable.ClassJobLevel<=${maxLevel}`,
-    'StatusRequiredTargetID=0'
-  ]
-
-  return await search(
-    index,
-    filters,
-    sortField,
-    columns.join(',')
-  )
-}
-
 export const recipeSearch = async (abbreviation, searchString, page = 1) => {
   const indexes = 'recipe'
   const size = 10
@@ -74,6 +55,8 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
     'Name',
     'Icon'
   ]
+
+  searchString = toLower(searchString)
 
   const paramsToSend = {
     indexes,
@@ -122,8 +105,6 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
     paramsToSend.body.query.bool.minimum_should_match = minimum_should_match
   }
 
-  console.log(paramsToSend)
-
   const result = await axios.post(`${BASE_URL}/search`,
     paramsToSend
   )
@@ -131,3 +112,44 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
 }
 
 export const getIconUrl = iconRelativePath => `${BASE_URL}${iconRelativePath}`
+
+export const getRecipesById = async recipeIds => {
+  const columns = [
+    'ID',
+    'Name'
+  ]
+
+  for (let i = 0; i < 10; i++) {
+    columns.push(`AmountIngredient${i}`)
+    columns.push(`ItemIngredient${i}.ID`)
+    columns.push(`ItemIngredient${i}.Icon`)
+    columns.push(`ItemIngredient${i}.Name`)
+    columns.push(`ItemIngredientRecipe${i}`)
+  }
+
+  const result = await axios.get(`${BASE_URL}/recipe`, {
+    params: {
+      ids: recipeIds.join(','),
+      columns: columns.join(',')
+    }
+  })
+  return get(result, 'data', {})
+}
+
+export const getItemsById = async itemIds => {
+  const columns = [
+    'ID',
+    'Name',
+    'Icon',
+    'GameContentLinks'
+  ]
+
+  const result = await axios.get(`${BASE_URL}/item`, {
+    params: {
+      ids: itemIds.join(','),
+      columns: columns.join(',')
+    }
+  })
+
+  return get(result, 'data', {})
+}

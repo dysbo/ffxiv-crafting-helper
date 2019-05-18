@@ -17,7 +17,7 @@ $iconSize: 28px;
   overflow: auto;
 }
 
-table.calculations, table.recipes {
+table.calculations, table.recipes, table.shopping-list {
   tbody {
     tr {
       &.focused {
@@ -39,6 +39,12 @@ table.calculations, table.recipes {
     th {
       vertical-align: bottom;
       text-align: center;
+    }
+
+    tr {
+      &.section-head {
+        background: #def;
+      }
     }
   }
 }
