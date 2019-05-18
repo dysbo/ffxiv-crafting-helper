@@ -9,7 +9,7 @@ import ShoppingList from './ShoppingList'
 
 export default class RecipeHelper extends React.Component {
   state = {
-    recipeSearchString: '',
+    recipeSearchString: 'padded leather duckbill',
     recipeSearchIsInvalid: false,
     searching: false,
     myList: [],

@@ -167,12 +167,15 @@ const getAndSortRecipeResults = async (
       }
 
       if (!gatheringItemId && !ingredientRecipe && !!itemId) {
-        const existingIngredientPurchased = find(ingredientsOther, ip => get(ip, 'itemId') === itemId)
-        if (!!existingIngredientPurchased) {
-          const existingAmount = get(existingIngredientPurchased, 'amount')
-          set(existingIngredientPurchased, 'amount', existingAmount + (amount * quantity))
+        console.log('this item is not gatherable and is not a recpie', itemId)
+        const existingIngredientOther = find(ingredientsOther, ip => get(ip, 'itemId') === itemId)
+        if (!!existingIngredientOther) {
+          console.log('I found an existing \'other\' ingredient', existingIngredientOther)
+          const existingAmount = get(existingIngredientOther, 'amount')
+          set(existingIngredientOther, 'amount', existingAmount + (amount * quantity))
+        } else {
+          ingredientsOther.push({ itemId, amount: amount * quantity })
         }
-        ingredientsOther.push({ itemId, amount: amount * quantity })
       }
     }
   })
