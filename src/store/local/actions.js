@@ -1,5 +1,5 @@
-import * as LocalStorage from '../service/localStorage'
-import * as XivApi from '../service/xivApi'
+import * as LocalStorage from '../../service/localStorage'
+import * as XivApi from '../../service/xivApi'
 import * as T from './types'
 
 const localClassDataRetrieve = localData => ({

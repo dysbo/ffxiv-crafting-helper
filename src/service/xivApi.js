@@ -43,7 +43,7 @@ const search = async (indexes, filters, sortField, columns, searchString) => {
   return get(result, 'data', {})
 }
 
-export const recipeSearch = async (abbreviation, searchString, page = 1) => {
+export const recipeSearch = async (abbreviation, searchString = '', page = 1) => {
   const indexes = 'recipe'
   const size = 10
   const columns = [
@@ -56,7 +56,7 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
     'Icon'
   ]
 
-  searchString = toLower(searchString)
+  searchString = toLower(searchString).replace(' ', '*')
 
   const paramsToSend = {
     indexes,
@@ -87,12 +87,6 @@ export const recipeSearch = async (abbreviation, searchString, page = 1) => {
 
   if (!!abbreviation) {
     const minimum_should_match = 1
-    // const should = []
-        // {
-        //   match: {
-        //     'ClassJob.Abbreviation_en': 'WVR'
-        //   }
-        // },
 
     abbreviation = isArray(abbreviation) ? abbreviation : [abbreviation]
     const should = map(abbreviation, a => ({

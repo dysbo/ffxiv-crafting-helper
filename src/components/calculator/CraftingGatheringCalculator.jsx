@@ -7,7 +7,7 @@ import FilterDropdown from './FilterDropdown'
 import CalculationsTableHeader from './CalculationsTableHeader'
 import CalculationsTableBody from './CalculationsTableBody'
 import EXP_PER_LEVEL from '../../data/exp-per-level'
-import { saveLocalClassData } from '../../store/actions'
+import { saveLocalClassData } from '../../store/local/actions'
 
 class CraftingGatheringCalculator extends React.Component {
   state = {

@@ -1,5 +1,5 @@
 import { get } from 'lodash'
-import * as LocalStorage from '../service/localStorage'
+import * as LocalStorage from '../../service/localStorage'
 import * as T from './types'
 
 const INITIAL_STATE = {
