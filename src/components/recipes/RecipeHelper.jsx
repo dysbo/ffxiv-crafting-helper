@@ -30,6 +30,13 @@ export default class RecipeHelper extends React.Component {
     })
   }
 
+  handleClearList () {
+    this.setState({
+      myList: [],
+      key: 'search'
+    })
+  }
+
   async search (page = 1) {
     const { recipeSearchString } = this.state
     const results = await recipeSearch(undefined, recipeSearchString, page)
@@ -145,6 +152,8 @@ export default class RecipeHelper extends React.Component {
             <div className="recipe-tab">
               <MyList
                 list={myList}
+                handleClearList={this.handleClearList.bind(this)}
+                handleTabChange={this.handleTabChange.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
                 handleUpdateQuantity={this.handleUpdateQuantity.bind(this)}
                 handleGenerateShoppingList={this.handleGenerateShoppingList.bind(this)}

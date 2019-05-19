@@ -7,12 +7,22 @@ import { getIconUrl } from '../../service/xivApi'
 
 export default class MyList extends React.Component {
   render () {
-    const { handleGenerateShoppingList, handleToggleListItem, handleUpdateQuantity, list } = this.props
+    const {
+      handleClearList,
+      handleGenerateShoppingList,
+      handleTabChange,
+      handleToggleListItem,
+      handleUpdateQuantity,
+      list
+    } = this.props
 
     if (!list.length) {
       return (
         <div className="tc">
-          No Items in List
+          No Items in List<br />
+          <Button onClick={handleTabChange.bind(this, 'search')}>
+            Back to Search
+          </Button>
         </div>
       )
     }
@@ -51,9 +61,14 @@ export default class MyList extends React.Component {
           <tfoot>
           <tr>
             <td colSpan={6} className="tc">
-              <Button variant="primary" onClick={handleGenerateShoppingList}>
-                Create My Shopping List
-              </Button>
+              <div className="space-between">
+                <Button variant="danger" onClick={handleClearList}>
+                  Clear Recipe List
+                </Button>
+                <Button variant="primary" onClick={handleGenerateShoppingList}>
+                  Create My Shopping List
+                </Button>
+              </div>
             </td>
           </tr>
           </tfoot>
@@ -64,7 +79,9 @@ export default class MyList extends React.Component {
 }
 
 MyList.propTypes = {
+  handleClearList: PropTypes.func.isRequired,
   handleGenerateShoppingList: PropTypes.func.isRequired,
+  handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,
   handleUpdateQuantity: PropTypes.func.isRequired,
   list: PropTypes.arrayOf(PropTypes.shape({

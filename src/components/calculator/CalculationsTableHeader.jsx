@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { calculateProgressPercentage, calculateRemainingExp, calculateRemainingItems } from '../../service/calculations'
-import SortableTableHeaderCell from './SortableTableHeaderCell'
+import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
 
 const tableHeaders = [
   { name: 'Class', sortFunc: 'name' },
