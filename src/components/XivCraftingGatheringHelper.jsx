@@ -41,10 +41,8 @@ class XivCraftingGatheringHelper extends React.Component {
           <Switch>
             <Route exact path="/" render={Calculator} />
             <Route path="/calculations" render={Calculator} />
-            {process.env.NODE_ENV === 'development' && (
-              <Route path="/recipes" component={RecipeHelper} />
-            )}
-          </Switch>
+            <Route path="/recipes" component={RecipeHelper} />
+            </Switch>
           <hr />
           <div className="tc text-muted">
             Created by {externalLink('https://na.finalfantasyxiv.com/lodestone/character/22858010/',
