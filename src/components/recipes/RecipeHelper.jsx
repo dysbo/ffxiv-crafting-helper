@@ -50,12 +50,10 @@ class RecipeHelper extends React.Component {
   handleUpdateQuantity (item, event) {
     const newValue = Math.max(1, toNumber(event.target.value))
 
-    const { myRecipeList } = this.props
+    const { myRecipeList, saveMyRecipeList } = this.props
     const myListItemIndex = indexOf(myRecipeList, item)
     myRecipeList[myListItemIndex].quantity = newValue
-    this.setState({
-      myRecipeList
-    })
+    saveMyRecipeList(myRecipeList)
   }
 
   handleSearch (event) {
