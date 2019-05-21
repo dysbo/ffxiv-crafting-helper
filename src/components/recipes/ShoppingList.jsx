@@ -7,27 +7,38 @@ import { getIconUrl } from '../../service/xivApi'
 export default class ShoppingList extends React.Component {
   state = {}
 
+  componentDidMount() {
+    this.updateGatherableIngredientsDropdowns()
+  }
+
   componentDidUpdate (prevProps, prevState, snapshot) {
     const { shoppingList } = this.props
 
     if (!isEqual(shoppingList, prevProps.shoppingList)) {
-      const {
-        // ingredientsCrafted,
-        // ingredientsPurchased,
-        ingredientsGatherable
-        // ingredientsOther
-      } = shoppingList
+      this.updateGatherableIngredientsDropdowns()
+    }
+  }
 
-      const gatherableStateVars = {}
+  updateGatherableIngredientsDropdowns () {
+    const { shoppingList } = this.props
+    const {
+      // ingredientsCrafted,
+      // ingredientsPurchased,
+      ingredientsGatherable
+      // ingredientsOther
+    } = shoppingList
+
+    const gatherableStateVars = {}
+    if (ingredientsGatherable) {
       ingredientsGatherable.forEach(item => {
         const key = `gatherable-${item.itemId}-location`
         gatherableStateVars[key] = get(item, 'pointData[0]', {})
       })
-
-      this.setState({
-        ...gatherableStateVars
-      })
     }
+
+    this.setState({
+      ...gatherableStateVars
+    })
   }
 
   handleLocationUpdate (event) {

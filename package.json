@@ -1,7 +1,7 @@
 {
   "name": "ffxiv-crafting-helper",
   "homepage": "http://dysbo.github.io/ffxiv-crafting-helper",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",

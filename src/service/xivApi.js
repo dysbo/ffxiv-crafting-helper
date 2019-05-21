@@ -43,7 +43,7 @@ const search = async (indexes, filters, sortField, columns, searchString) => {
   return get(result, 'data', {})
 }
 
-export const recipeSearch = async (abbreviation, searchString = '', page = 1) => {
+export const recipeSearch = async (searchString = '', options = { exact: false, page: 1 }) => {
   const indexes = 'recipe'
   const size = 10
   const columns = [
@@ -56,7 +56,13 @@ export const recipeSearch = async (abbreviation, searchString = '', page = 1) =>
     'Icon'
   ]
 
-  searchString = toLower(searchString).replace(' ', '*')
+  const { exact, page } = options
+
+  searchString = toLower(searchString)
+
+  if (!exact) {
+    searchString = searchString.replace(' ', '*')
+  }
 
   const paramsToSend = {
     indexes,
@@ -85,18 +91,18 @@ export const recipeSearch = async (abbreviation, searchString = '', page = 1) =>
     page
   }
 
-  if (!!abbreviation) {
+  if (!!options.abbreviation) {
+    let { abbreviation } = options
     const minimum_should_match = 1
 
     abbreviation = isArray(abbreviation) ? abbreviation : [abbreviation]
-    const should = map(abbreviation, a => ({
+
+    paramsToSend.body.query.bool.minimum_should_match = minimum_should_match
+    paramsToSend.body.query.bool.should = map(abbreviation, a => ({
       match: {
         'ClassJob.Abbreviation_en': a
       }
     }))
-
-    paramsToSend.body.query.bool.should = should
-    paramsToSend.body.query.bool.minimum_should_match = minimum_should_match
   }
 
   const result = await axios.post(`${BASE_URL}/search`,

@@ -1,52 +1,44 @@
 import * as T from './types'
-import * as XivApiService from '../../service/xivApi'
+import * as LocalStorageService from '../../service/localStorage'
+import * as RecipeListService from '../../service/recipe'
 
-const fetchRecipesByIdRequest = recipeIds => ({
-  type: T.FETCH_RECIPES_BY_ID,
-  recipeIds
+const recipeListClear = () => ({
+  type: T.RECIPE_LIST_CLEAR
 })
 
-const searchRecipesRequest = (abbreviations, searchString = '', page = 1) => ({
-  type: T.SEARCH_RECIPES,
-  searchParams: {
-    abbreviations,
-    searchString,
-    page
-  }
+const recipeListSave = recipeList => ({
+  type: T.RECIPE_LIST_SAVE,
+  recipeList
 })
 
-const apiRequestFailure = (requestType, error) => ({
-  type: T.API_REQUEST_FAILURE,
-  requestType,
-  error
+const shoppingListClear = () => ({
+  type: T.SHOPPING_LIST_CLEAR
 })
 
-const apiRequestSuccess = (requestType, payload) => ({
-  type: T.API_REQUEST_SUCCESS,
-  requestType,
-  payload
+const shoppingListCreate = shoppingList => ({
+  type: T.SHOPPING_LIST_CREATE,
+  shoppingList
 })
 
-export const fetchRecipesById = recipeIds => {
-  return async dispatch => {
-    dispatch(fetchRecipesByIdRequest(recipeIds))
-    try {
-      const payload = await XivApiService.getRecipesById(recipeIds)
-      dispatch(apiRequestSuccess(T.FETCH_RECIPES_BY_ID, payload))
-    } catch (err) {
-      dispatch(apiRequestFailure(T.FETCH_RECIPES_BY_ID, err))
-    }
-  }
+export const saveMyRecipeList = recipeList => dispatch => {
+  LocalStorageService.storeMyRecipeList(recipeList)
+  dispatch(recipeListSave(recipeList))
+  dispatch(createMyShoppingList(recipeList))
 }
 
-export const searchRecipes = (abbreviations, searchString = '', page = 1) => {
-  return async dispatch => {
-    dispatch(searchRecipesRequest(abbreviations, searchString, page))
-    try {
-      const payload = await XivApiService.recipeSearch(abbreviations, searchString, page)
-      dispatch(apiRequestSuccess(T.SEARCH_RECIPES, payload))
-    } catch (err) {
-      dispatch(apiRequestFailure(T.SEARCH_RECIPES, err))
-    }
-  }
+export const clearMyRecipeList = () => dispatch => {
+  LocalStorageService.clearMyRecipeList()
+  dispatch(recipeListClear())
+  dispatch(clearMyShoppingList())
+}
+
+export const createMyShoppingList = recipeList => async dispatch => {
+  const result = await RecipeListService.getIngredientListForRecipes(recipeList)
+  LocalStorageService.storeMyShoppingList(result)
+  dispatch(shoppingListCreate(result))
+}
+
+export const clearMyShoppingList = () => dispatch => {
+  LocalStorageService.clearMyShoppingList()
+  dispatch(shoppingListClear())
 }

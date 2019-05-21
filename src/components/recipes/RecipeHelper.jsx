@@ -1,13 +1,14 @@
 import React from 'react'
 import { Tab, Tabs } from 'react-bootstrap'
+import { connect } from 'react-redux'
 import { cloneDeep, find, get, omit, reject, indexOf, toNumber } from 'lodash'
 import { recipeSearch } from '../../service/xivApi'
 import RecipeSearch from './RecipeSearch'
 import MyList from './MyList'
-import * as RecipeService from '../../service/recipe'
+import * as recipeActions from '../../store/recipeList/actions'
 import ShoppingList from './ShoppingList'
 
-export default class RecipeHelper extends React.Component {
+class RecipeHelper extends React.Component {
   state = {
     recipeSearchString: '',
     recipeSearchIsInvalid: false,
@@ -31,15 +32,14 @@ export default class RecipeHelper extends React.Component {
   }
 
   handleClearList () {
-    this.setState({
-      myList: [],
-      key: 'search'
-    })
+    const { clearMyRecipeList } = this.props
+    clearMyRecipeList()
+    this.handleTabChange('search')
   }
 
   async search (page = 1) {
     const { recipeSearchString } = this.state
-    const results = await recipeSearch(undefined, recipeSearchString, page)
+    const results = await recipeSearch(recipeSearchString, { page })
     this.setState({
       searching: false,
       recipeList: results,
@@ -94,36 +94,35 @@ export default class RecipeHelper extends React.Component {
   }
 
   toggleListItem (item) {
+    console.log('togglin', item)
     item = omit(item, 'quantity')
-    const { myList } = this.state
-    let myClonedList = cloneDeep(myList)
-    const foundItem = find(myList, i => get(i, 'ID') === get(item, 'ID'))
+    const { myRecipeList, saveMyRecipeList } = this.props
+    let myClonedList = cloneDeep(myRecipeList)
+    const foundItem = find(myRecipeList, i => get(i, 'ID') === get(item, 'ID'))
 
     if (!!foundItem) {
-      myClonedList = reject(myList, item)
+      myClonedList = reject(myRecipeList, item)
     } else {
       item.quantity = 1
       myClonedList.push(item)
     }
 
-    this.setState({
-      myList: myClonedList
-    })
+    saveMyRecipeList(myClonedList)
   }
 
-  async handleGenerateShoppingList () {
-    const { myList } = this.state
+  handleGenerateShoppingList () {
+    const { createMyShoppingList, myRecipeList } = this.props
 
-    const shoppingListResults = await RecipeService.getIngredientListForRecipes(myList)
+    createMyShoppingList(myRecipeList)
 
     this.setState({
-      key: 'shopping-list',
-      shoppingListResults
+      key: 'shopping-list'
     })
   }
 
   render () {
-    const { myList, recipeList, recipeSearchIsInvalid, recipeSearchString, searching, shoppingListResults } = this.state
+    const { recipeList, recipeSearchIsInvalid, recipeSearchString, searching, shoppingListResults } = this.state
+    const { myRecipeList, myShoppingList } = this.props
 
     return (
       <div className="recipe-list pt3">
@@ -140,7 +139,7 @@ export default class RecipeHelper extends React.Component {
                 handleSubmit={this.handleSearch.bind(this)}
                 handleTabChange={this.handleTabChange.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
-                myList={myList}
+                myList={myRecipeList}
                 recipeSearchResults={recipeList}
                 recipeSearchIsInvalid={recipeSearchIsInvalid}
                 recipeSearchString={recipeSearchString}
@@ -148,10 +147,10 @@ export default class RecipeHelper extends React.Component {
               />
             </div>
           </Tab>
-          <Tab eventKey="recipe-list" title={`My Recipe List (${myList.length})`}>
+          <Tab eventKey="recipe-list" title={`My Recipe List (${myRecipeList.length})`}>
             <div className="recipe-tab">
               <MyList
-                list={myList}
+                list={myRecipeList}
                 handleClearList={this.handleClearList.bind(this)}
                 handleTabChange={this.handleTabChange.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
@@ -163,7 +162,7 @@ export default class RecipeHelper extends React.Component {
           <Tab eventKey="shopping-list" title={`My Shopping List`}>
             <div className="recipe-tab">
               <ShoppingList
-                shoppingList={shoppingListResults}
+                shoppingList={myShoppingList}
               />
             </div>
           </Tab>
@@ -172,3 +171,17 @@ export default class RecipeHelper extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  myRecipeList: get(state, 'recipeList.myRecipeList', []),
+  myShoppingList: get(state, 'recipeList.myShoppingList', [])
+})
+
+const mapDispatchToProps = dispatch => ({
+  saveMyRecipeList: recipeList => dispatch(recipeActions.saveMyRecipeList(recipeList)),
+  clearMyRecipeList: () => dispatch(recipeActions.clearMyRecipeList()),
+  createMyShoppingList: recipeList => dispatch(recipeActions.createMyShoppingList(recipeList)),
+  clearMyShoppingList: () => dispatch(recipeActions.clearMyShoppingList())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeHelper)

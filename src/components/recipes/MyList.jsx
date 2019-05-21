@@ -19,7 +19,8 @@ export default class MyList extends React.Component {
     if (!list.length) {
       return (
         <div className="tc">
-          No Items in List<br />
+          No Items in List
+          <hr />
           <Button onClick={handleTabChange.bind(this, 'search')}>
             Back to Search
           </Button>
@@ -65,8 +66,8 @@ export default class MyList extends React.Component {
                 <Button variant="danger" onClick={handleClearList}>
                   Clear Recipe List
                 </Button>
-                <Button variant="primary" onClick={handleGenerateShoppingList}>
-                  Create My Shopping List
+                <Button variant="primary" onClick={handleTabChange.bind(this, 'shopping-list')}>
+                  View My Shopping List
                 </Button>
               </div>
             </td>

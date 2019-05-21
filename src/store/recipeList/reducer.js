@@ -1,41 +1,32 @@
-import { get } from 'lodash'
+import * as LocalStorageService from '../../service/localStorage'
 import * as T from './types'
 
-const INITIAL_STATE = {}
+const INITIAL_STATE = {
+  myRecipeList: LocalStorageService.getMyRecipeList(),
+  myShoppingList: LocalStorageService.getMyShoppingList()
+}
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case T.FETCH_RECIPES_BY_ID:
+    case T.SHOPPING_LIST_CREATE:
       return {
         ...state,
-        recipeIds: get(action, 'recipeIds')
+        myShoppingList: action.shoppingList
       }
-    case T.SEARCH_RECIPES:
+    case T.SHOPPING_LIST_CLEAR:
       return {
         ...state,
-        searchParams: get(action, 'searchParameters')
+        myShoppingList: []
       }
-    case T.API_REQUEST_SUCCESS:
-      switch (action.requestType) {
-        case T.FETCH_RECIPES_BY_ID:
-          return {
-            ...state,
-            recipeList: get(action, 'payload.Results', []),
-            recipeListPagination: get(action, 'payload.Pagination', {})
-          }
-        case T.SEARCH_RECIPES:
-          return {
-            ...state,
-            payload
-          }
-        default:
-          return state
-      }
-    case T.API_REQUEST_FAILURE:
+    case T.RECIPE_LIST_SAVE:
       return {
         ...state,
-        failedRequestType: get(action, 'requestType'),
-        error: get(action, 'error')
+        myRecipeList: action.recipeList
+      }
+    case T.RECIPE_LIST_CLEAR:
+      return {
+        ...state,
+        myRecipeList: []
       }
     default:
       return state

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Nav, Navbar, NavbarBrand } from 'react-bootstrap'
+import { Nav, Navbar, NavbarBrand, Badge } from 'react-bootstrap'
 import LodestoneCharacterMenu from './LodestoneCharacterMenu'
 
 export default class Navigation extends React.Component {
@@ -20,13 +20,11 @@ export default class Navigation extends React.Component {
               Calculations
             </Nav.Link>
           </LinkContainer>
-          {process.env.NODE_ENV === 'development' && (
-            <LinkContainer to="/recipes/all">
-              <Nav.Link>
-                Recipes
-              </Nav.Link>
-            </LinkContainer>
-          )}
+          <LinkContainer to="/recipes/all">
+            <Nav.Link>
+              Recipes <Badge variant="primary">Beta</Badge>
+            </Nav.Link>
+          </LinkContainer>
         </Nav>
         <Nav>
           <LodestoneCharacterMenu

@@ -12,11 +12,68 @@ import {
 
 const KEYS = {
   CHARACTER_DATA: 'character',
-  CRAFTING_CLASS_DATA: 'craftingClasses'
+  CRAFTING_CLASS_DATA: 'craftingClasses',
+  MY_RECIPE_LIST: 'myRecipeList',
+  MY_SHOPPING_LIST: 'myShoppingList'
+}
+
+function get (key, defaultValue) {
+  const data = localStorage.getItem(key)
+  if (!!data) {
+    return JSON.parse(data)
+  }
+  return defaultValue
 }
 
 function store (key, data) {
   localStorage.setItem(key, JSON.stringify(data))
+}
+
+function clear (key) {
+  if (!!localStorage.getItem(key)) {
+    localStorage.removeItem(key)
+  }
+}
+
+export function getMyRecipeList () {
+  return get(KEYS.MY_RECIPE_LIST, [])
+}
+
+export function getMyShoppingList () {
+  return get(KEYS.MY_SHOPPING_LIST, [])
+}
+
+export function storeCharacterData (characterData) {
+  store(KEYS.CHARACTER_DATA, characterData)
+}
+
+export function storeCraftingClassData (craftingClasses) {
+  store(KEYS.CRAFTING_CLASS_DATA, craftingClasses)
+}
+
+export function storeMyRecipeList (myRecipeList) {
+  console.log('storing this', myRecipeList)
+  store(KEYS.MY_RECIPE_LIST, myRecipeList)
+}
+
+export function storeMyShoppingList (myShoppingList) {
+  store(KEYS.MY_SHOPPING_LIST, myShoppingList)
+}
+
+export function clearCharacterData () {
+  clear(KEYS.CHARACTER_DATA)
+}
+
+export function clearCraftingClassData () {
+  clear(KEYS.CRAFTING_CLASS_DATA)
+}
+
+export function clearMyRecipeList () {
+  clear(KEYS.MY_RECIPE_LIST)
+}
+
+export function clearMyShoppingList () {
+  clear(KEYS.MY_SHOPPING_LIST)
 }
 
 export function retrieveAndUpdateCraftingClassData () {
@@ -82,28 +139,6 @@ export function retrieveAndUpdateCharacterData () {
 
   // return the character data
   return JSON.parse(storedData)
-}
-
-export function storeCharacterData (characterData) {
-  // localStorage.setItem(KEYS.CHARACTER_DATA, JSON.stringify(characterData))
-  store(KEYS.CHARACTER_DATA, characterData)
-}
-
-export function storeCraftingClassData (craftingClasses) {
-  // localStorage.setItem(KEYS.CRAFTING_CLASS_DATA, JSON.stringify(craftingClasses))
-  store(KEYS.CRAFTING_CLASS_DATA, craftingClasses)
-}
-
-export function clearCharacterData () {
-  if (!!localStorage.getItem(KEYS.CHARACTER_DATA)) {
-    localStorage.removeItem(KEYS.CHARACTER_DATA)
-  }
-}
-
-export function clearCraftingClassData () {
-  if (!!localStorage.getItem(KEYS.CRAFTING_CLASS_DATA)) {
-    localStorage.removeItem(KEYS.CRAFTING_CLASS_DATA)
-  }
 }
 
 export function updateCraftingClassDataWithCharacterData () {
