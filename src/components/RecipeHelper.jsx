@@ -1,12 +1,13 @@
 import React from 'react'
-import { Tab, Tabs } from 'react-bootstrap'
+import { Badge, Tab, Tabs } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { cloneDeep, find, get, omit, reject, indexOf, toNumber } from 'lodash'
-import { recipeSearch } from '../../service/xivApi'
-import RecipeSearch from './RecipeSearch'
-import MyList from './MyList'
-import * as recipeActions from '../../store/recipeList/actions'
-import ShoppingList from './ShoppingList'
+import { recipeSearch } from '../service/xivApi'
+import RecipeSearch from './recipes/RecipeSearch'
+import MyList from './recipes/MyList'
+import * as recipeActions from '../store/recipeList/actions'
+import ShoppingList from './recipes/ShoppingList'
+import CraftingGatheringCalculator from './calculator/CraftingGatheringCalculator'
 
 class RecipeHelper extends React.Component {
   state = {
@@ -119,8 +120,10 @@ class RecipeHelper extends React.Component {
   }
 
   render () {
-    const { recipeList, recipeSearchIsInvalid, recipeSearchString, searching, shoppingListResults } = this.state
-    const { myRecipeList, myShoppingList } = this.props
+    const { recipeList, recipeSearchIsInvalid, recipeSearchString, searching } = this.state
+    const { characterData, craftingClassData, myRecipeList, myShoppingList } = this.props
+
+    const BetaBadge = () => <Badge variant="primary">Beta</Badge>
 
     return (
       <div className="recipe-list pt3">
@@ -128,6 +131,11 @@ class RecipeHelper extends React.Component {
           activeKey={this.state.key}
           onSelect={key => this.setState({ key })}
         >
+          <Tab eventKey="calculator" title="Calculations">
+            <div className="recipe-tab">
+              <CraftingGatheringCalculator characterData={characterData} craftingClassData={craftingClassData} />
+            </div>
+          </Tab>
           <Tab eventKey="search" title="Recipe Search">
             <div className="recipe-tab">
               <RecipeSearch
@@ -157,7 +165,11 @@ class RecipeHelper extends React.Component {
               />
             </div>
           </Tab>
-          <Tab eventKey="shopping-list" title={`My Shopping List`}>
+          <Tab eventKey="shopping-list" title={(
+            <span>
+              Shopping List <Badge variant="primary">Beta</Badge>
+            </span>
+          )}>
             <div className="recipe-tab">
               <ShoppingList
                 shoppingList={myShoppingList}

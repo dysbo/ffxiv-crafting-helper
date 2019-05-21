@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { get } from 'lodash'
 import * as actions from '../store/local/actions'
 import Navigation from './navigation/Navigation'
-import CraftingGatheringCalculator from './calculator/CraftingGatheringCalculator'
-import RecipeHelper from './recipes/RecipeHelper'
+import RecipeHelper from './RecipeHelper'
 
 const externalLink = (url, text) => (
   <a href={url} target="_blank" rel="noopener noreferrer">
@@ -23,14 +22,6 @@ class XivCraftingGatheringHelper extends React.Component {
   render () {
     const { characterData, craftingClassData } = this.props
 
-    const Calculator = props => (
-      <CraftingGatheringCalculator
-        characterData={characterData}
-        craftingClassData={craftingClassData}
-        {...props}
-      />
-    )
-
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <Navigation
@@ -38,11 +29,7 @@ class XivCraftingGatheringHelper extends React.Component {
           craftingClassData={craftingClassData}
         />
         <Container fluid>
-          <Switch>
-            <Route exact path="/" render={Calculator} />
-            <Route path="/calculations" render={Calculator} />
-            <Route path="/recipes" component={RecipeHelper} />
-            </Switch>
+          <RecipeHelper characterData={characterData} craftingClassData={craftingClassData} />
           <hr />
           <div className="tc text-muted">
             Created by {externalLink('https://na.finalfantasyxiv.com/lodestone/character/22858010/',

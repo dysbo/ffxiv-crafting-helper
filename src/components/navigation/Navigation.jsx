@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Nav, Navbar, NavbarBrand, Badge } from 'react-bootstrap'
+import { Nav, Navbar, NavbarBrand } from 'react-bootstrap'
 import LodestoneCharacterMenu from './LodestoneCharacterMenu'
 
 export default class Navigation extends React.Component {
@@ -14,18 +14,7 @@ export default class Navigation extends React.Component {
             FFXIV Crafting & Gathering Helper
           </NavbarBrand>
         </LinkContainer>
-        <Nav className="mr-auto">
-          <LinkContainer to="/calculations">
-            <Nav.Link>
-              Calculations
-            </Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/recipes/all">
-            <Nav.Link>
-              Recipes <Badge variant="primary">Beta</Badge>
-            </Nav.Link>
-          </LinkContainer>
-        </Nav>
+        <Nav className="mr-auto" />
         <Nav>
           <LodestoneCharacterMenu
             characterData={characterData}
