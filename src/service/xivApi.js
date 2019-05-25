@@ -79,7 +79,17 @@ export const recipeSearch = async (searchString = '', options = {}) => {
               wildcard: {
                 'NameCombined_en': `*${searchString}*`
               }
-            }
+            },
+            // {
+            //   match: {
+            //     'SecretRecipeBookTargetID': 0
+            //   }
+            // },
+            // {
+            //   match: {
+            //     'StatusRequiredTargetID': 0
+            //   }
+            // }
           ]
         }
       },

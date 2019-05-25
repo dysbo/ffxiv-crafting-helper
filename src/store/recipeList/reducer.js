@@ -16,7 +16,7 @@ export default (state = INITIAL_STATE, action) => {
     case T.SHOPPING_LIST_CLEAR:
       return {
         ...state,
-        myShoppingList: []
+        myShoppingList: {}
       }
     case T.RECIPE_LIST_SAVE:
       return {

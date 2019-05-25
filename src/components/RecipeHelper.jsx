@@ -93,7 +93,6 @@ class RecipeHelper extends React.Component {
   }
 
   toggleListItem (item) {
-    console.log('togglin', item)
     item = omit(item, 'quantity')
     const { myRecipeList, saveMyRecipeList } = this.props
     let myClonedList = cloneDeep(myRecipeList)
@@ -171,7 +170,7 @@ class RecipeHelper extends React.Component {
 
 const mapStateToProps = state => ({
   myRecipeList: get(state, 'recipeList.myRecipeList', []),
-  myShoppingList: get(state, 'recipeList.myShoppingList', [])
+  myShoppingList: get(state, 'recipeList.myShoppingList', {})
 })
 
 const mapDispatchToProps = dispatch => ({

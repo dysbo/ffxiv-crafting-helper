@@ -40,7 +40,7 @@ export function getMyRecipeList () {
 }
 
 export function getMyShoppingList () {
-  return get(KEYS.MY_SHOPPING_LIST, [])
+  return get(KEYS.MY_SHOPPING_LIST, {})
 }
 
 export function storeCharacterData (characterData) {
@@ -52,7 +52,6 @@ export function storeCraftingClassData (craftingClasses) {
 }
 
 export function storeMyRecipeList (myRecipeList) {
-  console.log('storing this', myRecipeList)
   store(KEYS.MY_RECIPE_LIST, myRecipeList)
 }
 
