@@ -50,7 +50,7 @@ export const getCharacterById = async id => {
  */
 export const recipeSearch = async (searchString = '', options = {}) => {
   const indexes = 'recipe'
-  const size = 10
+  const size = 20
   const columns = [
     'ID',
     'ClassJob.Abbreviation_en',

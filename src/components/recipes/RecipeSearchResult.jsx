@@ -5,6 +5,7 @@ import { Button, Spinner, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare, faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 import { getIconUrl } from '../../service/xivApi'
+import Pagination from '../common/Pagination'
 
 export default class RecipeSearchResult extends React.Component {
   render () {
@@ -38,10 +39,17 @@ export default class RecipeSearchResult extends React.Component {
 
     const pagePrev = get(pagination, 'PagePrev')
     const pageNext = get(pagination, 'PageNext')
+    const pageTotal = get(pagination, 'PageTotal')
+    const pageCurrent = get(pagination, 'Page')
 
     return (
       <Table className="recipes" hover striped>
         <thead>
+        <tr>
+          <td colSpan={5} className="tc">
+            <Pagination currentPage={pageCurrent} totalPages={pageTotal} handlePageChange={handlePageChange} />
+          </td>
+        </tr>
         <tr>
           <th />
           <th>Crafting Class</th>
@@ -76,6 +84,11 @@ export default class RecipeSearchResult extends React.Component {
         })}
         </tbody>
         <tfoot>
+        <tr>
+          <td colSpan={5} className="tc">
+            <Pagination currentPage={pageCurrent} totalPages={pageTotal} handlePageChange={handlePageChange} />
+          </td>
+        </tr>
         <tr>
           <td colSpan={5}>
             <div className="w-third dib tl">
