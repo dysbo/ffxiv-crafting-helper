@@ -109,21 +109,9 @@ class RecipeHelper extends React.Component {
     saveMyRecipeList(myClonedList)
   }
 
-  handleGenerateShoppingList () {
-    const { createMyShoppingList, myRecipeList } = this.props
-
-    createMyShoppingList(myRecipeList)
-
-    this.setState({
-      key: 'shopping-list'
-    })
-  }
-
   render () {
     const { recipeList, recipeSearchIsInvalid, recipeSearchString, searching } = this.state
     const { characterData, craftingClassData, myRecipeList, myShoppingList } = this.props
-
-    const BetaBadge = () => <Badge variant="primary">Beta</Badge>
 
     return (
       <div className="recipe-list pt3">
@@ -161,7 +149,6 @@ class RecipeHelper extends React.Component {
                 handleTabChange={this.handleTabChange.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
                 handleUpdateQuantity={this.handleUpdateQuantity.bind(this)}
-                handleGenerateShoppingList={this.handleGenerateShoppingList.bind(this)}
               />
             </div>
           </Tab>

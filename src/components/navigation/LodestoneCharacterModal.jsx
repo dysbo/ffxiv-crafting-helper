@@ -25,7 +25,7 @@ class LodestoneCharacterModal extends React.Component {
 
   async performSearch () {
     const { name, server, page } = this.state
-    const result = await XivApi.searchForCharacter(server, name, page)
+    const result = await XivApi.findCharacterByServerAndName(server, name, page)
     this.setState({
       lodestoneResults: result,
       loading: false

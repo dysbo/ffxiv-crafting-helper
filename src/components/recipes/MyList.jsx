@@ -9,7 +9,6 @@ export default class MyList extends React.Component {
   render () {
     const {
       handleClearList,
-      handleGenerateShoppingList,
       handleTabChange,
       handleToggleListItem,
       handleUpdateQuantity,
@@ -81,7 +80,6 @@ export default class MyList extends React.Component {
 
 MyList.propTypes = {
   handleClearList: PropTypes.func.isRequired,
-  handleGenerateShoppingList: PropTypes.func.isRequired,
   handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,
   handleUpdateQuantity: PropTypes.func.isRequired,
