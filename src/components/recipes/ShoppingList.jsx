@@ -1,25 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Table, FormControl } from 'react-bootstrap'
-import { isEqual, get } from 'lodash'
+import { isEqual, get, orderBy } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
+import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
 
 export default class ShoppingList extends React.Component {
-  state = {}
+  state = {
+    ingredientsGatherableSort: {
+      func: 'name',
+      direction: 'asc'
+    }
+  }
 
-  componentDidMount() {
-    this.updateGatherableIngredientsDropdowns()
+  componentDidMount () {
+    this.updateGatherableIngredients()
   }
 
   componentDidUpdate (prevProps, prevState, snapshot) {
     const { shoppingList } = this.props
 
     if (!isEqual(shoppingList, prevProps.shoppingList)) {
-      this.updateGatherableIngredientsDropdowns()
+      this.updateGatherableIngredients()
     }
   }
 
-  updateGatherableIngredientsDropdowns () {
+  updateGatherableIngredients () {
     const { shoppingList } = this.props
     const {
       // ingredientsCrafted,
@@ -51,8 +57,31 @@ export default class ShoppingList extends React.Component {
     })
   }
 
+  handleApplyIngredientsGatherableSort (sortFunc) {
+    const { ingredientsGatherableSort } = this.state
+
+    const sortDirection =
+      // isEqual(JSON.stringify(sortFunc), JSON.stringify(ingredientsGatherableSort.func)) && ingredientsGatherableSort.direction === 'asc'
+      isEqual(
+        JSON.stringify(sortFunc),
+        JSON.stringify(ingredientsGatherableSort.func)
+      ) && ingredientsGatherableSort.direction === 'asc'
+        ? 'desc'
+        : 'asc'
+
+    const newIngredientsGatherableSort = {
+      func: sortFunc,
+      direction: sortDirection
+    }
+
+    this.setState({
+      ingredientsGatherableSort: newIngredientsGatherableSort
+    })
+  }
+
   render () {
-    const { shoppingList: { ingredientsCrafted, ingredientsPurchased, ingredientsGatherable, ingredientsOther } } = this.props
+    const { shoppingList: { ingredientsCrafted, ingredientsGatherable, ingredientsPurchased, ingredientsOther } } = this.props
+    const { ingredientsGatherableSort } = this.state
 
     if (!ingredientsGatherable && !ingredientsCrafted && !ingredientsPurchased) {
       return (
@@ -65,11 +94,22 @@ export default class ShoppingList extends React.Component {
     const headings = (
       <tr>
         <th />
-        <th>Name</th>
+        <SortableTableHeaderCell
+          text="Name"
+          sortFunc="name"
+          applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
+        />
         <th>Required Class</th>
         <th>Required Level</th>
         <th>Quantity</th>
-        <th>Location</th>
+        <SortableTableHeaderCell
+          text="Location"
+          sortFunc={ig => {
+            const point = get(this.state, `gatherable-${ig.itemId}-location`)
+            return `${point.region} - ${point.area} - ${point.name}`
+          }}
+          applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
+        />
       </tr>
     )
 
@@ -87,44 +127,45 @@ export default class ShoppingList extends React.Component {
               {headings}
               </thead>
               <tbody>
-              {ingredientsGatherable.map(item => {
-                const { name, icon, itemId, amount, pointData } = item
-                const key = `gatherable-${itemId}`
-                const locationSelectId = `${key}-location`
-                const gatheringClass = get(this.state, `${locationSelectId}.gatheringClass`)
-                const gatheringType = get(this.state, `${locationSelectId}.type`)
-                const level = get(this.state, `${locationSelectId}.level`)
+              {orderBy(ingredientsGatherable, ingredientsGatherableSort.func, ingredientsGatherableSort.direction)
+                .map(item => {
+                  const { name, icon, itemId, amount, pointData } = item
+                  const key = `gatherable-${itemId}`
+                  const locationSelectId = `${key}-location`
+                  const gatheringClass = get(this.state, `${locationSelectId}.gatheringClass`)
+                  const gatheringType = get(this.state, `${locationSelectId}.type`)
+                  const level = get(this.state, `${locationSelectId}.level`)
 
-                return (
-                  <tr key={key}>
-                    <td><img src={icon} alt={name} /></td>
-                    <td>{name}</td>
-                    <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
-                    <td>{level}</td>
-                    <td>{amount}</td>
-                    <td>
-                      {pointData.length === 1 && (
-                        <React.Fragment>
-                          {pointData[0].region} - {pointData[0].area} - {pointData[0].name}
-                        </React.Fragment>
-                      )}
-                      {pointData.length > 1 && (
-                        <FormControl
-                          id={locationSelectId}
-                          as="select"
-                          onChange={this.handleLocationUpdate.bind(this)}
-                        >
-                          {pointData.map((point, key) => (
-                            <option key={key} value={JSON.stringify(point)}>
-                              {point.region} - {point.area} - {point.name} (Level {point.level}, {point.gatheringClass})
-                            </option>
-                          ))}
-                        </FormControl>
-                      )}
-                    </td>
-                  </tr>
-                )
-              })}
+                  return (
+                    <tr key={key}>
+                      <td><img src={icon} alt={name} /></td>
+                      <td>{name}</td>
+                      <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
+                      <td>{level}</td>
+                      <td>{amount}</td>
+                      <td>
+                        {pointData.length === 1 && (
+                          <React.Fragment>
+                            {pointData[0].region} - {pointData[0].area} - {pointData[0].name}
+                          </React.Fragment>
+                        )}
+                        {pointData.length > 1 && (
+                          <FormControl
+                            id={locationSelectId}
+                            as="select"
+                            onChange={this.handleLocationUpdate.bind(this)}
+                          >
+                            {pointData.map((point, key) => (
+                              <option key={key} value={JSON.stringify(point)}>
+                                {point.region} - {point.area} - {point.name} (Level {point.level}, {point.gatheringClass})
+                              </option>
+                            ))}
+                          </FormControl>
+                        )}
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </React.Fragment>
           )}
