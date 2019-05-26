@@ -126,3 +126,14 @@ table.calculations {
     margin: 0 0.25em
   }
 }
+
+.craftingClassSelections {
+  padding: 0;
+  margin: 0;
+  height: $iconSize * 1.5;
+  width: $iconSize * 1.5;
+
+  > img {
+    padding: .2em;
+  }
+}

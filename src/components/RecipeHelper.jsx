@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge, Tab, Tabs } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { cloneDeep, find, get, omit, reject, indexOf, toNumber } from 'lodash'
+import { cloneDeep, find, get, includes, indexOf, omit, reject, sortBy, toNumber } from 'lodash'
 import { recipeSearch } from '../service/xivApi'
 import RecipeSearch from './recipes/RecipeSearch'
 import MyList from './recipes/MyList'
@@ -11,11 +11,44 @@ import CraftingGatheringCalculator from './calculator/CraftingGatheringCalculato
 
 class RecipeHelper extends React.Component {
   state = {
+    recipeSearchClasses: [],
+    recipeSearchExact: false,
     recipeSearchString: '',
+    recipeSearchIncludeMaster: false,
     recipeSearchIsInvalid: false,
     searching: false,
     myList: [],
     lastSearch: undefined
+  }
+
+  handleToggleRecipeSearchClass (event) {
+    const recipeSearchClasses = cloneDeep(get(this.state, 'recipeSearchClasses', []))
+    const abbreviation = get(event, 'target.value', event)
+
+    if (includes(recipeSearchClasses, abbreviation)) {
+      recipeSearchClasses.splice(recipeSearchClasses.indexOf(abbreviation), 1)
+    } else {
+      recipeSearchClasses.push(abbreviation)
+    }
+
+    this.setState({
+      recipeSearchClasses: sortBy(recipeSearchClasses, s => s.toLowerCase())
+    })
+  }
+
+  handleToggleRecipeSearchExact (event) {
+    const recipeSearchExact = get(event, 'target.checked', false)
+    this.setState({
+      recipeSearchExact
+    })
+  }
+
+  handleToggleRecipeIncludeMaster (event) {
+    const checked = get(event, 'target.checked')
+
+    this.setState({
+      recipeSearchIncludeMaster: checked
+    })
   }
 
   handleFieldUpdate (event) {
@@ -39,8 +72,14 @@ class RecipeHelper extends React.Component {
   }
 
   async search (page = 1) {
-    const { recipeSearchString } = this.state
-    const results = await recipeSearch(recipeSearchString, { page })
+    const { recipeSearchClasses, recipeSearchExact, recipeSearchIncludeMaster, recipeSearchString } = this.state
+    const results = await recipeSearch(recipeSearchString, {
+      page,
+      abbreviation: recipeSearchClasses,
+      exact: recipeSearchExact,
+      includeMasterRecipes: recipeSearchIncludeMaster
+    })
+
     this.setState({
       searching: false,
       recipeList: results,
@@ -109,7 +148,16 @@ class RecipeHelper extends React.Component {
   }
 
   render () {
-    const { recipeList, recipeSearchIsInvalid, recipeSearchString, searching } = this.state
+    const {
+      recipeList,
+      recipeSearchExact,
+      recipeSearchClasses,
+      recipeSearchIncludeMaster,
+      recipeSearchIsInvalid,
+      recipeSearchString,
+      searching
+    } = this.state
+
     const { characterData, craftingClassData, myRecipeList, myShoppingList } = this.props
 
     return (
@@ -131,8 +179,14 @@ class RecipeHelper extends React.Component {
                 handleReset={this.handleClear.bind(this)}
                 handleSubmit={this.handleSearch.bind(this)}
                 handleTabChange={this.handleTabChange.bind(this)}
+                handleToggleRecipeIncludeMaster={this.handleToggleRecipeIncludeMaster.bind(this)}
                 handleToggleListItem={this.toggleListItem.bind(this)}
+                handleToggleRecipeSearchClass={this.handleToggleRecipeSearchClass.bind(this)}
+                handleToggleRecipeSearchExact={this.handleToggleRecipeSearchExact.bind(this)}
                 myList={myRecipeList}
+                recipeSearchIncludeMaster={recipeSearchIncludeMaster}
+                recipeSearchClasses={recipeSearchClasses}
+                recipeSearchExact={recipeSearchExact}
                 recipeSearchResults={recipeList}
                 recipeSearchIsInvalid={recipeSearchIsInvalid}
                 recipeSearchString={recipeSearchString}

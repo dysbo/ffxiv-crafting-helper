@@ -13,7 +13,13 @@ export default class RecipeSearch extends React.Component {
       handleSubmit,
       handleTabChange,
       handleToggleListItem,
+      handleToggleRecipeIncludeMaster,
+      handleToggleRecipeSearchClass,
+      handleToggleRecipeSearchExact,
       myList,
+      recipeSearchClasses,
+      recipeSearchExact,
+      recipeSearchIncludeMaster,
       recipeSearchIsInvalid,
       recipeSearchResults,
       recipeSearchString,
@@ -29,6 +35,12 @@ export default class RecipeSearch extends React.Component {
           handleChange={handleChange}
           handleReset={handleReset}
           handleSubmit={handleSubmit}
+          handleToggleRecipeIncludeMaster={handleToggleRecipeIncludeMaster}
+          handleToggleRecipeSearchClass={handleToggleRecipeSearchClass}
+          handleToggleRecipeSearchExact={handleToggleRecipeSearchExact}
+          recipeSearchClasses={recipeSearchClasses}
+          recipeSearchExact={recipeSearchExact}
+          recipeSearchIncludeMaster={recipeSearchIncludeMaster}
           recipeSearchIsInvalid={recipeSearchIsInvalid}
           recipeSearchString={recipeSearchString}
           searching={searching}
@@ -55,7 +67,13 @@ RecipeSearch.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,
+  handleToggleRecipeIncludeMaster: PropTypes.func.isRequired,
+  handleToggleRecipeSearchClass: PropTypes.func.isRequired,
+  handleToggleRecipeSearchExact: PropTypes.func.isRequired,
   myList: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  recipeSearchClasses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  recipeSearchExact: PropTypes.bool.isRequired,
+  recipeSearchIncludeMaster: PropTypes.bool.isRequired,
   recipeSearchIsInvalid: PropTypes.bool.isRequired,
   recipeSearchResults: PropTypes.shape(),
   recipeSearchString: PropTypes.string.isRequired,
@@ -64,5 +82,7 @@ RecipeSearch.propTypes = {
 
 RecipeSearch.defaultProps = {
   myList: [],
+  recipeSearchExact: false,
+  recipeSearchIncludeMaster: false,
   recipeSearchResults: {}
 }

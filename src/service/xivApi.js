@@ -40,13 +40,14 @@ export const getCharacterById = async id => {
 /**
  * Searches for recipes via the XIPAPI.
  *
- * @param   {string}  searchString                  The string for which to search.
- * @param   {object}  options                       Options to apply to this search.
- * @param   {boolean} options.exact                 Whether we are searching for the exact string (true) or should
- *                                                    substitute spaces for wildcards (false).
- * @param   {number}  options.page                  The page on which to begin the search.
- * @param   {string|[string]} options.abbreviation  Any crafting class abbreviations that should be queried.
- * @returns {object}                                An object containing search results.
+ * @param   {string}          searchString                    The string for which to search.
+ * @param   {object}          [options]                       Options to apply to this search.
+ * @param   {boolean}         [options.exact]                 Whether we are searching for the exact string (true) or
+ *                                                              should substitute spaces for wildcards (false).
+ * @param   {number}          [options.page]                  The page on which to begin the search.
+ * @param   {string|[string]} [options.abbreviation]          Any crafting class abbreviations that should be queried.
+ * @param   {boolean}         [options.includeMasterRecipes]  Indicates whether master recipes should be included.
+ * @returns {object}                                          An object containing search results.
  */
 export const recipeSearch = async (searchString = '', options = {}) => {
   const indexes = 'recipe'
@@ -61,7 +62,7 @@ export const recipeSearch = async (searchString = '', options = {}) => {
     'Icon'
   ]
 
-  const { exact = false, page = 1 } = options
+  const { exact = false, page = 1, includeMasterRecipes = false } = options
 
   searchString = toLower(searchString)
 
@@ -106,7 +107,15 @@ export const recipeSearch = async (searchString = '', options = {}) => {
     page
   }
 
-  if (!!options.abbreviation) {
+  if (!includeMasterRecipes) {
+    request.body.query.bool.must.push({
+      match: {
+        'SecretRecipeBookTargetID': 0
+      }
+    })
+  }
+
+  if (!!options.abbreviation && !!options.abbreviation.length && options.abbreviation.length < 8) {
     let { abbreviation } = options
     const minimum_should_match = 1
 

@@ -19,7 +19,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={currentPage === 1}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           &lt;&lt;
         </Button>
@@ -34,7 +34,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={currentPage === 1}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           &lt;
         </Button>
@@ -49,7 +49,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={minPage === 1}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           ...
         </Button>
@@ -63,8 +63,8 @@ export default class Pagination extends React.Component {
           key={i}
           value={i}
           onClick={handlePageChange}
-          variant={activePage ? 'primary' : 'default'}
-          style={{ border: '1px solid #def' }}
+          variant={activePage ? 'primary' : 'light'}
+          // style={{ border: '1px solid #def' }}
         >
           {i}
         </Button>
@@ -81,7 +81,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={maxPage === totalPages}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           ...
         </Button>
@@ -96,7 +96,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={currentPage === totalPages}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           &gt;
         </Button>
@@ -111,7 +111,7 @@ export default class Pagination extends React.Component {
           onClick={handlePageChange}
           disabled={currentPage === totalPages}
           variant="primary"
-          style={{ border: '1px solid #def' }}
+          // style={{ border: '1px solid #def' }}
         >
           &gt;&gt;
         </Button>
