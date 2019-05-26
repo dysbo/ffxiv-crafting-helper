@@ -1,13 +1,13 @@
 {
-  "main.css": "/ffxiv-crafting-helper/static/css/main.f46bbf13.chunk.css",
-  "main.js": "/ffxiv-crafting-helper/static/js/main.ca5be866.chunk.js",
-  "main.js.map": "/ffxiv-crafting-helper/static/js/main.ca5be866.chunk.js.map",
+  "main.css": "/ffxiv-crafting-helper/static/css/main.1cde692a.chunk.css",
+  "main.js": "/ffxiv-crafting-helper/static/js/main.cfdc7064.chunk.js",
+  "main.js.map": "/ffxiv-crafting-helper/static/js/main.cfdc7064.chunk.js.map",
   "runtime~main.js": "/ffxiv-crafting-helper/static/js/runtime~main.7eeda2ce.js",
   "runtime~main.js.map": "/ffxiv-crafting-helper/static/js/runtime~main.7eeda2ce.js.map",
-  "static/js/2.75834667.chunk.js": "/ffxiv-crafting-helper/static/js/2.75834667.chunk.js",
-  "static/js/2.75834667.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.75834667.chunk.js.map",
+  "static/js/2.e95743e8.chunk.js": "/ffxiv-crafting-helper/static/js/2.e95743e8.chunk.js",
+  "static/js/2.e95743e8.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.e95743e8.chunk.js.map",
   "index.html": "/ffxiv-crafting-helper/index.html",
-  "precache-manifest.2991920656b8535cb95a03536b6453f3.js": "/ffxiv-crafting-helper/precache-manifest.2991920656b8535cb95a03536b6453f3.js",
+  "precache-manifest.19c20fe1eebbf03e64139f2dd961a697.js": "/ffxiv-crafting-helper/precache-manifest.19c20fe1eebbf03e64139f2dd961a697.js",
   "service-worker.js": "/ffxiv-crafting-helper/service-worker.js",
-  "static/css/main.f46bbf13.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.f46bbf13.chunk.css.map"
+  "static/css/main.1cde692a.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.1cde692a.chunk.css.map"
 }
