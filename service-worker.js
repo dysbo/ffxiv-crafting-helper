@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ffxiv-crafting-helper/precache-manifest.e9d620e83f2eaf3ef62980a0d5928441.js"
+  "/ffxiv-crafting-helper/precache-manifest.2728d1b7e084ec979e2a90d56ed850d0.js"
 );
 
 workbox.clientsClaim();
