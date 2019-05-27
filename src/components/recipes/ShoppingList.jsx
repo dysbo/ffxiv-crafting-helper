@@ -94,22 +94,11 @@ export default class ShoppingList extends React.Component {
     const headings = (
       <tr>
         <th />
-        <SortableTableHeaderCell
-          text="Name"
-          sortFunc="name"
-          applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
-        />
+        <th>Name</th>
         <th>Required Class</th>
         <th>Required Level</th>
         <th>Quantity</th>
-        <SortableTableHeaderCell
-          text="Location"
-          sortFunc={ig => {
-            const point = get(this.state, `gatherable-${ig.itemId}-location`)
-            return `${point.region} - ${point.area} - ${point.name}`
-          }}
-          applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
-        />
+        <th>Location</th>
       </tr>
     )
 
@@ -124,7 +113,25 @@ export default class ShoppingList extends React.Component {
               <tr className="section-head">
                 <th colSpan={headingColumns}>Gatherable Items</th>
               </tr>
-              {headings}
+              <tr>
+                <th />
+                <SortableTableHeaderCell
+                  text="Name"
+                  sortFunc="name"
+                  applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
+                />
+                <th>Required Class</th>
+                <th>Required Level</th>
+                <th>Quantity</th>
+                <SortableTableHeaderCell
+                  text="Location"
+                  sortFunc={ig => {
+                    const point = get(this.state, `gatherable-${ig.itemId}-location`)
+                    return `${point.region} - ${point.area} - ${point.name}`
+                  }}
+                  applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
+                />
+              </tr>
               </thead>
               <tbody>
               {orderBy(ingredientsGatherable, ingredientsGatherableSort.func, ingredientsGatherableSort.direction)
