@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button, ButtonGroup, Form, FormControl } from 'react-bootstrap'
+import { Button, ButtonGroup, Form, FormControl, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { filter, forEach, includes, isEqual } from 'lodash'
 import CRAFTING_CLASSES from '../../data/crafting-classes'
 import { getIconUrl } from '../../service/xivApi'
@@ -28,18 +28,27 @@ export default class RecipeSearchForm extends React.Component {
 
     forEach(filter(CRAFTING_CLASSES, cc => cc.type === 'crafting'), cc => {
       buttons.push((
-        <Button
-          className="craftingClassSelections"
-          key={cc.abbreviation}
-          value={cc.abbreviation}
-          variant={includes(recipeSearchClasses, cc.abbreviation) ? 'primary' : 'light'}
+        <OverlayTrigger
+          key={`overlayTrigger-${cc.abbreviation}`}
+          overlay={
+            <Tooltip id={`tooltip-${cc.abbreviation}`}>
+              {cc.name}
+            </Tooltip>
+          }
         >
-          <img
-            src={getIconUrl(cc.icon)}
-            alt={cc.name}
-            onClick={handleToggleRecipeSearchClass.bind(this, cc.abbreviation)}
-          />
-        </Button>
+          <Button
+            className="craftingClassSelections"
+            key={cc.abbreviation}
+            value={cc.abbreviation}
+            variant={includes(recipeSearchClasses, cc.abbreviation) ? 'primary' : 'light'}
+          >
+            <img
+              src={getIconUrl(cc.icon)}
+              alt={cc.name}
+              onClick={handleToggleRecipeSearchClass.bind(this, cc.abbreviation)}
+            />
+          </Button>
+        </OverlayTrigger>
       ))
     })
 
