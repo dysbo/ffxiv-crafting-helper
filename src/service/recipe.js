@@ -211,9 +211,13 @@ const getAndSortRecipeResults = async (
       }
 
       if (!!ingredientRecipe) {
-        set(ingredientRecipe, 'quantity', quantity * amount)
-        nextRecipeResults.push(ingredientRecipe)
-        ingredientsCrafted.push(ingredientRecipe)
+        const existingIngredientCrafted = find(ingredientsCrafted, ir => get(ingredientRecipe, 'ID') === get(ir, 'ID'))
+        const existingAmount = get(existingIngredientCrafted, 'quantity', 0)
+        set(existingIngredientCrafted || ingredientRecipe, 'quantity', existingAmount + (quantity * amount))
+        if (!existingIngredientCrafted) {
+          nextRecipeResults.push(ingredientRecipe)
+          ingredientsCrafted.push(ingredientRecipe)
+        }
       }
 
       if (!gatheringItemId && !ingredientRecipe && !fishingSpotMatch && !!itemId) {
