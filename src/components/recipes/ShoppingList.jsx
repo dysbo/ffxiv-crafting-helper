@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table, FormControl } from 'react-bootstrap'
-import { isEqual, get, orderBy } from 'lodash'
+import { Table, FormControl, Badge } from 'react-bootstrap'
+import { filter, isEqual, get, orderBy } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
 import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
 
@@ -43,7 +43,9 @@ export default class ShoppingList extends React.Component {
     }
 
     this.setState({
-      ...gatherableStateVars
+      ...gatherableStateVars,
+      ingredientsGatherable: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') !== 58),
+      ingredientsCrystals: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') === 58)
     })
   }
 
@@ -80,8 +82,8 @@ export default class ShoppingList extends React.Component {
   }
 
   render () {
-    const { shoppingList: { ingredientsCrafted, ingredientsGatherable, ingredientsPurchased, ingredientsOther } } = this.props
-    const { ingredientsGatherableSort } = this.state
+    const { shoppingList: { ingredientsCrafted, ingredientsPurchased, ingredientsOther } } = this.props
+    const { ingredientsCrystals, ingredientsGatherable, ingredientsGatherableSort } = this.state
 
     if (!ingredientsGatherable && !ingredientsCrafted && !ingredientsPurchased) {
       return (
@@ -106,6 +108,19 @@ export default class ShoppingList extends React.Component {
 
     return (
       <div>
+        <div className="flex flex-row justify-center items-center">
+          {!!ingredientsCrystals && (
+            ingredientsCrystals.map(ic => {
+              const { amount, name, icon } = ic
+              return (
+                <span key={name} className="ph1">
+                  <img src={icon} alt={name} /><br />
+                  <Badge variant="primary" style={{ position: 'relative', top: '-15px', right: '-25px' }}>{amount}</Badge>
+                </span>
+              )
+            })
+          )}
+        </div>
         <Table hover striped className="shopping-list">
           {!!ingredientsGatherable && !!ingredientsGatherable.length && (
             <React.Fragment>

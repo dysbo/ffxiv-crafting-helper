@@ -152,6 +152,7 @@ export const getRecipesById = async recipeIds => {
     columns.push(`ItemIngredient${i}.ID`)
     columns.push(`ItemIngredient${i}.Icon`)
     columns.push(`ItemIngredient${i}.Name`)
+    columns.push(`ItemIngredient${i}.ItemSearchCategoryTargetID`)
     columns.push(`ItemIngredientRecipe${i}`)
   }
 

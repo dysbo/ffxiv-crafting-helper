@@ -193,6 +193,7 @@ const getAndSortRecipeResults = async (
     // go through each ingredient
     for (let i = 0; i < 10; i++) {
       const itemId = get(rr, `ItemIngredient${i}.ID`)
+      const itemCategory = get(rr, `ItemIngredient${i}.ItemSearchCategoryTargetID`)
       const amount = get(rr, `AmountIngredient${i}`)
       const gatheringMapNode = find(ITEM_TO_GATHERING_ITEM_MAPPING, mapping => get(mapping, 'ItemID') === itemId)
       const gatheringItemId = get(gatheringMapNode, 'GatheringItemID')
@@ -206,7 +207,7 @@ const getAndSortRecipeResults = async (
           const existingAmount = get(existingIngredientGatherable, 'amount')
           set(existingIngredientGatherable, 'amount', existingAmount + (amount * quantity))
         } else {
-          ingredientsGatherable.push({ itemId, gatheringItemId, amount: amount * quantity })
+          ingredientsGatherable.push({ itemId, gatheringItemId, amount: amount * quantity, itemCategory })
         }
       }
 
