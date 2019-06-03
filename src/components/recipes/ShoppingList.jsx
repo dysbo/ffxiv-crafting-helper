@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table, FormControl, Badge } from 'react-bootstrap'
+import { Table, FormControl, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { filter, isEqual, get, orderBy } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
 import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
@@ -114,8 +114,22 @@ export default class ShoppingList extends React.Component {
               const { amount, name, icon } = ic
               return (
                 <span key={name} className="ph1">
-                  <img src={icon} alt={name} /><br />
-                  <Badge variant="primary" style={{ position: 'relative', top: '-15px', right: '-25px' }}>{amount}</Badge>
+                  <OverlayTrigger
+                    key={`overlayTrigger-${name}`}
+                    overlay={
+                      <Tooltip id={`tooltip-${name}`}>
+                        {name}
+                      </Tooltip>
+                    }
+                  >
+                    <img src={icon} alt={name} />
+                  </OverlayTrigger><br />
+                    <Badge
+                      variant="primary"
+                      style={{ position: 'relative', top: '-15px', right: '-25px' }}
+                    >
+                      {amount}
+                    </Badge>
                 </span>
               )
             })
