@@ -14,7 +14,8 @@ const KEYS = {
   CHARACTER_DATA: 'character',
   CRAFTING_CLASS_DATA: 'craftingClasses',
   MY_RECIPE_LIST: 'myRecipeList',
-  MY_SHOPPING_LIST: 'myShoppingList'
+  MY_SHOPPING_LIST: 'myShoppingList',
+  CURRENT_TAB: 'currentTab'
 }
 
 function get (key, defaultValue) {
@@ -33,6 +34,14 @@ function clear (key) {
   if (!!localStorage.getItem(key)) {
     localStorage.removeItem(key)
   }
+}
+
+export function getCurrentTab () {
+  return get(KEYS.CURRENT_TAB)
+}
+
+export function storeCurrentTab (currentTab) {
+  store(KEYS.CURRENT_TAB, currentTab)
 }
 
 export function getMyRecipeList () {

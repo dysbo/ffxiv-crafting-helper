@@ -3,6 +3,7 @@ import { Badge, Tab, Tabs } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { cloneDeep, find, get, includes, indexOf, omit, reject, sortBy, toNumber } from 'lodash'
 import { recipeSearch } from '../service/xivApi'
+import { getCurrentTab, storeCurrentTab } from '../service/localStorage'
 import RecipeSearch from './recipes/RecipeSearch'
 import MyList from './recipes/MyList'
 import * as recipeActions from '../store/recipeList/actions'
@@ -19,6 +20,12 @@ class RecipeHelper extends React.Component {
     searching: false,
     myList: [],
     lastSearch: undefined
+  }
+
+  componentDidMount () {
+    this.setState({
+      key: getCurrentTab()
+    })
   }
 
   handleToggleRecipeSearchClass (event) {
@@ -126,9 +133,8 @@ class RecipeHelper extends React.Component {
   }
 
   handleTabChange (key) {
-    this.setState({
-      key
-    })
+    storeCurrentTab(key)
+    this.setState({ key })
   }
 
   toggleListItem (item) {
@@ -164,7 +170,7 @@ class RecipeHelper extends React.Component {
       <div className="recipe-list pt3">
         <Tabs
           activeKey={this.state.key}
-          onSelect={key => this.setState({ key })}
+          onSelect={this.handleTabChange.bind(this)}
         >
           <Tab eventKey="calculator" title="Calculations">
             <div className="recipe-tab">
