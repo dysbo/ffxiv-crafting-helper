@@ -14,9 +14,11 @@ export default (state = INITIAL_STATE, action) => {
   unset(state, 'error')
   switch (action.type) {
     case T.SHOPPING_LIST_CREATE:
+      unset(loading, 'shoppingList')
       return {
         ...state,
-        myShoppingList: action.shoppingList
+        myShoppingList: action.shoppingList,
+        loading
       }
     case T.SHOPPING_LIST_CLEAR:
       return {
@@ -24,9 +26,11 @@ export default (state = INITIAL_STATE, action) => {
         myShoppingList: {}
       }
     case T.RECIPE_LIST_SAVE:
+      set(loading, 'shoppingList', true)
       return {
         ...state,
-        myRecipeList: action.recipeList
+        myRecipeList: action.recipeList,
+        loading
       }
     case T.RECIPE_LIST_CLEAR:
       return {
@@ -37,7 +41,8 @@ export default (state = INITIAL_STATE, action) => {
       set(loading, 'recipeSearch', true)
       return {
         ...state,
-        loading
+        loading,
+        params: action.params
       }
     case T.RECIPE_SEARCH_SUCCESS:
       unset(loading, 'recipeSearch')
@@ -54,6 +59,7 @@ export default (state = INITIAL_STATE, action) => {
         error: action.error
       }
     case T.RECIPE_SEARCH_CLEAR:
+      unset(state, 'params')
       return {
         ...state,
         recipeSearchResults: {}

@@ -21,9 +21,8 @@ const shoppingListCreate = shoppingList => ({
   shoppingList
 })
 
-const recipeSearchRequest = (string, params) => ({
+const recipeSearchRequest = params => ({
   type: T.RECIPE_SEARCH_REQUEST,
-  string,
   params
 })
 
@@ -64,7 +63,7 @@ export const clearMyShoppingList = () => dispatch => {
 }
 
 export const searchRecipes = (string, params) => async dispatch => {
-  dispatch(recipeSearchRequest(string, params))
+  dispatch(recipeSearchRequest({string, ...params}))
   try {
     const result = await XivApiService.recipeSearch(string, params)
     dispatch(apiRequestSuccess(T.RECIPE_SEARCH_SUCCESS, result))
