@@ -73,8 +73,7 @@ export default class RecipeSearchForm extends React.Component {
       recipeSearchExact,
       recipeSearchIncludeMaster,
       recipeSearchIsInvalid,
-      recipeSearchString,
-      searching
+      recipeSearchString
     } = this.props
 
     const { craftingClassSelections } = this.state
@@ -114,8 +113,8 @@ export default class RecipeSearchForm extends React.Component {
               <Form.Label>Search Exact Phrase</Form.Label>
             </div>
           )}
-          <Button type="reset" variant="danger" className="mr1" disabled={!!searching}>Clear</Button>
-          <Button type="submit" variant="primary" className="ml1" disabled={!!searching}>Go!</Button>
+          <Button type="reset" variant="danger" className="mr1">Clear</Button>
+          <Button type="submit" variant="primary" className="ml1">Go!</Button>
         </Form>
       </React.Fragment>
     )
@@ -133,6 +132,5 @@ RecipeSearchForm.propTypes = {
   recipeSearchExact: PropTypes.bool.isRequired,
   recipeSearchIncludeMaster: PropTypes.bool.isRequired,
   recipeSearchIsInvalid: PropTypes.bool.isRequired,
-  recipeSearchString: PropTypes.string.isRequired,
-  searching: PropTypes.bool.isRequired
+  recipeSearchString: PropTypes.string.isRequired
 }

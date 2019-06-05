@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { isEqual } from 'lodash'
 import { Button, ButtonGroup } from 'react-bootstrap'
 
 export default class Pagination extends React.Component {
-  constructor (props) {
-    super(props)
-    const { currentPage, handlePageChange, totalPages } = props
+  state = {}
+
+  paginate () {
+    const { currentPage, handlePageChange, totalPages } = this.props
     const minPage = Math.max(1, Math.min(currentPage - 3, totalPages - 6))
     const maxPage = Math.min(totalPages, minPage + 6)
 
@@ -118,8 +120,18 @@ export default class Pagination extends React.Component {
       ))
     }
 
-    this.state = {
+    this.setState({
       options
+    })
+  }
+
+  componentDidMount () {
+    this.paginate()
+  }
+
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    if (!isEqual(this.props, prevProps)) {
+      this.paginate()
     }
   }
 

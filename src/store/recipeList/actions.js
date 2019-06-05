@@ -1,6 +1,7 @@
 import * as T from './types'
 import * as LocalStorageService from '../../service/localStorage'
 import * as RecipeListService from '../../service/recipe'
+import * as XivApiService from '../../service/xivApi'
 
 const recipeListClear = () => ({
   type: T.RECIPE_LIST_CLEAR
@@ -18,6 +19,25 @@ const shoppingListClear = () => ({
 const shoppingListCreate = shoppingList => ({
   type: T.SHOPPING_LIST_CREATE,
   shoppingList
+})
+
+const recipeSearchRequest = (string, params) => ({
+  type: T.RECIPE_SEARCH_REQUEST,
+  string,
+  params
+})
+
+const apiRequestSuccess = (type, payload) => ({
+  type,
+  payload
+})
+
+const apiRequestFailure = (type, error) => ({
+  type, error
+})
+
+const recipeSearchClear = () => ({
+  type: T.RECIPE_SEARCH_CLEAR
 })
 
 export const saveMyRecipeList = recipeList => dispatch => {
@@ -41,4 +61,18 @@ export const createMyShoppingList = recipeList => async dispatch => {
 export const clearMyShoppingList = () => dispatch => {
   LocalStorageService.clearMyShoppingList()
   dispatch(shoppingListClear())
+}
+
+export const searchRecipes = (string, params) => async dispatch => {
+  dispatch(recipeSearchRequest(string, params))
+  try {
+    const result = await XivApiService.recipeSearch(string, params)
+    dispatch(apiRequestSuccess(T.RECIPE_SEARCH_SUCCESS, result))
+  } catch (err) {
+    dispatch(apiRequestFailure(T.RECIPE_SEARCH_FAILURE, err))
+  }
+}
+
+export const clearRecipeSearch = () => dispatch => {
+  dispatch(recipeSearchClear())
 }

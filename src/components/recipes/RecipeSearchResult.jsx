@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { find, get } from 'lodash'
-import { Button, Spinner, Table } from 'react-bootstrap'
+import { Button, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare, faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 import { getIconUrl } from '../../service/xivApi'
@@ -15,19 +15,8 @@ export default class RecipeSearchResult extends React.Component {
       handleToggleListItem,
       myList,
       pagination,
-      ready,
       recipeList
     } = this.props
-
-    if (!ready) {
-      return (
-        <div className="tc">
-          <Spinner animation="grow" variant="primary" />
-          <Spinner animation="grow" variant="primary" />
-          <Spinner animation="grow" variant="primary" />
-        </div>
-      )
-    }
 
     if (!recipeList.length) {
       return (
@@ -37,8 +26,6 @@ export default class RecipeSearchResult extends React.Component {
       )
     }
 
-    const pagePrev = get(pagination, 'PagePrev')
-    const pageNext = get(pagination, 'PageNext')
     const pageTotal = get(pagination, 'PageTotal')
     const pageCurrent = get(pagination, 'Page')
 
@@ -91,24 +78,10 @@ export default class RecipeSearchResult extends React.Component {
         </tr>
         <tr>
           <td colSpan={5}>
-            <div className="w-third dib tl">
-              {!!pagePrev && (
-                <Button value={pagePrev} onClick={handlePageChange}>
-                  Previous
-                </Button>
-              )}
-            </div>
-            <div className="w-third dib tc">
+            <div className="w-100 dib tc">
               <Button onClick={handleTabChange.bind(this, 'recipe-list')}>
                 Go to Recipe List
               </Button>
-            </div>
-            <div className="w-third dib tr">
-              {!!pageNext && (
-                <Button value={pageNext} onClick={handlePageChange}>
-                  Next
-                </Button>
-              )}
             </div>
           </td>
         </tr>

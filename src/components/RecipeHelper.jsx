@@ -2,7 +2,6 @@ import React from 'react'
 import { Badge, Tab, Tabs } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { cloneDeep, find, get, includes, indexOf, omit, reject, sortBy, toNumber } from 'lodash'
-import { recipeSearch } from '../service/xivApi'
 import { getCurrentTab, storeCurrentTab } from '../service/localStorage'
 import RecipeSearch from './recipes/RecipeSearch'
 import MyList from './recipes/MyList'
@@ -17,7 +16,6 @@ class RecipeHelper extends React.Component {
     recipeSearchString: '',
     recipeSearchIncludeMaster: false,
     recipeSearchIsInvalid: false,
-    searching: false,
     myList: [],
     lastSearch: undefined
   }
@@ -78,20 +76,17 @@ class RecipeHelper extends React.Component {
     this.handleTabChange('search')
   }
 
-  async search (page = 1) {
+  search (page = 1) {
+    const { searchRecipes } = this.props
     const { recipeSearchClasses, recipeSearchExact, recipeSearchIncludeMaster, recipeSearchString } = this.state
-    const results = await recipeSearch(recipeSearchString, {
+    const params = {
       page,
       abbreviation: recipeSearchClasses,
       exact: recipeSearchExact,
       includeMasterRecipes: recipeSearchIncludeMaster
-    })
+    }
 
-    this.setState({
-      searching: false,
-      recipeList: results,
-      lastSearch: recipeSearchString
-    })
+    searchRecipes(recipeSearchString, params)
   }
 
   handleUpdateQuantity (item, event) {
@@ -115,9 +110,7 @@ class RecipeHelper extends React.Component {
       return
     }
 
-    this.setState({
-      searching: true
-    }, () => this.search(page))
+    this.search(page)
   }
 
   handleClear () {
@@ -155,16 +148,14 @@ class RecipeHelper extends React.Component {
 
   render () {
     const {
-      recipeList,
       recipeSearchExact,
       recipeSearchClasses,
       recipeSearchIncludeMaster,
       recipeSearchIsInvalid,
-      recipeSearchString,
-      searching
+      recipeSearchString
     } = this.state
 
-    const { characterData, craftingClassData, myRecipeList, myShoppingList } = this.props
+    const { characterData, craftingClassData, myRecipeList, myShoppingList, recipeSearchResults } = this.props
 
     return (
       <div className="recipe-list pt3">
@@ -193,10 +184,9 @@ class RecipeHelper extends React.Component {
                 recipeSearchIncludeMaster={recipeSearchIncludeMaster}
                 recipeSearchClasses={recipeSearchClasses}
                 recipeSearchExact={recipeSearchExact}
-                recipeSearchResults={recipeList}
+                recipeSearchResults={recipeSearchResults}
                 recipeSearchIsInvalid={recipeSearchIsInvalid}
                 recipeSearchString={recipeSearchString}
-                searching={searching}
               />
             </div>
           </Tab>
@@ -230,14 +220,17 @@ class RecipeHelper extends React.Component {
 
 const mapStateToProps = state => ({
   myRecipeList: get(state, 'recipeList.myRecipeList', []),
-  myShoppingList: get(state, 'recipeList.myShoppingList', {})
+  myShoppingList: get(state, 'recipeList.myShoppingList', {}),
+  recipeSearchResults: get(state, 'recipeList.recipeSearchResults', {})
 })
 
 const mapDispatchToProps = dispatch => ({
   saveMyRecipeList: recipeList => dispatch(recipeActions.saveMyRecipeList(recipeList)),
   clearMyRecipeList: () => dispatch(recipeActions.clearMyRecipeList()),
   createMyShoppingList: recipeList => dispatch(recipeActions.createMyShoppingList(recipeList)),
-  clearMyShoppingList: () => dispatch(recipeActions.clearMyShoppingList())
+  clearMyShoppingList: () => dispatch(recipeActions.clearMyShoppingList()),
+  searchRecipes: (string, params) => dispatch(recipeActions.searchRecipes(string, params)),
+  clearRecipeSearch: () => dispatch(recipeActions.clearRecipeSearch())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeHelper)

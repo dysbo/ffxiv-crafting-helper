@@ -44,13 +44,14 @@ class XivCraftingGatheringHelper extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return ({
-    craftingClassData: get(state, 'local.classData'),
-    characterData: get(state, 'local.characterData'),
-    loading: Object.keys(get(state, 'local.loading', {})).length > 0
-  })
-}
+const mapStateToProps = state => ({
+  craftingClassData: get(state, 'local.classData'),
+  characterData: get(state, 'local.characterData'),
+  loading: (
+    Object.keys(get(state, 'local.loading', {})).length > 0 ||
+    Object.keys(get(state, 'recipeList.loading', {})).length > 0
+  )
+})
 
 const mapDispatchToProps = dispatch => ({
   getLocalCharacterData: () => dispatch(actions.getLocalCharacterData()),

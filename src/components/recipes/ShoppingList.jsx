@@ -85,7 +85,7 @@ export default class ShoppingList extends React.Component {
     const { shoppingList: { ingredientsCrafted, ingredientsPurchased, ingredientsOther } } = this.props
     const { ingredientsCrystals, ingredientsGatherable, ingredientsGatherableSort } = this.state
 
-    if (!ingredientsGatherable && !ingredientsCrafted && !ingredientsPurchased) {
+    if (!get(ingredientsGatherable, 'length') && !ingredientsCrafted && !ingredientsPurchased) {
       return (
         <div className="tc">
           No Results to Display

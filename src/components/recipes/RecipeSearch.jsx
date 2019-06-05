@@ -22,8 +22,7 @@ export default class RecipeSearch extends React.Component {
       recipeSearchIncludeMaster,
       recipeSearchIsInvalid,
       recipeSearchResults,
-      recipeSearchString,
-      searching
+      recipeSearchString
     } = this.props
 
     const pagination = get(recipeSearchResults, 'Pagination')
@@ -43,7 +42,6 @@ export default class RecipeSearch extends React.Component {
           recipeSearchIncludeMaster={recipeSearchIncludeMaster}
           recipeSearchIsInvalid={recipeSearchIsInvalid}
           recipeSearchString={recipeSearchString}
-          searching={searching}
         />
         <hr />
         <RecipeSearchResult
@@ -53,7 +51,6 @@ export default class RecipeSearch extends React.Component {
           myList={myList}
           pagination={pagination}
           recipeList={recipeList}
-          ready={!searching}
         />
       </React.Fragment>
     )
@@ -76,8 +73,7 @@ RecipeSearch.propTypes = {
   recipeSearchIncludeMaster: PropTypes.bool.isRequired,
   recipeSearchIsInvalid: PropTypes.bool.isRequired,
   recipeSearchResults: PropTypes.shape(),
-  recipeSearchString: PropTypes.string.isRequired,
-  searching: PropTypes.bool.isRequired
+  recipeSearchString: PropTypes.string.isRequired
 }
 
 RecipeSearch.defaultProps = {
