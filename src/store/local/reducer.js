@@ -1,13 +1,21 @@
-import { get } from 'lodash'
+import { get, set, unset } from 'lodash'
 import * as LocalStorage from '../../service/localStorage'
 import * as T from './types'
 
 const INITIAL_STATE = {
-  classData: LocalStorage.getDefaultCraftingClasses()
+  classData: LocalStorage.getDefaultCraftingClasses(),
+  loading: {}
 }
 
 export default (state = INITIAL_STATE, action) => {
+  const { loading } = state
   switch (action.type) {
+    case T.LODESTONE_CHARACTER_DATA_REQUEST:
+      set(loading, 'characterData', true)
+      return {
+        ...state,
+        loading
+      }
     case T.LOCAL_CLASS_DATA_STORE:
     case T.LOCAL_CLASS_DATA_RETRIEVAL:
       return {
@@ -31,14 +39,18 @@ export default (state = INITIAL_STATE, action) => {
         classData: LocalStorage.getDefaultCraftingClasses()
       }
     case T.LODESTONE_CHARACTER_DATA_SUCCESS:
+      unset(loading, 'characterData')
       return {
         ...state,
-        characterData: get(action, 'payload')
+        characterData: get(action, 'payload'),
+        loading
       }
     case T.API_REQUEST_FAILURE:
+      unset(loading, 'characterData')
       return {
         ...state,
-        error: action.error
+        error: action.error,
+        loading
       }
     default:
       return state

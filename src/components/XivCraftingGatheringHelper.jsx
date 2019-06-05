@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { get } from 'lodash'
 import * as actions from '../store/local/actions'
 import Navigation from './navigation/Navigation'
 import RecipeHelper from './RecipeHelper'
+import LoadingOverlay from './common/LoadingOverlay'
 
 const externalLink = (url, text) => (
   <a href={url} target="_blank" rel="noopener noreferrer">
@@ -20,10 +20,10 @@ class XivCraftingGatheringHelper extends React.Component {
   }
 
   render () {
-    const { characterData, craftingClassData } = this.props
+    const { characterData, craftingClassData, loading } = this.props
 
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <React.Fragment>
         <Navigation
           characterData={characterData}
           craftingClassData={craftingClassData}
@@ -38,7 +38,8 @@ class XivCraftingGatheringHelper extends React.Component {
             Version {process.env.REACT_APP_VERSION}
           </div>
         </Container>
-      </Router>
+        <LoadingOverlay show={loading} />
+      </React.Fragment>
     )
   }
 }
@@ -46,7 +47,8 @@ class XivCraftingGatheringHelper extends React.Component {
 const mapStateToProps = state => {
   return ({
     craftingClassData: get(state, 'local.classData'),
-    characterData: get(state, 'local.characterData')
+    characterData: get(state, 'local.characterData'),
+    loading: Object.keys(get(state, 'local.loading', {})).length > 0
   })
 }
 
