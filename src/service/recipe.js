@@ -1,7 +1,6 @@
 import { concat, filter, find, forEach, get, includes, map, set, toLower, uniqBy, orderBy } from 'lodash'
 import ITEM_TO_GATHERING_ITEM_MAPPING from '../data/item-to-gathering-item-mapping'
 import GATHERING_ITEM_POINTS from '../data/gathering-item-points'
-import AETHERYTE from '../data/aetheryte'
 import FISHING_SPOTS from '../data/fishing-spots'
 import * as XivApiService from './xivApi'
 
@@ -113,7 +112,6 @@ const addGatheringItemData = ingredientsGatherable => {
       const areaPath = 'TerritoryType.PlaceName.Name_en'
       const regionPath = 'TerritoryType.PlaceNameRegion.Name_en'
       const levelPath = 'GatheringLevel'
-      const aetherytePath = 'TerritoryType.AetheryteTargetID'
 
       const pointData = map(filteredFishingSpots, point => {
         const pd = getPointData(
@@ -122,8 +120,7 @@ const addGatheringItemData = ingredientsGatherable => {
           areaPath,
           regionPath,
           levelPath,
-          '',
-          aetherytePath
+          ''
         )
         set(pd, 'type', 'Fishing')
         set(pd, 'gatheringClass', 'Fisherman')
@@ -135,7 +132,7 @@ const addGatheringItemData = ingredientsGatherable => {
   })
 }
 
-const getPointData = (data, namePath, areaPath, regionPath, levelPath, typePath, aetherytePath) => {
+const getPointData = (data, namePath, areaPath, regionPath, levelPath, typePath) => {
   const typeMap = {
     'Mining': 'Miner',
     'Quarrying': 'Miner',
@@ -147,10 +144,9 @@ const getPointData = (data, namePath, areaPath, regionPath, levelPath, typePath,
   const region = get(data, regionPath)
   const level = get(data, levelPath)
   const type = get(data, typePath)
-  const aetheryteId = get(data, aetherytePath)
 
   return {
-    name: name || get(find(AETHERYTE, a => get(a, 'ID') === aetheryteId), 'PlaceName.Name_en'),
+    name,
     area,
     region,
     level,

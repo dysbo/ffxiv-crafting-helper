@@ -182,7 +182,7 @@ export default class ShoppingList extends React.Component {
                       <td>
                         {pointData.length === 1 && (
                           <React.Fragment>
-                            {pointData[0].region} - {pointData[0].area} - {pointData[0].name}
+                            {pointData[0].region} - {pointData[0].area} {pointData[0].name ? `- ${pointData[0].name}` : '(Unspoiled)'}
                           </React.Fragment>
                         )}
                         {pointData.length > 1 && (
@@ -193,7 +193,7 @@ export default class ShoppingList extends React.Component {
                           >
                             {pointData.map((point, key) => (
                               <option key={key} value={JSON.stringify(point)}>
-                                {point.region} - {point.area} - {point.name} (Level {point.level}, {point.gatheringClass})
+                                {point.region} - {point.area} {point.name ? `- ${point.name}` : '(Unspoiled)'} (Level {point.level}, {point.gatheringClass})
                               </option>
                             ))}
                           </FormControl>
