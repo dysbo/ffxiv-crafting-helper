@@ -66,7 +66,8 @@ export default class ShoppingList extends React.Component {
     this.setState({
       ...gatherableStateVars,
       ingredientsGatherable: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') !== 58),
-      ingredientsCrystals: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') === 58)
+      ingredientsCrystals: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') === 58),
+      itemsOwned: []
     })
   }
 
