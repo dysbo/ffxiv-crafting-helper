@@ -15,7 +15,8 @@ const KEYS = {
   CRAFTING_CLASS_DATA: 'craftingClasses',
   MY_RECIPE_LIST: 'myRecipeList',
   MY_SHOPPING_LIST: 'myShoppingList',
-  CURRENT_TAB: 'currentTab'
+  CURRENT_TAB: 'currentTab',
+  OWNED_ITEMS: 'ownedItems'
 }
 
 function get (key, defaultValue) {
@@ -34,6 +35,14 @@ function clear (key) {
   if (!!localStorage.getItem(key)) {
     localStorage.removeItem(key)
   }
+}
+
+export function getObtainedItems () {
+  return get(KEYS.OWNED_ITEMS, [])
+}
+
+export function storeObtainedItems (obtainedItems) {
+  store(KEYS.OWNED_ITEMS, obtainedItems)
 }
 
 export function getCurrentTab () {
@@ -82,6 +91,10 @@ export function clearMyRecipeList () {
 
 export function clearMyShoppingList () {
   clear(KEYS.MY_SHOPPING_LIST)
+}
+
+export function clearObtainedItems () {
+  clear(KEYS.OWNED_ITEMS)
 }
 
 export function retrieveAndUpdateCraftingClassData () {

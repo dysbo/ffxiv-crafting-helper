@@ -63,6 +63,18 @@ table.calculations {
   }
 }
 
+.shopping-list {
+  .owned, .owned:hover {
+    color: #687;
+    font-style: italic;
+    background: #efd;
+
+    &:nth-child(2n + 1) {
+      background: #e0f0d0;
+    }
+  }
+}
+
 .margin-left {
   margin-left: .25em;
 }

@@ -1,16 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table, FormControl, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap'
-import { filter, isEqual, get, orderBy } from 'lodash'
+import cx from 'classnames'
+import { Badge, FormControl, OverlayTrigger, Table, Tooltip } from 'react-bootstrap'
+import { clone, filter, includes, isEqual, get, orderBy, pull } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
+import { clearObtainedItems, getObtainedItems, storeObtainedItems } from '../../service/localStorage'
 import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
+
+/**
+ * Scrolls to a position on the screen.
+ *
+ * @param {number} x The X coordinate for scrolling.
+ * @param {number} y The Y coodrinate for scrolling.
+ */
+function scrollToPosition(x, y) {
+  window.scrollTo(x, y)
+}
+
+/**
+ * The number of columns in a row.  This allows the subheadings to take up the full width of the table.
+ * @type {number}
+ */
+const headingColumns = 7
 
 export default class ShoppingList extends React.Component {
   state = {
     ingredientsGatherableSort: {
       func: 'name',
       direction: 'asc'
-    }
+    },
+    itemsOwned: getObtainedItems()
   }
 
   componentDidMount () {
@@ -41,6 +60,8 @@ export default class ShoppingList extends React.Component {
         gatherableStateVars[key] = get(item, 'pointData[0]', {})
       })
     }
+
+    clearObtainedItems()
 
     this.setState({
       ...gatherableStateVars,
@@ -81,6 +102,29 @@ export default class ShoppingList extends React.Component {
     })
   }
 
+  handleToggleItemOwned (itemId) {
+    const { scrollX, scrollY } = window
+    const itemsOwned = clone(get(this.state, 'itemsOwned', []))
+
+    if (includes(itemsOwned, itemId)) {
+      pull(itemsOwned, itemId)
+    } else {
+      itemsOwned.push(itemId)
+    }
+
+    storeObtainedItems(itemsOwned)
+
+    this.setState({
+      itemsOwned
+    }, scrollToPosition.bind(this, scrollX, scrollY))
+  }
+
+  handleOwnershipSort (item) {
+    const itemId = get(item, 'itemId', get(item, 'ItemResult.ID'))
+    return includes(get(this.state, 'itemsOwned', []), itemId)
+    // return !!itemId
+  }
+
   render () {
     const { shoppingList: { ingredientsCrafted, ingredientsPurchased, ingredientsOther } } = this.props
     const { ingredientsCrystals, ingredientsGatherable, ingredientsGatherableSort } = this.state
@@ -92,19 +136,6 @@ export default class ShoppingList extends React.Component {
         </div>
       )
     }
-
-    const headings = (
-      <tr>
-        <th />
-        <th>Name</th>
-        <th>Required Class</th>
-        <th>Required Level</th>
-        <th>Quantity</th>
-        <th>Location</th>
-      </tr>
-    )
-
-    const headingColumns = 6
 
     return (
       <div>
@@ -160,20 +191,25 @@ export default class ShoppingList extends React.Component {
                   }}
                   applySorting={this.handleApplyIngredientsGatherableSort.bind(this)}
                 />
+                <th>Obtained</th>
               </tr>
               </thead>
               <tbody>
-              {orderBy(ingredientsGatherable, ingredientsGatherableSort.func, ingredientsGatherableSort.direction)
-                .map(item => {
+              {orderBy(
+                ingredientsGatherable,
+                [this.handleOwnershipSort.bind(this), ingredientsGatherableSort.func],
+                ['asc', ingredientsGatherableSort.direction]
+              ).map(item => {
                   const { name, icon, itemId, amount, pointData } = item
                   const key = `gatherable-${itemId}`
                   const locationSelectId = `${key}-location`
                   const gatheringClass = get(this.state, `${locationSelectId}.gatheringClass`)
                   const gatheringType = get(this.state, `${locationSelectId}.type`)
                   const level = get(this.state, `${locationSelectId}.level`)
+                  const owned = includes(get(this.state, 'itemsOwned', []), itemId)
 
                   return (
-                    <tr key={key}>
+                    <tr key={key} className={cx(owned ? 'owned' : '')}>
                       <td><img src={icon} alt={name} /></td>
                       <td>{name}</td>
                       <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
@@ -199,6 +235,14 @@ export default class ShoppingList extends React.Component {
                           </FormControl>
                         )}
                       </td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          value={itemId}
+                          checked={owned}
+                          onChange={this.handleToggleItemOwned.bind(this, itemId)}
+                        />
+                      </td>
                     </tr>
                   )
                 })}
@@ -211,19 +255,40 @@ export default class ShoppingList extends React.Component {
               <tr className="section-head">
                 <th colSpan={headingColumns}>Items Obtained Elsewhere</th>
               </tr>
-              {headings}
+              <tr>
+                <th />
+                <th>Name</th>
+                <th />
+                <th />
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Obtained</th>
+              </tr>
               </thead>
               <tbody>
-              {ingredientsOther.map(item => {
+              {orderBy(
+                ingredientsOther,
+                this.handleOwnershipSort.bind(this),
+                'asc'
+              ).map(item => {
                 const { name, icon, itemId, amount } = item
+                const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
-                  <tr key={`purchasable-${itemId}`}>
+                  <tr key={`purchasable-${itemId}`} className={cx(owned ? 'owned' : '')}>
                     <td><img src={icon} alt={name} /></td>
                     <td>{name}</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td />
+                    <td />
                     <td>{amount}</td>
                     <td>???</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        value={itemId}
+                        checked={owned}
+                        onChange={this.handleToggleItemOwned.bind(this, itemId)}
+                      />
+                    </td>
                   </tr>
                 )
               })}
@@ -236,19 +301,40 @@ export default class ShoppingList extends React.Component {
               <tr className="section-head">
                 <th colSpan={headingColumns}>Purchasable Items</th>
               </tr>
-              {headings}
+              <tr>
+                <th />
+                <th>Name</th>
+                <th>Currency</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Obtained</th>
+              </tr>
               </thead>
               <tbody>
-              {ingredientsPurchased.map(item => {
+              {orderBy(
+                ingredientsPurchased,
+                this.handleOwnershipSort.bind(this),
+                'asc'
+              ).map(item => {
                 const { name, icon, itemId, amount } = item
+                const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
-                  <tr key={`purchasable-${itemId}`}>
+                  <tr key={`purchasable-${itemId}`} className={cx(owned ? 'owned' : '')}>
                     <td><img src={icon} alt={name} /></td>
                     <td>{name}</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>???</td>
+                    <td>???</td>
                     <td>{amount}</td>
                     <td>???</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        value={itemId}
+                        checked={owned}
+                        onChange={this.handleToggleItemOwned.bind(this, itemId)}
+                      />
+                    </td>
                   </tr>
                 )
               })}
@@ -261,24 +347,46 @@ export default class ShoppingList extends React.Component {
               <tr className="section-head">
                 <th colSpan={headingColumns}>Prerequisite Crafts</th>
               </tr>
-              {headings}
+              <tr>
+                <th />
+                <th>Name</th>
+                <th>Required Class</th>
+                <th>Required Level</th>
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Obtained</th>
+              </tr>
               </thead>
               <tbody>
-              {ingredientsCrafted.map(item => {
+              {orderBy(
+                ingredientsCrafted,
+                [this.handleOwnershipSort.bind(this), 'ItemResult.Name_en'],
+                ['asc', 'asc']
+              ).map(item => {
                 const name = get(item, 'ItemResult.Name_en')
                 const icon = get(item, 'ItemResult.Icon')
                 const id = get(item, 'ID')
                 const quantity = get(item, 'quantity')
                 const craftClass = get(item, 'ClassJob.NameEnglish')
                 const craftLevel = get(item, 'RecipeLevelTable.ClassJobLevel')
+                const itemId = get(item, 'ItemResult.ID')
+                const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
-                  <tr key={`crafted-${id}`}>
+                  <tr key={`crafted-${id}`} className={cx(owned ? 'owned' : '')}>
                     <td><img src={getIconUrl(icon)} alt={name} /></td>
                     <td>{name}</td>
                     <td>{craftClass}</td>
                     <td>{craftLevel}</td>
                     <td>{quantity}</td>
                     <td>N/A</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        value={itemId}
+                        checked={owned}
+                        onChange={this.handleToggleItemOwned.bind(this, itemId)}
+                      />
+                    </td>
                   </tr>
                 )
               })}
