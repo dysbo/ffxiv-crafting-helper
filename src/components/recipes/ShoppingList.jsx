@@ -6,6 +6,7 @@ import { clone, filter, includes, isEqual, get, orderBy, pull } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
 import { clearObtainedItems, getObtainedItems, storeObtainedItems } from '../../service/localStorage'
 import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
+import XivIcon from '../common/XivIcon'
 
 /**
  * Scrolls to a position on the screen.
@@ -146,22 +147,11 @@ export default class ShoppingList extends React.Component {
               const { amount, name, icon } = ic
               return (
                 <span key={name} className="ph1">
-                  <OverlayTrigger
-                    key={`overlayTrigger-${name}`}
-                    overlay={
-                      <Tooltip id={`tooltip-${name}`}>
-                        {name}
-                      </Tooltip>
-                    }
-                  >
-                    <img src={icon} alt={name} />
-                  </OverlayTrigger><br />
-                    <Badge
-                      variant="primary"
-                      style={{ position: 'relative', top: '-15px', right: '-25px' }}
-                    >
-                      {amount}
-                    </Badge>
+                  <XivIcon
+                    badge={{ text: amount }}
+                    image={{ url: icon, altText: name }}
+                    tooltip={{ text: name }}
+                  />
                 </span>
               )
             })
@@ -211,7 +201,7 @@ export default class ShoppingList extends React.Component {
 
                   return (
                     <tr key={key} className={cx(owned ? 'owned' : '')}>
-                      <td><img src={icon} alt={name} /></td>
+                      <td><XivIcon image={{ url: icon, altText: name }} /></td>
                       <td>{name}</td>
                       <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
                       <td>{level}</td>
@@ -276,7 +266,7 @@ export default class ShoppingList extends React.Component {
                 const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
                   <tr key={`purchasable-${itemId}`} className={cx(owned ? 'owned' : '')}>
-                    <td><img src={icon} alt={name} /></td>
+                    <td><XivIcon image={{ url: icon, altText: name }} /></td>
                     <td>{name}</td>
                     <td />
                     <td />
@@ -322,7 +312,7 @@ export default class ShoppingList extends React.Component {
                 const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
                   <tr key={`purchasable-${itemId}`} className={cx(owned ? 'owned' : '')}>
-                    <td><img src={icon} alt={name} /></td>
+                    <td><XivIcon image={{ url: icon, altText: name }} /></td>
                     <td>{name}</td>
                     <td>???</td>
                     <td>???</td>
@@ -374,7 +364,7 @@ export default class ShoppingList extends React.Component {
                 const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
                   <tr key={`crafted-${id}`} className={cx(owned ? 'owned' : '')}>
-                    <td><img src={getIconUrl(icon)} alt={name} /></td>
+                    <td><XivIcon image={{ url: getIconUrl(icon), altText: name }} /></td>
                     <td>{name}</td>
                     <td>{craftClass}</td>
                     <td>{craftLevel}</td>
