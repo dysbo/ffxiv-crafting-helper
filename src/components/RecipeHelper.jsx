@@ -155,7 +155,14 @@ class RecipeHelper extends React.Component {
       recipeSearchString
     } = this.state
 
-    const { characterData, craftingClassData, myRecipeList, myShoppingList, recipeSearchResults } = this.props
+    const {
+      characterData,
+      clearRecipeSearch,
+      craftingClassData,
+      myRecipeList,
+      myShoppingList,
+      recipeSearchResults
+    } = this.props
 
     return (
       <div className="recipe-list pt3">
@@ -171,6 +178,7 @@ class RecipeHelper extends React.Component {
           <Tab eventKey="search" title="Recipe Search">
             <div className="recipe-tab">
               <RecipeSearch
+                clearRecipeSearch={clearRecipeSearch.bind(this)}
                 handleChange={this.handleFieldUpdate.bind(this)}
                 handlePageChange={this.handlePageChange.bind(this)}
                 handleReset={this.handleClear.bind(this)}

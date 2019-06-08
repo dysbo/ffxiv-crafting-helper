@@ -10,6 +10,7 @@ import Pagination from '../common/Pagination'
 export default class RecipeSearchResult extends React.Component {
   render () {
     const {
+      clearRecipeSearch,
       handlePageChange,
       handleTabChange,
       handleToggleListItem,
@@ -79,7 +80,10 @@ export default class RecipeSearchResult extends React.Component {
         <tr>
           <td colSpan={5}>
             <div className="w-100 dib tc">
-              <Button onClick={handleTabChange.bind(this, 'recipe-list')}>
+              <Button className="mh1" onClick={clearRecipeSearch.bind(this)} variant="danger">
+                Clear Recipe Search
+              </Button>
+              <Button className="mh1" onClick={handleTabChange.bind(this, 'recipe-list')}>
                 Go to Recipe List
               </Button>
             </div>
@@ -92,6 +96,7 @@ export default class RecipeSearchResult extends React.Component {
 }
 
 RecipeSearchResult.propTypes = {
+  clearRecipeSearch: PropTypes.func.isRequired,
   handlePageChange: PropTypes.func.isRequired,
   handleTabChange: PropTypes.func.isRequired,
   handleToggleListItem: PropTypes.func.isRequired,

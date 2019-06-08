@@ -7,6 +7,7 @@ import RecipeSearchResult from './RecipeSearchResult'
 export default class RecipeSearch extends React.Component {
   render () {
     const {
+      clearRecipeSearch,
       handleChange,
       handlePageChange,
       handleReset,
@@ -45,6 +46,7 @@ export default class RecipeSearch extends React.Component {
         />
         <hr />
         <RecipeSearchResult
+          clearRecipeSearch={clearRecipeSearch}
           handlePageChange={handlePageChange}
           handleTabChange={handleTabChange}
           handleToggleListItem={handleToggleListItem}
@@ -58,6 +60,7 @@ export default class RecipeSearch extends React.Component {
 }
 
 RecipeSearch.propTypes = {
+  clearRecipeSearch: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   handlePageChange: PropTypes.func.isRequired,
   handleReset: PropTypes.func.isRequired,
