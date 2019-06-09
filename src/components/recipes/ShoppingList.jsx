@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Badge, FormControl, OverlayTrigger, Table, Tooltip } from 'react-bootstrap'
-import { clone, filter, includes, isEqual, get, orderBy, pull } from 'lodash'
+import { FormControl, Table } from 'react-bootstrap'
+import { clone, filter, get, includes, isEqual, orderBy, pull } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
 import { clearObtainedItems, getObtainedItems, storeObtainedItems } from '../../service/localStorage'
 import SortableTableHeaderCell from '../common/SortableTableHeaderCell'
@@ -14,7 +14,7 @@ import XivIcon from '../common/XivIcon'
  * @param {number} x The X coordinate for scrolling.
  * @param {number} y The Y coodrinate for scrolling.
  */
-function scrollToPosition(x, y) {
+function scrollToPosition (x, y) {
   window.scrollTo(x, y)
 }
 
@@ -191,52 +191,52 @@ export default class ShoppingList extends React.Component {
                 [this.handleOwnershipSort.bind(this), ingredientsGatherableSort.func],
                 ['asc', ingredientsGatherableSort.direction]
               ).map(item => {
-                  const { name, icon, itemId, amount, pointData } = item
-                  const key = `gatherable-${itemId}`
-                  const locationSelectId = `${key}-location`
-                  const gatheringClass = get(this.state, `${locationSelectId}.gatheringClass`)
-                  const gatheringType = get(this.state, `${locationSelectId}.type`)
-                  const level = get(this.state, `${locationSelectId}.level`)
-                  const owned = includes(get(this.state, 'itemsOwned', []), itemId)
+                const { name, icon, itemId, amount, pointData } = item
+                const key = `gatherable-${itemId}`
+                const locationSelectId = `${key}-location`
+                const gatheringClass = get(this.state, `${locationSelectId}.gatheringClass`)
+                const gatheringType = get(this.state, `${locationSelectId}.type`)
+                const level = get(this.state, `${locationSelectId}.level`)
+                const owned = includes(get(this.state, 'itemsOwned', []), itemId)
 
-                  return (
-                    <tr key={key} className={cx(owned ? 'owned' : '')}>
-                      <td><XivIcon image={{ url: icon, altText: name }} /></td>
-                      <td>{name}</td>
-                      <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
-                      <td>{level}</td>
-                      <td>{amount}</td>
-                      <td>
-                        {pointData.length === 1 && (
-                          <React.Fragment>
-                            {pointData[0].region} - {pointData[0].area} {pointData[0].name ? `- ${pointData[0].name}` : '(Unspoiled)'}
-                          </React.Fragment>
-                        )}
-                        {pointData.length > 1 && (
-                          <FormControl
-                            id={locationSelectId}
-                            as="select"
-                            onChange={this.handleLocationUpdate.bind(this)}
-                          >
-                            {pointData.map((point, key) => (
-                              <option key={key} value={JSON.stringify(point)}>
-                                {point.region} - {point.area} {point.name ? `- ${point.name}` : '(Unspoiled)'} (Level {point.level}, {point.gatheringClass})
-                              </option>
-                            ))}
-                          </FormControl>
-                        )}
-                      </td>
-                      <td>
-                        <input
-                          type="checkbox"
-                          value={itemId}
-                          checked={owned}
-                          onChange={this.handleToggleItemOwned.bind(this, itemId)}
-                        />
-                      </td>
-                    </tr>
-                  )
-                })}
+                return (
+                  <tr key={key} className={cx(owned ? 'owned' : '')}>
+                    <td><XivIcon image={{ url: icon, altText: name }} /></td>
+                    <td>{name}</td>
+                    <td>{gatheringClass}{!!gatheringType && ` (${gatheringType})`}</td>
+                    <td>{level}</td>
+                    <td>{amount}</td>
+                    <td>
+                      {pointData.length === 1 && (
+                        <React.Fragment>
+                          {pointData[0].region} - {pointData[0].area} {pointData[0].name ? `- ${pointData[0].name}` : '(Unspoiled)'}
+                        </React.Fragment>
+                      )}
+                      {pointData.length > 1 && (
+                        <FormControl
+                          id={locationSelectId}
+                          as="select"
+                          onChange={this.handleLocationUpdate.bind(this)}
+                        >
+                          {pointData.map((point, key) => (
+                            <option key={key} value={JSON.stringify(point)}>
+                              {point.region} - {point.area} {point.name ? `- ${point.name}` : '(Unspoiled)'} (Level {point.level}, {point.gatheringClass})
+                            </option>
+                          ))}
+                        </FormControl>
+                      )}
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        value={itemId}
+                        checked={owned}
+                        onChange={this.handleToggleItemOwned.bind(this, itemId)}
+                      />
+                    </td>
+                  </tr>
+                )
+              })}
               </tbody>
             </React.Fragment>
           )}
