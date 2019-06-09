@@ -43,7 +43,7 @@ export default class XivIcon extends React.Component {
 XivIcon.propTypes = {
   badge: PropTypes.shape({
     variant: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'danger', 'light', 'dark']),
-    text: PropTypes.string.isRequired
+    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
   }),
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   image: PropTypes.shape({
@@ -54,10 +54,4 @@ XivIcon.propTypes = {
   tooltip: PropTypes.shape({
     text: PropTypes.string.isRequired
   })
-}
-
-XivIcon.defaultProps = {
-  badge: {
-    variant: 'primary'
-  }
 }
