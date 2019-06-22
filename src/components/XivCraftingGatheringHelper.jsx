@@ -31,7 +31,7 @@ class XivCraftingGatheringHelper extends React.Component {
         <Container fluid>
           <RecipeHelper characterData={characterData} craftingClassData={craftingClassData} />
           <hr />
-          <div className="tc text-muted">
+          <div className="tc text-muted pb3">
             Created by {externalLink('https://na.finalfantasyxiv.com/lodestone/character/22858010/',
             'Xythyt')} with the help of {externalLink('https://www.xivapi.com', 'XIVAPI')}.
             <br />

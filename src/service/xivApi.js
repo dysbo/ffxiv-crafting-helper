@@ -5,6 +5,9 @@ import { map, get, isArray, set, toLower } from 'lodash'
 // const PRIVATE_KEY = '257f7d4532a74f15a429b5262d51d0f3938964ea78124b1ca8da9459accc15b7'
 const BASE_URL = 'https://xivapi.com'
 
+// this is for testing
+// let attempt = 0
+
 /**
  * Retrieves the URL of an icon provided in a response from XIVAPI.
  * @param   {string}  iconRelativePath  The relative path of the icon.
@@ -32,7 +35,22 @@ export const findCharacterByServerAndName = async (server, name, page = 1) => {
  * @returns {object}      An object containing the character's data.
  */
 export const getCharacterById = async id => {
+  // use this for normal functionality
   const result = await axios.get(`${BASE_URL}/character/${id}?extended=1`)
+
+  // use this when testing the "first import" message
+  // console.log('this is attempt', attempt.toString())
+  // let result
+  // if (!attempt) {
+  //   result = { data: UNLOADED_CHARACTER }
+  // } else {
+  //   result = await axios.get(`${BASE_URL}/character/${id}?extended=1`)
+  // }
+  // attempt++
+
+  // use this when testing the behavior when character does not load from Lodestone
+  // const result = { data: UNLOADED_CHARACTER }
+
   set(result, 'data.characterId', id)
   return get(result, 'data', {})
 }

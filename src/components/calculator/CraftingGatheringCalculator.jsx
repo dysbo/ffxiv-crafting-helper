@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
-import { concat, filter, find, isEqual, orderBy, set, toNumber } from 'lodash'
+import { concat, filter, find, get, isEqual, orderBy, set, toNumber } from 'lodash'
 import FilterDropdown from './FilterDropdown'
 import CalculationsTableHeader from './CalculationsTableHeader'
 import CalculationsTableBody from './CalculationsTableBody'
 import EXP_PER_LEVEL from '../../data/exp-per-level'
-import { saveLocalClassData } from '../../store/local/actions'
+import { saveLocalClassData, getLodestoneCharacterData } from '../../store/local/actions'
+import FirstTimeImport from './FirstTimeImport'
 
 class CraftingGatheringCalculator extends React.Component {
   state = {
@@ -69,14 +70,18 @@ class CraftingGatheringCalculator extends React.Component {
   }
 
   render () {
-    const { craftingClassData } = this.props
+    const { craftingClassData, characterData, getLodestoneCharacterData } = this.props
     const sortedAndFilteredCraftingClassData = this.getSortedCraftingClassData(
       this.getFilteredCraftingClassData(craftingClassData)
     )
 
     return (
       <div>
-        <div className="w-100 pv3 tc">
+        <FirstTimeImport
+          show={get(characterData, 'Character') === null}
+          getLodestoneCharacterData={getLodestoneCharacterData.bind(this, get(characterData, 'characterId'))}
+        />
+        <div className="w-100 pb3 tc">
           <FilterDropdown label={this.state.filter.label} applyFilterFunc={this.applyFilter.bind(this)} />
         </div>
         <div className="table-responsive">
@@ -100,7 +105,8 @@ CraftingGatheringCalculator.propTypes = {
 
 const mapStateToProps = () => ({})
 const mapDispatchToProps = dispatch => ({
-  saveLocalClassData: (classData) => dispatch(saveLocalClassData(classData))
+  saveLocalClassData: classData => dispatch(saveLocalClassData(classData)),
+  getLodestoneCharacterData: characterId => dispatch(getLodestoneCharacterData(characterId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CraftingGatheringCalculator)
