@@ -99,6 +99,16 @@ export const recipeSearch = async (searchString = '', options = {}) => {
                 'NameCombined_en': `*${searchString}*`
               }
             },
+            {
+              match: {
+                'ExpRewarded': 1
+              }
+            },
+            {
+              match: {
+                'ItemRequiredTargetID': 0
+              }
+            }
             // {
             //   match: {
             //     'SecretRecipeBookTargetID': 0
