@@ -109,16 +109,6 @@ export const recipeSearch = async (searchString = '', options = {}) => {
                 'ItemRequiredTargetID': 0
               }
             }
-            // {
-            //   match: {
-            //     'SecretRecipeBookTargetID': 0
-            //   }
-            // },
-            // {
-            //   match: {
-            //     'StatusRequiredTargetID': 0
-            //   }
-            // }
           ]
         }
       },
