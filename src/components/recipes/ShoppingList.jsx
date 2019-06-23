@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { FormControl, Table } from 'react-bootstrap'
+import { Button, FormControl, Table } from 'react-bootstrap'
 import { clone, filter, get, includes, isEqual, orderBy, pull } from 'lodash'
 import { getIconUrl } from '../../service/xivApi'
 import { clearObtainedItems, getObtainedItems, storeObtainedItems } from '../../service/localStorage'
@@ -25,12 +25,18 @@ function scrollToPosition (x, y) {
 const headingColumns = 7
 
 export default class ShoppingList extends React.Component {
-  state = {
-    ingredientsGatherableSort: {
-      func: 'name',
-      direction: 'asc'
-    },
-    itemsOwned: getObtainedItems()
+
+
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      ingredientsGatherableSort: {
+        func: 'name',
+        direction: 'asc'
+      },
+      itemsOwned: getObtainedItems()
+    }
   }
 
   componentDidMount () {
@@ -62,13 +68,10 @@ export default class ShoppingList extends React.Component {
       })
     }
 
-    clearObtainedItems()
-
     this.setState({
       ...gatherableStateVars,
       ingredientsGatherable: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') !== 58),
-      ingredientsCrystals: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') === 58),
-      itemsOwned: []
+      ingredientsCrystals: filter(ingredientsGatherable, ig => get(ig, 'itemCategory') === 58)
     })
   }
 
@@ -125,6 +128,13 @@ export default class ShoppingList extends React.Component {
     const itemId = get(item, 'itemId', get(item, 'ItemResult.ID'))
     return includes(get(this.state, 'itemsOwned', []), itemId)
     // return !!itemId
+  }
+
+  handleClearOwnershipInfo () {
+    clearObtainedItems()
+    this.setState({
+      itemsOwned: []
+    })
   }
 
   render () {
@@ -345,7 +355,7 @@ export default class ShoppingList extends React.Component {
                 <th>Required Level</th>
                 <th>Quantity</th>
                 <th>Location</th>
-                <th>Obtained</th>
+                <th />
               </tr>
               </thead>
               <tbody>
@@ -360,30 +370,30 @@ export default class ShoppingList extends React.Component {
                 const quantity = get(item, 'quantity')
                 const craftClass = get(item, 'ClassJob.NameEnglish')
                 const craftLevel = get(item, 'RecipeLevelTable.ClassJobLevel')
-                const itemId = get(item, 'ItemResult.ID')
-                const owned = includes(get(this.state, 'itemsOwned', []), itemId)
                 return (
-                  <tr key={`crafted-${id}`} className={cx(owned ? 'owned' : '')}>
+                  <tr key={`crafted-${id}`}>
                     <td><XivIcon image={{ url: getIconUrl(icon), altText: name }} /></td>
                     <td>{name}</td>
                     <td>{craftClass}</td>
                     <td>{craftLevel}</td>
                     <td>{quantity}</td>
                     <td>N/A</td>
-                    <td>
-                      <input
-                        type="checkbox"
-                        value={itemId}
-                        checked={owned}
-                        onChange={this.handleToggleItemOwned.bind(this, itemId)}
-                      />
-                    </td>
+                    <td />
                   </tr>
                 )
               })}
               </tbody>
             </React.Fragment>
           )}
+          <tfoot>
+          <tr>
+            <td colSpan={7} className="tc pv1">
+              <Button variant="warning" onClick={this.handleClearOwnershipInfo.bind(this)}>
+                Clear Owned Items Info
+              </Button>
+            </td>
+          </tr>
+          </tfoot>
         </Table>
       </div>
     )
