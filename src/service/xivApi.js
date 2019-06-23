@@ -16,6 +16,15 @@ const BASE_URL = 'https://xivapi.com'
 export const getIconUrl = iconRelativePath => `${BASE_URL}${iconRelativePath}`
 
 /**
+ * Retrieves a list of servers in FFXIV.
+ * @returns {[object]} A list of server names.
+ */
+export const getServerList = async () => {
+  const result = await axios.get(`${BASE_URL}/servers`)
+  return get(result, 'data', [])
+}
+
+/**
  * Finds a character by server and name.
  *
  * @param   {string}  server  The name of the server.

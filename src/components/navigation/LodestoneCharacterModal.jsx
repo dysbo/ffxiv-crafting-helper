@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Form, Spinner, Modal } from 'react-bootstrap'
-import { get, map as _map } from 'lodash'
-import XIV_SERVERS from '../../data/xiv-servers'
+import { get, sortBy, map as _map } from 'lodash'
 import * as XivApi from '../../service/xivApi'
 
 class LodestoneCharacterModal extends React.Component {
   state = {}
+
+  async componentDidMount() {
+    if (get(this.state, 'servers', []).length === 0) {
+      const servers = sortBy(await XivApi.getServerList(), s => s.toString().toLowerCase())
+      this.setState({
+        servers
+      })
+    }
+  }
 
   handleSetField (event) {
     const { target: { name, value } } = event
@@ -52,7 +60,7 @@ class LodestoneCharacterModal extends React.Component {
 
   render () {
     const { show } = this.props
-    const { characterId, loading, lodestoneResults, name, server } = this.state
+    const { characterId, loading, lodestoneResults, name, server, servers } = this.state
 
     const results = get(lodestoneResults, 'Results', [])
     const prevPage = get(lodestoneResults, 'Pagination.PagePrev')
@@ -74,7 +82,7 @@ class LodestoneCharacterModal extends React.Component {
               <Form.Label>Server</Form.Label>
               <Form.Control name="server" as="select" onChange={this.handleSetField.bind(this)}>
                 <option>Choose a Server</option>
-                {_map(XIV_SERVERS, (server, key) => (
+                {_map(servers, (server, key) => (
                   <option key={key} value={server}>{server}</option>
                 ))}
               </Form.Control>
