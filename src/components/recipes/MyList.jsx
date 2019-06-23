@@ -1,19 +1,67 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { isEqual, set, toNumber } from 'lodash'
 import { Button, Form, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 import { getIconUrl } from '../../service/xivApi'
 
 export default class MyList extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      mapping: this.createItemQuantityMapping()
+    }
+  }
+
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    const { list } = this.props
+    if (!isEqual(list, prevProps.list)) {
+      const mapping = this.createItemQuantityMapping()
+      this.setState({
+        mapping
+      })
+    }
+  }
+
+  createItemQuantityMapping () {
+    const { list } = this.props
+    const mapping = {}
+
+    list.forEach(l => {
+      mapping[l.ID] = l.quantity
+    })
+
+    return mapping
+  }
+
+  handleItemQuantityUpdate (i, event) {
+    const { mapping } = this.state
+    set(mapping, i.ID, event.target.value)
+    this.setState({
+      mapping
+    })
+  }
+
+  handleQuantityFieldBlur (item) {
+    const { handleUpdateQuantity } = this.props
+    const { mapping } = this.state
+
+    const quantity = toNumber(mapping[item.ID]) || 1
+
+    handleUpdateQuantity(item, quantity)
+  }
+
   render () {
     const {
       handleClearList,
       handleTabChange,
       handleToggleListItem,
-      handleUpdateQuantity,
       list
     } = this.props
+
+    const { mapping } = this.state
 
     if (!list.length) {
       return (
@@ -40,22 +88,29 @@ export default class MyList extends React.Component {
         </tr>
         </thead>
         <tbody>
-        {list.map((i, k) => (
-          <tr key={k}>
-            <td><img src={getIconUrl(i.Icon)} alt={i.Name} /></td>
-            <td>{i.ClassJob.NameEnglish}</td>
-            <td>{i.Name}</td>
-            <td>{i.RecipeLevelTable.ClassJobLevel}</td>
-            <td>
-              <Form.Control type="number" value={i.quantity} onChange={handleUpdateQuantity.bind(this, i)} />
-            </td>
-            <td>
-              <Button variant="danger" onClick={handleToggleListItem.bind(this, i)}>
-                <FontAwesomeIcon icon={faMinusSquare} />
-              </Button>
-            </td>
-          </tr>
-        ))}
+        {list.map((i) => {
+          return (
+            <tr key={i.ID}>
+              <td><img src={getIconUrl(i.Icon)} alt={i.Name} /></td>
+              <td>{i.ClassJob.NameEnglish}</td>
+              <td>{i.Name}</td>
+              <td>{i.RecipeLevelTable.ClassJobLevel}</td>
+              <td>
+                <Form.Control
+                  type="number"
+                  value={mapping[i.ID] || 1}
+                  onChange={this.handleItemQuantityUpdate.bind(this, i)}
+                  onBlur={this.handleQuantityFieldBlur.bind(this, i)}
+                />
+              </td>
+              <td>
+                <Button variant="danger" onClick={handleToggleListItem.bind(this, i)}>
+                  <FontAwesomeIcon icon={faMinusSquare} />
+                </Button>
+              </td>
+            </tr>
+          )
+        })}
         </tbody>
         {list.length && (
           <tfoot>
