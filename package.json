@@ -1,7 +1,7 @@
 {
   "name": "ffxiv-crafting-helper",
   "homepage": "http://dysbo.github.io/ffxiv-crafting-helper",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -16,7 +16,7 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
-    "react-bootstrap": "^1.0.0-beta.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.5",
     "react-redux": "^7.0.2",
     "react-scripts": "2.1.8",

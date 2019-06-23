@@ -39,6 +39,11 @@ const recipeSearchClear = () => ({
   type: T.RECIPE_SEARCH_CLEAR
 })
 
+const shoppingListFailure = error => ({
+  type: T.SHOPPING_LIST_ERROR,
+  error
+})
+
 export const saveMyRecipeList = recipeList => dispatch => {
   LocalStorageService.storeMyRecipeList(recipeList)
   dispatch(recipeListSave(recipeList))
@@ -52,9 +57,13 @@ export const clearMyRecipeList = () => dispatch => {
 }
 
 export const createMyShoppingList = recipeList => async dispatch => {
-  const result = await RecipeListService.getIngredientListForRecipes(recipeList)
-  LocalStorageService.storeMyShoppingList(result)
-  dispatch(shoppingListCreate(result))
+  try {
+    const result = await RecipeListService.getIngredientListForRecipes(recipeList)
+    LocalStorageService.storeMyShoppingList(result)
+    dispatch(shoppingListCreate(result))
+  } catch (err) {
+    dispatch(shoppingListFailure(err))
+  }
 }
 
 export const clearMyShoppingList = () => dispatch => {

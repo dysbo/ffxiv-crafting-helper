@@ -64,6 +64,13 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         recipeSearchResults: {}
       }
+    case T.SHOPPING_LIST_ERROR:
+      unset(loading, 'shoppingList')
+      return {
+        ...state,
+        loading,
+        error: action.error
+      }
     default:
       return state
   }
