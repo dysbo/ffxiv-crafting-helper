@@ -92,7 +92,7 @@ class CalculationsTableBody extends React.Component {
                 type="number"
                 value={c.currentLevel}
                 min="1"
-                max="70"
+                max="80"
                 onChange={this.validateNumericFieldChange.bind(this, c.abbreviation)}
               />
             </td>
