@@ -1,13 +1,22 @@
 {
-  "main.css": "/ffxiv-crafting-helper/static/css/main.a67eb82c.chunk.css",
-  "main.js": "/ffxiv-crafting-helper/static/js/main.d9bb7629.chunk.js",
-  "main.js.map": "/ffxiv-crafting-helper/static/js/main.d9bb7629.chunk.js.map",
-  "runtime~main.js": "/ffxiv-crafting-helper/static/js/runtime~main.7eeda2ce.js",
-  "runtime~main.js.map": "/ffxiv-crafting-helper/static/js/runtime~main.7eeda2ce.js.map",
-  "static/js/2.8e755288.chunk.js": "/ffxiv-crafting-helper/static/js/2.8e755288.chunk.js",
-  "static/js/2.8e755288.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.8e755288.chunk.js.map",
-  "index.html": "/ffxiv-crafting-helper/index.html",
-  "precache-manifest.4137e380000781b968bfa8be18144699.js": "/ffxiv-crafting-helper/precache-manifest.4137e380000781b968bfa8be18144699.js",
-  "service-worker.js": "/ffxiv-crafting-helper/service-worker.js",
-  "static/css/main.a67eb82c.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.a67eb82c.chunk.css.map"
+  "files": {
+    "main.css": "/ffxiv-crafting-helper/static/css/main.a9b3a1b6.chunk.css",
+    "main.js": "/ffxiv-crafting-helper/static/js/main.075b090b.chunk.js",
+    "main.js.map": "/ffxiv-crafting-helper/static/js/main.075b090b.chunk.js.map",
+    "runtime-main.js": "/ffxiv-crafting-helper/static/js/runtime-main.24ccf699.js",
+    "runtime-main.js.map": "/ffxiv-crafting-helper/static/js/runtime-main.24ccf699.js.map",
+    "static/js/2.62c9d7d8.chunk.js": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js",
+    "static/js/2.62c9d7d8.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js.map",
+    "index.html": "/ffxiv-crafting-helper/index.html",
+    "precache-manifest.0863b87b78e42605d102ba24f35832b1.js": "/ffxiv-crafting-helper/precache-manifest.0863b87b78e42605d102ba24f35832b1.js",
+    "service-worker.js": "/ffxiv-crafting-helper/service-worker.js",
+    "static/css/main.a9b3a1b6.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.a9b3a1b6.chunk.css.map",
+    "static/js/2.62c9d7d8.chunk.js.LICENSE.txt": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24ccf699.js",
+    "static/js/2.62c9d7d8.chunk.js",
+    "static/css/main.a9b3a1b6.chunk.css",
+    "static/js/main.075b090b.chunk.js"
+  ]
 }
