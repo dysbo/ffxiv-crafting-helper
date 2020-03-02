@@ -45,7 +45,7 @@ export const findCharacterByServerAndName = async (server, name, page = 1) => {
  */
 export const getCharacterById = async id => {
   // use this for normal functionality
-  const result = await axios.get(`${BASE_URL}/character/${id}?extended=1`)
+  const result = await axios.get(`${BASE_URL}/character/${id}?extended=1&data=CJ`)
 
   // use this when testing the "first import" message
   // console.log('this is attempt', attempt.toString())
