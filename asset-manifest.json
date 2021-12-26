@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ffxiv-crafting-helper/static/css/main.1fcdd61a.chunk.css",
-    "main.js": "/ffxiv-crafting-helper/static/js/main.1c043f0a.chunk.js",
-    "main.js.map": "/ffxiv-crafting-helper/static/js/main.1c043f0a.chunk.js.map",
+    "main.css": "/ffxiv-crafting-helper/static/css/main.8051c32d.chunk.css",
+    "main.js": "/ffxiv-crafting-helper/static/js/main.a5811184.chunk.js",
+    "main.js.map": "/ffxiv-crafting-helper/static/js/main.a5811184.chunk.js.map",
     "runtime-main.js": "/ffxiv-crafting-helper/static/js/runtime-main.24ccf699.js",
     "runtime-main.js.map": "/ffxiv-crafting-helper/static/js/runtime-main.24ccf699.js.map",
-    "static/js/2.62c9d7d8.chunk.js": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js",
-    "static/js/2.62c9d7d8.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js.map",
+    "static/js/2.4371f907.chunk.js": "/ffxiv-crafting-helper/static/js/2.4371f907.chunk.js",
+    "static/js/2.4371f907.chunk.js.map": "/ffxiv-crafting-helper/static/js/2.4371f907.chunk.js.map",
     "index.html": "/ffxiv-crafting-helper/index.html",
-    "precache-manifest.412c589986682c9aff2f7664d2044cca.js": "/ffxiv-crafting-helper/precache-manifest.412c589986682c9aff2f7664d2044cca.js",
+    "precache-manifest.103486de7b017c1e711c2bd24f69ec96.js": "/ffxiv-crafting-helper/precache-manifest.103486de7b017c1e711c2bd24f69ec96.js",
     "service-worker.js": "/ffxiv-crafting-helper/service-worker.js",
-    "static/css/main.1fcdd61a.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.1fcdd61a.chunk.css.map",
-    "static/js/2.62c9d7d8.chunk.js.LICENSE.txt": "/ffxiv-crafting-helper/static/js/2.62c9d7d8.chunk.js.LICENSE.txt"
+    "static/css/main.8051c32d.chunk.css.map": "/ffxiv-crafting-helper/static/css/main.8051c32d.chunk.css.map",
+    "static/js/2.4371f907.chunk.js.LICENSE.txt": "/ffxiv-crafting-helper/static/js/2.4371f907.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.24ccf699.js",
-    "static/js/2.62c9d7d8.chunk.js",
-    "static/css/main.1fcdd61a.chunk.css",
-    "static/js/main.1c043f0a.chunk.js"
+    "static/js/2.4371f907.chunk.js",
+    "static/css/main.8051c32d.chunk.css",
+    "static/js/main.a5811184.chunk.js"
   ]
 }
